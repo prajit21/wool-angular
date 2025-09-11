@@ -1,0 +1,37 @@
+<div class="card segmented-button">
+  <div class="card-header">
+    <h3>Segmented buttons </h3>
+    <p class="f-m-light mt-1">
+      Multiple add-ons are supported and can be mixed with<code> dropdowns</code> versions.</p>
+  </div>
+  <div class="card-body main-segment-btn card-wrapper input-group-wrapper">
+    <div class="input-group" ngbDropdown>
+      <button class="btn btn-outline-info" type="button">Info </button>
+      <button class="btn btn-info dropdown-toggle dropdown-toggle-split" type="button" ngbDropdownToggle><span class="visually-hidden">Toggle Dropdown</span></button>
+      <ul ngbDropdownMenu>
+        <li><a href="javascript:void(0)" ngbDropdownItem>Learning</a></li>
+        <li><a href="javascript:void(0)" ngbDropdownItem>Editors</a></li>
+        <li><a href="javascript:void(0)" ngbDropdownItem>Users</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a href="javascript:void(0)" ngbDropdownItem>Social App</a></li>
+      </ul>
+      <input class="form-control" type="text" aria-label="Text input with segmented dropdown button">
+    </div>
+    <div class="input-group" ngbDropdown>
+      <input class="form-control" type="text" aria-label="Text input with segmented dropdown button">
+      <button class="btn btn-outline-secondary" type="button">Secondary</button>
+      <button class="btn btn-secondary dropdown-toggle dropdown-toggle-split" type="button" ngbDropdownToggle><span class="visually-hidden">Toggle Dropdown</span></button>
+      <ul ngbDropdownMenu>
+        <li><a href="javascript:void(0)" ngbDropdownItem>Search Result</a></li>
+        <li><a href="javascript:void(0)" ngbDropdownItem>Tasks</a></li>
+        <li><a href="javascript:void(0)" ngbDropdownItem>Projects</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a href="javascript:void(0)" ngbDropdownItem>Animation</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

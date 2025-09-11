@@ -1,0 +1,23 @@
+<div class="card widget-1">
+  <div class="card-body">
+    <div class="widget-content">
+      <div class="widget-round {{ status()?.font }}">
+        <div class="bg-round">
+          <svg class="svg-fill">
+            <use attr.xlink:href="assets/svg/icon-sprite.svg#{{ status()?.icon }}"></use>
+          </svg>
+          <svg class="half-circle svg-fill">
+            <use href="assets/svg/icon-sprite.svg#halfcircle"></use>
+          </svg>
+        </div>
+      </div>
+      <div>
+        <h4>{{ status()?.counter }}</h4>
+        <span class="f-light">{{ status()?.name }}</span>
+      </div>
+    </div>
+    <div class="font-{{ status()?.font }} f-w-500">
+      <i class="{{ status()?.tradingIcon }} icon-rotate me-1"></i><span>{{ status()?.pr }}%</span>
+    </div>
+  </div>
+</div>

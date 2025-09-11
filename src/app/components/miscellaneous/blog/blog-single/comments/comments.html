@@ -1,0 +1,45 @@
+<section class="comment-box">
+  <h3>Comment</h3>
+  <hr>
+  <ul>
+    @for(details of comment(); track details){
+      <li>
+        @if(!details.reply){
+          <div class="d-flex align-self-center">
+            <img class="align-self-center" [src]="details.img" alt="Generic placeholder image">
+            <div class="flex-grow-1">
+              <div class="row">
+                <div class="col-md-4 xl-100">
+                  <h4 class="mt-0">{{ details.name }}<span> ( {{ details.designation }} )</span></h4>
+                </div>
+                <div class="col-md-8 xl-100">
+                  <ul class="comment-social float-start float-md-end">
+                    <li><i class="icofont icofont-thumbs-up"></i>{{ details.hits.toLocaleString('en-US', {minimumIntegerDigits: 2}) }} Hits</li>
+                    <li><i class="icofont icofont-ui-chat"></i>{{ details.comments }} Comments</li>
+                  </ul>
+                </div>
+              </div>
+              <p>{{ details.desc }}</p>
+            </div>
+          </div>
+        }@else {
+          <ul>
+            <li>
+              <div class="d-flex">
+                <img class="align-self-center" [src]="details.img" alt="Generic placeholder image">
+                <div class="flex-grow-1">
+                  <div class="row">
+                    <div class="col-xl-12">
+                      <h4 class="mt-0">{{ details.name }}<span> ( {{ details.designation }} )</span></h4>
+                    </div>
+                  </div>
+                  <p>{{ details.desc }}</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        }
+      </li>
+    }
+  </ul>
+</section>

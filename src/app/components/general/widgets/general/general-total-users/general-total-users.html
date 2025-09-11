@@ -1,0 +1,23 @@
+<div class="card">
+  <app-title [title]="'Total Users'" [dropdown]="true" [dots]="true" />
+  <div class="card-body py-lg-3">
+    <ul class="user-list">
+      @for(details of totalUserData; track details){
+        <li>
+          <div class="user-icon {{ details.color }}">
+            <div class="user-box">
+              <app-feather-icons [icon]="details.icon" [class]="details.iconColor" />
+            </div>
+          </div>
+          <div>
+            <h4 class="mb-1">{{ details.text }}</h4>
+            <span class="font-{{ details.textColor }} d-flex align-items-center">
+              <i class="{{ details.tradingIcon }} icon-rotate me-1"> </i>
+              <span class="f-w-500">{{ details.pr }}</span>
+            </span>
+          </div>
+        </li>
+      }
+    </ul>
+  </div>
+</div>

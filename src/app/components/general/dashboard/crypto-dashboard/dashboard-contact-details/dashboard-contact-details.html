@@ -1,0 +1,15 @@
+<div class="card contact-details">
+  <app-title [title]="'Contact Details'" />
+  <div class="card-body pt-0">
+    <div class="d-flex"><span class="f-w-600">Amount BTC</span><span class="f-w-700">1,3000000</span></div>
+    <h4>Recent Contact</h4>
+    <ul>
+      @for(details of dashboardContacts; track details){
+        <li> <img [src]="details.image" alt="user">
+          <p class="f-w-600">{{ details.name }}</p><span>{{ details.email }}</span>
+          <div class="active-status active-online"></div>
+        </li>
+      }
+    </ul>
+  </div>
+</div>

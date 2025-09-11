@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Formatted Results</h3>
+    <span>A typeahead example that uses a formatter function for string results</span>
+  </div>
+  <div class="card-body">
+    <div id="bloodhound">
+      <form class="theme-form">
+        <div>
+          <input class="typeahead form-control" type="text" placeholder="Search for a state" [ngbTypeahead]="search" [resultFormatter]="formatter">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

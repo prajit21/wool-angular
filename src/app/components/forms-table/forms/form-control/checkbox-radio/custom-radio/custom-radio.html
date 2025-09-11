@@ -1,0 +1,48 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Custom radio </h3>
+    <p class="f-m-light mt-1">
+      Use the <code>.form-check-input </code>and <code>.form-check-label </code>for radios.</p>
+  </div>
+  <div class="card-body checkbox-checked">
+    <div class="row g-3">
+      <div class="col-xl-4 col-sm-6">
+        <div class="card-wrapper border rounded-3">
+          <h6 class="sub-title">Bordered Radio</h6>
+          @for(details of borderedRadio; track details){
+            <div class="form-check radio radio-{{ details.color }}">
+              <input class="form-check-input" id="{{ details.radioId }}" type="radio" name="radio1" value="option1" [checked]="details.checked">
+              <label class="form-check-label" for="{{ details.radioId }}">{{ details.title }} </label>
+            </div>
+          }
+        </div>
+      </div>
+      <div class="col-xl-4 col-sm-12 order-xl-0 order-sm-1">
+        <div class="card-wrapper border rounded-3 h-100 checkbox-checked">
+          <h6 class="sub-title">Icons Radio</h6>
+          <div class="form-check radio radio-primary ps-0">
+            <ul class="radio-wrapper">
+              @for(details of iconRadio; track details){
+                <li>  
+                  <input class="form-check-input" id="{{ details.radioId }}" type="radio" name="radio2" value="option2" [checked]="details.checked">
+                  <label class="form-check-label" for="{{ details.radioId }}"><i class="fa fa-{{ details.icon }}"></i><span>{{ details.title }}</span></label>
+                </li>
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-sm-6">
+        <div class="card-wrapper border rounded-3 fill-radios">
+          <h6 class="sub-title">Filled Radio</h6>
+          @for(details of filledRadio; track details){
+            <div class="form-check radio radio-{{ details.color }}">
+              <input class="form-check-input" id="{{ details.radioId }}" type="radio" name="radio3" value="option1" [checked]=details.checked>
+              <label class="form-check-label" for="{{ details.radioId }}">{{ details.title }}</label>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

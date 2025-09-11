@@ -1,0 +1,14 @@
+<div class="card height-equal">
+  <div class="card-header">
+    <h3>Text colors</h3>
+    <p class="f-m-light mt-1">
+      Use the text color for <code>.font-*</code> class.</p>
+  </div>
+  <div class="card-body">
+    @for(details of textColor; track details){
+    <div class="helper-common-box"></div>
+      <div class="font-{{ details }}">
+        This is a <strong>font-{{ details }} </strong> text used class as .font-{{ details }}</div>
+    }
+  </div>
+</div>

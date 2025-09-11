@@ -1,0 +1,49 @@
+<div class="header-faq">
+  <h3 class="mb-0">Browse articles by category</h3>
+</div>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h3>Browse Articles</h3>
+      </div>
+      <div class="card-body">
+        <div class="row browse g-sm-4 g-3">
+          @for(details of browseArticles; track details){
+            <div class="col-xl-4 col-md-6 box-col-33">
+              <div class="browse-articles">
+                <h4>
+                  <span>
+                    <app-feather-icons [icon]="details.titleIcon" />
+                  </span>{{ details.title }}</h4>
+                <ul>
+                  @for(data of details.data; track data){
+                    <li>
+                      <a href="javascript:void(0)">
+                        <span>
+                          <app-feather-icons [icon]="data.icon" />
+                        </span>
+                        <span>{{ data.listData }}</span>
+                        @if(data.tag){
+                          <span class="badge badge-primary pull-right">{{ data.tagTitle }}</span>
+                        }
+                      </a>
+                    </li>
+                  }
+                  <li>
+                    <a class="f-w-600 font-primary" href="javascript:void(0)">
+                      <span>
+                        <app-feather-icons [icon]="'arrow-right'" />
+                      </span>
+                      <span>See More ({{ details.seeMore }})</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

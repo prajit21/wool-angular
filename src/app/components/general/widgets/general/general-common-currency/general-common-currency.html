@@ -1,0 +1,39 @@
+<div class="currency-widget height-equal widget-currency" [ngClass]="currency()?.colorClass">
+  <div class="d-flex">
+    <div class="currency-icon-widget">
+      <app-svg-icon [icon]="currency()?.icon" />
+    </div>
+    <div>
+      <h4>{{ currency()?.coinName }} <span class="f-light">{{ currency()?.tag }}</span></h4>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body d-flex">
+      <div class="currency-chart-wrap">
+        <div id="currency-chart">
+          <apx-chart
+            [series]="currency()?.series!"
+            [chart]="currency()?.chart!"
+            [grid]="currency()?.grid!"
+            [colors]="currency()?.colors!"
+            [stroke]="currency()?.stroke!"
+            [labels]="currency()?.labels!"
+            [markers]="currency()?.markers!"
+            [xaxis]="currency()?.xaxis!"
+            [yaxis]="currency()?.yaxis!"
+            [legend]="currency()?.legend!"
+            [tooltip]="currency()?.tooltip!"
+            [responsive]="currency()?.responsive!"
+          />
+        </div>
+      </div>
+      <div class="bg-light-{{ currency()?.colorClass }} text-center">
+        <h4 class="mb-sm-0">${{ currency()?.price }}</h4>
+        <span class="f-12 f-w-500 font-{{ currency()?.colorClass }}">
+          <app-feather-icons [icon]="'trending-up'" />
+          {{ currency()?.parsonage }}%</span
+        >
+      </div>
+    </div>
+  </div>
+</div>

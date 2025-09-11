@@ -1,0 +1,33 @@
+<div class="card">
+  <div class="row product-page-main">
+    <div class="col-sm-12">
+      <ul class="nav nav-tabs border-tab nav-primary mb-0" id="top-tab" role="tablist">
+        @for(tab of productDescription; track tab){
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="activeTab === tab.value"
+            id="top-home-tab"
+            href="javascript:void(0)"
+            (click)="changeTab(tab.id)"
+            >{{ tab.title }}</a
+          >
+          <div class="material-border"></div>
+        </li>
+        }
+      </ul>
+      <div class="tab-content" id="top-tabContent">
+        <div
+          class="tab-pane fade active show"
+          id="top-home"
+          role="tabpanel"
+          aria-labelledby="top-home-tab"
+        >
+          @for(details of tabData.details; track details){
+          <p class="mb-0" [ngClass]="details.colClass">{{ details.data }}</p>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

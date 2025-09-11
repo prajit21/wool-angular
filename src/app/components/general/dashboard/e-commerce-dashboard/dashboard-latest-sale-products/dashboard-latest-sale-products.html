@@ -1,0 +1,49 @@
+<div class="card recent-orders common-table">
+  <app-title [title]="'Latest Sales'" />
+  <div class="card-body pt-0">
+    <div class="table-responsive custom-scrollbar">
+      <div class="dataTables_wrapper  no-footer">
+        <div id="slling-card_filter" class="dataTables_filter">
+          <label>Search:<input type="search" class="" placeholder="" aria-controls="slling-card"></label>
+        </div>
+        <table class="table display dataTable no-footer" id="recent-orders" style="width:100%">
+          <thead>
+            <tr>
+              <th>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="">
+                  <label class="form-check-label"></label>
+                </div>
+              </th>
+              <th>Product Name</th>
+              <th>ordered By</th>
+              <th>Quantity</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for(details of latestSaleProducts; track details){
+              <tr>
+                <td>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="form-check-label"></label>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-flex gap-2">
+                    <img [src]="details.image" alt="user">
+                    <a href="javascript:void(0)" [routerLink]="['/e-commerce/product-list']"><span>{{ details.productName }}</span></a>
+                  </div>
+                </td>
+                <td>{{ details.orderBy }}</td>
+                <td>{{ details.quantity }}</td>
+                <td>${{ details.price }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

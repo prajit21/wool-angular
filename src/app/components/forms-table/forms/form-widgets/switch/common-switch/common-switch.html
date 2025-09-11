@@ -1,0 +1,27 @@
+<div class="card height-equal">
+  <div class="card-header">
+    <h3>{{ data()?.title }}</h3>
+    <p class="f-m-light mt-1" [innerHTML]="data()?.description"></p>
+  </div>
+  <div
+    class="card-body common-flex"
+    [ngClass]="{ 'flex-column switch-wrapper' : data()?.flexColumn !== false }"
+  >
+    @for(switch of data()?.details;track switch){
+    <div class="d-flex">
+      <div class="flex-shrink-0 text-end" [ngClass]="data()?.class">
+        <label class="switch mb-0">
+          <input type="checkbox" [checked]="data()?.checked" /><span
+            class="switch-state bg-{{ switch.color }}"
+          ></span>
+        </label>
+      </div>
+      @if(data()?.switchTitle){
+      <label class="col-form-label m-l-10">
+        {{ data()?.switchTitle }} {{ switch.color | titlecase }} Switch</label
+      >
+      }
+    </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,69 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Individual column searching (text inputs) Starts-->
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <h3>Individual column searching (text inputs) </h3><span>The searching functionality provided by DataTables is useful for quickly search through the information in the table - however the search is global, and you may wish to present controls that search on specific columns.</span>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive product-table custom-scrollbar">
+            <div class="dataTables_wrapper no-footer">
+              <div class="dataTables_length" id="basic-1_length">
+                <label>Show
+                  <select name="pageSize" [(ngModel)]="service.pageSize">
+                    <option [ngValue]="10">10</option>
+                    <option [ngValue]="25">25</option>
+                    <option [ngValue]="50">50</option>
+                    <option [ngValue]="100">100</option>
+                  </select> entries
+                </label>
+              </div>
+              <div id="basic-1_filter" class="dataTables_filter">
+                <label>Search:
+                  <input type="search" name="searchTerm" [(ngModel)]="service.searchTerm">
+                </label>
+                  @if (service.loading$ | async) {
+                    <span class="col col-form-label">Loading...</span>
+                  }
+              </div>
+              <table class="display dataTable no-footer" id="basic-1">
+                <thead>
+                  <tr>
+                    <th>Image</th>
+                    <th appECommerce="name" (sort)="onSort($event)">Details</th>
+                    <th appECommerce="amount" (sort)="onSort($event)">Amount</th>
+                    <th appECommerce="stock" (sort)="onSort($event)">Stock</th>
+                    <th appECommerce="date" (sort)="onSort($event)">Start date</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @for (product of product$ | async; track product){
+                    <tr>
+                      <td><img [src]="product.img" alt=""></td>
+                      <td>
+                        <h6> {{ product.name }}</h6><span>{{ product.desc }}</span>
+                      </td>
+                      <td>${{ product.amount }}</td>
+                      <td [ngClass]="{ 'font-success': product.stock === 'In Stock', 'font-primary': product.stock === 'Low Stock', 'font-danger': product.stock === 'out of Stock'}">{{ product.stock }}</td>
+                      <td>{{ product.date }}</td>
+                      <td>
+                        <button class="btn btn-danger btn-xs me-1" type="button">Delete</button>
+                        <button class="btn btn-success btn-xs" type="button">Edit</button>
+                      </td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+              <div class="dataTables_paginate paging_simple_numbers" id="basic-1_paginate">
+                <ngb-pagination [collectionSize]="(total$ | async)!" [(page)]="service.page" [pageSize]="service.pageSize" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Individual column searching (text inputs) Ends-->
+  </div>
+</div>

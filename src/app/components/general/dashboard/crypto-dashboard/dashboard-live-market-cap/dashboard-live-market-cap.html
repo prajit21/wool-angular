@@ -1,0 +1,9 @@
+<div class="card market-chart">
+  <app-title [title]="'Live Market Cap'" [dropdown]="true" />
+  <div class="card-body pt-0">
+    <div id="liveMarkCapBoxChart">
+      <apx-chart [series]="liveMarketCap.series" [chart]="liveMarketCap.chart" [plotOptions]="liveMarketCap.plotOptions"
+                 [xaxis]="liveMarketCap.xaxis" [yaxis]="liveMarketCap.yaxis" />
+    </div>
+  </div>
+</div>

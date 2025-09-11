@@ -1,0 +1,39 @@
+<div class="card total-earning">
+  <div class="card-header card-no-border pb-0">
+    <div class="d-flex">
+      <div class="badge badge-rounded animation">
+        <app-svg-icon [icon]="chartData()?.icon" [class]="chartData()?.iconClass!" />
+        <!-- <svg class="ethereum-icon">
+          <use href="assets/svg/icon-sprite.svg#stroke-ethereum"></use>
+        </svg> -->
+      </div>
+      <div class="flex-grow-1">
+        <h5>{{ chartData()?.price }}</h5>
+        <p class="d-flex">
+          <span class="bg-light-{{ chartData()?.textColor }} me-2">
+            <app-svg-icon [icon]="chartData()?.marginType" />
+            <!-- <svg>
+              <use href="assets/svg/icon-sprite.svg#arrow-up"></use>
+            </svg> --> </span
+          ><span class="font-{{ chartData()?.textColor }} me-2">{{ chartData()?.totalMargin }}</span
+          ><span>{{ chartData()?.time }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card-body p-0">
+    <div>
+      <div id="ethereumchart">
+        <apx-chart
+          [series]="chartData()?.series!"
+          [colors]="chartData()?.colors!"
+          [chart]="chartData()?.chart!"
+          [dataLabels]="chartData()?.dataLabels!"
+          [stroke]="chartData()?.stroke!"
+          [plotOptions]="chartData()?.plotOptions!"
+          [xaxis]="chartData()?.xaxis!"
+        />
+      </div>
+    </div>
+  </div>
+</div>

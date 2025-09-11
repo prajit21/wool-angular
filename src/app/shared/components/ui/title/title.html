@@ -1,0 +1,32 @@
+@if(type() === 'payment'){
+<div class="card-header py-4">
+  <h5>{{ title() }}</h5>
+</div>
+}@else {
+<div class="card-header" [class.card-no-border]="!border()" [class.pb-0]="dots()">
+  @if(dropdown()){
+  <div class="header-top">
+    <h3>{{ title() }}</h3>
+    <div class="dropdown" [class.icon-dropdown]="dropdown() && dots()" ngbDropdown>
+      <button
+        class="btn dropdown-toggle yearly"
+        id="dropdownMenuButton4"
+        type="button"
+        ngbDropdownToggle
+      >
+        @if(dots()){
+        <i class="icon-more-alt"></i>
+        }@else { {{ dropdownText() }} }
+      </button>
+      <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+        <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Today</a>
+        <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Tomorrow</a>
+        <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Yesterday </a>
+      </div>
+    </div>
+  </div>
+  }@else {
+  <h3>{{ title() }}</h3>
+  }
+</div>
+}

@@ -1,0 +1,46 @@
+<div class="card hovercard text-center">
+  <div class="cardheader socialheader"></div>
+  <div class="user-image">
+    <div class="avatar"><img alt="" src="assets/images/user/1.jpg" /></div>
+    <div class="icon-wrapper"><i class="icofont icofont-pencil-alt-5"></i></div>
+    <ul class="share-icons">
+      <li>
+        <a class="social-icon bg-primary" href="javascript:void(0)"
+          ><i class="fa fa-smile-o"></i
+        ></a>
+      </li>
+      <li>
+        <a class="social-icon bg-secondary" href="javascript:void(0)"
+          ><i class="fa fa-wechat"></i
+        ></a>
+      </li>
+      <li>
+        <a class="social-icon bg-warning" href="javascript:void(0)"
+          ><i class="fa fa-share-alt"></i
+        ></a>
+      </li>
+    </ul>
+  </div>
+  <div class="info market-tabs p-0">
+    <ul class="nav nav-tabs border-tab tabs-scoial" id="top-tab" role="tablist">
+      @for(tab of socialAppTab; track tab){ @if(tab.value){
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [class.active]="tab.value === activeTab"
+          id="top-timeline"
+          href="javascript:void(0)"
+          (click)="changeTab(tab.value)"
+          >{{ tab.title }}</a
+        >
+      </li>
+      } @if(tab.profile){
+      <li class="nav-item">
+        <div class="user-designation"></div>
+        <div class="title"><a target="_blank" href="">ElANA</a></div>
+        <div class="desc mt-2">general manager</div>
+      </li>
+      } }
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Offset</h3>
+    <p class="mt-1 f-m-light">You can offset the grid column using <code>.offset-</code> grid class.</p>
+  </div>
+  <div class="card-body grid-showcase">
+    <div class="row g-2">
+      @for(details of gridOffset; track details){
+        <div [class]="details.class"><span>{{ details.text }}</span></div>
+      }
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="table-responsive theme-scrollbar">
+      <table class="w-100">
+        <tbody>
+          <tr>
+            <th> Class</th>
+            <th class="f-w-800">Value of the class</th>
+          </tr>
+          <tr>
+            <td><code>.offset-*</code></td>
+            <td> 1 / 2 / ... / 11 / 12</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

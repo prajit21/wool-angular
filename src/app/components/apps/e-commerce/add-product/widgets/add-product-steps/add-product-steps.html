@@ -1,0 +1,17 @@
+<ul class="sidebar-left-icons nav nav-pills" id="add-product-pills-tab" role="tablist">
+  @for(steps of addProductSteps; track steps){
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="steps.active" id="detail-product-tab"  href="javascript:void(0)" role="tab">
+        <div class="nav-rounded">
+          <div class="product-icons">
+            <app-svg-icon [icon]="steps.icon" />
+          </div>
+        </div>
+        <div class="product-tab-content">
+          <h5>{{ steps.title }}</h5>
+          <p>{{ steps.subTitle }}</p>
+        </div>
+      </a>
+    </li>
+  }
+</ul>

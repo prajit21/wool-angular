@@ -1,0 +1,11 @@
+<div class="card bg-primary">
+  <div class="card-body">
+    <div class="d-flex faq-widgets">
+      <div class="flex-grow-1">
+        <h3>{{ details()?.title }}</h3>
+        <p>{{ details()?.description }}</p>
+      </div>
+      <app-feather-icons [icon]="details()?.icon" />
+    </div>
+  </div>
+</div>

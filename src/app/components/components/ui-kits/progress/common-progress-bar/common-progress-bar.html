@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-header">
+    <h3>{{ details()?.header }}</h3>
+    <p class="f-m-light mt-1" [innerHTML]="details()?.desc"></p>
+  </div>
+  <div class="card-body progress-showcase">
+    <div class="row">
+      <div class="col">
+        @for(progress of details()?.data; track progress){
+        <div class="progress">
+          <div
+            class="{{ details()?.class }}-{{ progress.colorClass }}"
+            [ngStyle]="{ width: progress.width + '%' }"
+          >
+            @if(progress.width && details()?.showWidth){
+            {{ progress.width + "%" }}
+            }
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

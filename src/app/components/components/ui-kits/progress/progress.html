@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <app-common-progress-bar [details]="progressData.basicProgressBar" />
+      <div class="row">
+        <div class="col-xl-6">
+          <app-common-progress-bar [details]="progressData.stripedProgress" />
+        </div>
+        <div class="col-xl-6">
+          <app-common-progress-bar [details]="progressData.animatedProgress" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6">
+          <app-multiple-progress-bar />
+        </div>
+        <div class="col-xl-6">
+          <app-number-step-progress />
+        </div>
+      </div>
+      <app-custom-progress-bar />
+      <div class="row">
+        <div class="col-xl-6">
+          <app-small-progress-bar />
+        </div>
+        <div class="col-xl-6">
+          <app-large-progress-bar />
+        </div>
+      </div>
+      <app-custom-height-progress-bar />
+    </div>
+  </div>
+</div>

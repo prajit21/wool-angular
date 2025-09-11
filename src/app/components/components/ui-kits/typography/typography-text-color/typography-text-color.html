@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-header">
+    <h3 class="mb-0">Text color</h3>
+    <p class="f-m-light mt-1">You can Give text color by using <code>txt-*</code> class</p>
+  </div>
+  <div class="card-body">
+    <div class="d-flex flex-column gap-2">
+      @for(details of textColor; track details){
+        <p class="txt-{{ details }} mb-0">This is {{ details | titlecase }} text You can archive this adding<code>.txt-{{ details }}</code> class</p>
+      }
+    </div>
+  </div>
+</div>

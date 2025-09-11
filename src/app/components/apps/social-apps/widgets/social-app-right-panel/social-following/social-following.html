@@ -1,0 +1,9 @@
+@for(details of following; track details){
+  <div class="d-flex">
+    <img class="img-50 img-fluid m-r-20 rounded-circle" alt="" [src]="details.profile">
+    <div class="flex-grow-1">
+      <span class="d-block">{{ details.name }}</span>
+      <a href="javascript:void(0)">Add Friend</a>
+    </div>
+  </div>
+}

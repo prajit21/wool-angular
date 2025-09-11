@@ -1,0 +1,31 @@
+<div class="modal-header modal-copy-header">
+  <h5 class="headerTitle mb-0">Customizer configuration</h5>
+  <button type="button" class="btn-close" aria-label="Close" (click)="closeModal()">
+  </button>
+</div>
+<div class="modal-body">
+  <div class="modal-body config-popup">
+    <div class="row">
+      <p>To replace our design with your desired theme. Please do configuration as mention </p>
+      <p> <b> Path : src > app > shared > services > layout.service.ts </b> </p>
+      <div>
+        <pre>
+          <code>
+public config = &#123;
+  settings&#58; &#123;
+      layout_type&#58; '{{layout.config.settings.layout_type}}',
+      layout_version&#58; '{{layout.config.settings.layout_version}}',
+      sidebar_type&#58; '{{layout.config.settings.sidebar_type}}',
+  &#125;,
+  color&#58; &#123;
+      primary_color&#58; '{{layout.config.color.primary}}',
+      secondary_color&#58; '{{layout.config.color.secondary}}'
+  &#125;
+&#125;
+          </code>
+        </pre>
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary mt-2" (click)="copyText(this.layout.config)">Copy Json</button>
+</div>

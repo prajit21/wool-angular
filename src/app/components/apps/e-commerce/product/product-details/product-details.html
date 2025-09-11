@@ -1,0 +1,43 @@
+<div class="row">
+  @for(details of listData; track details){
+    <div [class.col-xl-6]="col_xl_6" [class.col-sm-6]="col_sm_6" [class.col-xl-4]="col_xl_4" [class.col-sm-4]="col_sm_4"
+         [class.col-xl-3]="col_xl_3" [class.col-sm-3]="col_sm_3" [class.col-xl-2]="col_xl_2" [class.col-xl-12]="col_xl_12">
+      <div class="card">
+        <div class="product-box">
+          <div class="product-img">
+            <!-- Ribbion For Offers & Sale -->
+            @if(details.status === 'Sale'){
+              <div class="ribbon ribbon-danger">{{details.status}}</div>
+            }@else if(details.status === '50%'){
+              <div class="ribbon ribbon-success ribbon-right">{{details.status}}</div>
+            }@else if(details.status === 'Hot'){
+              <div class="ribbon ribbon-clip ribbon-warning">{{details.status}}</div>
+            }@else if(details.status === 'love'){
+              <div class="ribbon ribbon-bookmark ribbon-vertical-right ribbon-info"><i class="icofont icofont-love"></i></div>
+            }@else if(details.status === 'gift'){
+              <div class="ribbon ribbon-secondary ribbon-vertical-left"><i class="icon-gift"></i></div>
+            }
+            <img class="img-fluid" [src]="details.img" alt="">
+            <div class="product-hover">
+              <ul>
+                <li><a href="javascript:void(0)" [routerLink]="['/e-commerce/cart']"><i class="icon-shopping-cart"></i></a></li>
+                <li><a href="javascript:void(0)" (click)="openModal(details)"><i class="icon-eye"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-details">
+            <div class="rating">
+              <ngb-rating [(rate)]="details.rating" class="font-warning" />
+            </div><a href="javascript:void(0)">
+              <h4>{{ details.productName }}</h4>
+            </a>
+            <p>{{ details.aboutProduct }}</p>
+            <div class="product-price">${{ details.discountPrice }}
+              <del>${{ details.price }} </del>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+</div>

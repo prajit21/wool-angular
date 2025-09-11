@@ -1,0 +1,38 @@
+<div class="card live-price">
+  <app-title [title]="'Live Prices'" />
+  <div class="card-body pt-0">
+    <div class="table-responsive custom-scrollbar">
+      <table class="table display" style="width:100%">
+        <tbody>
+          @for(details of livePrice; track details){
+            <tr>
+              <td>
+                <div class="d-flex gap-2">
+                  <div class="flex-shrink-0">
+                    <app-svg-icon [icon]="details.data.icon" [class]="'animation'" />
+                  </div>
+                  <div class="flex-grow-1">
+                    <h6 class="f-w-600">{{ details.data.currencyName }}</h6>
+                    <p>{{ details.data.currencySymbol }}</p>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div id="priceChart1">
+                  <apx-chart [series]="details.data.series" [chart]="details.data.chart" [fill]="details.data.fill"
+                             [colors]="details.data.colors" [stroke]="details.data.stroke" [tooltip]="details.data.tooltip" />
+                </div>
+              </td>
+              <td>
+                <div class="flex-grow-1">
+                  <h6 class="f-w-600">${{ details.data.price }}</h6>
+                  <p>{{ details.data.margin }}</p>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

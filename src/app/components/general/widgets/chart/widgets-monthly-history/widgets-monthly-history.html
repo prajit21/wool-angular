@@ -1,0 +1,17 @@
+<div class="card o-hidden">
+  <app-title [title]="'Monthly History'" />
+  <div class="bar-chart-widget">
+    <div class="bottom-content card-body">
+      <div class="row">
+        <div class="col-12">
+          <div id="chart-widget4">
+            <apx-chart [series]="monthlyHistory.series" [chart]="monthlyHistory.chart" [plotOptions]="monthlyHistory.plotOptions"
+                       [dataLabels]="monthlyHistory.dataLabels" [stroke]="monthlyHistory.stroke" [xaxis]="monthlyHistory.xaxis"
+                       [yaxis]="monthlyHistory.yaxis" [colors]="monthlyHistory.colors" [fill]="monthlyHistory.fill"
+                       [tooltip]="monthlyHistory.tooltip" [responsive]="monthlyHistory.responsive" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+export const touchSpinDetails = [
+  {
+    id: 1,
+    defaultValue: 0,
+    outlinedValue: 0,
+    roundedValue: 0,
+    color: 'primary',
+  },
+  {
+    id: 2,
+    defaultValue: 2,
+    outlinedValue: 2,
+    roundedValue: 2,
+    color: 'secondary',
+  },
+  {
+    id: 3,
+    defaultValue: 1,
+    outlinedValue: 1,
+    roundedValue: 1,
+    color: 'success',
+  },
+  {
+    id: 4,
+    defaultValue: 8,
+    outlinedValue: 8,
+    roundedValue: 8,
+    color: 'danger',
+  },
+  {
+    id: 5,
+    defaultValue: 3,
+    outlinedValue: 3,
+    roundedValue: 3,
+    color: 'warning',
+  },
+  {
+    id: 6,
+    defaultValue: 9,
+    outlinedValue: 9,
+    roundedValue: 9,
+    color: 'info',
+  },
+  {
+    id: 7,
+    defaultValue: 4,
+    outlinedValue: 4,
+    roundedValue: 4,
+    color: 'dark',
+  },
+];

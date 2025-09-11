@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Active lists </h3>
+    <p class="f-m-light mt-1">
+      Use<code>.active </code>to a<code>.list-group-item</code> to indicate the current active.</p>
+  </div>
+  <div class="card-body">
+    <ul class="list-group">
+      @for(details of activeList; track details){
+        <li class="list-group-item" [ngClass]="{ 'active bg-warning-light' : details.active }">
+          <i class="icofont icofont-arrow-right"> </i>{{ details.item }}
+        </li>
+      }
+    </ul>
+  </div>
+</div>

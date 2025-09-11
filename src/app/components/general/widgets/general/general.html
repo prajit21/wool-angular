@@ -1,0 +1,47 @@
+<div class="container-fluid widget-page">
+  <div class="row">
+    @for(details of currencyChart; track details){
+    <div class="col-sm-4 col-xxl-2">
+      <app-general-common-currency [currency]="details" />
+    </div>
+    } @for(details of averageDayCharts; track details){
+    <div class="col-xxl-3 col-sm-6">
+      <app-general-common-average-of-day [average]="details" />
+    </div>
+    } @for(details of productStatusDetails; track details){
+    <div class="col-sm-6 col-xl-3 col-lg-6 box-col-6">
+      <app-general-common-product-status [status]="details" />
+    </div>
+    }
+    <div class="col-xxl-3 col-xl-4 col-md-6 box-col-6">
+      <app-general-courses />
+    </div>
+    <div class="col-xxl-4 col-xl-5 col-md-6 box-col-6">
+      <div class="row">
+        <div class="col-xl-12">
+          <app-general-total-users />
+        </div>
+        <div class="col-xl-12">
+          <app-general-followers-growth />
+        </div>
+      </div>
+    </div>
+    <div class="col-xxl-5 col-xl-3 col-md-12 box-col-12">
+      <app-general-visitor-chart />
+    </div>
+    @for(details of socialMedia; track details){
+    <div class="col-xl-3 col-sm-6">
+      <app-general-social-media [social]="details" />
+    </div>
+    }
+    <div class="col-xxl-5 col-xl-8 box-col-12">
+      <app-general-all-details />
+    </div>
+    <div class="col-xxl-3 col-xl-4 col-sm-6 box-col-6">
+      <app-general-balance />
+    </div>
+    <div class="col-xl-4 d-xxl-block d-xl-none col-sm-6 box-col-6">
+      <app-general-calender />
+    </div>
+  </div>
+</div>

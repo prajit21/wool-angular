@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 box-col-12">
+      <div class="card">
+        <div class="card-header">
+          <h3>MASONRY GALLERY</h3>
+        </div>
+        <div class="card-body photoswipe-pb-responsive">
+          <div class="my-gallery row grid gallery" gallerize>
+            <ngx-masonry [options]="masonryOptions" style="width: 100%;" [ordered]="true">
+              @for (details of masonryItems; track details ) {
+              <div class="col-md-3 col-sm-6 grid-item" ngxMasonryItem>
+                <a href="javascript:void(0)" itemprop="contentUrl">
+                  <img class="img-thumbnail" [src]="details.image" itemprop="thumbnail" alt="Image description">
+                </a>
+              </div>
+              }
+            </ngx-masonry>
+            <!-- <ngx-masonry [ordered]="true" [options]="masonryOptions">
+              @for(details of masonryItems; track details){
+                <figure class="col-md-3 col-sm-6 grid-item" ngxMasonryItem style="width: 355px;">
+                  <a href="javascript:void(0)">
+                    <img class="img-thumbnail" [src]="details.image" alt="Image description">
+                  </a>
+                </figure>
+              }
+            </ngx-masonry> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

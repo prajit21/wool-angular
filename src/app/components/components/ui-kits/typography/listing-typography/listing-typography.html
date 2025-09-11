@@ -1,0 +1,52 @@
+<div class="card">
+  <div class="card-header">
+    <h3 class="mb-0">Listing typography</h3>
+    <p class="f-m-light mt-1">
+      All typography list:- <code>&lt;ul&gt;</code>,<code>&lt;ol&gt;</code> &amp;
+      <code>&lt;dl&gt;</code>
+    </p>
+  </div>
+  <div class="card-body">
+    <div class="row g-3">
+      <div class="col-md-6 col-xxl-4">
+        <div class="card-wrapper border rounded-3">
+          <h6 class="sub-title fw-bold">Unorder list</h6>
+          <ul>
+            @for(details of unOrderedList; track details){
+            <li>{{ details.item }}</li>
+            }
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 col-xxl-4">
+        <div class="card-wrapper border rounded-3 h-100">
+          <h6 class="sub-title fw-bold">Order list</h6>
+          <ol>
+            @for(data of orderList; track data){
+            <li>
+              {{ data.item }} @if(data.children){
+              <ol>
+                @for(item of data.children; track item) {
+                <li>{{ item.item }}</li>
+                }
+              </ol>
+              }
+            </li>
+            }
+          </ol>
+        </div>
+      </div>
+      <div class="col-md-12 col-xxl-4">
+        <div class="card-wrapper border rounded-3">
+          <h6 class="sub-title fw-bold">Description list</h6>
+          <dl>
+            @for(details of descriptionList; track details){
+            <dt>{{ details.title }}</dt>
+            <dd>{{ details.author }}</dd>
+            }
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

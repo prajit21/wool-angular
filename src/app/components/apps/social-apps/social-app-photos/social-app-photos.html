@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="my-gallery card-body row gallery-with-description" itemscope="" gallerize>
+        @for(details of socialAppPhoto; track details){
+          <figure class="col-xl-3 col-sm-6" itemprop="associatedMedia" itemscope="" >
+            <a href="javascript:void(0)" itemprop="contentUrl" data-size="1600x950">
+              <img [src]="details.srcUrl" itemprop="thumbnail" alt="Image description">
+              <div class="caption">
+                <h4>{{ details.name }}</h4>
+                <p>{{ details.description }}</p>
+              </div>
+            </a>
+          </figure>
+        }
+      </div>
+    </div>
+  </div>
+</div>

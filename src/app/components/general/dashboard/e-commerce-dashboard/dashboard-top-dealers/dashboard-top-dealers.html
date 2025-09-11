@@ -1,0 +1,48 @@
+<div class="card top-dealer-sec">
+  <div class="card-header card-no-border">
+    <div class="header-top d-sm-flex justify-content-between align-items-center">
+      <h3>Top Dealer</h3>
+      <div class="center-content">
+        <p class="d-flex"><span class="bg-light-primary me-1">
+          <app-svg-icon [icon]="'arrow-down'" />
+          </span><span class="font-primary me-1">635 Dealer</span><span>65% More Than Last Year</span></p>
+      </div>
+      <div class="dropdown" ngbDropdown>
+        <button class="btn dropdown-toggle yearly" id="dropdownMenuButton4" type="button" ngbDropdownToggle>Yearly</button>
+        <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+          <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Today</a>
+          <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Tomorrow</a>
+          <a class="dropdown-item" href="javascript:void(0)" ngbDropdownItem>Yesterday </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-body overflow-hidden pt-0">
+    <div class="owl-carousel owl-theme owl-loaded" id="owl-carousel-14">
+      <div class="item">
+        <div class="row">
+          @for(details of topDealers; track details){
+            <div class="col-12">
+              <div class="owl-carousel-16 owl-carousel owl-theme" style="display: block;">
+                <owl-carousel-o [options]="options">
+                  @for(item of details.items; track item){
+                    <ng-template carouselSlide>
+                      <div class="item">
+                        <div class="card">
+                          <div class="top-dealerbox text-center"><img class="card-img-top" [src]="item.image" alt="...">
+                            <h6>{{ item.name }}</h6>
+                            <p>{{ item.location }}</p><a class="btn btn-rounded" href="javascript:void(0)" [routerLink]="['/social-app']">View More</a>
+                          </div>
+                        </div>
+                      </div>
+                    </ng-template>
+                  }
+                </owl-carousel-o>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="card">
+  <div class="profile-img-style">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="d-flex">
+          <img
+            class="img-thumbnail rounded-circle me-3"
+            [src]="postDetails()?.userProfile"
+            alt="Generic placeholder image"
+          />
+          <div class="flex-grow-1 align-self-center">
+            <h4 class="mt-0 user-name">{{ postDetails()?.name }}</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 align-self-center">
+        <div class="float-sm-end"><small>{{ postDetails()?.time }}</small></div>
+      </div>
+    </div>
+    <hr />
+    <p>{{ postDetails()?.desc }}</p>
+    @if(postDetails()?.image ){
+    <div class="img-container">
+      <div class="my-gallery" id="aniimated-thumbnials" itemscope="">
+        <figure itemprop="associatedMedia" itemscope="">
+          <a href="javascript:void(0)" itemprop="contentUrl" data-size="1600x950">
+            <img
+              class="img-fluid rounded"
+              [src]="postDetails()?.image"
+              itemprop="thumbnail"
+              alt="gallery"
+          /></a>
+          <figcaption itemprop="caption description">Image caption 1</figcaption>
+        </figure>
+      </div>
+    </div>
+    }
+    <div class="like-comment" [class.mt-4]="!postDetails()?.image">
+      <ul class="list-inline">
+        <li class="list-inline-item border-right pe-3">
+          <label class="m-0"
+            ><a href="javascript:void(0)"><i class="fa fa-heart"></i></a>  Like</label
+          ><span class="ms-2 counter">{{ postDetails()?.like }}</span>
+        </li>
+        <li class="list-inline-item ms-2">
+          <label class="m-0"
+            ><a href="javascript:void(0)"><i class="fa fa-comment"></i></a>  Comment</label
+          ><span class="ms-2 counter">{{ postDetails()?.comment }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

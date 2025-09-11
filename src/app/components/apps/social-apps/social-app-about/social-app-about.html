@@ -1,0 +1,86 @@
+<div class="row">
+  <div class="col-xl-3 xl-40 col-lg-12 col-md-5 box-col-4">
+    <app-social-app-left-panel />
+  </div>
+  <div class="col-xl-6 xl-60 col-lg-12 col-md-7 box-col-8e">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <h5>Pepole You May Know</h5>
+          </div>
+          <div class="card-body avatar-showcase">
+            <app-social-app-people />
+          </div>
+        </div>
+      </div>
+      @for(details of hobbiesEductionDetails; track details){
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header social-header">
+            <h5>
+              <span>{{ details.heading}}</span>
+              <span class="pull-right">
+                <app-feather-icons [icon]="'more-vertical'" />
+              </span>
+            </h5>
+          </div>
+          <div class="card-body">
+            @for(data of details.data; track data){
+            <div class="row details-about">
+              @for(subData of data.details; track subData){
+              <div class="col-sm-6">
+                <div class="your-details" [class.your-details-xs]="subData.id % 2 === 0">
+                  <span class="f-w-700 mb-2 d-block">{{ subData.title }}</span>
+                  @if(subData.year){
+                  <p>{{ subData.year }}</p>
+                  }
+                  <p>{{ subData.desc }}</p>
+                </div>
+              </div>
+              }
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+      }
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <h5>Viewed Your Profile</h5>
+          </div>
+          <div class="card-body avatar-showcase">
+            <app-social-app-people />
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <h5>Activity Log</h5>
+          </div>
+          <div class="card-body">
+            <div class="activity-log">
+              @for(details of activityLogDetails; track details){
+              <div class="my-activity">
+                <h6 class="f-w-700 mb-3">{{ details.title }}</h6>
+                @for(data of details.data; track data){
+                <p>
+                  <span>
+                    <app-feather-icons [icon]="data.icon" [class]="'m-r-20'" /> </span
+                  >{{ data.data }}
+                </p>
+                }
+              </div>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-3 xl-100 box-col-12">
+    <app-social-app-right-panel />
+  </div>
+</div>

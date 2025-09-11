@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Without borders style</h3>
+    <p class="f-m-light mt-1">
+      By adding <code>.plain-style </code>class to <code>.mega-inline</code> You can archive this style</p>
+  </div>
+  <div class="card-body">
+    <form class="mega-inline plain-style">
+      <div class="row">
+        @for(details of withoutBorder; track details){
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="d-flex p-20">
+                <div class="form-check checkbox checkbox-{{ details.color }} m-0">
+                  <input class="form-check-input" id="{{ details.id }}" type="checkbox" [checked]=details.checked>
+                  <label class="form-check-label" for="{{ details.id }}">
+                    <span class="flex-grow-1 megaoption-space">
+                      <span class="mt-0 mega-title-badge">${{ details.price }}
+                        <span class="badge badge-{{ details.color }} pull-right digits">{{ details.tag }}</span>
+                      </span>
+                      <span>{{ details.text }}</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </form>
+  </div>
+  <div class="card-footer text-end">
+    <button class="btn btn-warning m-r-15" type="submit">Submit</button>
+    <button class="btn bg-light-warning" type="submit">Cancel</button>
+  </div>
+</div>

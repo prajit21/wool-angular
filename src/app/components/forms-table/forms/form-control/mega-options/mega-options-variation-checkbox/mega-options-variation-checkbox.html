@@ -1,0 +1,48 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Variation checkbox </h3>
+    <p class="f-m-light mt-1">
+      We can create any creative design by using <code>(type='checkbox')</code>attribute.</p>
+  </div>
+  <div class="card-body">
+    <div class="row g-3">
+      <div class="col-xl-4 col-md-6">
+        <div class="card-wrapper border rounded-3">
+          <h6 class="sub-title fw-bold">Which of the following activities do you enjoy doing in your free time?</h6>
+          @for(details of variationCheckbox; track details){
+            <div class="payment-wrapper">
+              <div class="payment-first">
+                <div class="form-check checkbox checkbox-{{ details.color }}">
+                  <input class="form-check-input" id="{{ details.id }}" type="checkbox" [checked]="details.checked">
+                  <label class="form-check-label mb-0" for="{{ details.id }}">{{ details.text }} </label>
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+      <div class="col-xl-8 col-md-6">
+        <div class="card-wrapper border rounded-3 h-100 checkbox-checked">
+          <section class="main-upgrade"><i class="fa fa-rocket"></i>
+            <h6 class="mb-2">It&apos;s time to <span class="txt-primary">upgrade</span></h6>
+            <p class="text-muted mb-2">Select the theme that best suits your requirements, and you're ready to go!</p>
+            <div class="variation-box">
+              @for(details of themeSale; track details){
+                <div class="selection-box">
+                  <input id="feature1" type="checkbox" [checked]="details.checked">
+                  <div class="custom--mega-checkbox">
+                    <ul class="d-flex flex-column">
+                      <li>{{ details.text }}</li>
+                      <li class="txt-danger">{{ details.sale }} Sales</li>
+                      <li>+ ${{ details.price }}</li>
+                    </ul>
+                  </div>
+                </div>
+              }
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

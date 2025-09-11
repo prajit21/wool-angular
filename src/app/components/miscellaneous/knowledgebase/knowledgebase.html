@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="knowledgebase-bg bg-center bg-size" [ngStyle]="{'background-image': 'url(assets/images/knowledgebase/bg_1.jpg)',
+                                                        'background-size': 'cover',
+                                                        'background-position': 'center center',
+                                                        'display': 'block'}">
+        <img class="bg-img-cover bg-center" src="assets/images/knowledgebase/bg_1.jpg" alt="looginpage" style="display: none;">
+      </div>
+      <div class="knowledgebase-search">
+        <div>
+          <h3>How Can I help you?</h3>
+          <form class="form-inline">
+            <div class="form-group w-100">
+              <app-feather-icons [icon]="'search'" />
+              <input class="form-control-plaintext w-100" type="text" placeholder="Type question here" title="">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    @for(details of knowledgebaseDetails; track details){
+      <div class="col-xl-4" [ngClass]="details.colClass">
+        <app-knowledgebase-details [details]="details" />
+      </div>
+    }
+    <div class="col-sm-12">
+      <app-knowledgebase-article />
+    </div>
+    <div class="col-lg-12">
+      <app-knowledgebase-featured-tutorials />
+    </div>
+    <div class="col-lg-12 faq-articles">
+      <app-knowledgebase-article-video />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="card card-absolute">
+  <div class="card-header bg-{{ details()?.bgColor }}">
+    <h5 class="txt-light">{{ details()?.heading }}</h5>
+  </div>
+  <div class="card-body">
+    <div class="d-flex list-behavior-1 align-items-center">
+      <div class="flex-shrink-0">
+        <img class="tab-img img-fluid" [src]="details()?.img" alt="home" />
+      </div>
+      <div class="flex-grow-1">
+        <p class="mb-xl-0 mb-sm-4">{{ details()?.text }}</p>
+      </div>
+    </div>
+  </div>
+</div>

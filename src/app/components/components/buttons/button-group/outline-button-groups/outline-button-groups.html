@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-header">
+    <h3>{{ details()?.title }}</h3>
+  </div>
+  <div class="card-body btn-group-showcase">
+    <div class="row">
+      @for(color of buttonColor(); track color){
+      <div class="col-xxl-4 col-md-6 col-sm-12">
+        <div class="btn-group" [ngClass]="details()?.buttonClass">
+          <button class="btn btn-outline-{{ color }}" type="button">Left</button>
+          <button class="btn btn-outline-{{ color }}" type="button">Middle</button>
+          <button class="btn btn-outline-{{ color }}" type="button">Right</button>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

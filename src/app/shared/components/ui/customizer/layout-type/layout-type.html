@@ -1,0 +1,48 @@
+<h5>Layout Type</h5>
+<ul class="main-layout layout-grid">
+  <li [class.active]="layoutType === 'ltr'" (click)="changeType('ltr')">
+    <div class="header bg-light">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="body">
+      <ul>
+        <li class="bg-light sidebar"></li>
+        <li class="bg-light body"><span class="badge badge-primary">LTR</span></li>
+      </ul>
+    </div>
+  </li>
+  <li [class.active]="layoutType === 'rtl'" (click)="changeType('rtl')">
+    <div class="header bg-light">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="body">
+      <ul>
+        <li class="bg-light body"><span class="badge badge-primary">RTL</span></li>
+        <li class="bg-light sidebar"></li>
+      </ul>
+    </div>
+  </li>
+  <li class="box-layout px-3" [class.active]="layoutType === 'box'" (click)="changeType('box')">
+    <div class="header bg-light">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="body">
+      <ul>
+        <li class="bg-light sidebar"></li>
+        <li class="bg-light body"><span class="badge badge-primary">Box</span></li>
+      </ul>
+    </div>
+  </li>
+</ul>

@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-header">
+    <h3>{{ backGroundColor.header }}</h3>
+    <p class="f-m-light mt-1" [innerHTML]="backGroundColor.desc"></p>
+  </div>
+  <div class="card-body">
+    <div class="row g-3">
+      @for(details of backGroundColor.titleData; track details){
+        <div [class]="details.colClass">
+          <div [class]="details.divClass">
+            <h6 class="mb-3">{{ details.title }}</h6>
+            @for(data of details.data; track data){
+              <div class="helper-common-box">
+                <div [class]="data.textClass"></div><span>{{ data.text }}</span>
+              </div>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

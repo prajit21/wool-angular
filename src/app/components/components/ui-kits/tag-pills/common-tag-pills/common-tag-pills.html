@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header">
+    <h3>{{ details()?.header }}</h3>
+    <p class="f-m-light mt-1" [innerHTML]="details()?.desc"></p>
+  </div>
+  <div class="card-body">
+    <div class="badge-spacing">
+      @for(tag of details()?.data; track tag){ @if(tag.text){
+      <span class="badge" [ngClass]="tag.class">{{ tag.text }}</span>
+      } @if(tag.number){
+      <a class="badge" [ngClass]="tag.class" href="javascript:void(0)">{{ tag.number }}</a>
+      } @if(tag.icon){
+      <a class="badge" [ngClass]="tag.class" href="javascript:void(0)">
+        <app-feather-icons [icon]="tag.icon" />
+      </a>
+      } }
+    </div>
+  </div>
+</div>

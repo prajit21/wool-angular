@@ -1,0 +1,20 @@
+<div class="card sales-chart">
+  <app-title [title]="'Sales Analytics'" [dropdown]=true />
+  <div class="card-body pt-0">
+    <ul>
+      <li class="me-3"><span class="circle bg-primary me-1"> </span>
+        <p>Pending<span>($4,875)</span></p>
+      </li>
+      <li> <span class="circle bg-secondary me-1"></span>
+        <p>Complete <span>($1,450)</span></p>
+      </li>
+    </ul>
+    <div class="legend"> </div>
+    <div id="sales-analytics">
+      <apx-chart [series]="salesAnalyticsChart.series" [chart]="salesAnalyticsChart.chart" [grid]="salesAnalyticsChart.grid"
+                 [stroke]="salesAnalyticsChart.stroke" [dataLabels]="salesAnalyticsChart.dataLabels" [fill]="salesAnalyticsChart.fill"
+                 [xaxis]="salesAnalyticsChart.xaxis" [yaxis]="salesAnalyticsChart.yaxis" [legend]="salesAnalyticsChart.legend"
+                 [colors]="salesAnalyticsChart.colors" />
+    </div>
+  </div>
+</div>

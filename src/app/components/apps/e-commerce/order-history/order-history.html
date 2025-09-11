@@ -1,0 +1,137 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      @for(details of orderDetails; track details){
+      <div class="card">
+        <div class="card-header card-no-border pb-0">
+          <h3>{{ details.title }}</h3>
+        </div>
+        <div class="card-body">
+          <div class="row g-sm-4 g-3">
+            @for(product of details.details; track product){
+            <div class="col-xl-4 col-md-6">
+              <div class="prooduct-details-box">
+                <div class="d-flex">
+                  <img class="align-self-center img-fluid img-60" [src]="product.img" alt="#" />
+                  <div class="flex-grow-1 ms-3">
+                    <div class="product-name">
+                      <h6><a href="javascript:void(0)">{{ product.name }}</a></h6>
+                    </div>
+                    <div class="rating">
+                      <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i
+                      ><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    <div class="price d-flex">
+                      <div class="text-muted">Price</div>
+                      : {{ product.price }}$
+                    </div>
+                    <div class="avaiabilty">
+                      <div class="text-success">{{ product.stock }}</div>
+                    </div>
+                    <a
+                      class="btn btn-xs"
+                      [ngClass]="{ 'btn-primary': product.tag === 'Processing',
+                                                                 'btn-success': product.tag === 'Shipped',
+                                                                 'btn-danger': product.tag === 'Cancelled'}"
+                      href="javascript:void(0)"
+                      >{{ product.tag }}</a
+                    >
+                    <app-feather-icons
+                      [icon]="'x'"
+                      [class]="'close'"
+                      (click)="remove(details.id,product)"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header card-no-border pb-0">
+          <h3>Datatable order history</h3>
+        </div>
+        <div class="card-body">
+          <div class="order-history table-responsive custom-scrollbar">
+            <div class="dataTables_wrapper no-footer">
+              <div class="dataTables_length" id="basic-1_length">
+                <label
+                  >Show
+                  <select name="pageSize" [(ngModel)]="service.pageSize">
+                    <option [ngValue]="10">10</option>
+                    <option [ngValue]="25">25</option>
+                    <option [ngValue]="50">50</option>
+                    <option [ngValue]="100">100</option>
+                  </select>
+                  entries
+                </label>
+              </div>
+              <div id="basic-1_filter" class="dataTables_filter">
+                <label
+                  >Search:
+                  <input type="search" name="searchTerm" [(ngModel)]="service.searchTerm" />
+                </label>
+                @if (service.loading$ | async) {
+                <span class="col col-form-label">Loading...</span>
+                }
+              </div>
+              <table class="table table-bordernone display" id="basic-1">
+                <thead>
+                  <tr>
+                    <th scope="col">Prdouct</th>
+                    <th scope="col" appProductOrder="name" (sortOrder)="onSort($event)">
+                      Prdouct name
+                    </th>
+                    <th scope="col" appProductOrder="size" (sortOrder)="onSort($event)">Size</th>
+                    <th scope="col" appProductOrder="color" (sortOrder)="onSort($event)">Color</th>
+                    <th scope="col" appProductOrder="article_number" (sortOrder)="onSort($event)">
+                      Article number
+                    </th>
+                    <th scope="col" appProductOrder="units" (sortOrder)="onSort($event)">Units</th>
+                    <th scope="col" appProductOrder="price" (sortOrder)="onSort($event)">Price</th>
+                    <th scope="col"><i class="fa fa-angle-down"></i></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @for (product of product$ | async; track product){
+                  <tr>
+                    <td><img class="img-fluid img-30" [src]="product.img" alt="#" /></td>
+                    <td>
+                      <div class="product-name">
+                        <a href="javascript:void(0)">{{ product.name }}</a>
+                        <div class="order-process">
+                          <span class="order-process-circle"></span>{{ product.tag }}
+                        </div>
+                      </div>
+                    </td>
+                    <td>{{ product.size }}</td>
+                    <td>{{ product.color }}</td>
+                    <td>{{ product.article_number }}</td>
+                    <td>{{ product.units }}</td>
+                    <td>${{ product.price }}</td>
+                    <td>
+                      <app-feather-icons [icon]="'more-vertical'" />
+                    </td>
+                  </tr>
+                  }
+                </tbody>
+              </table>
+              <div class="dataTables_paginate paging_simple_numbers" id="basic-1_paginate">
+                <ngb-pagination
+                  [collectionSize]="(total$ | async)!"
+                  [(page)]="service.page"
+                  [pageSize]="service.pageSize"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="card profit">
+  <app-title [title]="'Profit'" [dropdown]=true />
+  <div class="card-body profit-earning">
+    <div class="d-flex">
+      <div class="badge badge-rounded">
+        <app-svg-icon [icon]="'profit-up'" [class]="'bit-icon animation'" />
+      </div>
+      <div class="flex-grow-1">
+        <div class="d-flex">
+          <h2 class="me-2">$20.790,<span>00</span></h2><span class="bg-light-secondary me-2">
+            <app-svg-icon [icon]="'arrow-down'" />
+            </span><span class="font-secondary">- 12.32%</span>
+        </div>
+        <p>Earned this month</p>
+      </div>
+      <div id="profit-chart">
+        <apx-chart [series]="profitChart.series" [colors]="profitChart.colors" [chart]="profitChart.chart"
+                   [dataLabels]="profitChart.dataLabels" [plotOptions]="profitChart.plotOptions" [xaxis]="profitChart.xaxis"
+                   [responsive]="profitChart.responsive" />
+      </div>
+    </div>
+  </div>
+</div>

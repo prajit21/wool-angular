@@ -1,0 +1,69 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <div class="product-box row">
+      <div class="product-img col-lg-6">
+        <img class="img-fluid" [src]="productDetail()?.img" alt="" />
+      </div>
+      <div class="product-details col-lg-6 text-start">
+        <h4>{{ productDetail()?.productName }}</h4>
+        <div class="product-price">
+          ${{ productDetail()?.discountPrice }}
+          <del>${{ productDetail()?.price }} </del>
+        </div>
+        <div class="product-view">
+          <h4 class="f-w-600">Product Details</h4>
+          <p class="mb-0">{{ productDetail()?.description }}</p>
+        </div>
+        <div class="product-size">
+          <ul>
+            <li>
+              <button class="btn btn-outline-light" type="button">M</button>
+            </li>
+            <li>
+              <button class="btn btn-outline-light" type="button">L</button>
+            </li>
+            <li>
+              <button class="btn btn-outline-light" type="button">Xl</button>
+            </li>
+          </ul>
+        </div>
+        <div class="product-qnty">
+          <h4 class="f-w-600 mb-2">Quantity</h4>
+          <fieldset>
+            <div class="input-group bootstrap-touchspin" style="margin-bottom: 10px">
+              <button
+                class="btn btn-primary btn-square bootstrap-touchspin-down"
+                style="margin-right: 4px"
+                (click)="changeValue(-1)"
+              >
+                <i class="fa fa-minus"> </i>
+              </button>
+              <input
+                class="touchspin text-center form-control"
+                type="number"
+                value="{{ counter }}"
+                style="display: block"
+              />
+              <button
+                class="btn btn-primary btn-square bootstrap-touchspin-up"
+                style="margin-left: 4px"
+                (click)="changeValue(1)"
+              >
+                <i class="fa fa-plus"> </i>
+              </button>
+            </div>
+          </fieldset>
+          <div class="addcart-btn">
+            <a class="btn btn-primary" href="javascript:void(0)" (click)="addToCart()"
+              >Add to Cart</a
+            >
+            <a class="btn btn-primary ms-2" href="javascript:void(0)" (click)="viewDetails()"
+              >View Details</a
+            >
+          </div>
+        </div>
+      </div>
+      <button class="btn-close" type="button" (click)="closeModal()"></button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="card height-equal">
+  <div class="card-header">
+    <h3>Live alert</h3>
+    <p class="f-m-light mt-1">
+      Click the button below to show an alert,then dismiss it with the built-in close button.</p>
+  </div>
+  <div class="card-body live-dark">
+    @for(alert of array; track alert; let i = $index){
+      <div id="liveAlertPlaceholder">
+        <div>
+          <div class="alert alert-light-dark txt-dark mb-3 alert-dismissible" role="alert">
+            <div>Nice, you triggered this alert message!</div>
+            <button type="button" class="btn-close" (click)="closeAlert(i)"></button>
+          </div>
+        </div>
+      </div>
+    }
+    <button class="btn btn-dark" id="liveAlertBtn" type="button" (click)="addAlert()">Show live alert</button>
+  </div>
+</div>

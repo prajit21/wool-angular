@@ -1,0 +1,27 @@
+<div class="card height-equal radial-height">
+  <div class="card-body radial-progress-card">
+    <div>
+      <h4 class="mb-0">{{ average()?.averageTitle }}</h4>
+      <div class="sale-details">
+        <h4 class="font-{{ average()?.cardColor }} mb-0">{{ average()?.average }}</h4>
+        <span class="f-12 f-light f-w-500">
+          <app-feather-icons [icon]="'arrow-up'" />
+          {{ average()?.parsonage }}</span
+        >
+      </div>
+      <p class="f-light">{{ average()?.desc }}</p>
+    </div>
+    <div class="radial-chart-wrap">
+      <div id="radial-chart">
+        <apx-chart
+          [series]="average()?.series!"
+          [chart]="average()?.chart!"
+          [plotOptions]="average()?.plotOptions!"
+          [colors]="average()?.colors!"
+          [stroke]="average()?.stroke!"
+          [responsive]="average()?.responsive!"
+        />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Outlined touchspin</h3>
+    <p class="f-m-light mt-1">
+      Use the <code>.decrement-touchspin </code>and <code>.increment-touchspin </code>class.</p>
+  </div>
+  <div class="card-body common-flex">
+    @for(details of touchSpinDetails; track details){
+      <div class="touchspin-wrapper">
+        <button class="decrement-touchspin btn-touchspin spin-border-{{ details.color }}" (click)="changeValue(details.id,-1)"><i class="fa fa-minus"> </i></button>
+        <input class="input-touchspin spin-outline-{{ details.color }}" type="number" [value]="details.outlinedValue">
+        <button class="increment-touchspin btn-touchspin spin-border-{{ details.color }}" (click)="changeValue(details.id,1)"><i class="fa fa-plus"> </i></button>
+      </div>
+    }
+  </div>
+</div>

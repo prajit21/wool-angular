@@ -1,0 +1,67 @@
+<div class="card recent-activities common-table">
+  <app-title [title]="'Recent Trading Activities'" />
+  <div class="card-body pt-0">
+    <div class="table-responsive custom-scrollbar">
+      <div class="dataTables_wrapper  no-footer">
+        <div id="slling-card_filter" class="dataTables_filter">
+          <label>Search:<input type="search" class="" placeholder="" aria-controls="slling-card"></label>
+        </div>
+        <table class="table display" id="recent-trading" style="width:100% ;margin-top: 13px;">
+          <thead>
+            <tr>
+              <th>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="">
+                  <label class="form-check-label"></label>
+                </div>
+              </th>
+              <th>Name and type</th>
+              <th>Customer</th>
+              <th>ID and Status</th>
+              <th>Volume</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for(details of recentTradingActivity; track details){
+              <tr>
+                <td>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="form-check-label"></label>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-flex gap-2">
+                    <div class="flex-shrink-0">
+                      <app-svg-icon [icon]="details.icon" [class]="'animation'" />
+                    </div>
+                    <div class="flex-grow-1"><a href="javascript:void(0)" [routerLink]="['/letter-box']">
+                        <h6 class="f-w-600">{{ details.name }}</h6>
+                        <p>{{ details.type }}</p>
+                      </a></div>
+                  </div>
+                </td>
+                <td>
+                  <h6 class="f-w-600">{{ details.date }}</h6>
+                  <p>{{ details.time }}</p>
+                </td>
+                <td>
+                  <div class="d-flex gap-2">
+                    <p class="m-0">{{ details.total }}</p>
+                    <div class="progress">
+                      <div class="progress-bar bg-{{ details.progressBG }}" role="progressbar" [ngStyle]="{ 'width': details.status + '%'}" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <h6 class="f-w-600">{{ details.volume }}</h6>
+                  <p>{{ details.margin }}</p>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

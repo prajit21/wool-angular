@@ -1,0 +1,19 @@
+<div class="small-chart-widget chart-widgets-small">
+  <div class="card">
+    <app-title [title]="'Monthly Sales'" />
+    <div class="card"></div>
+    <div class="card-body">
+      <div class="chart-container">
+        <div class="row">
+          <div class="col-12">
+            <div id="chart-widget8">
+              <apx-chart [fill]="monthlySales.fill" [colors]="monthlySales.colors" [chart]="monthlySales.chart"
+                         [series]="monthlySales.series" [title]="monthlySales.title" [stroke]="monthlySales.stroke"
+                         [markers]="monthlySales.markers" [labels]="monthlySales.labels" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

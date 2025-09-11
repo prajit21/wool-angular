@@ -1,0 +1,19 @@
+<div class="card height-equal">
+  <div class="card-header">
+    <h3 class="mb-0">{{ details()?.title }}</h3>
+    <p class="mb-0 mt-1" [innerHTML]="details()?.desc"></p>
+  </div>
+  <div class="card"></div>
+  <div class="card-body avatar-showcase">
+    <div class="avatars">
+      @for(avatar of details()?.data; track avatar){
+      <div [class]="details()?.class">
+        <img [class]="avatar.imgClass" [src]="avatar.img" alt="javascript:void(0)" />
+        @if(avatar.status){
+        <div class="status status-{{ avatar.status }}"></div>
+        }
+      </div>
+      }
+    </div>
+  </div>
+</div>

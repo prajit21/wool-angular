@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Wikipedia Search</h3>
+    <span>A typeahead example that gets values from the WikipediaService</span>
+  </div>
+  <div class="card-body">
+    <div id="remote">
+      <form class="theme-form">
+        <div>
+          <input class="typeahead form-control" type="text" placeholder="" [class.is-invalid]="searchFailed" [ngbTypeahead]="search">
+          @if (searching) {
+          <small class="form-text text-muted">searching...</small>
+          }
+          @if (searchFailed) {
+          <div class="invalid-feedback">Sorry, suggestions could not be loaded.</div>
+          }
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

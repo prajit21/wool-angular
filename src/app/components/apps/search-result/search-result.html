@@ -1,0 +1,52 @@
+<div class="container-fluid search-page">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <form class="theme-form">
+            <div class="input-group m-0 flex-nowrap">
+              <input
+                class="form-control-plaintext"
+                type="search"
+                placeholder="Pixelstrap .."
+              /><span class="btn btn-primary input-group-text">Search</span>
+            </div>
+          </form>
+        </div>
+        <div class="card-body">
+          <div class="text-center">
+            <ul class="nav nav-tabs search-list" id="top-tab" role="tablist">
+              @for(tab of searchResultTabs; track tab){
+              <li class="nav-item bg-light-{{ tab.bgColor }}">
+                <a
+                  class="nav-link txt-{{ tab.bgColor }}"
+                  [class.active]="activeTab === tab.value  "
+                  id="setting-link"
+                  href="javascript:void(0)"
+                  role="tab"
+                  (click)="changeTab(tab.value)"
+                >
+                  @if(tab.icon){
+                  <i class="icon-{{ tab.icon }}"></i>
+                  } {{ tab.title }}
+                </a>
+              </li>
+              }
+            </ul>
+          </div>
+          <div class="tab-content" id="top-tabContent">
+            <div class="search-links tab-pane fade show active" id="all-links">
+              @if(activeTab === 'all'){
+              <app-search-result-all />
+              }@else if(activeTab === 'images'){
+              <app-search-result-images />
+              }@else if(activeTab === 'videos'){
+              <app-search-result-video />
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="card">
+  <app-title [title]="'Order Status'" [dropdown]="true" [dropdownText]="'Today'" />
+  <div class="card-body">
+    <div class="chart-container progress-chart">
+      @for(details of orderStatus; track details){
+        <div id="{{ details.data.id}}">
+          <apx-chart [chart]="details.data.chart" [plotOptions]="details.data.plotOptions"
+                     [colors]="details.data.colors" [stroke]="details.data.stroke"
+                     [fill]="details.data.fill" [series]="details.data.series"
+                     [title]="details.data.title" [subtitle]="details.data.subtitle"
+                     [tooltip]="details.data.tooltip" [xaxis]="details.data.xaxis"
+                     [yaxis]="details.data.yaxis" [responsive]="details.data.responsive" />
+        </div>
+      }
+    </div>
+  </div>
+</div>

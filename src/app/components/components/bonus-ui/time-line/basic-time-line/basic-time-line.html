@@ -1,0 +1,22 @@
+<div class="card height-equal">
+  <div class="card-header">
+    <h3>Basic Timeline </h3>
+    <p class="f-m-light mt-1">
+      Use the <code>.main-basic-timeline </code>class through made basic timeline.</p>
+  </div>
+  <div class="card-body dark-timeline">
+    <ul>
+      @for(details of basicTimeline; track details){
+        <li class="d-flex">
+          <div class="timeline-dot-{{ details.dotClass }}"></div>
+          <div class="w-100 ms-3">
+            <p class="d-flex justify-content-between mb-2">
+              <span class="date-content light-background txt-dark">{{ details.date }}</span><span>{{ details.time }}</span></p>
+            <h5 class="f-w-700">{{ details.title }}<span class="dot-notification"></span></h5>
+            <p class="f-light">{{ details.desc }}</p>
+          </div>
+        </li>
+      }
+    </ul>
+  </div>
+</div>

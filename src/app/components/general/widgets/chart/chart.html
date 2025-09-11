@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="row">
+    @for(details of detailsChart; track details){
+    <div class="col-xl-4 col-md-12 box-col-12">
+      <app-widgets-details-chart [details]="details" />
+    </div>
+    }
+    <div class="row">
+      <div class="col-md-12 box-col-12">
+        <app-widgets-monthly-history />
+      </div>
+      <div class="col-xl-6 col-lg-12 box-col-6 xl-50">
+        <app-widgets-skill-status />
+      </div>
+      <div class="col-xl-6 col-lg-12 box-col-6 xl-50">
+        <app-widgets-order-status />
+      </div>
+    </div>
+    <div class="row">
+      <div class="xl-50 col-xl-7 col-lg-12">
+        <app-widgets-live-products />
+      </div>
+      <div class="xl-50 col-xl-5 col-lg-12">
+        <app-widgets-turn-over />
+      </div>
+      <div class="xl-50 col-xl-6 col-lg-12">
+        <app-widgets-crypto-currency-price />
+      </div>
+      <div class="xl-50 col-xl-6 col-lg-12">
+        <app-widgets-crypto-annotation />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 box-col-12">
+        <app-widgets-stoke-market />
+      </div>
+      <div class="col-xl-5 col-lg-12 box-col-12">
+        <app-widgets-finance />
+      </div>
+      <div class="col-xl-7 col-lg-12 box-col-6">
+        <app-widgets-order-status2 />
+      </div>
+      <div class="xl-50 col-xl-5 col-lg-12 box-col-6">
+        <app-widgets-monthly-sales />
+      </div>
+      <div class="xl-50 col-xl-7 col-lg-12 box-col-12">
+        <app-widgets-user />
+      </div>
+    </div>
+  </div>
+</div>

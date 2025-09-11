@@ -1,0 +1,30 @@
+<div class="card height-equal">
+  <div class="card-header card-no-border pb-0">
+    <h3>Current Rating Bar</h3>
+  </div>
+  <div class="card-body">
+    <div class="rating-container">
+      <div class="star-ratings">
+        <bar-rating [rate]="faoRate" (rateChange)="onFaoRate($event)" [max]="10">
+          <ng-template ratingActive>
+            <i class="fa fa-star fa-lg" style="color: #50e3c2"></i>
+          </ng-template>
+          <ng-template ratingInactive>
+            <i class="fa fa-star-o fa-lg" style="color: #d2d2d2"></i>
+          </ng-template>
+          <ng-template ratingFraction>
+            <i class="fa fa-star-half-o fa-lg" style="color: #50e3c2"></i>
+          </ng-template>
+        </bar-rating>
+        <p></p>
+        @if(!faoRated){
+          <p>Current rating: {{faoRate}}</p>
+        }@else if(faoRated){
+          <p>Your rating: {{faoRate}}
+            <i class="link fa fa-times-circle fa-lg" (click)="faoReset()"></i>
+          </p>
+        }
+      </div>
+    </div>
+  </div>
+</div>

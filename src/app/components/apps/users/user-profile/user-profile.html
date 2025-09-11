@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="user-profile">
+    <div class="row">
+      <!-- user profile first-style start-->
+      <div class="col-sm-12">
+        <app-user-details />
+      </div>
+      <!-- user profile first-style end-->
+      <!-- user profile second-style start-->
+      <div class="col-sm-12">
+        <app-user-single-post [postDetails]="postDetails1" />
+      </div>
+      <!-- user profile second-style end-->
+      <!-- user profile third-style start-->
+      <div class="col-sm-12">
+        <app-user-double-post />
+      </div>
+      <!-- user profile third-style end-->
+      <!-- user profile fourth-style start-->
+      <div class="col-sm-12">
+        <app-user-single-post [postDetails]="postDetails2" />
+      </div>
+      <!-- user profile fourth-style end-->
+      <!-- user profile fifth-style start-->
+      <div class="col-sm-12">
+        <app-user-left-side-post />
+      </div>
+    </div>
+  </div>
+</div>

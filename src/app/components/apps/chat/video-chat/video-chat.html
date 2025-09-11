@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col call-chat-sidebar">
+      <app-chat-contact />
+    </div>
+    <div class="col call-chat-body">
+      <div class="card">
+        <div class="card-body p-0">
+          <div class="row chat-box">
+            <!-- Chat right side start-->
+            <div class="col pr-xl-0 chat-right-aside">
+              <!-- chat start-->
+              <div class="chat">
+                <!-- chat-header start-->
+                <app-chat-header (menuOpen)="openMenu($event)" />
+                <!-- chat-header end-->
+                <!-- chat-history start-->
+                <div class="chat-history">
+                  <div class="row">
+                    <div class="col text-center pe-0 call-content">
+                      <div>
+                        <div class="total-time">
+                          <h2>36 : 56</h2>
+                        </div>
+                        <div class="call-icons">
+                          <ul class="list-inline">
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="icon-video-camera"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="icon-volume"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)"><i class="icon-user"></i></a></li>
+                          </ul>
+                        </div>
+                        <button class="btn btn-danger-gradien btn-block btn-lg">END CALL</button>
+                        <div class="receiver-img"><img src="assets/images/other-images/receiver-img.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="col-sm-7 ps-0 caller-img"><img class="img-fluid" src="assets/images/other-images/caller.jpg" alt=""></div>
+                  </div>
+                </div>
+                <!-- chat-history ends-->
+                <!-- chat end-->
+                <!-- Chat right side ends-->
+              </div>
+            </div>
+            <div class="col pl-xl-0 chat-menu" [class.show]="isShow">
+              <app-chat-menu />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

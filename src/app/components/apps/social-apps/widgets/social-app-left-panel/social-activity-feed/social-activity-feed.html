@@ -1,0 +1,12 @@
+@for(details of activityFeed; track details){
+  <div class="d-flex">
+    <img class="img-50 rounded-circle m-r-15" [src]="details.img" alt="">
+    <div class="flex-grow-1">
+      <span class="f-w-700 d-block">{{ details.name }}</span>
+      <p>{{ details.feed }}
+        <a href="javascript:void(0)">Photo</a>
+      </p>
+      <span class="light-span">{{ details.time }}</span>
+    </div>
+  </div>
+}

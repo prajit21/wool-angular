@@ -1,0 +1,48 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-3 xl-40 box-col-12">
+      <app-job-search-filter />
+    </div>
+    <div class="col-xl-9 xl-60 box-col-12">
+      @for(details of jobCards| slice:0:8; track details){
+        <div class="card" [ngClass]="{ 'ribbon-vertical-left-wrapper' : details.ribbon }">
+          @if(details.ribbon){
+          <div class="ribbon ribbon-bookmark ribbon-vertical-left ribbon-secondary">
+            <i class="icofont icofont-{{ details.ribbonIcon }}"></i>
+          </div>
+          }
+          <div class="job-search">
+            <div class="card-body">
+              <div class="d-flex"><img class="img-40 img-fluid m-r-20" [src]="details.image" alt="">
+                <div class="flex-grow-1">
+                  <h6 class="f-w-700"><a href="javascript:void(0)">{{ details.title }}</a>
+                    @if(details.tag){
+                    <span class="badge badge-{{ details.tagColor }} pull-right">{{ details.tagTitle }}</span>
+                    }@else if(details.time){
+                    <span class="pull-right">{{ details.timeText }}</span>
+                    }
+                  </h6>
+                  <p>{{ details.subTitle }}<span>
+                      <ngb-rating [rate]="details.rating" class="font-warning" />
+                    </span></p>
+                </div>
+              </div>
+              <p>{{ details.desc }}</p>
+            </div>
+          </div>
+        </div>
+      }
+      <div class="job-pagination">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination pagination-primary">
+            <li class="page-item disabled"><a class="page-link" href="javascript:void(0)">Previous</a></li>
+            <li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0)">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

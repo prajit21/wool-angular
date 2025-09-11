@@ -1,0 +1,15 @@
+<div class="card height-equal">
+  <div class="card-header">
+    <h3>Dismissing dark alert</h3>
+    <p class="f-m-light mt-1">Use the <code>.alert-dismissible</code> utility class to quickly remove the alerts.</p>
+  </div>
+  <div class="card-body">
+    @if(isShow){
+      <div class="alert alert-secondary dark alert-dismissible fade show" role="alert">
+        <app-feather-icons [icon]="'heart'" />
+        <p>Check your update! You should check in on some of those fields below.</p>
+        <button class="btn-close" type="button" (click)="dismissAlert()"></button>
+      </div>
+    }
+  </div>
+</div>

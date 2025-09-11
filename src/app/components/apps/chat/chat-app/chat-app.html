@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col call-chat-sidebar col-sm-12">
+      <app-chat-contact />
+    </div>
+    <div class="col call-chat-body">
+      <div class="card">
+        <div class="card-body p-0">
+          <div class="row chat-box">
+            <!-- Chat right side start-->
+            <div class="col pe-0 chat-right-aside">
+              <!-- chat start-->
+              <app-user-chat (menuOpen)="openMenu($event)" />
+            </div>
+            <div class="col ps-0 chat-menu" [class.show]="isShow">
+              <app-chat-menu />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

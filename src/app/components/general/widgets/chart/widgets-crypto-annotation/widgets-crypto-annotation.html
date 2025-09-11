@@ -1,0 +1,17 @@
+<div class="card">
+  <app-title [title]="'Crypto Annotations'" />
+  <div class="card-body">
+    <div class="chart-container">
+      <div class="row">
+        <div class="col-12">
+          <div id="crypto-annotation">
+            <apx-chart [series]="cryptoAnnotation.series" [chart]="cryptoAnnotation.chart" [annotations]="cryptoAnnotation.annotations"
+                       [dataLabels]="cryptoAnnotation.dataLabels" [stroke]="cryptoAnnotation.stroke" [grid]="cryptoAnnotation.grid"
+                       [title]="cryptoAnnotation.title" [colors]="cryptoAnnotation.colors" [labels]="cryptoAnnotation.labels"
+                       [xaxis]="cryptoAnnotation.xaxis" [responsive]="cryptoAnnotation.responsive" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

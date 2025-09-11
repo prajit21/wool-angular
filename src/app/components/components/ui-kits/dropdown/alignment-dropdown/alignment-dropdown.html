@@ -1,0 +1,20 @@
+<div class="card">
+  <div class="card-header">
+    <h3> Alignments</h3>
+    <p class="f-m-light mt-1">Use the <code>(dropstart/dropup/dropend)</code> this class through change dropdown directions.</p>
+  </div>
+  <div class="card-body rtl-dropdown">
+    <div class="common-flex">
+      @for(details of alignmentDropdown; track details){
+        <div class="btn-group" [ngClass]="details.class" ngbDropdown [placement]="details.alignment">
+          <button class="btn btn-{{ details.colorClass }} dropdown-toggle" type="button" ngbDropdownToggle>{{ details.title }}</button>
+          <ul class="dropdown-menu dropdown-block" ngbDropdownMenu>
+            @for(items of details.dropdownItem; track items){
+              <li><a href="javascript:void(0)" ngbDropdownItem>{{ items.item }}</a></li>
+            }
+          </ul>
+        </div>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <div class="faq-wrap">
+    <div class="row">
+      @for(details of faqs; track details){
+        <div class="col-xl-4 box-col-4" [ngClass]="details.colClass">
+          <app-common-faq [details]="details" />
+        </div>
+      }
+      <div class="col-lg-12">
+        <div class="header-faq">
+          <h3 class="mb-0">Quick Questions are answered</h3>
+        </div>
+        <div class="row default-according style-1 faq-accordion" id="accordionoc">
+          <div class="col-xl-8 xl-60 col-lg-6 col-md-7">
+            <app-faq-question-answer />
+          </div>
+          <div class="col-xl-4 xl-40 col-lg-6 col-md-5">
+            <div class="row">
+              <div class="col-lg-12">
+                <app-faq-search-article />
+              </div>
+              <div class="col-lg-12">
+                <app-faq-navigation />
+              </div>
+              <div class="col-lg-12">
+                <app-faq-latest-updates />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <app-featured-tutorials [tutorials]="featuredTutorial" />
+      </div>
+      <div class="col-lg-12 faq-articles">
+        <app-latest-article-videos [articleVideo]="latestArticleVideo" />
+      </div>
+    </div>
+  </div>
+</div>

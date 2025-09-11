@@ -1,0 +1,33 @@
+<div class="card">
+  <div class="card-body">
+    <!-- side-bar colleps block stat-->
+    <div class="filter-block">
+      <h4>Brand</h4>
+      <ul>
+        @for(brand of productBrand; track brand){
+          <li>{{ brand.title }}</li>
+        }
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-body">
+    <div class="collection-filter-block">
+      <ul class="pro-services">
+        @for(details of productServices; track details){
+          <li>
+            <div class="d-flex">
+              <app-feather-icons [icon]="details.icon" />
+              <div class="flex-grow-1">
+                <h5>{{ details.title }} </h5>
+                <p>{{ details.subTitle }}</p>
+              </div>
+            </div>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+  <!-- silde-bar colleps block end here-->
+</div>

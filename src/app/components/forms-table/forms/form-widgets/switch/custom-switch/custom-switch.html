@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Custom switch</h3>
+    <p class="f-m-light mt-1">
+      A switch has the markup of a custom checkbox but uses the .form-switch class to render a <code>toggle switch</code>.</p>
+  </div>
+  <div class="card-body">
+    <div class="row g-3">
+      @for(details of customSwitches; track details){
+        <div [class]="details.colClass">
+          <div class="card-wrapper border rounded-3" [ngClass]="details.mainDivClass">
+            <div class="form-check-size" [ngClass]="details.subClass">
+              @for(switches of details.details; track switches){
+                <div class="form-check form-switch form-check-inline">
+                  <input class="form-check-input switch-{{ switches.color }} check-size" type="checkbox" role="switch" checked="" [disabled]="details.disabled">
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

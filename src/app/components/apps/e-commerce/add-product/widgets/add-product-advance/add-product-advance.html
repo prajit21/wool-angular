@@ -1,0 +1,28 @@
+<div class="sidebar-body advance-options">
+  <ul class="nav nav-tabs border-tab mb-0" id="advance-option-tab" role="tablist">
+    @for(tab of advanceTab; track tab){
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        [class.active]="activeTab === tab.value"
+        id="manifest-option-tab"
+        href="javascript:void(0)"
+        role="tab"
+        (click)="changeTab(tab.value)"
+        >{{ tab.title }}</a
+      >
+    </li>
+    }
+  </ul>
+  <div class="tab-content" id="advance-option-tabContent">
+    <div class="tab-pane fade show active" id="manifest-option">
+      @if(activeTab === 'inventory'){
+      <app-add-product-inventory (activeStep)="changeActiveTab($event)" />
+      } @if(activeTab === 'additional_options'){
+      <app-add-product-additional-option />
+      } @if(activeTab === 'shipping'){
+      <app-add-product-shipping />
+      }
+    </div>
+  </div>
+</div>

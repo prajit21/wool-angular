@@ -1,0 +1,43 @@
+<div class="container-fluid dashboard_default">
+  <div class="row widget-grid">
+    <div class="col-xl-4 col-lg-4 col-md-6 proorder-xl-1 proorder-lg-1">
+      <app-top-common-charts [chartData]="bitcoinChart" />
+    </div>
+    <div class="col-xl-4 col-lg-4 col-md-6 proorder-xl-2 proorder-lg-2">
+      <app-top-common-charts [chartData]="ethereumChart" />
+    </div>
+    <div class="col-xl-4 col-lg-4 proorder-xl-3 proorder-lg-3">
+      <app-top-common-charts [chartData]="liteCoinChart" />
+    </div>
+    <div class="col-xxl-6 col-xl-7 box-col-7 proorder-xl-4 proorder-lg-4">
+      <app-dashboard-active-order />
+    </div>
+    <div class="col-xxl-3 col-xl-6 box-col-6 col-lg-6 col-md-6 proorder-xl-8 proorder-lg-5">
+      <app-dashboard-buy-sell-coin />
+    </div>
+    <div class="col-xxl-3 col-xl-5 box-col-5 col-lg-6 col-md-6 proorder-xl-5 proorder-lg-6">
+      <app-dashboard-live-prices />
+    </div>
+    <div class="col-xl-6 proorder-xl-6 proorder-lg-7">
+      <app-dashboard-recent-trading-activity />
+    </div>
+    <div class="col-xl-6 proorder-xl-7 proorder-lg-8">
+      <app-dashboard-market-overview />
+    </div>
+    <div class="col-xxl-3 col-xl-6 box-col-6 col-lg-6 proorder-xl-9 proorder-lg-9 col-md-6">
+      <app-dashboard-contact-details />
+    </div>
+    <div class="col-xl-6 proorder-xl-10 col-lg-6 proorder-lg-11 col-lg-12">
+      <app-dashboard-total-margin />
+    </div>
+    <div class="col-xxl-3 col-xl-6 box-col-6 proorder-xl-11 proorder-lg-10 col-lg-6 col-md-6">
+      <app-dashboard-balance />
+    </div>
+    <div class="col-xl-6 proorder-xl-12 proorder-lg-12">
+      <app-dashboard-live-market-cap />
+    </div>
+    <div class="col-xl-6 proorder-xl-13 proorder-lg-13">
+      <app-dashboard-popular-coins />
+    </div>
+  </div>
+</div>

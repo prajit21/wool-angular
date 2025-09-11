@@ -1,0 +1,35 @@
+<div class="card">
+  <div class="card-header">
+    <h5 class="mb-0">
+      <button
+        class="btn btn-link"
+        [attr.aria-expanded]="isCollapse"
+        [class.collapsed]="!isCollapse"
+        (click)="collapse()"
+      >
+        Categories
+      </button>
+    </h5>
+  </div>
+  <div
+    class="collapse card-body px-0 show"
+    [ngStyle]="{ 'padding-top': 0 }"
+    [class.show]="isCollapse"
+  >
+    @for(details of category; track details){
+    <div class="categories" [class.pt-0]="details.padding === true">
+      <div class="learning-header">
+        <span class="f-w-600">{{ details.title }}</span>
+      </div>
+      <ul>
+        @for(data of details.designer; track data){
+        <li>
+          <a href="javascript:void(0)">{{ data.designerTitle }} </a>
+          <span class="badge badge-primary pull-right">{{ data.count }}</span>
+        </li>
+        }
+      </ul>
+    </div>
+    }
+  </div>
+</div>

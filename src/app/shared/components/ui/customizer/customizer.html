@@ -1,0 +1,37 @@
+<div class="customizer-links" [class.open]="isOpen">
+  <div class="nav flex-column nac-pills">
+    <a class="nav-link" href="javascript:void(0)">
+      <span>Check layouts</span>
+    </a>
+    <a class="nav-link" href="javascript:void(0)" (click)="openCustomizer()">
+      <div class="settings">
+        <img class="img-fluid" src="assets/images/customizer/1.png" alt="nft"> </div>
+        <span>Quick option</span>
+    </a>
+    <a class="nav-link" target="_blank" href="https://support.pixelstrap.com/">
+      <div><img class="img-fluid" src="assets/images/customizer/2.png" alt="nft"></div><span>Support</span>
+    </a> <a class="nav-link" target="_blank" href="https://docs.pixelstrap.net/angular/wool/document/" target="_blank">
+      <div><img class="img-fluid" src="assets/images/customizer/3.png" alt="nft"></div><span>Document</span>
+    </a>  <a class="nav-link" target="_blank" href="https://themeforest.net/user/pixelstrap/portfolio">
+      <div><img class="img-fluid" src="assets/images/customizer/5.png" alt="nft"></div><span>Buy now</span>
+    </a></div>
+</div>
+<div class="customizer-contain" [class.open]="isOpen">
+  <div class="tab-content">
+
+    <div class="customizer-header">
+      <i class="icon-close" (click)="closeCustomizer()"></i>
+      <h3 class="f-w-700">Preview Settings</h3>
+      <p class="mb-0">Try It Real Time <i class="fa fa-thumbs-o-up txt-primary"></i></p>
+      <button class="btn btn-primary plus-popup mt-2" (click)="openModal()">Configuration</button>
+    </div>
+    <div class="customizer-body custom-scrollbar">
+      <div class="tab-pane fade show active">
+        <app-layout-type />
+        <app-sidebar-type />
+        <app-unlimited-color />
+      </div>
+      <div class="tab-pane fade"></div>
+    </div>
+  </div>
+</div>

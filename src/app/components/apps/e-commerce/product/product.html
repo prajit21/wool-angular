@@ -1,0 +1,48 @@
+<div class="container-fluid product-wrapper" [class.sidebaron]="productService.isOpenFilter">
+  <div class="product-grid">
+    <div class="feature-products">
+      <div class="row">
+        <div class="col-md-6 products-total">
+          <div class="square-product-setting d-inline-block"><a class="icon-grid grid-layout-view" href="javascript:void(0)" (click)="grid()"><app-feather-icons [icon]="'grid'" /></a></div>
+          <div class="square-product-setting d-inline-block"><a class="icon-grid m-0 list-layout-view" href="javascript:void(0)" (click)="list()"><app-feather-icons [icon]="'list'" /></a></div>
+          <span class="d-none-productlist filter-toggle" (click)="openFilter()">
+            Filters<span class="ms-2">
+              <app-feather-icons [icon]="'chevron-down'" [class]="'toggle-data'" />
+              </span></span>
+          <div class="grid-options d-inline-block">
+            <ul>
+              <li><a class="product-2-layout-view" href="javascript:void(0)" (click)="grid2()"><span class="line-grid line-grid-1 bg-primary"></span><span class="line-grid line-grid-2 bg-primary"></span></a></li>
+              <li><a class="product-3-layout-view" href="javascript:void(0)" (click)="grid3()"><span class="line-grid line-grid-3 bg-primary"></span><span class="line-grid line-grid-4 bg-primary"></span><span class="line-grid line-grid-5 bg-primary"></span></a></li>
+              <li><a class="product-4-layout-view" href="javascript:void(0)" (click)="grid4()"><span class="line-grid line-grid-6 bg-primary"></span><span class="line-grid line-grid-7 bg-primary"></span><span class="line-grid line-grid-8 bg-primary"></span><span class="line-grid line-grid-9 bg-primary"></span></a></li>
+              <li><a class="product-6-layout-view" href="javascript:void(0)" (click)="grid6()"><span class="line-grid line-grid-10 bg-primary"></span><span class="line-grid line-grid-11 bg-primary"></span><span class="line-grid line-grid-12 bg-primary"></span><span class="line-grid line-grid-13 bg-primary"></span><span class="line-grid line-grid-14 bg-primary"></span><span class="line-grid line-grid-15 bg-primary"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 text-sm-end"><span class="f-w-700 m-r-5">Showing Products 1 - 24 Of 200 Results</span>
+          <div class="select2-drpdwn-product select-options d-inline-block">
+            <select class="form-control btn-square" name="select">
+              <option value="opt1">Featured</option>
+              <option value="opt2">Lowest Prices</option>
+              <option value="opt3">Highest Prices</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <app-product-filter />
+        </div>
+        <div class="col-md-9 col-sm-12">
+          <form>
+            <div class="form-group m-0">
+              <input class="form-control" type="search" placeholder="Search.."><i class="fa fa-search"></i>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="product-wrapper-grid" [class.list-view]="listView">
+      <app-product-details />
+    </div>
+  </div>
+</div>

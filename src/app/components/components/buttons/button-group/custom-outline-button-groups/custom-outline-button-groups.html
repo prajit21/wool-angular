@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-header">
+    <h3>{{ details()?.title }}</h3>
+  </div>
+  <div class="card-body btn-group-showcase">
+    <div class="row">
+      @for(color of buttonColor(); track color){
+      <div class="col-xxl-4 col-md-6 col-sm-12">
+        <div class="btn-group btn-group-pill">
+          @if(details()?.left){
+          <button class="btn btn-outline-{{ color }}" type="button">Left</button>
+          }@else {
+          <button class="btn btn-{{ color }}" type="button">Left</button>
+          } @if(details()?.middle){
+          <button class="btn btn-outline-{{ color }}" type="button">Middle</button>
+          }@else {
+          <button class="btn btn-{{ color }}" type="button">Middle</button>
+          } @if(details()?.right){
+          <button class="btn btn-outline-{{ color }}" type="button">Right</button>
+          }@else {
+          <button class="btn btn-{{ color }}" type="button">Right</button>
+          }
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,86 @@
+<ul class="nav nav-tabs border-tab nav-primary" id="info-tab" role="tablist">
+  <li class="nav-item">
+    <a href="javascript:void(0)" class="nav-link" [ngClass]="{'active show': openTab === 'call'}" id="info-home-tab" (click)="tabbed('call')">CALL</a>
+  </li>
+  <li class="nav-item">
+    <a href="javascript:void(0)" class="nav-link" [ngClass]="{'active': openTab === 'status'}" id="profile-info-tab" (click)="tabbed('status')">STATUS</a>
+  </li>
+  <li class="nav-item">
+    <a href="javascript:void(0)" class="nav-link" [ngClass]="{'active': openTab === 'profile'}" id="contact-info-tab" (click)="tabbed('profile')">PROFILE</a>
+  </li>
+</ul>
+<div class="tab-content" id="info-tabContent">
+  <div class="tab-pane fade" id="info-home" [ngClass]="{'show active': openTab === 'call'}">
+    <div class="people-list">
+      <ul class="list">
+        @for(details of calls; track details){
+          <li class="clearfix">
+            <img class="rounded-circle user-image" [src]="details.img" alt="">
+            <div class="about">
+              <div class="name">{{ details.name }}</div>
+              <div class="status"><i class="fa" [ngClass]="details.callType === 'share' ? 'fa-share font-success' : 'fa-reply font-danger'"></i>{{ details.date }}</div>
+            </div>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="info-profile" [ngClass]="{'show active': openTab === 'status'}">
+    <div class="people-list">
+      <div class="search">
+        <form class="theme-form">
+          <div class="mb-3">
+            <input class="form-control" type="text" placeholder="Write Status..."><i class="fa fa-pencil"></i>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="status">
+      <p class="font-dark">Active</p>
+      <hr>
+      <p>
+        Established fact that a reader will be
+        distracted  <i class="icofont icofont-emo-heart-eyes font-danger f-20"></i><i class="icofont icofont-emo-heart-eyes font-danger f-20 m-l-5"></i>
+      </p>
+      <hr>
+      <p>Dolore magna aliqua  <i class="icofont icofont-emo-rolling-eyes font-success f-20"></i></p>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="info-contact" [ngClass]="{'show active': openTab === 'profile'}">
+    <div class="user-profile">
+      <div class="image">
+        <div class="avatar text-center"><img alt="" src="assets/images/user/2.png"></div>
+        <div class="icon-wrapper"><i class="icofont icofont-pencil-alt-5"></i></div>
+      </div>
+      <div class="user-content text-center">
+        <h5 class="text-uppercase">mark jenco</h5>
+        <div class="social-media">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="https://accounts.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+            <li class="list-inline-item"><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="https://rss.app/" target="_blank"><i class="fa fa-rss"></i></a></li>
+          </ul>
+        </div>
+        <hr>
+        <div class="follow text-center">
+          <div class="row">
+            <div class="col border-right"><span>Following</span>
+              <div class="follow-num">236k</div>
+            </div>
+            <div class="col"><span>Follower</span>
+              <div class="follow-num">3691k</div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="text-center">
+          <p class="mb-0">Mark.jecno23&#64;gmail.com</p>
+          <p class="mb-0">+91 365 - 658 - 1236</p>
+          <p class="mb-0">Fax: 123-4560</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

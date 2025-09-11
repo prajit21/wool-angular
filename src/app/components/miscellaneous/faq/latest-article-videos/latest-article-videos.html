@@ -1,0 +1,26 @@
+<div class="header-faq">
+  <h3 class="mb-0">Latest articles and videos</h3>
+</div>
+<div class="row">
+  @for(details of articleVideo(); track details){
+    <div [class]="details.divClass">
+      <div class="row">
+        @for(data of details.data; track data){
+          <div [class]="data.colClass">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex">
+                  <app-feather-icons [icon]="data.icon" [class]="'m-r-30'" />
+                  <div class="flex-grow-1">
+                    <h6 class="f-w-600">{{ data.title }}</h6>
+                    <p>{{ data.description }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  }
+</div>

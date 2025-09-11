@@ -1,0 +1,77 @@
+<div class="card activeorder common-table">
+  <app-title [title]="'Active Order'" />
+  <div class="card-body pt-0">
+    <div class="table-responsive custom-scrollbar">
+      <div class="dataTables_wrapper  no-footer">
+        <div id="slling-card_filter" class="dataTables_filter">
+          <label>Search:<input type="search" class="" name="searchTerm" [(ngModel)]="service.searchTerm" /></label>
+        </div>
+        <table class="table display" id="active-order" style="width:100%; margin-top: 13px;">
+          <thead>
+            <tr>
+              <th>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="">
+                  <label class="form-check-label"></label>
+                </div>
+              </th>
+              <th sortable="date" (sort)="onSort($event)">Date</th>
+              <th sortable="type" (sort)="onSort($event)">Type</th>
+              <th>Customer</th>
+              <th sortable="price" (sort)="onSort($event)">Price</th>
+              <th sortable="usd" (sort)="onSort($event)">Usd </th>
+              <th sortable="status" (sort)="onSort($event)">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for(details of activeOrders$ | async; track details){
+              <tr>
+                <td>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="">
+                    <label class="form-check-label"></label>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-flex">
+                    <div class="flex-grow-1"><a href="javascript:void(0)" [routerLink]="['/e-commerce/payment-detail']">
+                        <h6 class="f-w-600">{{ details.date }}</h6><span>{{ details.time }}</span>
+                      </a></div>
+                  </div>
+                </td>
+                <td>
+                  <button class="btn type">{{ details.type }}</button>
+                </td>
+                <td>
+                  <div class="user-details customers">
+                    <ul>
+                      @for(images of details.customers; track images){
+                        <li class="d-inline-block"><img class="rounded-circle" [src]="images.image" alt="user"></li>
+                      }
+                      @if(details.totalImages){
+                        <li class="d-inline-block">
+                          <div class="light-card"><span class="f-w-600">{{ details.totalImages }}</span></div>
+                        </li>
+                      }
+                    </ul>
+                  </div>
+                </td>
+                <td>{{ details.price }}</td>
+                <td>$ {{ details.usd }}</td>
+                <td>
+                  <div class="order">
+                    <p>{{ details.status}}</p>
+                  </div>
+                </td>
+              </tr>
+            }@empty {
+                <tr class="odd">
+                  <td valign="top" colspan="7" class="dataTables_empty">No matching records found</td>
+                </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

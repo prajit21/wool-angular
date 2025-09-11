@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Auto Play Variant</h3>
+  </div>
+  <div class="card-body">
+    <div class="owl-carousel owl-theme owl-loaded" id="owl-carousel-13">
+      <owl-carousel-o [options]="options">
+        @for(details of carouselImages; track details){
+          <ng-template carouselSlide>
+            <div class="item w-100"><img [src]="details.img" alt="Drawing-room"></div>
+          </ng-template>
+        }
+      </owl-carousel-o>
+    </div>
+  </div>
+</div>

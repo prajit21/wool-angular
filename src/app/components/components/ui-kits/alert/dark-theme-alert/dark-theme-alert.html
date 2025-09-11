@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Link color in dark theme</h3>
+    <p class="f-m-light mt-1">Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.</p>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      @for(details of alerts; track details){
+        <div class="col-xl-6">
+          @for(alert of details.details; track alert){
+            <p class="mb-1">{{ alert.color | titlecase }} Alert</p>
+            <div class="alert alert-{{ alert.color }} dark" role="alert">
+              <p [class.text-dark]="alert.textDark">This is a
+                <a class="alert-link" [ngClass]="{ 'text-white': alert.textWhite }" href="javascript:void(0)">
+                  {{ alert.color }} alert
+                </a> with an example link. Check it out.
+              </p>
+            </div>
+            }
+        </div>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+<div class="row g-sm-3 height-equal-2 widget-charts">
+  @for(details of allDetails; track details){
+  <div class="col-sm-6">
+    <div class="card small-widget mb-sm-0">
+      <div class="card-body {{ details.color }}">
+        <span class="f-light">{{ details.title }}</span>
+        <div class="d-flex align-items-end gap-1">
+          <h4>{{ details.text }}</h4>
+          <span class="font-{{ details.color }} f-12 f-w-500">
+            <i class="{{ details.tradingIcon }}"></i>
+            <span>{{ details.pr }}%</span>
+          </span>
+        </div>
+        <div class="bg-gradient">
+          <app-svg-icon [icon]="details.icon" [class]="'stroke-icon svg-fill'" />
+        </div>
+      </div>
+    </div>
+  </div>
+  }
+  <div class="col-sm-6">
+    <div class="card widget-1 widget-with-chart mb-xl-0">
+      <div class="card-body">
+        <div>
+          <h4 class="mb-1">1,80k</h4>
+          <span class="f-light">Orders</span>
+        </div>
+        <div class="order-chart">
+          <div id="orderchart">
+            <apx-chart
+              [series]="orderChart.series"
+              [chart]="orderChart.chart"
+              [dataLabels]="orderChart.dataLabels"
+              [stroke]="orderChart.stroke"
+              [colors]="orderChart.colors"
+              [yaxis]="orderChart.yaxis"
+              [xaxis]="orderChart.xaxis"
+              [plotOptions]="orderChart.plotOptions"
+              [grid]="orderChart.grid"
+              [tooltip]="orderChart.tooltip"
+              [legend]="orderChart.legend"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card widget-1 widget-with-chart mb-xl-0">
+      <div class="card-body">
+        <div>
+          <h4 class="mb-1">6,90k</h4>
+          <span class="f-light">Profit</span>
+        </div>
+        <div class="profit-chart">
+          <div id="profitchart">
+            <apx-chart
+              [series]="profitChart.series"
+              [chart]="profitChart.chart"
+              [dataLabels]="profitChart.dataLabels"
+              [stroke]="profitChart.stroke"
+              [colors]="profitChart.colors"
+              [yaxis]="profitChart.yaxis"
+              [xaxis]="profitChart.xaxis"
+              [grid]="profitChart.grid"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

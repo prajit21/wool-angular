@@ -1,0 +1,30 @@
+<div class="card o-hidden">
+  <div class="chart-widget-top">
+    <div class="row card-body pb-0 m-0">
+      <div class="col-xl-9 col-lg-8 col-9 p-0">
+        <h6 class="mb-2">{{ details().title }}</h6>
+        <h3>{{ details().count }}</h3>
+        <span>{{ details().subTitle }}</span>
+      </div>
+      <div class="col-xl-3 col-lg-4 col-3 text-end p-0">
+        <h6 class="txt-success">{{ details().growth }}</h6>
+      </div>
+    </div>
+    <div id="chart-widget2">
+      <div class="flot-chart-placeholder" id="chart-widget-top-second">
+        <apx-chart
+          [chart]="details().chart"
+          [dataLabels]="details().dataLabels"
+          [stroke]="details().stroke"
+          [xaxis]="details().xaxis"
+          [yaxis]="details().yaxis"
+          [grid]="details().grid"
+          [fill]="details().fill"
+          [colors]="details().colors"
+          [series]="details().series"
+          [responsive]="details().responsive"
+        />
+      </div>
+    </div>
+  </div>
+</div>

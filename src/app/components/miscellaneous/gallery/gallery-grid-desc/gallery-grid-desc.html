@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <h3>IMAGE GALLERY WITH DESCRIPTION</h3>
+        </div>
+        <div class="my-gallery card-body row gallery-with-description" gallerize>
+          @for(details of galleryItems; track details){
+            <figure class="col-xl-3 col-sm-6">
+              <a href="javascript:void(0)">
+                <img class="img-thumbnail" [src]="details.srcUrl" alt="Image description">
+                <div class="caption">
+                  <h4>{{ details.title }}</h4>
+                  <p>{{ details.text }}</p>
+                </div>
+              </a>
+            </figure>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
