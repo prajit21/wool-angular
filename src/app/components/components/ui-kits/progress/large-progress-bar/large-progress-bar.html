@@ -1,18 +1,23 @@
 <div class="card height-equal">
   <div class="card-header">
     <h3>Large progress bars</h3>
-    <p class="f-m-light mt-1">Use <code> .lg-progress-bar</code> class to change progress size to large.</p>
+    <p class="f-m-light mt-1">
+      Use <code> .lg-progress-bar</code> class to change progress size to large.
+    </p>
   </div>
   <div class="card-body progress-showcase">
     <div class="row">
       <div class="col">
-        @for(details of progress; track details){
-          @if(details.width){
-            <div class="progress lg-progress-bar">
-              <div class="progress-bar bg-{{ details.colorClass}}" [ngStyle]="{ 'width': details.width + '%' }">{{ details.width + '%' }}</div>
-            </div>
-          }
-        }
+        @for(details of progress; track details){ @if(details.width){
+        <div class="progress lg-progress-bar">
+          <div
+            class="progress-bar bg-{{ details.colorClass}}"
+            [ngStyle]="{ 'width': details.width + '%' }"
+          >
+            {{ details.width + '%' }}
+          </div>
+        </div>
+        } }
       </div>
     </div>
   </div>

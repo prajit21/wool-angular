@@ -3,9 +3,15 @@
   <div class="card-body">
     <div class="chart-container skill-chart">
       <div id="circlechart">
-        <apx-chart [chart]="skillStatus.chart" [plotOptions]="skillStatus.plotOptions" [series]="skillStatus.series"
-                   [labels]="skillStatus.labels" [legend]="skillStatus.legend" [colors]="skillStatus.colors"
-                   [responsive]="skillStatus.responsive" />
+        <apx-chart
+          [chart]="skillStatus.chart"
+          [plotOptions]="skillStatus.plotOptions"
+          [series]="skillStatus.series"
+          [labels]="skillStatus.labels"
+          [legend]="skillStatus.legend"
+          [colors]="skillStatus.colors"
+          [responsive]="skillStatus.responsive"
+        />
       </div>
     </div>
   </div>

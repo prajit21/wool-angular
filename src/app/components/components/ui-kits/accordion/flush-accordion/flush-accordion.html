@@ -1,27 +1,42 @@
 <div class="card height-equal">
   <div class="card-header">
     <h3>Flush accordion</h3>
-    <p class="f-m-light mt-1">Add <code>.accordion-flush</code> to remove the default<code> background-color</code> , some borders, and some rounded corners to render accordions edge-to-edge with their parent container.</p>
+    <p class="f-m-light mt-1">
+      Add <code>.accordion-flush</code> to remove the default<code> background-color</code> , some
+      borders, and some rounded corners to render accordions edge-to-edge with their parent
+      container.
+    </p>
   </div>
   <div class="card-body">
-    <div class="accordion accordion-flush dark-accordion" id="accordionFlushExample" ngbAccordion [closeOthers]="true">
+    <div
+      class="accordion accordion-flush dark-accordion"
+      id="accordionFlushExample"
+      ngbAccordion
+      [closeOthers]="true"
+    >
       @for(details of flushAccordion; track details){
-        <div class="accordion-item" ngbAccordionItem [collapsed]="details.panel !== 1">
-          <h2 class="accordion-header" id="flush-headingOne" ngbAccordionHeader>
-            <button class="accordion-button collapsed txt-success bg-light-success active" type="button" ngbAccordionButton>{{ details.title }}</button>
-          </h2>
-          <div class="accordion-collapse collapse show" id="flush-collapseOne" ngbAccordionCollapse>
-            <div class="accordion-body" ngbAccordionBody>
-              <ng-template>
-                <ul class="d-flex flex-column gap-1 accordions-content">
-                  @for(item of details.data; track item){
-                    <li>{{ item.desc }}</li>
-                  }
-                </ul>
-              </ng-template>
-            </div>
+      <div class="accordion-item" ngbAccordionItem [collapsed]="details.panel !== 1">
+        <h2 class="accordion-header" id="flush-headingOne" ngbAccordionHeader>
+          <button
+            class="accordion-button collapsed txt-success bg-light-success active"
+            type="button"
+            ngbAccordionButton
+          >
+            {{ details.title }}
+          </button>
+        </h2>
+        <div class="accordion-collapse collapse show" id="flush-collapseOne" ngbAccordionCollapse>
+          <div class="accordion-body" ngbAccordionBody>
+            <ng-template>
+              <ul class="d-flex flex-column gap-1 accordions-content">
+                @for(item of details.data; track item){
+                <li>{{ item.desc }}</li>
+                }
+              </ul>
+            </ng-template>
           </div>
         </div>
+      </div>
       }
     </div>
   </div>

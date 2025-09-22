@@ -18,11 +18,12 @@
         </bar-rating>
         <p></p>
         @if(!faoRated){
-          <p>Current rating: {{faoRate}}</p>
+        <p>Current rating: {{faoRate}}</p>
         }@else if(faoRated){
-          <p>Your rating: {{faoRate}}
-            <i class="link fa fa-times-circle fa-lg" (click)="faoReset()"></i>
-          </p>
+        <p>
+          Your rating: {{faoRate}}
+          <i class="link fa fa-times-circle fa-lg" (click)="faoReset()"></i>
+        </p>
         }
       </div>
     </div>

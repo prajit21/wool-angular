@@ -1,15 +1,21 @@
 <div class="card">
   <div class="card-header">
     <h3>Custom height progress bars</h3>
-    <p class="f-m-light mt-1">Set a height value on the <code>.progress-bar</code>, so if you change that value the outer<code>.progress</code> will automatically resize accordingly.</p>
+    <p class="f-m-light mt-1">
+      Set a height value on the <code>.progress-bar</code>, so if you change that value the
+      outer<code>.progress</code> will automatically resize accordingly.
+    </p>
   </div>
   <div class="card-body progress-showcase">
     <div class="row">
       <div class="col">
         @for(details of progress; track details){
-          <div class="progress" [ngStyle]="{ 'height': details.height }">
-            <div class="progress-bar bg-{{ details.colorClass }}" [ngStyle]="{ 'width': details.width }"></div>
-          </div>
+        <div class="progress" [ngStyle]="{ 'height': details.height }">
+          <div
+            class="progress-bar bg-{{ details.colorClass }}"
+            [ngStyle]="{ 'width': details.width }"
+          ></div>
+        </div>
         }
       </div>
     </div>

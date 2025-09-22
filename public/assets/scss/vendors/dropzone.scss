@@ -1,5 +1,5 @@
 @import '../utils/variables.scss';
-@import "dropzone/dropzone";
+@import 'dropzone/dropzone';
 /*
  * The MIT License
  * Copyright (c) 2012 Matias Meno <m@tias.me>
@@ -81,7 +81,6 @@
     }
 
     &.dz-error {
-
       .dz-error-message,
       .dz-error-mark {
         display: block;

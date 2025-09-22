@@ -1,4 +1,4 @@
-import { Component, inject, input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
@@ -15,7 +15,7 @@ export class ProductDetailsModal {
   private modal = inject(NgbActiveModal);
   private router = inject(Router);
 
-  readonly productDetail = input<Products>();
+  @Input() productDetail?: Products;
 
   public counter: number = 1;
 

@@ -1,17 +1,17 @@
 <div class="card">
   <div class="card-header">
     <h3>Horizontal Alignment</h3>
-    <p class="mt-1 f-m-light">You can use the <code>justify-content-*</code> class
-      to set the horizontal alignment.
+    <p class="mt-1 f-m-light">
+      You can use the <code>justify-content-*</code> class to set the horizontal alignment.
     </p>
   </div>
   <div class="card-body">
     <div class="grid-showcase grid-align">
       @for(details of alignmentDetails; track details){
-        <div class="row justify-content-{{ details }} bg-light">
-          <div class="col-5"><span class="bg-white text-dark">One column</span></div>
-          <div class="col-5"><span class="bg-white text-dark">Two column</span></div>
-        </div>
+      <div class="row justify-content-{{ details }} bg-light">
+        <div class="col-5"><span class="bg-white text-dark">One column</span></div>
+        <div class="col-5"><span class="bg-white text-dark">Two column</span></div>
+      </div>
       }
     </div>
     <div class="card-footer">
@@ -19,7 +19,7 @@
         <table class="w-100">
           <tbody></tbody>
           <tr>
-            <th> Class</th>
+            <th>Class</th>
             <th class="f-w-800">Value of the class</th>
           </tr>
           <tr>

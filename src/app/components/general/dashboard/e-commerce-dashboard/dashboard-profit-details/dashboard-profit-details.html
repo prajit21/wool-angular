@@ -2,13 +2,15 @@
   <div class="card-body revenue-ecommerce">
     <div class="d-flex">
       @for(details of profitDetails; track details){
-        <div class="flex-grow-1 ecommerce">
-          <h5>{{ details.title }}</h5>
-          <h3>{{ details.subTitle }}</h3>
-          <button class="btn bg-light-{{ details.bgColor }} d-flex gap-1"><span class="bg-light-{{ details.bgColor }}">
-            <app-svg-icon [icon]="details.marginIcon" [class]="'fill'+'-'+details.bgColor" />
-              </span><span class="font-{{ details.bgColor }} f-w-600">{{ details.margin }}</span></button>
-        </div>
+      <div class="flex-grow-1 ecommerce">
+        <h5>{{ details.title }}</h5>
+        <h3>{{ details.subTitle }}</h3>
+        <button class="btn bg-light-{{ details.bgColor }} d-flex gap-1">
+          <span class="bg-light-{{ details.bgColor }}">
+            <app-svg-icon [icon]="details.marginIcon" [class]="'fill'+'-'+details.bgColor" /> </span
+          ><span class="font-{{ details.bgColor }} f-w-600">{{ details.margin }}</span>
+        </button>
+      </div>
       }
     </div>
   </div>

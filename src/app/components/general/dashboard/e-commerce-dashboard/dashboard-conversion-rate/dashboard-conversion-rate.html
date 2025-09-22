@@ -14,36 +14,46 @@
           </thead>
           <tbody>
             @for(details of conversionRate; track details){
-              <tr>
-                <td>{{ details.year }}</td>
-                <td>{{ details.customer }}</td>
-                <td>{{ details.trend }}</td>
-                <td>${{ details.revenue }}</td>
-              </tr>
+            <tr>
+              <td>{{ details.year }}</td>
+              <td>{{ details.customer }}</td>
+              <td>{{ details.trend }}</td>
+              <td>${{ details.revenue }}</td>
+            </tr>
             }
           </tbody>
         </table>
         <ul class="d-flex">
           <li>
             <h2>34,837</h2>
-            <p>Regular Customers </p>
-            <button class="btn bg-light-success d-flex gap-1"><span class="bg-light-success">
-              <app-svg-icon [icon]="'arrow-up'" />
-              </span><span class="font-success f-w-600">- 12.32% </span></button>
+            <p>Regular Customers</p>
+            <button class="btn bg-light-success d-flex gap-1">
+              <span class="bg-light-success">
+                <app-svg-icon [icon]="'arrow-up'" /> </span
+              ><span class="font-success f-w-600">- 12.32% </span>
+            </button>
           </li>
           <li>
             <h2>+23,684</h2>
             <p>New Customers</p>
-            <button class="btn bg-light-secondary d-flex gap-1"><span class="bg-light-secondary">
-                <app-svg-icon [icon]="'arrow-down'" />
-              </span><span class="font-secondary f-w-600">- 12.22% </span></button>
+            <button class="btn bg-light-secondary d-flex gap-1">
+              <span class="bg-light-secondary">
+                <app-svg-icon [icon]="'arrow-down'" /> </span
+              ><span class="font-secondary f-w-600">- 12.22% </span>
+            </button>
           </li>
         </ul>
       </div>
       <div class="col-xl-6 col-md-6 col-sm-6">
         <div id="rate-chart">
-          <apx-chart [series]="conversionRateChart.series" [chart]="conversionRateChart.chart" [plotOptions]="conversionRateChart.plotOptions"
-                     [colors]="conversionRateChart.colors" [labels]="conversionRateChart.labels" [responsive]="conversionRateChart.responsive" />
+          <apx-chart
+            [series]="conversionRateChart.series"
+            [chart]="conversionRateChart.chart"
+            [plotOptions]="conversionRateChart.plotOptions"
+            [colors]="conversionRateChart.colors"
+            [labels]="conversionRateChart.labels"
+            [responsive]="conversionRateChart.responsive"
+          />
         </div>
       </div>
     </div>

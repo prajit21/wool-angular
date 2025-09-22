@@ -1,6 +1,9 @@
-<div class="d-flex profile-media"><img class="b-r-10" src="assets/images/dashboard/profile.png" alt="">
-  <div class="flex-grow-1 user"><span>Helen Walter</span>
-    <p class="mb-0 font-nunito">Admin
+<div class="d-flex profile-media">
+  <img class="b-r-10" src="assets/images/dashboard/profile.png" alt="" />
+  <div class="flex-grow-1 user">
+    <span>Helen Walter</span>
+    <p class="mb-0 font-nunito">
+      Admin
       <svg class="middle">
         <use href="assets/svg/icon-sprite.svg#arrow-down-fill"></use>
       </svg>
@@ -8,21 +11,19 @@
   </div>
 </div>
 <ul class="profile-dropdown onhover-show-div">
-  @for(details of userProfile; track details){
-    @if(details.title === 'Log Out'){
-      <li>
-        <a href="javascript:void(0)" (click)="logOut()">
-          <app-feather-icons [icon]="details.icon" />
-          <span>{{ details.title }} </span>
-        </a>
-      </li>
-    }@else {
-      <li>
-        <a href="javascript:void(0)" [routerLink]="details.path">
-          <app-feather-icons [icon]="details.icon" />
-          <span>{{ details.title }} </span>
-        </a>
-      </li>
-    }
-  }
+  @for(details of userProfile; track details){ @if(details.title === 'Log Out'){
+  <li>
+    <a href="javascript:void(0)" (click)="logOut()">
+      <app-feather-icons [icon]="details.icon" />
+      <span>{{ details.title }} </span>
+    </a>
+  </li>
+  }@else {
+  <li>
+    <a href="javascript:void(0)" [routerLink]="details.path">
+      <app-feather-icons [icon]="details.icon" />
+      <span>{{ details.title }} </span>
+    </a>
+  </li>
+  } }
 </ul>

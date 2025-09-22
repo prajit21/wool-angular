@@ -8,23 +8,46 @@
         <div class="card-body">
           <div class="row g-xl-5 g-3">
             <div class="col-xxl-3 col-xl-4 box-col-4e sidebar-left-wrapper">
-              <app-add-product-steps (activeTabValue)="getTabValue($event)" [activeStep]="activeTab" />
+              <app-add-product-steps
+                (activeTabValue)="getTabValue($event)"
+                [activeStep]="activeTab"
+              />
             </div>
             <div class="col-xxl-9 col-xl-8 box-col-8 position-relative">
               <div class="tab-content" id="add-product-pills-tabContent">
-                <div class="tab-pane fade show active" id="detail-product" [ngClass]="activeTab === 'details' ? 'd-block' : 'd-none'">
+                <div
+                  class="tab-pane fade show active"
+                  id="detail-product"
+                  [ngClass]="activeTab === 'details' ? 'd-block' : 'd-none'"
+                >
                   <app-add-product-details (activeStep)="getTabValue($event)" />
                 </div>
-                <div class="tab-pane fade show active" id="detail-product" [ngClass]="activeTab === 'gallery' ? 'd-block' : 'd-none'">
+                <div
+                  class="tab-pane fade show active"
+                  id="detail-product"
+                  [ngClass]="activeTab === 'gallery' ? 'd-block' : 'd-none'"
+                >
                   <app-add-product-gallery (activeStep)="getTabValue($event)" />
                 </div>
-                <div class="tab-pane fade show active" id="detail-product" [ngClass]="activeTab === 'category' ? 'd-block' : 'd-none'">
+                <div
+                  class="tab-pane fade show active"
+                  id="detail-product"
+                  [ngClass]="activeTab === 'category' ? 'd-block' : 'd-none'"
+                >
                   <app-add-product-category (activeStep)="getTabValue($event)" />
                 </div>
-                <div class="tab-pane fade show active" id="detail-product" [ngClass]="activeTab === 'price' ? 'd-block' : 'd-none'">
+                <div
+                  class="tab-pane fade show active"
+                  id="detail-product"
+                  [ngClass]="activeTab === 'price' ? 'd-block' : 'd-none'"
+                >
                   <app-add-product-price (activeStep)="getTabValue($event)" />
                 </div>
-                <div class="tab-pane fade show active" id="detail-product" [ngClass]="activeTab === 'advance' ? 'd-block' : 'd-none'">
+                <div
+                  class="tab-pane fade show active"
+                  id="detail-product"
+                  [ngClass]="activeTab === 'advance' ? 'd-block' : 'd-none'"
+                >
                   <app-add-product-advance (activeStep)="getTabValue($event)" />
                 </div>
               </div>

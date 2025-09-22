@@ -2,10 +2,14 @@
   <div class="row">
     <div class="col-xl-6 set-col-12 box-col-12">
       <div class="card">
-        <div class="blog-box blog-shadow"><img class="img-fluid" src="assets/images/blog/blog.jpg" alt="">
+        <div class="blog-box blog-shadow">
+          <img class="img-fluid" src="assets/images/blog/blog.jpg" alt="" />
           <div class="blog-details">
             <p>25 July 2024</p>
-            <h4>People just don't do it anymore. We have to change that. Sometimes the simplest things are the most profound.</h4>
+            <h4>
+              People just don't do it anymore. We have to change that. Sometimes the simplest things
+              are the most profound.
+            </h4>
             <ul class="blog-social">
               <li><i class="icofont icofont-user"></i>Mark Jecno</li>
               <li><i class="icofont icofont-thumbs-up"></i>02 Hits</li>
@@ -17,44 +21,47 @@
     </div>
     <div class="col-xl-6 set-col-12 box-col-12">
       @for(details of blogDetails | slice: 0:2; track details){
-        <div class="card">
-          <div class="blog-box blog-list row">
-            <div class="col-sm-5"><img class="img-fluid sm-100-w" [src]="details.img" alt=""></div>
-            <div class="col-sm-7">
-              <div class="blog-details">
-                <div class="blog-date"><span>{{ details.date.toLocaleString('en-US', {minimumIntegerDigits: 2}) }}</span> {{ details.year }}</div>
-                <h4>{{ details.title }}</h4>
-                <div class="blog-bottom-content">
-                  <ul class="blog-social">
-                    <li>by: {{ details.postedBy }}</li>
-                    <li>{{ details.hits }} Hits</li>
-                  </ul>
-                  <hr>
-                  <p class="mt-0 f-w-500">{{ details.description }}</p>
-                </div>
+      <div class="card">
+        <div class="blog-box blog-list row">
+          <div class="col-sm-5"><img class="img-fluid sm-100-w" [src]="details.img" alt="" /></div>
+          <div class="col-sm-7">
+            <div class="blog-details">
+              <div class="blog-date">
+                <span>{{ details.date.toLocaleString('en-US', {minimumIntegerDigits: 2}) }}</span>
+                {{ details.year }}
+              </div>
+              <h4>{{ details.title }}</h4>
+              <div class="blog-bottom-content">
+                <ul class="blog-social">
+                  <li>by: {{ details.postedBy }}</li>
+                  <li>{{ details.hits }} Hits</li>
+                </ul>
+                <hr />
+                <p class="mt-0 f-w-500">{{ details.description }}</p>
               </div>
             </div>
           </div>
         </div>
+      </div>
       }
     </div>
     @for(details of blogDetails | slice: 2; track details){
-      <div class="col-md-6 col-xxl-3 box-col-6">
-        <div class="card">
-          <div class="blog-box blog-grid text-center">
-            <img class="img-fluid top-radius-blog" [src]="details.img " alt="">
-            <div class="blog-details-main">
-              <ul class="blog-social">
-                <li>{{ details.date }} {{ details.year }}</li>
-                <li>by: {{ details.postedBy }}</li>
-                <li>{{ details.hits }} Hits</li>
-              </ul>
-              <hr>
-              <h4 class="blog-bottom-details">{{ details.description }}</h4>
-            </div>
+    <div class="col-md-6 col-xxl-3 box-col-6">
+      <div class="card">
+        <div class="blog-box blog-grid text-center">
+          <img class="img-fluid top-radius-blog" [src]="details.img " alt="" />
+          <div class="blog-details-main">
+            <ul class="blog-social">
+              <li>{{ details.date }} {{ details.year }}</li>
+              <li>by: {{ details.postedBy }}</li>
+              <li>{{ details.hits }} Hits</li>
+            </ul>
+            <hr />
+            <h4 class="blog-bottom-details">{{ details.description }}</h4>
           </div>
         </div>
       </div>
+    </div>
     }
   </div>
 </div>

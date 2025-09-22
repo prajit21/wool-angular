@@ -48,24 +48,24 @@
         margin: 0;
         padding: 0;
         width: 100%;
-        &:last-child{
-          .task-container{
+        &:last-child {
+          .task-container {
             border-bottom: 0 !important;
             padding-bottom: 0;
           }
         }
         .task-container {
-          display: flex;   
-          justify-content: space-between;      
-          padding:10px 0;
-          width:100%;
+          display: flex;
+          justify-content: space-between;
+          padding: 10px 0;
+          width: 100%;
           border-bottom: 1px solid $light-gray;
           box-sizing: border-box;
           position: relative;
           transition: background 200ms ease;
-          .d-flex{
+          .d-flex {
             align-items: center;
-            div{
+            div {
               text-align: right;
             }
           }
@@ -74,7 +74,7 @@
             font-size: 16px;
             font-weight: 400;
             vertical-align: middle;
-            color:$light-text;
+            color: $light-text;
             word-break: break-word;
             padding-top: 5px;
           }
@@ -94,7 +94,7 @@
             }
           }
           &:hover {
-            h4{
+            h4 {
               color: $dark-color;
               transition: all 0.3s ease;
             }
@@ -106,7 +106,7 @@
             border-radius: 4px;
             .icon {
               font-weight: bold;
-              i{
+              i {
                 color: $success-color;
               }
             }
@@ -193,37 +193,37 @@
     }
   }
 }
-.todo-wrap{
-  .card-header{
-    &.b-bottom{
+.todo-wrap {
+  .card-header {
+    &.b-bottom {
       border-bottom: 1px solid $light-gray;
     }
-    .todo-list-header{
-      .new-task-wrapper{
-        input{
+    .todo-list-header {
+      .new-task-wrapper {
+        input {
           padding: 12px 28px;
           background-color: $body-color;
           border: 1px solid #dee2e6;
         }
       }
-      .add-new-task-btn{
+      .add-new-task-btn {
         display: flex;
         align-items: center;
         z-index: 0;
       }
     }
   }
-  .todo-list-body{
-    .assign-name{
+  .todo-list-body {
+    .assign-name {
       opacity: 0.4;
       font-size: 13px;
       font-weight: 400;
     }
   }
-  .left-bookmark{
-    ul{
-      li{
-        .iconbg{
+  .left-bookmark {
+    ul {
+      li {
+        .iconbg {
           padding: 8px;
           border-radius: 30px;
           display: flex;
@@ -233,26 +233,26 @@
       }
     }
   }
-  &.email-wrap{
-    .email-app-sidebar{
-      .main-menu{
-        > li{
-          button.d-block{
+  &.email-wrap {
+    .email-app-sidebar {
+      .main-menu {
+        > li {
+          button.d-block {
             text-align: left;
           }
-          + li{
+          + li {
             padding-top: 12px;
           }
-          a{
+          a {
             padding: 0 16px;
             align-items: center;
-            .badge{
+            .badge {
               color: $white;
               padding: 5px 6px 4px 7px;
             }
-            &:hover{
+            &:hover {
               background-color: transparent;
-              .badge{
+              .badge {
                 color: $white;
               }
             }

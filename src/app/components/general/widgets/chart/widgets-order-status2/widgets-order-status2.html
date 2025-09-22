@@ -3,11 +3,21 @@
   <div class="card-body">
     <div class="chart-container">
       <div id="linechart">
-        <apx-chart [chart]="orderStatus.chart" [dataLabels]="orderStatus.dataLabels" [stroke]="orderStatus.stroke"
-                   [grid]="orderStatus.grid" [fill]="orderStatus.fill" [colors]="orderStatus.colors"
-                   [markers]="orderStatus.markers" [series]="orderStatus.series" [xaxis]="orderStatus.xaxis"
-                   [yaxis]="orderStatus.yaxis" [title]="orderStatus.title" [legend]="orderStatus.legend"
-                   [responsive]="orderStatus.responsive" />
+        <apx-chart
+          [chart]="orderStatus.chart"
+          [dataLabels]="orderStatus.dataLabels"
+          [stroke]="orderStatus.stroke"
+          [grid]="orderStatus.grid"
+          [fill]="orderStatus.fill"
+          [colors]="orderStatus.colors"
+          [markers]="orderStatus.markers"
+          [series]="orderStatus.series"
+          [xaxis]="orderStatus.xaxis"
+          [yaxis]="orderStatus.yaxis"
+          [title]="orderStatus.title"
+          [legend]="orderStatus.legend"
+          [responsive]="orderStatus.responsive"
+        />
       </div>
     </div>
   </div>

@@ -6,9 +6,9 @@
     <div class="owl-carousel owl-theme owl-loaded" id="owl-carousel-13">
       <owl-carousel-o [options]="options">
         @for(details of carouselImages; track details){
-          <ng-template carouselSlide>
-            <div class="item w-100"><img [src]="details.img" alt="Drawing-room"></div>
-          </ng-template>
+        <ng-template carouselSlide>
+          <div class="item w-100"><img [src]="details.img" alt="Drawing-room" /></div>
+        </ng-template>
         }
       </owl-carousel-o>
     </div>

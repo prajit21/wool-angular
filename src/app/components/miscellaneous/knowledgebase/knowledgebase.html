@@ -1,11 +1,19 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-12">
-      <div class="knowledgebase-bg bg-center bg-size" [ngStyle]="{'background-image': 'url(assets/images/knowledgebase/bg_1.jpg)',
+      <div
+        class="knowledgebase-bg bg-center bg-size"
+        [ngStyle]="{'background-image': 'url(assets/images/knowledgebase/bg_1.jpg)',
                                                         'background-size': 'cover',
                                                         'background-position': 'center center',
-                                                        'display': 'block'}">
-        <img class="bg-img-cover bg-center" src="assets/images/knowledgebase/bg_1.jpg" alt="looginpage" style="display: none;">
+                                                        'display': 'block'}"
+      >
+        <img
+          class="bg-img-cover bg-center"
+          src="assets/images/knowledgebase/bg_1.jpg"
+          alt="looginpage"
+          style="display: none"
+        />
       </div>
       <div class="knowledgebase-search">
         <div>
@@ -13,16 +21,21 @@
           <form class="form-inline">
             <div class="form-group w-100">
               <app-feather-icons [icon]="'search'" />
-              <input class="form-control-plaintext w-100" type="text" placeholder="Type question here" title="">
+              <input
+                class="form-control-plaintext w-100"
+                type="text"
+                placeholder="Type question here"
+                title=""
+              />
             </div>
           </form>
         </div>
       </div>
     </div>
     @for(details of knowledgebaseDetails; track details){
-      <div class="col-xl-4" [ngClass]="details.colClass">
-        <app-knowledgebase-details [details]="details" />
-      </div>
+    <div class="col-xl-4" [ngClass]="details.colClass">
+      <app-knowledgebase-details [details]="details" />
+    </div>
     }
     <div class="col-sm-12">
       <app-knowledgebase-article />

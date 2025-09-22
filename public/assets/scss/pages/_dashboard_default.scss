@@ -2,15 +2,10 @@
 //   3.13 Dashboard_default CSS Start
 // ==========================**/
 // //index dashboard css start
-@each $badge-light-name,
-$badge-light-color in (primary, $primary-color),
-(secondary, $secondary-color),
-(success, $success-color),
-(danger, $danger-color),
-(info, $info-color),
-(light, $badge-light-color),
-(dark, $dark-color),
-(warning, $warning-color) {
+@each $badge-light-name, $badge-light-color in (primary, $primary-color),
+  (secondary, $secondary-color), (success, $success-color), (danger, $danger-color),
+  (info, $info-color), (light, $badge-light-color), (dark, $dark-color), (warning, $warning-color)
+{
   .badge-light-#{$badge-light-name} {
     background-color: lighten($badge-light-color, 38%);
     color: $badge-light-color;
@@ -29,8 +24,8 @@ $badge-light-color in (primary, $primary-color),
   background-color: rgba($secondary-color, 0.08);
 }
 .dashboard_default {
-  .active-status{
-    content: "";
+  .active-status {
+    content: '';
     position: absolute;
     width: 10px;
     height: 10px;
@@ -47,13 +42,13 @@ $badge-light-color in (primary, $primary-color),
   table {
     thead {
       tr {
-        th{
+        th {
           padding: 0px 8px 8px 0px !important;
           font-family: $font-nunito-sans;
           .form-check {
             input {
               height: 15px;
-              &:checked{
+              &:checked {
                 background-color: var(--theme-deafult);
                 border: 1px solid $table-border-color;
               }
@@ -69,11 +64,11 @@ $badge-light-color in (primary, $primary-color),
       }
     }
     tbody {
-      tr{
+      tr {
         .form-check {
           input {
             height: 15px;
-            &:checked{
+            &:checked {
               background-color: var(--theme-deafult);
               border: 1px solid $table-border-color;
             }
@@ -155,7 +150,7 @@ $badge-light-color in (primary, $primary-color),
         font-size: 14px;
         font-weight: 600;
         margin-top: 5px;
-        span[class*="bg-"] {
+        span[class*='bg-'] {
           width: 15px;
           height: 15px;
           border-radius: 100%;
@@ -216,10 +211,10 @@ $badge-light-color in (primary, $primary-color),
               &:nth-child(5) {
                 color: var(--theme-deafult) !important;
               }
-              &:nth-child(6){
+              &:nth-child(6) {
                 color: var(--theme-deafult) !important;
               }
-              &:nth-child(7){
+              &:nth-child(7) {
                 .order {
                   background-color: rgba($primary-color, 0.1) !important;
                   color: var(--theme-deafult) !important;
@@ -320,7 +315,7 @@ $badge-light-color in (primary, $primary-color),
     }
     .from-buy {
       position: relative;
-      &.price-content{
+      &.price-content {
         margin-bottom: 1.5rem;
       }
       label {
@@ -331,7 +326,7 @@ $badge-light-color in (primary, $primary-color),
       }
       input {
         padding: 10px 10px 10px 10px;
-        &::placeholder{
+        &::placeholder {
           font-size: 16px;
           font-weight: 600;
           color: $theme-font-color;
@@ -348,9 +343,9 @@ $badge-light-color in (primary, $primary-color),
     }
   }
   .live-price {
-    table{
+    table {
       tbody {
-        tr{
+        tr {
           &:hover {
             .animation {
               transform: rotateY(360deg);
@@ -362,7 +357,7 @@ $badge-light-color in (primary, $primary-color),
               }
             }
           }
-          td{
+          td {
             padding: 18px 0px 18px 0px !important;
           }
           &:first-child {
@@ -370,12 +365,12 @@ $badge-light-color in (primary, $primary-color),
               padding-top: 10px !important;
             }
           }
-          &:last-child{
+          &:last-child {
             td {
               padding-bottom: 0px !important;
             }
           }
-          td{
+          td {
             &:first-child {
               .flex-shrink-0 {
                 background-color: $icon-bg-color;
@@ -394,14 +389,14 @@ $badge-light-color in (primary, $primary-color),
               }
               .flex-grow-1 {
                 p {
-                   font-size: 14px;
-                   font-weight: 600;
-                   color: $theme-body-sub-title-color;
+                  font-size: 14px;
+                  font-weight: 600;
+                  color: $theme-body-sub-title-color;
                 }
               }
             }
-            &:nth-child(3){
-              .flex-grow-1{
+            &:nth-child(3) {
+              .flex-grow-1 {
                 text-align: end;
                 p {
                   font-size: 14px;
@@ -411,7 +406,7 @@ $badge-light-color in (primary, $primary-color),
               }
             }
           }
-          &:nth-child(1){
+          &:nth-child(1) {
             td {
               .flex-shrink-0 {
                 svg {
@@ -429,7 +424,7 @@ $badge-light-color in (primary, $primary-color),
               }
             }
           }
-          &:nth-child(4){
+          &:nth-child(4) {
             td {
               .flex-shrink-0 {
                 svg {
@@ -438,7 +433,7 @@ $badge-light-color in (primary, $primary-color),
               }
             }
           }
-          &:last-child{
+          &:last-child {
             td {
               .flex-shrink-0 {
                 svg {
@@ -459,15 +454,15 @@ $badge-light-color in (primary, $primary-color),
             &:nth-child(5) {
               text-align: end;
             }
-           }
+          }
         }
       }
       tbody {
-        tr{
+        tr {
           &:hover {
             td {
-              &:nth-child(2){
-                .d-flex{
+              &:nth-child(2) {
+                .d-flex {
                   .flex-shrink-0 {
                     svg {
                       stroke: var(--theme-deafult);
@@ -484,13 +479,13 @@ $badge-light-color in (primary, $primary-color),
                   }
                 }
               }
-              &:nth-child(3){
+              &:nth-child(3) {
                 h6 {
                   color: var(--theme-deafult);
                 }
               }
-              &:nth-child(5){
-                h6{
+              &:nth-child(5) {
+                h6 {
                   color: var(--theme-deafult);
                 }
               }
@@ -530,7 +525,7 @@ $badge-light-color in (primary, $primary-color),
             }
             &:nth-child(3) {
               min-width: 100px;
-              p{
+              p {
                 font-size: 13px;
                 color: $theme-body-sub-title-color;
               }
@@ -539,11 +534,11 @@ $badge-light-color in (primary, $primary-color),
               min-width: 100px;
               .d-flex {
                 align-items: center;
-                .progress{
+                .progress {
                   border-radius: 50px;
                   height: 5px;
                   width: 70px;
-                  .progress-bar{
+                  .progress-bar {
                     border-radius: 50px;
                   }
                 }
@@ -578,7 +573,7 @@ $badge-light-color in (primary, $primary-color),
         border: 1px solid $theme-body-sub-title-color;
         justify-content: space-evenly;
         margin-bottom: 16px;
-        span{
+        span {
           padding: 10px 32px 10px 32px;
           margin: 0;
           &:first-child {
@@ -622,7 +617,7 @@ $badge-light-color in (primary, $primary-color),
   .progress-show {
     &.card {
       &:hover {
-        .card-header{
+        .card-header {
           h3 {
             letter-spacing: 0px;
           }
@@ -663,7 +658,9 @@ $badge-light-color in (primary, $primary-color),
     svg {
       fill: var(--theme-deafult);
       --tw-translate-x: -50%;
-      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+        skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+        scaleY(var(--tw-scale-y));
       width: 16px;
       height: 8px;
       top: 22px;
@@ -676,9 +673,9 @@ $badge-light-color in (primary, $primary-color),
       justify-content: space-between;
       margin-bottom: 14px;
       span {
-         font-size: 20px;
-         font-weight: 700;
-         justify-content: space-between;
+        font-size: 20px;
+        font-weight: 700;
+        justify-content: space-between;
       }
     }
   }
@@ -687,7 +684,7 @@ $badge-light-color in (primary, $primary-color),
       p {
         color: $theme-body-sub-title-color;
       }
-      h3{
+      h3 {
         font-size: 24px;
         font-weight: 700;
         margin-bottom: 5px;
@@ -713,16 +710,16 @@ $badge-light-color in (primary, $primary-color),
       }
       .flex-grow-1 {
         P {
-          text-overflow:ellipsis;
-          overflow:hidden;
+          text-overflow: ellipsis;
+          overflow: hidden;
           display: -webkit-box !important;
           -webkit-line-clamp: 1;
           -webkit-box-orient: vertical;
           white-space: normal;
         }
         h5 {
-          text-overflow:ellipsis;
-          overflow:hidden;
+          text-overflow: ellipsis;
+          overflow: hidden;
           display: -webkit-box !important;
           -webkit-line-clamp: 1;
           -webkit-box-orient: vertical;
@@ -732,17 +729,17 @@ $badge-light-color in (primary, $primary-color),
       .d-flex {
         align-items: center;
         justify-content: space-between;
-        .limit-balance-title{
+        .limit-balance-title {
           padding-right: 10px;
           border-right: 1px dashed $theme-font-color;
           h5 {
             color: var(--theme-deafult);
           }
-          .limit-balance{
+          .limit-balance {
             h5 {
               color: $theme-font-color;
-              text-overflow:ellipsis;
-              overflow:hidden;
+              text-overflow: ellipsis;
+              overflow: hidden;
               display: -webkit-box !important;
               -webkit-line-clamp: 1;
               -webkit-box-orient: vertical;
@@ -750,8 +747,8 @@ $badge-light-color in (primary, $primary-color),
             }
             p {
               font-size: 12px;
-              text-overflow:ellipsis;
-              overflow:hidden;
+              text-overflow: ellipsis;
+              overflow: hidden;
               display: -webkit-box !important;
               -webkit-line-clamp: 1;
               -webkit-box-orient: vertical;
@@ -759,15 +756,15 @@ $badge-light-color in (primary, $primary-color),
             }
           }
         }
-        .seconds-balance-title{
+        .seconds-balance-title {
           h5 {
             color: var(--theme-secondary);
           }
-          .limit-balance{
+          .limit-balance {
             h5 {
               color: $theme-font-color;
-              text-overflow:ellipsis;
-              overflow:hidden;
+              text-overflow: ellipsis;
+              overflow: hidden;
               display: -webkit-box !important;
               -webkit-line-clamp: 1;
               -webkit-box-orient: vertical;
@@ -775,8 +772,8 @@ $badge-light-color in (primary, $primary-color),
             }
             p {
               font-size: 12px;
-              text-overflow:ellipsis;
-              overflow:hidden;
+              text-overflow: ellipsis;
+              overflow: hidden;
               display: -webkit-box !important;
               -webkit-line-clamp: 1;
               -webkit-box-orient: vertical;
@@ -819,7 +816,7 @@ $badge-light-color in (primary, $primary-color),
         }
       }
     }
-    table{
+    table {
       thead {
         tr {
           th {
@@ -830,7 +827,7 @@ $badge-light-color in (primary, $primary-color),
         }
       }
       tbody {
-        tr{
+        tr {
           &:hover {
             td {
               &:nth-child(2) {
@@ -863,7 +860,7 @@ $badge-light-color in (primary, $primary-color),
                   border-radius: 5px;
                 }
               }
-              &:nth-child(6){
+              &:nth-child(6) {
                 color: var(--theme-deafult) !important;
               }
               &:nth-child(7) {
@@ -873,7 +870,7 @@ $badge-light-color in (primary, $primary-color),
               }
             }
           }
-          td{
+          td {
             &:nth-child(2) {
               .d-flex {
                 align-items: center;
@@ -893,7 +890,7 @@ $badge-light-color in (primary, $primary-color),
                   }
                 }
                 a {
-                  p  {
+                  p {
                     color: $theme-font-color;
                   }
                 }
@@ -903,13 +900,13 @@ $badge-light-color in (primary, $primary-color),
               span {
                 padding: 8px 8px;
               }
-            }   
+            }
             &:nth-child(5) {
               span {
                 padding: 8px 8px;
               }
             }
-            &:nth-child(7){
+            &:nth-child(7) {
               text-align: end;
               span {
                 font-size: 13px;
@@ -918,7 +915,7 @@ $badge-light-color in (primary, $primary-color),
               }
             }
           }
-          td{
+          td {
             &:last-child {
               fill: var(--theme-deafult);
             }
@@ -937,7 +934,7 @@ $badge-light-color in (primary, $primary-color),
         top: 37px;
         right: 18px;
       }
-      input[type=search] {
+      input[type='search'] {
         width: 150px !important;
         height: 34px;
         border-radius: 6px;
@@ -955,15 +952,15 @@ $badge-light-color in (primary, $primary-color),
           tr.odd,
           tr.even {
             background-color: transparent !important;
-            >.sorting_1 {
+            > .sorting_1 {
               background-color: transparent !important;
             }
           }
         }
       }
       thead {
-        >tr {
-          >th {
+        > tr {
+          > th {
             text-transform: capitalize;
             font-weight: 600;
             &:before,
@@ -974,8 +971,8 @@ $badge-light-color in (primary, $primary-color),
         }
       }
       tbody {
-        >tr {
-          >td {
+        > tr {
+          > td {
             font-weight: 600;
           }
         }
@@ -1078,7 +1075,7 @@ $badge-light-color in (primary, $primary-color),
   .dashboard_default {
     .contact-details {
       .card-body {
-        .d-flex{
+        .d-flex {
           span {
             padding: 10px 8px 10px 0px;
           }
@@ -1142,7 +1139,7 @@ $badge-light-color in (primary, $primary-color),
       }
     }
     .dashboard_default {
-      .main-balance{
+      .main-balance {
         .card-body {
           h3 {
             font-size: 20px;
@@ -1251,7 +1248,7 @@ $badge-light-color in (primary, $primary-color),
       .card-body {
         .d-flex {
           margin-bottom: 25px;
-          span  {
+          span {
             padding: 10px 62px 10px 44px;
           }
         }
@@ -1311,7 +1308,7 @@ $badge-light-color in (primary, $primary-color),
     }
   }
 }
-@media screen and (max-width: 1310px){
+@media screen and (max-width: 1310px) {
   .dashboard_default {
     .total-earning {
       .d-flex {
@@ -1346,22 +1343,22 @@ $badge-light-color in (primary, $primary-color),
             &:first-child {
               min-width: 10px;
             }
-            &:nth-child(2){
+            &:nth-child(2) {
               min-width: 100px;
             }
-            &:nth-child(3){
+            &:nth-child(3) {
               min-width: 100px;
             }
-            &:nth-child(4){
+            &:nth-child(4) {
               min-width: 100px;
             }
-            &:nth-child(5){
+            &:nth-child(5) {
               min-width: 100px;
             }
-            &:nth-child(6){
+            &:nth-child(6) {
               min-width: 100px;
             }
-            &:nth-child(7){
+            &:nth-child(7) {
               min-width: 100px;
             }
           }
@@ -1371,7 +1368,7 @@ $badge-light-color in (primary, $primary-color),
     .coins-table {
       tr {
         th {
-          &:nth-child(2){
+          &:nth-child(2) {
             min-width: 145px;
           }
         }
@@ -1379,7 +1376,7 @@ $badge-light-color in (primary, $primary-color),
     }
     .recent-activities {
       tr {
-        th{
+        th {
           &:nth-child(2) {
             min-width: 195px;
           }
@@ -1413,7 +1410,7 @@ $badge-light-color in (primary, $primary-color),
       }
     }
     .buysell-section {
-      a{
+      a {
         &.btn {
           margin-top: 32px;
         }
@@ -1461,7 +1458,7 @@ $badge-light-color in (primary, $primary-color),
       .d-flex {
         .flex-grow-1 {
           p {
-            span{
+            span {
               &:last-child {
                 display: none;
               }
@@ -1495,7 +1492,7 @@ $badge-light-color in (primary, $primary-color),
 @media screen and (max-width: 360px) {
   .dashboard_default {
     .contact-details {
-      .card-body{
+      .card-body {
         .d-flex {
           span {
             padding: 10px 17px 10px 13px;

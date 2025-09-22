@@ -1,13 +1,17 @@
 <div class="sidebar-body">
   <div class="product-upload">
-    <p>Product Image </p>
-    <form class=" dropzone-light" id="multiFileUploadA">
-      <dropzone class="no-preview" [config]="config" [message]="'Drag your image here, or browser SVG,PNG,JPG or GIF'"  />
+    <p>Product Image</p>
+    <form class="dropzone-light" id="multiFileUploadA">
+      <dropzone
+        class="no-preview"
+        [config]="config"
+        [message]="'Drag your image here, or browser SVG,PNG,JPG or GIF'"
+      />
     </form>
   </div>
   <div class="product-upload">
     <p>Product Gallery</p>
-    <form class=" dropzone-light" id="multiFileUploadB">
+    <form class="dropzone-light" id="multiFileUploadB">
       <dropzone class="no-preview" [config]="config2" [message]="'Drag your image here'" />
     </form>
   </div>
@@ -15,14 +19,15 @@
     <div class="btn me-2">
       <div class="d-flex align-items-center gap-sm-2 gap-1" (click)="previous()">
         <svg>
-          <use href="assets/svg/icon-sprite.svg#back-arrow"></use>
-        </svg>Previous
+          <use href="assets/svg/icon-sprite.svg#back-arrow"></use></svg
+        >Previous
       </div>
     </div>
     <div class="btn">
-      <div class="d-flex align-items-center gap-sm-2 gap-1" (click)="next()">Next
+      <div class="d-flex align-items-center gap-sm-2 gap-1" (click)="next()">
+        Next
         <svg>
-          <use href="assets/svg/icon-sprite.svg#front-arrow"> </use>
+          <use href="assets/svg/icon-sprite.svg#front-arrow"></use>
         </svg>
       </div>
     </div>

@@ -1,12 +1,14 @@
 <div class="card">
   <div class="card-header">
     <h3>Grid For Column</h3>
-    <p class="mt-1 f-m-light">You may use predefined grid classes. Using <code>.col-md-*</code>you can set the grid system.</p>
+    <p class="mt-1 f-m-light">
+      You may use predefined grid classes. Using <code>.col-md-*</code>you can set the grid system.
+    </p>
   </div>
   <div class="card-body grid-showcase">
     <div class="row">
       @for(details of gridColumn; track details){
-        <div class="col-md-{{ details }} text-center"><span>col-md-{{ details }}</span></div>
+      <div class="col-md-{{ details }} text-center"><span>col-md-{{ details }}</span></div>
       }
     </div>
   </div>

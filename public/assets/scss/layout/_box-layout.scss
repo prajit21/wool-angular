@@ -11,15 +11,15 @@
     }
     .artist-table {
       .appointment-table.customer-table {
-            table {
-                tr {
-                      td {
-                          &:last-child {
-                                min-width: 100px;
-                          }
-                      }
-                }
+        table {
+          tr {
+            td {
+              &:last-child {
+                min-width: 100px;
+              }
             }
+          }
+        }
       }
     }
     .md-sidebar {
@@ -55,7 +55,7 @@
       }
     }
     .currency-widget {
-      div[class*=bg-light-] {
+      div[class*='bg-light-'] {
         display: none;
       }
     }
@@ -102,7 +102,7 @@
     .apache-cotainer-large,
     #line-visual,
     #line-visulH {
-      >div,
+      > div,
       canvas {
         width: 100% !important;
       }
@@ -121,11 +121,11 @@
             top: 140px;
             bottom: 97px;
             &.close_icon {
-              ~footer {
+              ~ footer {
                 width: 1200px;
                 left: 47%;
               }
-              ~.footer-fix {
+              ~ .footer-fix {
                 padding-left: 0;
               }
               .sidebar-main {
@@ -190,8 +190,8 @@
                   }
                   a {
                     &.active {
-                      ~.sidebar-submenu,
-                      ~.mega-menu-container {
+                      ~ .sidebar-submenu,
+                      ~ .mega-menu-container {
                         animation: unset;
                       }
                     }
@@ -326,7 +326,7 @@
                   height: calc(100vh - 316px);
                 }
               }
-              ~footer {
+              ~ footer {
                 width: 1280px;
                 left: 50%;
                 margin-left: 0;
@@ -479,7 +479,7 @@
               align-items: center;
               justify-content: center;
               min-width: 300px;
-              >div {
+              > div {
                 z-index: 8;
                 background-color: rgba($white, 0.75);
                 background-blend-mode: overlay;
@@ -563,7 +563,7 @@
       }
       ul {
         &.close_icon {
-          >li {
+          > li {
             label {
               padding: 0;
               &:after {
@@ -596,7 +596,7 @@
         .btn-radio {
           .btn-group {
             .radio {
-              input[type="radio"] {
+              input[type='radio'] {
                 display: none;
               }
             }
@@ -614,7 +614,7 @@
           .bitcoin-content {
             .bitcoin-numbers {
               h6 {
-                font-size: 14PX;
+                font-size: 14px;
               }
             }
             &.text-right {
@@ -773,7 +773,7 @@
             padding-left: 12px;
           }
           .col-xl-3 {
-            +.col-xl-3 {
+            + .col-xl-3 {
               padding-right: 12px;
             }
           }
@@ -861,7 +861,7 @@
           }
         }
       }
-      .main-balance{
+      .main-balance {
         .card-body {
           h3 {
             font-size: 20px;
@@ -963,7 +963,7 @@
         .card-body {
           .d-flex {
             margin-bottom: 25px;
-            span  {
+            span {
               padding: 10px 62px 10px 44px;
             }
           }
@@ -1068,7 +1068,7 @@
       table {
         tbody {
           tr {
-            td{
+            td {
               padding: 15px 0px 15px 0px !important;
             }
           }
@@ -1140,7 +1140,7 @@
               flex-wrap: wrap;
               justify-content: space-between;
               li {
-                .flex-grow-1{
+                .flex-grow-1 {
                   .progress {
                     width: 100px;
                   }
@@ -1152,7 +1152,7 @@
       }
       .profit {
         .profit-earning {
-          .d-flex{
+          .d-flex {
             .badge {
               width: 60px;
               height: 60px;
@@ -1167,7 +1167,7 @@
                 h2 {
                   font-size: 24px;
                 }
-                span[class*="bg-"] {
+                span[class*='bg-'] {
                   display: none;
                   svg {
                     display: none;
@@ -1207,7 +1207,7 @@
                   display: none;
                 }
                 &:nth-child(5) {
-                  display: none ;
+                  display: none;
                 }
                 &:nth-child(6) {
                   display: none;
@@ -1292,7 +1292,7 @@
             tr {
               td {
                 &:nth-child(3) {
-                   display: none;
+                  display: none;
                 }
               }
             }

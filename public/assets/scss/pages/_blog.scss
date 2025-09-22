@@ -21,7 +21,7 @@
         display: inline-block;
         font-size: 12px;
         color: $theme-body-sub-title-color;
-        +li {
+        + li {
           padding-left: 20px;
           line-height: 1;
           padding-right: 0;
@@ -82,7 +82,7 @@
     box-shadow: inset 0px -200px 100px -13px rgba($black, 0.6);
     transition: all 0.3s ease;
     border-radius: 5px;
-    content: "";
+    content: '';
     position: absolute;
     height: 100%;
     top: 0;
@@ -230,7 +230,7 @@
       padding: 7px;
       width: 90px;
       border: 1px solid $light-semi-gray;
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         margin-left: 30px;
         margin-right: unset;
       }
@@ -266,7 +266,7 @@
 .blog-box {
   &.blog-list {
     .blog-details {
-      h4{
+      h4 {
         margin-top: 0px !important;
       }
     }

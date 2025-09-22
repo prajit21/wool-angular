@@ -1,22 +1,27 @@
 <div class="card">
   <div class="card-header">
     <h3>Alerts with icons and text actions</h3>
-    <p class="f-m-light mt-1">Use the <code>.dismiss-text</code> class to add dismiss text instead of icon</p>
+    <p class="f-m-light mt-1">
+      Use the <code>.dismiss-text</code> class to add dismiss text instead of icon
+    </p>
   </div>
   <div class="card-body dark-txt">
     @if(isShow[0]){
-      <div class="alert border-warning alert-dismissible fade show p-0" role="alert">
-        <div class="alert-arrow bg-warning"><i class="icon-timer"></i></div>
-        <p>Your time Over after <strong class="txt-dark">5</strong> minute</p>
-        <button class="p-0 border-0 me-2 ms-auto" type="button" (click)="dismissAlert(0)"><span class="bg-warning px-3 py-1" aria-hidden="true">Check</span></button>
-      </div>
-    }
-    @if(isShow[1]){
-      <div class="alert border-danger alert-dismissible fade show p-0 mb-0" role="alert">
-        <div class="alert-arrow bg-danger"><i class="icon-heart"></i></div>
-        <p>Oh snap! Change a few things up <strong class="txt-dark"> Notification check</strong></p>
-        <button class="p-0 border-0 me-2 ms-auto" type="button" (click)="dismissAlert(1)"><span class="bg-danger text-white px-3 py-1" aria-hidden="true">Alert</span></button>
-      </div>
+    <div class="alert border-warning alert-dismissible fade show p-0" role="alert">
+      <div class="alert-arrow bg-warning"><i class="icon-timer"></i></div>
+      <p>Your time Over after <strong class="txt-dark">5</strong> minute</p>
+      <button class="p-0 border-0 me-2 ms-auto" type="button" (click)="dismissAlert(0)">
+        <span class="bg-warning px-3 py-1" aria-hidden="true">Check</span>
+      </button>
+    </div>
+    } @if(isShow[1]){
+    <div class="alert border-danger alert-dismissible fade show p-0 mb-0" role="alert">
+      <div class="alert-arrow bg-danger"><i class="icon-heart"></i></div>
+      <p>Oh snap! Change a few things up <strong class="txt-dark"> Notification check</strong></p>
+      <button class="p-0 border-0 me-2 ms-auto" type="button" (click)="dismissAlert(1)">
+        <span class="bg-danger text-white px-3 py-1" aria-hidden="true">Alert</span>
+      </button>
+    </div>
     }
   </div>
 </div>

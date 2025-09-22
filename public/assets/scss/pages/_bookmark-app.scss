@@ -10,8 +10,8 @@
 .bookmark-wrap {
   .details-bookmark {
     .row {
-      >div {
-        +div {
+      > div {
+        + div {
           padding-right: 15px !important;
         }
       }
@@ -33,7 +33,7 @@
           height: 18px;
           vertical-align: middle;
         }
-        >.main-title {
+        > .main-title {
           color: var(--theme-deafult);
           font-weight: 700;
           margin-bottom: 5px;
@@ -52,7 +52,7 @@
           }
         }
         a {
-          >.title {
+          > .title {
             text-transform: capitalize;
           }
         }
@@ -169,7 +169,7 @@
             ul {
               li {
                 display: inline-block;
-                +li {
+                + li {
                   margin-left: 5px;
                 }
                 svg {
@@ -201,9 +201,9 @@
     }
     &.list-bookmark {
       .row {
-        >div {
+        > div {
           flex: 0 0 100%;
-          max-width: 100%
+          max-width: 100%;
         }
       }
       .bookmark-card {
@@ -224,11 +224,11 @@
               right: 30px;
               opacity: 1;
               text-align: right;
-                [dir="rtl"] & {
-                  text-align: left;
-                  left: 30px;
-                  right: unset;
-                }
+              [dir='rtl'] & {
+                text-align: left;
+                left: 30px;
+                right: unset;
+              }
             }
           }
           &:hover {
@@ -286,7 +286,7 @@
         ul {
           li {
             display: inline-block;
-            +li {
+            + li {
               margin-left: 5px;
             }
           }
@@ -294,13 +294,13 @@
       }
     }
     .tab-pane {
-      >.card {
+      > .card {
         box-shadow: none;
       }
     }
   }
 }
-// responsive 
+// responsive
 @media only screen and (max-width: 1660px) {
   .bookmark-tabcontent {
     .details-bookmark {

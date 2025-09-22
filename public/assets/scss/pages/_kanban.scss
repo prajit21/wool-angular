@@ -18,17 +18,17 @@
   background: $body-color;
   border-bottom: 1px solid #ddd;
   &.bg-info {
-    &~.kanban-drag {
+    & ~ .kanban-drag {
       background-color: rgba($info-color, 0.3) !important;
     }
   }
   &.bg-warning {
-    &~.kanban-drag {
+    & ~ .kanban-drag {
       background-color: rgba($warning-color, 0.3) !important;
     }
   }
   &.bg-success {
-    &~.kanban-drag {
+    & ~ .kanban-drag {
       background-color: rgba($success-color, 0.3) !important;
     }
   }
@@ -85,13 +85,13 @@
     &:hover {
       color: inherit;
     }
-    &+.kanban-box {
+    & + .kanban-box {
       margin-top: 20px;
     }
     .badge {
       font-weight: 400;
     }
-     h5 {
+    h5 {
       font-size: 15px;
       margin-top: 5px;
       padding-bottom: 8px;
@@ -120,7 +120,7 @@
         content: none;
       }
     }
-    .customers ul li+li {
+    .customers ul li + li {
       margin-left: -10px;
     }
     .date {

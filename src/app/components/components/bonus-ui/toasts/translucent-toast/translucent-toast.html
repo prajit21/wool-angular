@@ -2,21 +2,24 @@
   <div class="card-header">
     <h3>Translucent Toasts</h3>
     <p class="f-m-light mt-1">
-      Use the <code>.hide </code>class through hide toast and <code>.show </code>class through visible toast and given directions.<code>[toast-*]</code>through change icons colors.</p>
+      Use the <code>.hide </code>class through hide toast and <code>.show </code>class through
+      visible toast and given directions.<code>[toast-*]</code>through change icons colors.
+    </p>
   </div>
   <div class="card-body toast-rtl bg-dark toast-stack-wrapper">
     <div class="toast-container">
       @for(details of translucentToasts; track details){
-        <div class="toast" [class.show]="details.show">
-          <div class="toast-header">
-            <div class="toast-icons">
-              <app-feather-icons [icon]="'disc'" [class]="details.iconColor" />
-            </div>
-            <strong class="me-auto">{{ details.title }}</strong><small class="text-muted d-sm-block d-none">{{ details.time }}</small>
-            <button class="btn-close" type="button" (click)="closeToast(details.id)"></button>
+      <div class="toast" [class.show]="details.show">
+        <div class="toast-header">
+          <div class="toast-icons">
+            <app-feather-icons [icon]="'disc'" [class]="details.iconColor" />
           </div>
-          <div class="toast-body toast-dark"> {{ details.bodyText }}</div>
+          <strong class="me-auto">{{ details.title }}</strong
+          ><small class="text-muted d-sm-block d-none">{{ details.time }}</small>
+          <button class="btn-close" type="button" (click)="closeToast(details.id)"></button>
         </div>
+        <div class="toast-body toast-dark">{{ details.bodyText }}</div>
+      </div>
       }
     </div>
   </div>

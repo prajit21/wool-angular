@@ -1,15 +1,14 @@
 /**=====================
   2.3 General CSS start
 ==========================**/
-app-svg-icon{
+app-svg-icon {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-
-.jvector-map-height{
-  .map-container{
+.jvector-map-height {
+  .map-container {
     height: 310px !important;
     width: 100% !important;
     @media only screen and (max-width: 1700px) {
@@ -31,7 +30,7 @@ app-svg-icon{
       .product-details {
         padding: 25px 0;
 
-        h4{
+        h4 {
           text-transform: capitalize;
         }
 
@@ -46,15 +45,15 @@ app-svg-icon{
           border-bottom: 1px solid #59667a;
         }
 
-        .product-qnty{
-          .input-group{
-            .btn-primary{
+        .product-qnty {
+          .input-group {
+            .btn-primary {
               background-color: #59667a !important;
               border: 1px solid #59667a !important;
               padding: 5px 12px;
             }
 
-            input{
+            input {
               margin-left: calc(var(--bs-border-width) * -1);
               padding: 0 12px;
             }
@@ -80,11 +79,11 @@ app-svg-icon{
   }
 }
 
-.product-sidebar{
-  .product-filter{
-    .owl-carousel{
-      .owl-item{
-        .product-box{
+.product-sidebar {
+  .product-filter {
+    .owl-carousel {
+      .owl-item {
+        .product-box {
           margin-top: 15px;
         }
       }
@@ -93,9 +92,9 @@ app-svg-icon{
 }
 
 // Copy Text Alert
-.alert{
-  &.alert-copy{
-    &.notify-alert{
+.alert {
+  &.alert-copy {
+    &.notify-alert {
       margin: 0px auto;
       position: fixed;
       transition: all 0.5s ease-in-out 0s;
@@ -103,11 +102,11 @@ app-svg-icon{
       bottom: 20px;
       right: 20px;
 
-      >button{
-            position: absolute;
-    right: 10px;
-    top: 5px;
-    z-index: 1002;
+      > button {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        z-index: 1002;
       }
     }
   }

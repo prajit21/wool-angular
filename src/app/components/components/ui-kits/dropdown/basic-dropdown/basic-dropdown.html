@@ -2,19 +2,27 @@
   <div class="card-header">
     <h3>Basic dropdown</h3>
     <p class="f-m-light mt-1">
-      When the<code>.show </code>class starts, dropdown appears. And <code>.btn-*</code> to change button dark background colors.</p>
+      When the<code>.show </code>class starts, dropdown appears. And <code>.btn-*</code> to change
+      button dark background colors.
+    </p>
   </div>
   <div class="card-body rtl-dropdown">
     <div class="common-flex">
       @for(details of basicDropdown; track details){
-        <div class="btn-group" ngbDropdown>
-          <button class="btn btn-{{ details.colorClass }} dropdown-toggle" type="button" ngbDropdownToggle>{{ details.title }}</button>
-          <ul class="dropdown-menu dropdown-block" ngbDropdownMenu>
-            @for(items of details.dropdownItem; track items){
-              <li><a ngbDropdownItem href="javascript:void(0)">{{ items.item }}</a></li>
-            }
-          </ul>
-        </div>
+      <div class="btn-group" ngbDropdown>
+        <button
+          class="btn btn-{{ details.colorClass }} dropdown-toggle"
+          type="button"
+          ngbDropdownToggle
+        >
+          {{ details.title }}
+        </button>
+        <ul class="dropdown-menu dropdown-block" ngbDropdownMenu>
+          @for(items of details.dropdownItem; track items){
+          <li><a ngbDropdownItem href="javascript:void(0)">{{ items.item }}</a></li>
+          }
+        </ul>
+      </div>
       }
     </div>
   </div>

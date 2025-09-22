@@ -9,7 +9,7 @@
 }
 .form-space {
   margin-bottom: -10px;
-  >div {
+  > div {
     margin-bottom: 10px;
   }
 }
@@ -28,20 +28,20 @@
       font-weight: $form-placeholder-font-weight;
     }
   }
-  input[type=text],
-  input[type=email],
-  input[type=search],
-  input[type=password],
-  input[type=number],
-  input[type=tel],
-  input[type=date],
-  input[type=datetime-local],
-  input[type=time],
-  input[type=datetime-local],
-  input[type=month],
-  input[type=week],
-  input[type=url],
-  input[type=file],
+  input[type='text'],
+  input[type='email'],
+  input[type='search'],
+  input[type='password'],
+  input[type='number'],
+  input[type='tel'],
+  input[type='date'],
+  input[type='datetime-local'],
+  input[type='time'],
+  input[type='datetime-local'],
+  input[type='month'],
+  input[type='week'],
+  input[type='url'],
+  input[type='file'],
   textarea,
   select {
     border-color: $form-input-border-color;
@@ -58,7 +58,7 @@
       font-weight: $form-placeholder-font-weight;
     }
   }
-  input[type=file] {
+  input[type='file'] {
     height: auto;
   }
   select.form-control:not([size]):not([multiple]) {
@@ -68,7 +68,7 @@
   .checkbox {
     label {
       padding-left: 10px;
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         padding-right: 10px;
         padding-left: unset;
       }
@@ -86,10 +86,10 @@
       left: 40%;
       margin-left: -10px;
       padding: 0 5px;
-      content: "Or Signup With";
+      content: 'Or Signup With';
       color: $theme-font-color;
       background: $white;
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         left: unset;
         right: 40%;
         margin-left: unset;
@@ -111,8 +111,8 @@
       padding: 0 5px;
       color: $theme-font-color;
       background: $white;
-      content: "Or Login With";
-      [dir="rtl"] & {
+      content: 'Or Login With';
+      [dir='rtl'] & {
         left: unset;
         right: 40%;
         margin-left: unset;
@@ -154,7 +154,7 @@
   margin-bottom: 0;
   .col-form-label {
     margin-right: 5px;
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       margin-left: 5px;
       margin-right: unset;
     }
@@ -164,25 +164,25 @@
   .form-group {
     &:before {
       position: absolute;
-      content: "";
+      content: '';
       width: 1px;
       height: 25px;
       background: #e8ebf2;
       left: 82px;
       top: 50px;
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         left: unset;
         right: 82px;
       }
     }
     &:after {
       position: absolute;
-      content: "\f002";
-      font-family: "FontAwesome";
+      content: '\f002';
+      font-family: 'FontAwesome';
       top: 53px;
       left: 53px;
       color: #8e8e8e;
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         left: unset;
         right: 53px;
       }
@@ -193,7 +193,7 @@
     padding: 10px 10px 10px 70px;
     border-radius: 10px;
     background-color: rgba($light-color, 0.3);
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       padding: 10px 70px 10px 10px;
     }
     &:focus {
@@ -242,10 +242,10 @@
       &:invalid {
         border-color: $danger-color;
       }
-      &:invalid~.form-check-label {
+      &:invalid ~ .form-check-label {
         color: $danger-color;
       }
-      &:valid~.form-check-label {
+      &:valid ~ .form-check-label {
         color: $success-color;
       }
       &:checked {
@@ -278,7 +278,7 @@
   .form-check {
     &.form-switch {
       .form-check-input {
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           margin-left: 7px;
         }
       }
@@ -302,8 +302,8 @@
     &:checked {
       background-color: $primary-color;
       border-color: $primary-color;
-    }media
-    &:focus {
+    }
+    media &:focus {
       border-color: $primary-color;
       box-shadow: 0 0 0 4px rgba($primary-color, 0.25);
     }
@@ -341,7 +341,7 @@
   .form-check-inline {
     margin: 0;
     min-height: 0;
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       margin: 0;
     }
     .form-check-input {
@@ -372,7 +372,7 @@
       left: 15px;
       width: 24px;
       height: 24px;
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         left: unset;
         right: 15px;
       }
@@ -400,7 +400,7 @@
         background-color: transparent !important;
         top: 0;
         display: block;
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           margin-left: unset;
           margin-right: 1px;
         }
@@ -408,13 +408,13 @@
     }
   }
   &.checkbox-primary {
-    input[type=checkbox]:checked {
-      +label::before {
+    input[type='checkbox']:checked {
+      + label::before {
         color: transparent;
         border: 2px solid $primary-color;
       }
     }
-    input[type=checkbox] {
+    input[type='checkbox'] {
       opacity: 1;
     }
     .form-check-input {
@@ -424,7 +424,7 @@
           box-shadow: none;
         }
       }
-      &:checked[type=checkbox] {
+      &:checked[type='checkbox'] {
         background-image: none;
       }
     }
@@ -442,7 +442,7 @@
   gap: calc(11px + (16 - 11) * ((100vw - 320px) / (1920 - 320)));
   flex-wrap: wrap;
   justify-content: center;
-  @media (max-width:1200px) {
+  @media (max-width: 1200px) {
     justify-content: unset;
   }
   li {
@@ -470,13 +470,13 @@
       &:focus {
         box-shadow: none;
       }
-      &[type=radio] {
+      &[type='radio'] {
         opacity: 1;
       }
       &:checked {
         border: 2px solid $primary-color;
         background-color: transparent;
-        &[type=radio] {
+        &[type='radio'] {
           background-image: none;
           box-shadow: unset;
         }
@@ -494,7 +494,7 @@
       i {
         font-size: 20px;
         padding-right: 10px;
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           padding-right: 0;
           padding-left: 10px;
         }
@@ -516,16 +516,16 @@
 .rtl-input {
   .form-check {
     &.form-check-inline {
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         padding: 0;
       }
     }
     &.form-switch {
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         padding-right: 40px;
       }
       .form-check-input {
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           margin-left: unset;
           margin-right: -40px;
           float: right;
@@ -555,7 +555,7 @@
     top: 50%;
     right: 12px;
     transform: translateY(-50%);
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       right: 0;
       left: 12px;
     }
@@ -567,7 +567,7 @@
       top: 50%;
       right: 12px;
       transform: translateY(-50%);
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         right: unset;
         left: 12px;
       }
@@ -602,15 +602,15 @@
         display: none;
       }
     }
-    >label {
-      [dir="rtl"] & {
+    > label {
+      [dir='rtl'] & {
         left: unset;
         right: 0;
       }
     }
   }
 }
-.theme-form{
+.theme-form {
   .form-control {
     &::placeholder {
       color: $theme-body-sub-title-color;

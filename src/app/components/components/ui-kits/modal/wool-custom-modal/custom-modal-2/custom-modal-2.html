@@ -9,8 +9,11 @@
       <h3 class="theme-name mb-0"><span>Modal 2 - </span>Result Modal</h3>
       <p>Example of wool login form.</p>
     </div>
-    <div class="overflow-hidden"><img class="img-fluid" src="assets/images/alert/learning.png" alt="learning">
-      <button class="btn btn-primary mx-auto mt-3" type="button" (click)="openModal(resultModal)">Click Out</button>
+    <div class="overflow-hidden">
+      <img class="img-fluid" src="assets/images/alert/learning.png" alt="learning" />
+      <button class="btn btn-primary mx-auto mt-3" type="button" (click)="openModal(resultModal)">
+        Click Out
+      </button>
     </div>
 
     <ng-template #resultModal let-modal>
@@ -18,25 +21,36 @@
         <div class="modal-body social-profile text-start">
           <div class="modal-toggle-wrapper">
             <h3>wool Login</h3>
-            <p>
-              Fill in your information below to continue.</p>
+            <p>Fill in your information below to continue.</p>
             <form class="row g-3">
               <div class="col-md-12">
                 <label class="form-label" for="inputEmailEnter">Email</label>
-                <input class="form-control" id="inputEmailEnter" type="email" placeholder="Enter Your Email">
+                <input
+                  class="form-control"
+                  id="inputEmailEnter"
+                  type="email"
+                  placeholder="Enter Your Email"
+                />
               </div>
               <div class="col-md-12">
                 <label class="form-label" for="inputPasswordEnter">Password</label>
-                <input class="form-control" id="inputPasswordEnter" type="password" placeholder="Enter Your Password">
+                <input
+                  class="form-control"
+                  id="inputPasswordEnter"
+                  type="password"
+                  placeholder="Enter Your Password"
+                />
               </div>
               <div class="col-12">
                 <div class="form-check">
-                  <input class="form-check-input" id="checkout" type="checkbox">
+                  <input class="form-check-input" id="checkout" type="checkbox" />
                   <label class="form-check-label" for="checkout">Check me out</label>
                 </div>
               </div>
               <div class="col-12">
-                <button class="btn btn-primary" type="submit" data-bs-dismiss="modal">Sign in </button>
+                <button class="btn btn-primary" type="submit" data-bs-dismiss="modal">
+                  Sign in
+                </button>
               </div>
             </form>
           </div>

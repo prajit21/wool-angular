@@ -15,13 +15,7 @@ div.DTS {
   }
 
   div.dataTables_scrollBody {
-    background: repeating-linear-gradient(
-                    45deg,
-                    #edeeff,
-                    #edeeff 10px,
-                    white 10px,
-                    white 20px
-    );
+    background: repeating-linear-gradient(45deg, #edeeff, #edeeff 10px, white 10px, white 20px);
 
     table {
       z-index: 2;

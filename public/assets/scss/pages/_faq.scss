@@ -86,7 +86,7 @@
   }
 }
 .faq-articles {
-  h6{
+  h6 {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 8px;
@@ -201,7 +201,7 @@
 .updates-bottom-time {
   p {
     margin-bottom: 2px;
-    +p {
+    + p {
       color: $light-text;
     }
   }

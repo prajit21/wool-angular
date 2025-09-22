@@ -10,29 +10,56 @@
             <div class="col-sm-12">
               <div class="mb-3">
                 <label for="validationCustom01">Title:</label>
-                <input class="form-control" id="validationCustom01" type="text" placeholder="Post Title" required="">
+                <input
+                  class="form-control"
+                  id="validationCustom01"
+                  type="text"
+                  placeholder="Post Title"
+                  required=""
+                />
                 <div class="valid-feedback">Looks good!</div>
               </div>
               <div class="mb-3">
                 <label>Type:</label>
                 <div class="m-checkbox-inline">
                   <label for="edo-ani">
-                    <input class="radio_animated" id="edo-ani" type="radio" name="rdo-ani" checked="">Text
+                    <input
+                      class="radio_animated"
+                      id="edo-ani"
+                      type="radio"
+                      name="rdo-ani"
+                      checked=""
+                    />Text
                   </label>
                   <label for="edo-ani1">
-                    <input class="radio_animated" id="edo-ani1" type="radio" name="rdo-ani">Image
+                    <input class="radio_animated" id="edo-ani1" type="radio" name="rdo-ani" />Image
                   </label>
                   <label for="edo-ani2">
-                    <input class="radio_animated" id="edo-ani2" type="radio" name="rdo-ani" checked="">Audio
+                    <input
+                      class="radio_animated"
+                      id="edo-ani2"
+                      type="radio"
+                      name="rdo-ani"
+                      checked=""
+                    />Audio
                   </label>
                   <label for="edo-ani3">
-                    <input class="radio_animated" id="edo-ani3" type="radio" name="rdo-ani">Video
+                    <input class="radio_animated" id="edo-ani3" type="radio" name="rdo-ani" />Video
                   </label>
                 </div>
               </div>
               <div class="mb-3">
-                <div class="col-form-label">Category:
-                  <ng-select [items]="category" bindLabel="name" bindValue="id" name="category" [multiple]="true" placeholder="Select Category" [(ngModel)]="selectedCityIds" />
+                <div class="col-form-label">
+                  Category:
+                  <ng-select
+                    [items]="category"
+                    bindLabel="name"
+                    bindValue="id"
+                    name="category"
+                    [multiple]="true"
+                    placeholder="Select Category"
+                    [(ngModel)]="selectedCityIds"
+                  />
                 </div>
               </div>
               <div class="email-wrapper">
@@ -46,11 +73,15 @@
             </div>
           </form>
           <form class="dropzone">
-            <dropzone class="no-preview" [config]="config" [message]="'Drag & Drop your files or Browse'" />
+            <dropzone
+              class="no-preview"
+              [config]="config"
+              [message]="'Drag & Drop your files or Browse'"
+            />
           </form>
           <div class="btn-showcase text-end">
             <button class="btn btn-primary" type="submit">Post</button>
-            <input class="btn btn-light" type="reset" value="Discard">
+            <input class="btn btn-light" type="reset" value="Discard" />
           </div>
         </div>
       </div>

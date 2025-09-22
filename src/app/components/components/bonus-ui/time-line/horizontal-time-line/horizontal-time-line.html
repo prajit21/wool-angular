@@ -1,33 +1,38 @@
 <div class="card">
   <div class="card-header">
-    <h3>Horizontal Timeline </h3>
+    <h3>Horizontal Timeline</h3>
     <p class="f-m-light mt-1">
-      Use the <code>.square-timeline</code> main class through create new variations of timeline.</p>
+      Use the <code>.square-timeline</code> main class through create new variations of timeline.
+    </p>
   </div>
   <div class="card-body">
     @for(details of horizontalTimeline; track details){
-      <div class="list-inline events timeline-list row" [ngClass]="details.ulClass">
-        @for(data of details.data; track data){
-          <div [class]="data.divClass">
-            <div>
-              @if(details.verticalLine === 'top'){
-                <div class="vertical-line"></div>
-              }
-              <div class="list-inline-item event-list">
-                <div class="px-4">
-                  <div class="event-date alert-light-{{ data.colorClass }} txt-{{ data.colorClass }}">{{ data.date }}</div>
-                  <h4 class="f-18 f-w-700">{{ data.title }} </h4>
-                  <p class="text-muted">{{ data.desc }}</p>
-                  <div class="read-more-btn"><a class="btn btn-primary px-3" href="javascript:void(0)">Read more</a></div>
-                </div>
+    <div class="list-inline events timeline-list row" [ngClass]="details.ulClass">
+      @for(data of details.data; track data){
+      <div [class]="data.divClass">
+        <div>
+          @if(details.verticalLine === 'top'){
+          <div class="vertical-line"></div>
+          }
+          <div class="list-inline-item event-list">
+            <div class="px-4">
+              <div class="event-date alert-light-{{ data.colorClass }} txt-{{ data.colorClass }}">
+                {{ data.date }}
               </div>
-              @if(details.verticalLine === 'bottom'){
-                <div class="vertical-line"></div>
-              }
+              <h4 class="f-18 f-w-700">{{ data.title }}</h4>
+              <p class="text-muted">{{ data.desc }}</p>
+              <div class="read-more-btn">
+                <a class="btn btn-primary px-3" href="javascript:void(0)">Read more</a>
+              </div>
             </div>
           </div>
-        }
+          @if(details.verticalLine === 'bottom'){
+          <div class="vertical-line"></div>
+          }
+        </div>
       </div>
+      }
+    </div>
     }
   </div>
 </div>

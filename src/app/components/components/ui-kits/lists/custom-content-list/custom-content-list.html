@@ -1,23 +1,33 @@
 <div class="card">
   <div class="card-header">
     <h3>Custom content lists</h3>
-    <p class="f-m-light mt-1">Use the <code>.list-group-item</code> through make custom design of all lists.</p>
+    <p class="f-m-light mt-1">
+      Use the <code>.list-group-item</code> through make custom design of all lists.
+    </p>
   </div>
   <div class="card-body">
     <div class="list-group main-lists-content">
       @for(details of customContent; track details){
-        <a class="list-group-item list-group-item-action" [ngClass]="details.active ? 'active bg-primary' : 'list-hover-primary'" href="javascript:void(0)">
-          <div class="d-flex w-100 justify-content-between align-items-center">
-            <div class="list-wrapper">
-              <img class="list-img" [src]="details.img" alt="profile">
-              <div class="list-content">
-                <h3>{{ details.name }}</h3>
-                <p>{{ details.email }}</p>
-              </div>
-            </div><small>{{ details.time }}</small>
+      <a
+        class="list-group-item list-group-item-action"
+        [ngClass]="details.active ? 'active bg-primary' : 'list-hover-primary'"
+        href="javascript:void(0)"
+      >
+        <div class="d-flex w-100 justify-content-between align-items-center">
+          <div class="list-wrapper">
+            <img class="list-img" [src]="details.img" alt="profile" />
+            <div class="list-content">
+              <h3>{{ details.name }}</h3>
+              <p>{{ details.email }}</p>
+            </div>
           </div>
-          <p class="mb-1">{{ details.desc }}</p><small [ngClass]="details.active ? 'text-black' : 'text-muted'">{{ details.followers }} Followers</small>
-        </a>
+          <small>{{ details.time }}</small>
+        </div>
+        <p class="mb-1">{{ details.desc }}</p>
+        <small [ngClass]="details.active ? 'text-black' : 'text-muted'"
+          >{{ details.followers }} Followers</small
+        >
+      </a>
       }
     </div>
   </div>

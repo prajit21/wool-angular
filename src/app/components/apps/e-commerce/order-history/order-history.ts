@@ -9,7 +9,7 @@ import { FeatherIcons } from '../../../../shared/components/ui/feather-icons/fea
 import { orderDetails } from '../../../../shared/data/data/e-commerce/order-history';
 import {
   ProductOrderDirective,
-  sortOrderEvent,
+  SortEvent,
 } from '../../../../shared/directive/product-order.directive';
 import { order, productOrder } from '../../../../shared/interface/e-commerce';
 import { ProductOrderService } from '../../../../shared/services/e-commerce/product-order.service';
@@ -37,11 +37,11 @@ export class OrderHistory {
     this.total$ = service.total$;
   }
 
-  onSort({ column, direction }: sortOrderEvent) {
+  onSort({ column, direction }: SortEvent) {
     // resetting other headers
     this.headers().forEach(header => {
-      if (header.appProductOrder() !== column) {
-        header.direction = '';
+      if (header.sortableOrder() !== column) {
+        header.currentDirection.set('');
       }
     });
 

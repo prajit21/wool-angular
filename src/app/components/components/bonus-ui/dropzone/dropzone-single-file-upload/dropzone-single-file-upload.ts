@@ -15,4 +15,6 @@ export class DropzoneSingleFileUpload {
     uploadMultiple: false,
     addRemoveLinks: true,
   };
+  public text =
+    ' <div class="dz-message needsclick"><i class="icon-cloud-up"></i><p>Drop files here or click to upload.</p></div>';
 }

@@ -1,14 +1,25 @@
 <div class="card">
   <div class="card-header">
     <h3>Open on focus</h3>
-    <span>It is possible to get the focus events with the current input value to emit results on focus with a great flexibility. In this simple example, a search is done no matter the content of the input:
-</span>
+    <span
+      >It is possible to get the focus events with the current input value to emit results on focus
+      with a great flexibility. In this simple example, a search is done no matter the content of
+      the input:
+    </span>
   </div>
   <div class="card-body">
     <div id="prefetch">
       <form class="theme-form">
         <div>
-          <input class="typeahead form-control" type="text" placeholder="Search for a state" [ngbTypeahead]="search" (focus)="focus$.next($any($event).target.value)" (click)="click$.next($any($event).target.value)" #instance="ngbTypeahead">
+          <input
+            class="typeahead form-control"
+            type="text"
+            placeholder="Search for a state"
+            [ngbTypeahead]="search"
+            (focus)="focus$.next($any($event).target.value)"
+            (click)="click$.next($any($event).target.value)"
+            #instance="ngbTypeahead"
+          />
         </div>
       </form>
     </div>

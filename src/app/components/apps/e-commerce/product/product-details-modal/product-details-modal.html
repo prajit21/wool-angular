@@ -2,17 +2,17 @@
   <div class="modal-header">
     <div class="product-box row">
       <div class="product-img col-lg-6">
-        <img class="img-fluid" [src]="productDetail()?.img" alt="" />
+        <img class="img-fluid" [src]="productDetail?.img" alt="" />
       </div>
       <div class="product-details col-lg-6 text-start">
-        <h4>{{ productDetail()?.productName }}</h4>
+        <h4>{{ productDetail?.productName }}</h4>
         <div class="product-price">
-          ${{ productDetail()?.discountPrice }}
-          <del>${{ productDetail()?.price }} </del>
+          ${{ productDetail?.discountPrice }}
+          <del>${{ productDetail?.price }} </del>
         </div>
         <div class="product-view">
           <h4 class="f-w-600">Product Details</h4>
-          <p class="mb-0">{{ productDetail()?.description }}</p>
+          <p class="mb-0">{{ productDetail?.description }}</p>
         </div>
         <div class="product-size">
           <ul>

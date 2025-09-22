@@ -7,11 +7,11 @@
         </div>
         <div class="gallery my-gallery card-body row" gallerize>
           @for(details of galleryItems; track details){
-            <figure class="col-xl-3 col-md-4 col-6">
-              <a href="javascript:void(0)">
-                <img class="img-thumbnail" [src]="details.srcUrl" alt="Image description">
-              </a>
-            </figure>
+          <figure class="col-xl-3 col-md-4 col-6">
+            <a href="javascript:void(0)">
+              <img class="img-thumbnail" [src]="details.srcUrl" alt="Image description" />
+            </a>
+          </figure>
           }
         </div>
       </div>

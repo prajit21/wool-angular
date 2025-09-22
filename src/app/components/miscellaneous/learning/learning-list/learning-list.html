@@ -3,54 +3,54 @@
     <div class="col-xl-9 xl-60 order-xl-0 order-1 box-col-12">
       <div class="row">
         @for(details of learningDetails| slice: 0:2;track details){
-          <div class="col-xl-12">
-            <div class="card">
-              <div class="blog-box blog-list row">
-                <div class="col-sm-5">
-                  <img class="img-fluid sm-100-w" [src]="details.img" alt=""></div>
-                <div class="col-sm-7">
-                  <div class="blog-details">
-                    <div class="blog-date"><span>{{ details.date }}</span> {{ details.month }}</div>
-                    <h6>{{ details.title }} </h6>
-                    <div class="blog-bottom-content">
-                      <ul class="blog-social">
-                        <li>by: {{ details.by }}</li>
-                        <li>{{ details.hits }} Hits</li>
-                      </ul>
-                      <hr>
-                      <p class="mt-0">{{ details.desc }}</p>
-                    </div>
-                  </div>
-                </div>
+        <div class="col-xl-12">
+          <div class="card">
+            <div class="blog-box blog-list row">
+              <div class="col-sm-5">
+                <img class="img-fluid sm-100-w" [src]="details.img" alt="" />
               </div>
-            </div>
-          </div>
-        }
-        @for(details of learningDetails| slice: 2;track details){
-          <div class="col-xl-4 xl-50 col-sm-6 box-col-6">
-            <div class="card">
-              <div class="blog-box blog-grid text-center product-box">
-                <div class="product-img">
-                  <img class="img-fluid top-radius-blog" [src]="details.img" alt="">
-                  <div class="product-hover">
-                    <ul>
-                      <li><i class="icon-link"></i></li>
-                      <li><i class="icon-import"></i></li>
+              <div class="col-sm-7">
+                <div class="blog-details">
+                  <div class="blog-date"><span>{{ details.date }}</span> {{ details.month }}</div>
+                  <h6>{{ details.title }}</h6>
+                  <div class="blog-bottom-content">
+                    <ul class="blog-social">
+                      <li>by: {{ details.by }}</li>
+                      <li>{{ details.hits }} Hits</li>
                     </ul>
+                    <hr />
+                    <p class="mt-0">{{ details.desc }}</p>
                   </div>
-                </div>
-                <div class="blog-details-main">
-                  <ul class="blog-social">
-                    <li>{{ details.date }} {{ details.month }}</li>
-                    <li>by: {{ details.by }}</li>
-                    <li>{{ details.hits }} Hits</li>
-                  </ul>
-                  <hr>
-                  <h6 class="blog-bottom-details">{{ details.desc }}</h6>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        } @for(details of learningDetails| slice: 2;track details){
+        <div class="col-xl-4 xl-50 col-sm-6 box-col-6">
+          <div class="card">
+            <div class="blog-box blog-grid text-center product-box">
+              <div class="product-img">
+                <img class="img-fluid top-radius-blog" [src]="details.img" alt="" />
+                <div class="product-hover">
+                  <ul>
+                    <li><i class="icon-link"></i></li>
+                    <li><i class="icon-import"></i></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="blog-details-main">
+                <ul class="blog-social">
+                  <li>{{ details.date }} {{ details.month }}</li>
+                  <li>by: {{ details.by }}</li>
+                  <li>{{ details.hits }} Hits</li>
+                </ul>
+                <hr />
+                <h6 class="blog-bottom-details">{{ details.desc }}</h6>
+              </div>
+            </div>
+          </div>
+        </div>
         }
       </div>
     </div>

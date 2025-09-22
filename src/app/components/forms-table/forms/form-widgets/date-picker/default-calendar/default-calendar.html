@@ -6,7 +6,13 @@
     <div class="row g-3">
       <div class="col-12">
         <div class="input-group main-inline-calender">
-          <input class="form-control mb-1" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker />
+          <input
+            class="form-control mb-1"
+            placeholder="yyyy-mm-dd"
+            name="dp"
+            [(ngModel)]="model"
+            ngbDatepicker
+          />
           <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next" />
         </div>
       </div>

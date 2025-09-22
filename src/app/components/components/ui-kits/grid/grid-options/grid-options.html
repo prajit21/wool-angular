@@ -2,8 +2,7 @@
   <div class="card-header">
     <h3>Grid Options</h3>
     <p class="mt-1 f-m-light">
-      Bootstrap grid system allow all six breakpoints, and any breakpoints
-      you can customize.
+      Bootstrap grid system allow all six breakpoints, and any breakpoints you can customize.
     </p>
   </div>
   <div class="card-body">
@@ -12,22 +11,24 @@
         <thead>
           <tr>
             <th></th>
-            <th class="text-center f-w-700">Extra small<br><small>&lt;576px</small></th>
-            <th class="text-center f-w-700">Small<br><small>≥576px</small></th>
-            <th class="text-center f-w-700">Medium<br><small>≥768px</small></th>
-            <th class="text-center f-w-700">Large<br><small>≥992px</small></th>
-            <th class="text-center f-w-700">Extra large<br><small>≥1200px</small></th>
-            <th class="text-center f-w-700">Extra extra large<br><small class="digits">≥1400px</small></th>
+            <th class="text-center f-w-700">Extra small<br /><small>&lt;576px</small></th>
+            <th class="text-center f-w-700">Small<br /><small>≥576px</small></th>
+            <th class="text-center f-w-700">Medium<br /><small>≥768px</small></th>
+            <th class="text-center f-w-700">Large<br /><small>≥992px</small></th>
+            <th class="text-center f-w-700">Extra large<br /><small>≥1200px</small></th>
+            <th class="text-center f-w-700">
+              Extra extra large<br /><small class="digits">≥1400px</small>
+            </th>
           </tr>
         </thead>
         <tbody>
           @for(details of gridOptions; track details){
-            <tr>
-              <th class="text-nowrap" scope="row">{{ details.heading }}</th>
-              @for(data of details.data; track data){
-                <td [attr.colspan]="data.colSpan" [innerHTML]="data.details"></td>
-              }
-            </tr>
+          <tr>
+            <th class="text-nowrap" scope="row">{{ details.heading }}</th>
+            @for(data of details.data; track data){
+            <td [attr.colspan]="data.colSpan" [innerHTML]="data.details"></td>
+            }
+          </tr>
           }
         </tbody>
       </table>

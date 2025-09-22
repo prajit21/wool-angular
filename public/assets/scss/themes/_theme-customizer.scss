@@ -8,7 +8,7 @@
   z-index: 3;
   transform: translate(0, -50%);
   box-shadow: 0 0 37px rgba(8, 21, 66, 0.1);
-  >.nav {
+  > .nav {
     border-radius: 8px;
     padding: 10px;
     background-color: $white;
@@ -22,7 +22,7 @@
     padding: 0;
     position: relative;
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       height: 100%;
       width: 100%;
@@ -32,7 +32,7 @@
       transition: all 0.3s ease;
     }
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       width: 0;
       height: 0;
@@ -65,7 +65,7 @@
         transition: all 0.3s ease;
       }
     }
-    &+.nav-link {
+    & + .nav-link {
       margin-bottom: 5px;
     }
     span {
@@ -186,7 +186,7 @@
       }
     }
     .tab-pane {
-      >h5 {
+      > h5 {
         margin-top: 15px;
         margin-bottom: 8px;
         &:first-child {
@@ -210,51 +210,51 @@
       margin-right: 3px;
       border: 1px solid #b8b8b8;
       padding: 3px;
-      >div {
+      > div {
         background-color: #7366ff;
         height: 100%;
         width: 100%;
         border-radius: 5px;
       }
-      &[data-attr="color-2"] {
+      &[data-attr='color-2'] {
         div {
-          background-color: #005F94;
+          background-color: #005f94;
         }
       }
-      &[data-attr="color-3"] {
+      &[data-attr='color-3'] {
         div {
-          background-color: #A155B9;
+          background-color: #a155b9;
         }
       }
-      &[data-attr="color-4"] {
+      &[data-attr='color-4'] {
         div {
-          background-color: #2F9477;
+          background-color: #2f9477;
         }
       }
-      &[data-attr="color-5"] {
+      &[data-attr='color-5'] {
         div {
           background-color: #7c4dff;
         }
       }
-      &[data-attr="color-6"] {
+      &[data-attr='color-6'] {
         div {
           background-color: #3949ab;
         }
       }
     }
     .dark {
-      >li {
+      > li {
         background-color: #2f3c4e;
       }
     }
     .main-layout {
-      >li {
+      > li {
         height: 65px;
         width: 85px;
         border: 1px solid $light-color;
         border-radius: 10px;
         display: inline-block;
-        &+li {
+        & + li {
           margin-left: 7px;
         }
       }
@@ -268,20 +268,20 @@
     }
     .sidebar-type,
     .sidebar-setting {
-      >li {
+      > li {
         height: 70px;
         width: 85px;
         border: 1px solid $light-color;
         border-radius: 5px;
         display: inline-block;
-        &+li {
+        & + li {
           margin-left: 7px;
         }
       }
     }
     .sidebar-type {
       li {
-        &[data-attr="normal-sidebar"] {
+        &[data-attr='normal-sidebar'] {
           .body {
             ul {
               li {
@@ -315,7 +315,7 @@
     }
     .layout-types {
       margin-bottom: -30px;
-      >li {
+      > li {
         display: block;
         width: unset;
         height: unset;
@@ -337,7 +337,7 @@
 .layout-grid:not(.customizer-color) {
   li {
     padding: 5px;
-    >.header {
+    > .header {
       height: 9px;
       border-radius: 3px;
       position: relative;
@@ -345,7 +345,7 @@
         position: absolute;
         top: -8px;
         left: 5px;
-        >li {
+        > li {
           display: inline-block;
           width: 4px;
           height: 4px;
@@ -363,7 +363,7 @@
         }
       }
     }
-    >.body {
+    > .body {
       background-color: $light-color;
       height: calc(100% - 16px);
       border-radius: 3px;
@@ -383,7 +383,7 @@
           padding: 0;
           &.compact {
             width: 12px;
-            &~.body {
+            & ~ .body {
               width: calc(100% - 19px);
             }
           }

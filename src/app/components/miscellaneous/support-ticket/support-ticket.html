@@ -3,31 +3,35 @@
     <div class="col-sm-12">
       <div class="card">
         <div class="card-header">
-          <h3>Support Ticket List</h3><span>List of ticket opened by customers</span>
+          <h3>Support Ticket List</h3>
+          <span>List of ticket opened by customers</span>
         </div>
         <div class="card-body">
           <div class="row">
             @for(details of supportTicketListDetails; track details){
-              <div class="col-xl-4 col-sm-6 box-col-6">
-                <app-support-ticket-list [details]="details" />
-              </div>
+            <div class="col-xl-4 col-sm-6 box-col-6">
+              <app-support-ticket-list [details]="details" />
+            </div>
             }
           </div>
           <div class="table-responsive product-table custom-scrollbar">
             <div class="dataTables_wrapper no-footer">
               <div class="dataTables_length" id="basic-1_length">
-                <label>Show
+                <label
+                  >Show
                   <select name="pageSize" [(ngModel)]="service.pageSize">
                     <option [ngValue]="10">10</option>
                     <option [ngValue]="25">25</option>
                     <option [ngValue]="50">50</option>
                     <option [ngValue]="100">100</option>
-                  </select> entries
+                  </select>
+                  entries
                 </label>
               </div>
               <div id="basic-1_filter" class="dataTables_filter">
-                <label>Search:
-                  <input type="search" name="searchTerm" [(ngModel)]="service.searchTerm">
+                <label
+                  >Search:
+                  <input type="search" name="searchTerm" [(ngModel)]="service.searchTerm" />
                 </label>
                 @if (service.loading$ | async) {
                 <span class="col col-form-label">Loading...</span>
@@ -53,7 +57,12 @@
                   @for (ticket of supportTicket$ | async; track ticket){
                   <tr>
                     <td>
-                      <div class="d-flex"><img class="rounded-circle img-30 me-3" [src]="ticket.img" alt="Generic placeholder image">
+                      <div class="d-flex">
+                        <img
+                          class="rounded-circle img-30 me-3"
+                          [src]="ticket.img"
+                          alt="Generic placeholder image"
+                        />
                         <div class="flex-grow-1 align-self-center">
                           <div>{{ ticket.name }}</div>
                         </div>
@@ -65,7 +74,10 @@
                     <td>
                       <div class="progress-showcase">
                         <div class="progress sm-progress-bar">
-                          <div class="progress-bar bg-{{ ticket.color }}" [ngStyle]="{ 'width' : ticket.progress + '%' }"></div>
+                          <div
+                            class="progress-bar bg-{{ ticket.color }}"
+                            [ngStyle]="{ 'width' : ticket.progress + '%' }"
+                          ></div>
                         </div>
                       </div>
                     </td>
@@ -76,7 +88,11 @@
                 </tbody>
               </table>
               <div class="dataTables_paginate paging_simple_numbers" id="basic-1_paginate">
-                <ngb-pagination [collectionSize]="(total$ | async)!" [(page)]="service.page" [pageSize]="service.pageSize" />
+                <ngb-pagination
+                  [collectionSize]="(total$ | async)!"
+                  [(page)]="service.page"
+                  [pageSize]="service.pageSize"
+                />
               </div>
             </div>
           </div>

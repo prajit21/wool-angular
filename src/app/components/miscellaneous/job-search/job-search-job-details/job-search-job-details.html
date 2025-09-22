@@ -7,32 +7,45 @@
       <div class="card">
         <div class="job-search">
           <div class="card-body">
-            <div class="d-flex"><img class="img-40 img-fluid m-r-20" src="assets/images/job-search/1.jpg" alt="">
+            <div class="d-flex">
+              <img class="img-40 img-fluid m-r-20" src="assets/images/job-search/1.jpg" alt="" />
               <div class="flex-grow-1">
-                <h6 class="f-w-700"><a href="javascript:void(0)">Product Designer (UI/UX Designer)</a><span class="pull-right">
-                    <button class="btn btn-primary" type="button">Apply</button></span></h6>
-                <p>Endless - United States<span><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i></span></p>
+                <h6 class="f-w-700">
+                  <a href="javascript:void(0)">Product Designer (UI/UX Designer)</a
+                  ><span class="pull-right">
+                    <button class="btn btn-primary" type="button">Apply</button></span
+                  >
+                </h6>
+                <p>
+                  Endless - United States<span
+                    ><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i
+                    ><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i
+                    ><i class="fa fa-star font-warning"></i
+                  ></span>
+                </p>
               </div>
             </div>
             @for(details of jobDetail; track details){
-              <div class="job-description">
-                <h6>{{ details.title }}</h6>
-                @if(details.list){
-                  <ul>
-                    @for(data of details.data; track data){
-                      <li>{{ data.description}}</li>
-                    }
-                  </ul>
-                }@else {
-                  @for(data of details.data; track data){
-                    <p>{{ data.description}}</p>
-                  }
+            <div class="job-description">
+              <h6>{{ details.title }}</h6>
+              @if(details.list){
+              <ul>
+                @for(data of details.data; track data){
+                <li>{{ data.description}}</li>
                 }
-              </div>
+              </ul>
+              }@else { @for(data of details.data; track data){
+              <p>{{ data.description}}</p>
+              } }
+            </div>
             }
             <div class="job-description">
-              <button class="btn btn-primary me-2" type="button"><span><i class="fa fa-check"></i></span> Save this job</button>
-              <button class="btn btn-primary" type="button"><span><i class="fa fa-share-alt"></i></span> Share</button>
+              <button class="btn btn-primary me-2" type="button">
+                <span><i class="fa fa-check"></i></span> Save this job
+              </button>
+              <button class="btn btn-primary" type="button">
+                <span><i class="fa fa-share-alt"></i></span> Share
+              </button>
             </div>
           </div>
         </div>
@@ -45,22 +58,27 @@
         <div class="col-xl-6 xl-100">
           <div class="card" [ngClass]="{ 'ribbon-vertical-left-wrapper' : details.ribbon }">
             @if(details.ribbon){
-              <div class="ribbon ribbon-bookmark ribbon-vertical-left ribbon-secondary">
-                <i class="icofont icofont-{{ details.ribbonIcon }}"></i>
-              </div>
+            <div class="ribbon ribbon-bookmark ribbon-vertical-left ribbon-secondary">
+              <i class="icofont icofont-{{ details.ribbonIcon }}"></i>
+            </div>
             }
             <div class="job-search">
               <div class="card-body">
-                <div class="d-flex"><img class="img-40 img-fluid m-r-20" [src]="details.image" alt="">
+                <div class="d-flex">
+                  <img class="img-40 img-fluid m-r-20" [src]="details.image" alt="" />
                   <div class="flex-grow-1">
-                    <h6 class="f-w-700"><a href="javascript:void(0)">{{ details.title }}</a>
+                    <h6 class="f-w-700">
+                      <a href="javascript:void(0)">{{ details.title }}</a>
                       @if(details.tag){
-                        <span class="badge badge-{{ details.tagColor }} pull-right">{{ details.tagTitle }}</span>
+                      <span class="badge badge-{{ details.tagColor }} pull-right"
+                        >{{ details.tagTitle }}</span
+                      >
                       }@else if(details.time){
-                        <span class="pull-right">{{ details.timeText }}</span>
+                      <span class="pull-right">{{ details.timeText }}</span>
                       }
                     </h6>
-                    <p>{{ details.subTitle }}<span>
+                    <p>
+                      {{ details.subTitle }}<span>
                         <ngb-rating [rate]="details.rating" class="font-warning" />
                       </span>
                     </p>
@@ -76,13 +94,35 @@
           <div class="card">
             <div class="job-search">
               <div class="card-body">
-                <div class="d-flex"><img class="img-40 img-fluid m-r-20" src="assets/images/job-search/3.jpg" alt="">
+                <div class="d-flex">
+                  <img
+                    class="img-40 img-fluid m-r-20"
+                    src="assets/images/job-search/3.jpg"
+                    alt=""
+                  />
                   <div class="flex-grow-1">
-                    <h6 class="f-w-700"><a href="javascript:void(0)">Senior UX designer</a><span class="pull-right">5 days ago</span></h6>
-                    <p>Sutherland <span>Lelystad, Netherlands </span><span><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning"></i><i class="fa fa-star font-warning-half-o"></i><i class="fa fa-star font-warning-o"></i></span></p>
+                    <h6 class="f-w-700">
+                      <a href="javascript:void(0)">Senior UX designer</a
+                      ><span class="pull-right">5 days ago</span>
+                    </h6>
+                    <p>
+                      Sutherland <span>Lelystad, Netherlands </span
+                      ><span
+                        ><i class="fa fa-star font-warning"></i
+                        ><i class="fa fa-star font-warning"></i
+                        ><i class="fa fa-star font-warning"></i
+                        ><i class="fa fa-star font-warning-half-o"></i
+                        ><i class="fa fa-star font-warning-o"></i
+                      ></span>
+                    </p>
                   </div>
                 </div>
-                <p>Woody equal ask saw sir weeks aware decay. Entrance prospect removing we packages strictly is no smallest he. For hopes may chief get hours day rooms. Oh no turned behind polite piqued enough at. Forbade few through inquiry blushes you. Cousin no itself eldest it in dinner latter missed no.</p>
+                <p>
+                  Woody equal ask saw sir weeks aware decay. Entrance prospect removing we packages
+                  strictly is no smallest he. For hopes may chief get hours day rooms. Oh no turned
+                  behind polite piqued enough at. Forbade few through inquiry blushes you. Cousin no
+                  itself eldest it in dinner latter missed no.
+                </p>
               </div>
             </div>
           </div>

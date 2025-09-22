@@ -2,8 +2,14 @@
   <app-title [title]="'Market Overview'" [dropdown]="true" />
   <div class="card-body pt-0">
     <div id="market-stickchart">
-      <apx-chart [series]="marketOverview.series" [chart]="marketOverview.chart" [title]="marketOverview.title"
-                 [xaxis]="marketOverview.xaxis" [yaxis]="marketOverview.yaxis" [plotOptions]="marketOverview.plotOptions" />
+      <apx-chart
+        [series]="marketOverview.series"
+        [chart]="marketOverview.chart"
+        [title]="marketOverview.title"
+        [xaxis]="marketOverview.xaxis"
+        [yaxis]="marketOverview.yaxis"
+        [plotOptions]="marketOverview.plotOptions"
+      />
     </div>
   </div>
 </div>

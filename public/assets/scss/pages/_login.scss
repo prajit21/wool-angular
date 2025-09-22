@@ -20,7 +20,7 @@
       line-height: 1;
       padding: 10px 15px;
       margin: 0;
-      &+.btn {
+      & + .btn {
         margin-left: 5px;
       }
       svg {
@@ -51,7 +51,7 @@
       .or {
         position: relative;
         &:before {
-          content: "";
+          content: '';
           position: absolute;
           width: 65%;
           height: 2px;
@@ -89,17 +89,17 @@
         right: 0;
       }
 
-      .form-control{
-        &.is-invalid{
+      .form-control {
+        &.is-invalid {
           border-color: var(--bs-form-invalid-border-color);
         }
 
-        &.is-valid{
+        &.is-valid {
           border-color: var(--bs-form-valid-border-color);
         }
       }
 
-      .invalid-feedback{
+      .invalid-feedback {
         color: var(--bs-form-invalid-border-color);
       }
     }
@@ -116,11 +116,11 @@
     color: var(--theme-deafult);
     &.show {
       &:before {
-        content: "show";
+        content: 'show';
       }
     }
     &:before {
-      content: "hide";
+      content: 'hide';
     }
   }
 }

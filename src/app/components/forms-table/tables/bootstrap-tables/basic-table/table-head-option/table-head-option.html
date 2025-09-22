@@ -1,6 +1,10 @@
 <div class="card">
   <div class="card-header">
-    <h3>Table head options</h3><span>Similar to tables , use the modifier classes<code>.table-[color]</code> to make <code>thead</code>appear in any color.</span>
+    <h3>Table head options</h3>
+    <span
+      >Similar to tables , use the modifier classes<code>.table-[color]</code> to make
+      <code>thead</code>appear in any color.</span
+    >
   </div>
   <div class="card-block row">
     <div class="col-sm-12 col-lg-12 col-xl-12">
@@ -16,12 +20,12 @@
           </thead>
           <tbody>
             @for(details of headOptionData; track details){
-              <tr>
-                <th scope="row">{{ details.id }}</th>
-                <td>{{ details.fname }}</td>
-                <td>{{ details.lname }}</td>
-                <td>{{ details.userName }}</td>
-              </tr>
+            <tr>
+              <th scope="row">{{ details.id }}</th>
+              <td>{{ details.fname }}</td>
+              <td>{{ details.lname }}</td>
+              <td>{{ details.userName }}</td>
+            </tr>
             }
           </tbody>
         </table>

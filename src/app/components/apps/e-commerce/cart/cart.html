@@ -21,35 +21,56 @@
                 </thead>
                 <tbody>
                   @for(details of cartItem; track details){
-                    <tr>
-                      <td><img class="img-fluid img-40" [src]="details.img" alt="javascript:void(0)"></td>
-                      <td>
-                        <div class="product-name"><a href="javascript:void(0)">{{ details.name }}</a></div>
-                      </td>
-                      <td>${{ details.price }}</td>
-                      <td>
-                        <fieldset class="qty-box">
-                          <div class="input-group bootstrap-touchspin">
-                            <button class="btn btn-primary btn-square bootstrap-touchspin-down" type="button" (click)="changeValue(details.id,-1)">
-                              <i class="fa fa-minus"></i>
-                            </button>
-                            <input class="touchspin text-center form-control" type="text" value="{{ details.counter }}" style="display: block;">
-                            <button class="btn btn-primary btn-square bootstrap-touchspin-up" type="button" (click)="changeValue(details.id,1)">
-                              <i class="fa fa-plus"></i>
-                            </button>
-                          </div>
-                        </fieldset>
-                      </td>
-                      <td>
-                        <app-feather-icons [icon]="'x-circle'" />
-                      </td>
-                      <td>${{ details.total }}</td>
-                    </tr>
+                  <tr>
+                    <td>
+                      <img class="img-fluid img-40" [src]="details.img" alt="javascript:void(0)" />
+                    </td>
+                    <td>
+                      <div class="product-name">
+                        <a href="javascript:void(0)">{{ details.name }}</a>
+                      </div>
+                    </td>
+                    <td>${{ details.price }}</td>
+                    <td>
+                      <fieldset class="qty-box">
+                        <div class="input-group bootstrap-touchspin">
+                          <button
+                            class="btn btn-primary btn-square bootstrap-touchspin-down"
+                            type="button"
+                            (click)="changeValue(details.id,-1)"
+                          >
+                            <i class="fa fa-minus"></i>
+                          </button>
+                          <input
+                            class="touchspin text-center form-control"
+                            type="text"
+                            value="{{ details.counter }}"
+                            style="display: block"
+                          />
+                          <button
+                            class="btn btn-primary btn-square bootstrap-touchspin-up"
+                            type="button"
+                            (click)="changeValue(details.id,1)"
+                          >
+                            <i class="fa fa-plus"></i>
+                          </button>
+                        </div>
+                      </fieldset>
+                    </td>
+                    <td>
+                      <app-feather-icons [icon]="'x-circle'" />
+                    </td>
+                    <td>${{ details.total }}</td>
+                  </tr>
                   }
                   <tr>
                     <td colspan="4">
                       <div class="input-group">
-                        <input class="form-control me-2" type="text" placeholder="Enter coupan code"><a class="btn btn-primary" href="javascript:void(0)">Apply</a>
+                        <input
+                          class="form-control me-2"
+                          type="text"
+                          placeholder="Enter coupan code"
+                        /><a class="btn btn-primary" href="javascript:void(0)">Apply</a>
                       </div>
                     </td>
                     <td class="total-amount">
@@ -59,8 +80,21 @@
                   </tr>
                   <tr>
                     <td class="text-end" colspan="5">
-                      <a class="btn btn-secondary cart-btn-transform" href="javascript:void(0)" [routerLink]="['/e-commerce/product']">continue shopping</a></td>
-                    <td><a class="btn btn-success cart-btn-transform" href="javascript:void(0)" [routerLink]="['/e-commerce/checkout']">check out</a></td>
+                      <a
+                        class="btn btn-secondary cart-btn-transform"
+                        href="javascript:void(0)"
+                        [routerLink]="['/e-commerce/product']"
+                        >continue shopping</a
+                      >
+                    </td>
+                    <td>
+                      <a
+                        class="btn btn-success cart-btn-transform"
+                        href="javascript:void(0)"
+                        [routerLink]="['/e-commerce/checkout']"
+                        >check out</a
+                      >
+                    </td>
                   </tr>
                 </tbody>
               </table>

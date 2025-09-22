@@ -6,15 +6,21 @@
   <div class="card-body rtl-dropdown">
     <div class="common-flex">
       @for(details of helperCardDropdown; track details){
-        <div class="btn-group" ngbDropdown>
-          <button class="btn btn-{{ details.colorClass }} dropdown-toggle" type="button" ngbDropdownToggle>{{ details.title }}</button>
-          <ul class="dropdown-menu dropdown-block p-3 dark-form" ngbDropdownMenu>
-            <li ngbDropdownItem>
-              <h6 class="fs-6 pb-2">{{ details.tagData }}</h6>
-              <p class="dropdown-item helper-truncate">{{ details.desc }}</p>
-            </li>
-          </ul>
-        </div>
+      <div class="btn-group" ngbDropdown>
+        <button
+          class="btn btn-{{ details.colorClass }} dropdown-toggle"
+          type="button"
+          ngbDropdownToggle
+        >
+          {{ details.title }}
+        </button>
+        <ul class="dropdown-menu dropdown-block p-3 dark-form" ngbDropdownMenu>
+          <li ngbDropdownItem>
+            <h6 class="fs-6 pb-2">{{ details.tagData }}</h6>
+            <p class="dropdown-item helper-truncate">{{ details.desc }}</p>
+          </li>
+        </ul>
+      </div>
       }
     </div>
   </div>

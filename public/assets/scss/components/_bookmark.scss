@@ -20,7 +20,7 @@
           input {
             width: 240px;
             background-color: $white;
-            box-shadow: 0 5px 21px rgba($black, 0.10);
+            box-shadow: 0 5px 21px rgba($black, 0.1);
           }
           &.open {
             transform: translateY(0px) scaleY(1);
@@ -50,7 +50,7 @@
           width: 20px;
         }
       }
-      +li {
+      + li {
         margin-left: 10px;
       }
       &:last-child {

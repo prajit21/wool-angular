@@ -3,7 +3,7 @@
 ==========================**/
 .nav-pills {
   .nav-link.active,
-  .show>.nav-link {
+  .show > .nav-link {
     background-color: var(--theme-deafult);
   }
 }
@@ -15,24 +15,10 @@
 .nav-right {
   justify-content: flex-end;
 }
-$nav-name: theme,
-  primary,
-  secondary,
-  success,
-  danger,
-  info,
-  light,
-  dark,
-  warning;
-$nav-color: var(--theme-deafult),
-  var(--theme-deafult),
-  $secondary-color,
-  $success-color,
-  $danger-color,
-  $info-color,
-  $light-color,
-  $dark-color,
-  $warning-color;
+$nav-name: theme, primary, secondary, success, danger, info, light, dark, warning;
+$nav-color:
+  var(--theme-deafult), var(--theme-deafult), $secondary-color, $success-color, $danger-color,
+  $info-color, $light-color, $dark-color, $warning-color;
 @each $var in $nav-name {
   $i: index($label-name, $var);
   .nav-#{$var},
@@ -41,7 +27,7 @@ $nav-color: var(--theme-deafult),
       color: nth($nav-color, $i);
     }
     .nav-link.active,
-    .show>.nav-link {
+    .show > .nav-link {
       background-color: nth($nav-color, $i);
       color: $white;
     }
@@ -57,7 +43,7 @@ $nav-color: var(--theme-deafult),
   }
 }
 .tab-content {
-  ~.nav-tabs {
+  ~ .nav-tabs {
     &.border-tab {
       margin-bottom: 0;
       margin-top: 30px;
@@ -103,7 +89,7 @@ $nav-color: var(--theme-deafult),
     color: $dark-color;
   }
   .nav-link.active,
-  .show>.nav-link {
+  .show > .nav-link {
     background-color: transparent;
     border-left-color: var(--theme-deafult);
     color: var(--theme-deafult);
@@ -119,7 +105,7 @@ $nav-color: var(--theme-deafult),
     text-align: right;
   }
   .nav-link.active,
-  .show>.nav-link {
+  .show > .nav-link {
     background-color: transparent;
     border-right-color: var(--theme-deafult);
     color: var(--theme-deafult);
@@ -127,24 +113,10 @@ $nav-color: var(--theme-deafult),
     transition: all 0.3s ease;
   }
 }
-$m-nav-name: theme,
-  primary,
-  secondary,
-  success,
-  danger,
-  info,
-  light,
-  dark,
-  warning;
-$nav-color: var(--theme-deafult),
-  var(--theme-deafult),
-  $secondary-color,
-  $success-color,
-  $danger-color,
-  $info-color,
-  $light-color,
-  $dark-color,
-  $warning-color;
+$m-nav-name: theme, primary, secondary, success, danger, info, light, dark, warning;
+$nav-color:
+  var(--theme-deafult), var(--theme-deafult), $secondary-color, $success-color, $danger-color,
+  $info-color, $light-color, $dark-color, $warning-color;
 @each $var in $m-nav-name {
   $i: index($label-name, $var);
   .border-tab.nav-#{$var} {
@@ -174,14 +146,14 @@ $nav-color: var(--theme-deafult),
   }
   .border-tab.nav-left.nav-#{$var} {
     .nav-link.active,
-    .show>.nav-link {
+    .show > .nav-link {
       border-left-color: nth($nav-color, $i);
       color: nth($nav-color, $i);
     }
   }
   .border-tab.nav-right.nav-#{$var} {
     .nav-link.active,
-    .show>.nav-link {
+    .show > .nav-link {
       border-right-color: nth($nav-color, $i);
       color: nth($nav-color, $i);
     }
@@ -209,7 +181,7 @@ $nav-color: var(--theme-deafult),
 .flex-space {
   display: flex;
   gap: 16px;
-  @media (max-width:576px) {
+  @media (max-width: 576px) {
     justify-content: center;
   }
 }
@@ -247,7 +219,7 @@ $nav-color: var(--theme-deafult),
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  @media (max-width:1400px) {
+  @media (max-width: 1400px) {
     gap: calc(14px + (35 - 14) * ((100vw - 320px) / (1400 - 320)));
   }
   .designer-profile {
@@ -315,7 +287,7 @@ $nav-color: var(--theme-deafult),
       padding-bottom: 6px;
       border-bottom: 1px solid var(--light-border);
       align-items: center;
-      @media (max-width:630px) {
+      @media (max-width: 630px) {
         align-items: unset;
       }
     }
@@ -324,22 +296,10 @@ $nav-color: var(--theme-deafult),
 .tab-space {
   font-size: 14px;
 }
-$tabs-name: primary,
-  secondary,
-  success,
-  danger,
-  warning,
-  info,
-  light,
-  dark;
-$tab-color : $primary-color,
-$secondary-color,
-$success-color,
-$danger-color,
-$warning-color,
-$info-color,
-$light-color,
-$dark-color;
+$tabs-name: primary, secondary, success, danger, warning, info, light, dark;
+$tab-color:
+  $primary-color, $secondary-color, $success-color, $danger-color, $warning-color, $info-color,
+  $light-color, $dark-color;
 @each $var in $tabs-name {
   $i: index($tabs-name, $var);
   #bottom-tab {
@@ -372,8 +332,12 @@ $dark-color;
       border-bottom: 1px solid;
       margin-top: 10px;
       opacity: 0;
-      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-      transition: opacity 0.35s, transform 0.35s;
+      -webkit-transition:
+        opacity 0.35s,
+        -webkit-transform 0.35s;
+      transition:
+        opacity 0.35s,
+        transform 0.35s;
       -webkit-transform: scale(0, 1);
       transform: scale(0, 1);
     }
@@ -415,7 +379,7 @@ $dark-color;
 .material-wrapper {
   display: flex;
   gap: 12px;
-  @media (max-width:576px) {
+  @media (max-width: 576px) {
     flex-direction: column;
     align-items: center;
   }

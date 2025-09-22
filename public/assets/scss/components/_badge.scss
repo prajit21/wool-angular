@@ -22,7 +22,7 @@
     &.badge-p-space {
       padding: 10px 13px;
     }
-    &+.badge {
+    & + .badge {
       margin-left: 0px;
     }
     &.btn-p-space {
@@ -44,7 +44,7 @@ a.badge {
   padding: $badge-padding;
   font-family: $font-nunito-sans, $font-serif;
   font-weight: 600;
-  &+.badge {
+  & + .badge {
     margin-left: 5px;
   }
   svg {
@@ -56,15 +56,10 @@ a.badge {
 .b-ln-height {
   line-height: 5px;
 }
-@each $pill-badge-name,
-$pill-badge-color in (primary, var(--theme-deafult)),
-(secondary, $secondary-color),
-(success, $success-color),
-(danger, $danger-color),
-(info, $info-color),
-(light, $light-color),
-(dark, $dark-color),
-(warning, $warning-color) {
+@each $pill-badge-name, $pill-badge-color in (primary, var(--theme-deafult)),
+  (secondary, $secondary-color), (success, $success-color), (danger, $danger-color),
+  (info, $info-color), (light, $light-color), (dark, $dark-color), (warning, $warning-color)
+{
   .pill-badge-#{$pill-badge-name} {
     background-color: $pill-badge-color;
     box-shadow: -0.5px 4.33px 16px 0px rgba($pill-badge-color, 0.25);
@@ -78,15 +73,10 @@ $pill-badge-color in (primary, var(--theme-deafult)),
 .pill-badge-secondary {
   background-color: var(--theme-secondary);
 }
-@each $round-badge-name,
-$round-badge-color in (primary, var(--theme-deafult)),
-(secondary, $secondary-color),
-(success, $success-color),
-(danger, $danger-color),
-(info, $info-color),
-(light, $light-color),
-(dark, $dark-color),
-(warning, $warning-color) {
+@each $round-badge-name, $round-badge-color in (primary, var(--theme-deafult)),
+  (secondary, $secondary-color), (success, $success-color), (danger, $danger-color),
+  (info, $info-color), (light, $light-color), (dark, $dark-color), (warning, $warning-color)
+{
   .round-badge-#{$round-badge-name} {
     border-radius: 6px;
     background-color: $round-badge-color;

@@ -25,10 +25,12 @@
   margin-bottom: -4px;
   display: block;
 }
-.invoice-1 .order-details th:first-child, .order-details td:first-child {
+.invoice-1 .order-details th:first-child,
+.order-details td:first-child {
   min-width: 490px;
 }
-.invoice-1 .order-details th:nth-child(2), .order-details td:nth-child(2) {
+.invoice-1 .order-details th:nth-child(2),
+.order-details td:nth-child(2) {
   width: 20%;
 }
 @media (max-width: 1199px) {

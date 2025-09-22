@@ -2,34 +2,48 @@
   <div class="card-header">
     <h3>Variation radio</h3>
     <p class="f-m-light mt-1">
-      Use the <code>radio </code>attribute through create variation of radio designs.</p>
+      Use the <code>radio </code>attribute through create variation of radio designs.
+    </p>
   </div>
   <div class="card-body">
     <div class="row g-3">
       @for(radioDetails of variationRadioDetails; track radioDetails){
-        <div class="col-xl-4 col-md-6">
-          <div class="card-wrapper border rounded-3 h-100 checkbox-checked">
-            <h6 class="sub-title fw-bold">{{ radioDetails.title }}</h6>
-            @for(details of radioDetails.details; track details){
-              <div class="payment-wrapper">
-                <div class="payment-first">
-                  <div class="form-check radio radio-primary">
-                    <input class="form-check-input" id="{{ details.radioId }}" type="radio" [name]="radioDetails.radioName" value="option1" [checked]="details.checked">
-                    <label class="form-check-label mb-0" for="{{ details.radioId }}">{{ details.option }}</label>
-                  </div>
-                </div>
-                @if(details.image){
-                  <div class="payment-second">
-                    <img class="img-fluid" [src]="details.image" alt="card"></div>
-                }@else if (details.icon && details.iconClass) {
-                  <div class="payment-second">
-                    <app-svg-icon [icon]="details.icon" [class]="details.iconClass + ' ' + 'mega-icons'" />
-                  </div>
-                }
+      <div class="col-xl-4 col-md-6">
+        <div class="card-wrapper border rounded-3 h-100 checkbox-checked">
+          <h6 class="sub-title fw-bold">{{ radioDetails.title }}</h6>
+          @for(details of radioDetails.details; track details){
+          <div class="payment-wrapper">
+            <div class="payment-first">
+              <div class="form-check radio radio-primary">
+                <input
+                  class="form-check-input"
+                  id="{{ details.radioId }}"
+                  type="radio"
+                  [name]="radioDetails.radioName"
+                  value="option1"
+                  [checked]="details.checked"
+                />
+                <label class="form-check-label mb-0" for="{{ details.radioId }}"
+                  >{{ details.option }}</label
+                >
               </div>
+            </div>
+            @if(details.image){
+            <div class="payment-second">
+              <img class="img-fluid" [src]="details.image" alt="card" />
+            </div>
+            }@else if (details.icon && details.iconClass) {
+            <div class="payment-second">
+              <app-svg-icon
+                [icon]="details.icon"
+                [class]="details.iconClass + ' ' + 'mega-icons'"
+              />
+            </div>
             }
           </div>
+          }
         </div>
+      </div>
       }
     </div>
   </div>

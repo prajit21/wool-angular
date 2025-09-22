@@ -7,10 +7,10 @@
       <div class="carousel-inner">
         <owl-carousel-o [options]="options">
           @for(details of carouselImages; track details){
-            <ng-template carouselSlide>
-              <div class="carousel-item active">
-                <img class="d-block w-100" [src]="details.img" alt="drawing-room">
-              </div>
+          <ng-template carouselSlide>
+            <div class="carousel-item active">
+              <img class="d-block w-100" [src]="details.img" alt="drawing-room" />
+            </div>
           </ng-template>
           }
         </owl-carousel-o>

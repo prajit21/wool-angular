@@ -1,12 +1,22 @@
 <h5>Unlimited Color</h5>
 <ul class="layout-grid unlimited-color-layout">
-  <input id="ColorPicker1" type="color" value="#7366ff" [(ngModel)]="primary" name="Background">
-  <input id="ColorPicker2" type="color" value="#f73164" [(ngModel)]="secondary" name="Background">
-  <button type="button" class="color-apply-btn btn btn-primary color-apply-btn" (click)="applyColor()">Apply</button>
+  <input id="ColorPicker1" type="color" value="#7366ff" [(ngModel)]="primary" name="Background" />
+  <input id="ColorPicker2" type="color" value="#f73164" [(ngModel)]="secondary" name="Background" />
+  <button
+    type="button"
+    class="color-apply-btn btn btn-primary color-apply-btn"
+    (click)="applyColor()"
+  >
+    Apply
+  </button>
 </ul>
 <h5>Mix Layout</h5>
 <ul class="layout-grid customizer-mix">
-  <li class="color-layout" [class.active]="layout.config.settings.layout_version === 'light-only'" (click)="changeLayout('light-only')">
+  <li
+    class="color-layout"
+    [class.active]="layout.config.settings.layout_version === 'light-only'"
+    (click)="changeLayout('light-only')"
+  >
     <div class="header bg-light">
       <ul>
         <li></li>
@@ -21,7 +31,11 @@
       </ul>
     </div>
   </li>
-  <li class="color-layout" [class.active]="layout.config.settings.layout_version === 'dark-sidebar'" (click)="changeLayout('dark-sidebar')">
+  <li
+    class="color-layout"
+    [class.active]="layout.config.settings.layout_version === 'dark-sidebar'"
+    (click)="changeLayout('dark-sidebar')"
+  >
     <div class="header bg-light">
       <ul>
         <li></li>
@@ -36,7 +50,11 @@
       </ul>
     </div>
   </li>
-  <li class="color-layout" [class.active]="layout.config.settings.layout_version === 'dark-only'" (click)="changeLayout('dark-only')">
+  <li
+    class="color-layout"
+    [class.active]="layout.config.settings.layout_version === 'dark-only'"
+    (click)="changeLayout('dark-only')"
+  >
     <div class="header bg-dark">
       <ul>
         <li></li>

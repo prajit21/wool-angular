@@ -9,7 +9,12 @@
           <div class="card email-body email-list" [class.hide]="isShowMail">
             <app-letter-box-header />
             <div class="tab-content" id="email-pills-tabContent">
-              <div class="tab-pane fade show active" id="inbox-pill" role="tabpanel" aria-labelledby="inbox-pill-tab">
+              <div
+                class="tab-pane fade show active"
+                id="inbox-pill"
+                role="tabpanel"
+                aria-labelledby="inbox-pill-tab"
+              >
                 <app-letter-box-mail [activeTab]="activeTab" (showMail)="showMail($event)" />
               </div>
             </div>

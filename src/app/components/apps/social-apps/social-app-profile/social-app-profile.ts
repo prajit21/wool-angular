@@ -12,14 +12,14 @@ export class SocialAppProfile {
   readonly activeTabValue = output<string>();
 
   public socialAppTab = socialAppTab;
-  public activeTab?: string = 'timeline';
+  public activeTab: string = 'timeline'; // <-- no ?
 
   ngOnInit() {
     this.activeTabValue.emit(this.activeTab);
   }
 
   changeTab(value?: string) {
-    this.activeTab = value;
+    this.activeTab = value ?? 'timeline';
     this.activeTabValue.emit(this.activeTab);
   }
 }

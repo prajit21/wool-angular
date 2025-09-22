@@ -3,7 +3,8 @@
     <div class="chat-box">
       <!-- Chat left side Start-->
       <div class="chat-left-aside">
-        <div class="d-flex"><img class="rounded-circle user-image" src="assets/images/user/12.png" alt="">
+        <div class="d-flex">
+          <img class="rounded-circle user-image" src="assets/images/user/12.png" alt="" />
           <div class="about">
             <div class="name f-w-600">Mark Jecno</div>
             <div class="status">Status...</div>
@@ -13,20 +14,22 @@
           <div class="search">
             <form class="theme-form">
               <div class="mb-3">
-                <input class="form-control" type="text" placeholder="Search"><i class="fa fa-search"></i>
+                <input class="form-control" type="text" placeholder="Search" /><i
+                  class="fa fa-search"
+                ></i>
               </div>
             </form>
           </div>
           <ul class="list custom-scrollbar">
             @for(details of contact; track details){
-              <li class="clearfix">
-                <img class="rounded-circle user-image" [src]="details.img" alt="">
-                <div class="status-circle {{ details.status_color }}"></div>
-                <div class="about">
-                  <div class="name">{{ details.name }}</div>
-                  <div class="status">{{ details.status }}</div>
-                </div>
-              </li>
+            <li class="clearfix">
+              <img class="rounded-circle user-image" [src]="details.img" alt="" />
+              <div class="status-circle {{ details.status_color }}"></div>
+              <div class="about">
+                <div class="name">{{ details.name }}</div>
+                <div class="status">{{ details.status }}</div>
+              </div>
+            </li>
             }
           </ul>
         </div>

@@ -15,14 +15,18 @@ import { NewContactModal } from '../new-contact-modal/new-contact-modal';
 })
 export class ContactSideMenu {
   private modal = inject(NgbModal);
-
   readonly activeTabValue = output<string>();
-
   public contact = contact;
-  public activeTab?: string = 'personal';
-  public isOpen: boolean = false;
+  public activeTab: string = 'personal';
+
+  public isOpen = false;
 
   ngOnInit() {
+    this.activeTabValue.emit(this.activeTab);
+  }
+
+  changeTab(value?: string) {
+    this.activeTab = value ?? 'personal';
     this.activeTabValue.emit(this.activeTab);
   }
 
@@ -30,15 +34,10 @@ export class ContactSideMenu {
     this.isOpen = !this.isOpen;
   }
 
-  changeTab(value?: string) {
-    this.activeTab = value;
-    this.activeTabValue.emit(this.activeTab);
-  }
-
   openModal(value: string) {
-    if (value == 'contact') {
+    if (value === 'contact') {
       this.modal.open(NewContactModal, { size: 'lg', windowClass: 'modal-bookmark' });
-    } else if (value == 'category') {
+    } else if (value === 'category') {
       this.modal.open(ContactCategoryModal);
     }
   }

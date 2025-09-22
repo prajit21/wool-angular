@@ -3,21 +3,48 @@
     <h3>Popular Coins</h3>
     <div class="card-header-right">
       <ul class="simple-wrapper nav nav-pills" id="myTab" role="tablist">
-        <li class="nav-item"><a class="nav-link" [class.active]="activeTab === 'home'" id="home-tab" href="javascript:void(0)" (click)="getTab('home')">Home</a></li>
-        <li class="nav-item"><a class="nav-link" [class.active]="activeTab === 'profile'" id="profile-tabs" href="javascript:void(0)" (click)="getTab('profile')">Profile</a></li>
-        <li class="nav-item"><a class="nav-link" [class.active]="activeTab === 'contact'" id="contact-tab" href="javascript:void(0)" (click)="getTab('contact')">Contact</a></li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="activeTab === 'home'"
+            id="home-tab"
+            href="javascript:void(0)"
+            (click)="getTab('home')"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="activeTab === 'profile'"
+            id="profile-tabs"
+            href="javascript:void(0)"
+            (click)="getTab('profile')"
+            >Profile</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="activeTab === 'contact'"
+            id="contact-tab"
+            href="javascript:void(0)"
+            (click)="getTab('contact')"
+            >Contact</a
+          >
+        </li>
       </ul>
     </div>
   </div>
   <div class="card-body pt-0">
     <div class="table-responsive custom-scrollbar">
       <div class="dataTables_wrapper no-footer">
-        <table class="table display" id="coins-table" style="width:100%">
+        <table class="table display" id="coins-table" style="width: 100%">
           <thead>
             <tr>
               <th>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="">
+                  <input class="form-check-input" type="checkbox" value="" />
                   <label class="form-check-label"></label>
                 </div>
               </th>
@@ -31,32 +58,41 @@
           </thead>
           <tbody>
             @for(details of popularCoins; track details){
-              <tr>
-                <td>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="">
-                    <label class="form-check-label"></label>
+            <tr>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" />
+                  <label class="form-check-label"></label>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex gap-2">
+                  <div class="flex-shrink-0">
+                    <app-svg-icon
+                      [icon]="details.icon"
+                      [class]="details.iconClass + ' ' + 'animation'"
+                    />
                   </div>
-                </td>
-                <td>
-                  <div class="d-flex gap-2">
-                    <div class="flex-shrink-0">
-                      <app-svg-icon [icon]="details.icon" [class]="details.iconClass + ' ' + 'animation'" />
-                    </div><a href="javascript:void(0)" [routerLink]="['/e-commerce/pricing']">
-                      <p class="f-w-600">{{ details.coinName }}</p>
-                    </a>
-                  </div>
-                </td>
-                <td>
-                  <p class="f-w-600">${{ details.price }}</p>
-                </td>
-                <td class="f-w-600 font-{{ details.dayMarginClass }}"> <span>{{ details.dayMargin }}</span></td>
-                <td class="f-w-600 font-{{ details.weekMarginClass }}"> <span>{{ details.weekMargin }}</span></td>
-                <td class="f-w-600">${{ details.marketCap }}</td>
-                <td>
-                  <p class="m-0 f-w-600">${{ details.volumePrice }}</p><span>{{ details.volume }}</span>
-                </td>
-              </tr>
+                  <a href="javascript:void(0)" [routerLink]="['/e-commerce/pricing']">
+                    <p class="f-w-600">{{ details.coinName }}</p>
+                  </a>
+                </div>
+              </td>
+              <td>
+                <p class="f-w-600">${{ details.price }}</p>
+              </td>
+              <td class="f-w-600 font-{{ details.dayMarginClass }}">
+                <span>{{ details.dayMargin }}</span>
+              </td>
+              <td class="f-w-600 font-{{ details.weekMarginClass }}">
+                <span>{{ details.weekMargin }}</span>
+              </td>
+              <td class="f-w-600">${{ details.marketCap }}</td>
+              <td>
+                <p class="m-0 f-w-600">${{ details.volumePrice }}</p>
+                <span>{{ details.volume }}</span>
+              </td>
+            </tr>
             }
           </tbody>
         </table>

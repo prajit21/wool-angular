@@ -5,10 +5,9 @@
   </div>
   <div class="card-body">
     @for(details of fontWeight.data; track details){
-      <div class="helper-common-box">
-        <div [class]="details.textClass">
-          {{ details.text }}</div>
-        </div>
+    <div class="helper-common-box">
+      <div [class]="details.textClass">{{ details.text }}</div>
+    </div>
     }
   </div>
 </div>

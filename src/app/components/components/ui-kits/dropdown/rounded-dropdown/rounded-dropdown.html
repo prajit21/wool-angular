@@ -1,19 +1,28 @@
 <div class="card height-equal">
   <div class="card-header">
     <h3>Rounded dropdown</h3>
-    <p class="f-m-light mt-1">When the<code>.show </code>class starts, dropdown appears. And <code>.rounded-pill</code> to change rounded dropdowns.</p>
+    <p class="f-m-light mt-1">
+      When the<code>.show </code>class starts, dropdown appears. And <code>.rounded-pill</code> to
+      change rounded dropdowns.
+    </p>
   </div>
   <div class="card-body rtl-dropdown">
     <div class="common-flex">
       @for(details of roundedDropdown; track details){
-        <div class="btn-group" ngbDropdown>
-          <button class="btn btn-{{ details.colorClass }} rounded-pill dropdown-toggle" type="button" ngbDropdownToggle >{{ details.title }}</button>
-          <ul class="dropdown-menu dropdown-block" ngbDropdownMenu>
-            @for(items of details.dropdownItem; track items){
-              <li><a ngbDropdownItem href="javascript:void(0)">{{ items.item }}</a></li>
-            }
-          </ul>
-        </div>
+      <div class="btn-group" ngbDropdown>
+        <button
+          class="btn btn-{{ details.colorClass }} rounded-pill dropdown-toggle"
+          type="button"
+          ngbDropdownToggle
+        >
+          {{ details.title }}
+        </button>
+        <ul class="dropdown-menu dropdown-block" ngbDropdownMenu>
+          @for(items of details.dropdownItem; track items){
+          <li><a ngbDropdownItem href="javascript:void(0)">{{ items.item }}</a></li>
+          }
+        </ul>
+      </div>
       }
     </div>
   </div>

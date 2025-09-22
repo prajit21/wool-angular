@@ -15,9 +15,9 @@
   }
   .nav-primary {
     .nav-link.active,
-    .nav-primary .show>.nav-link,
+    .nav-primary .show > .nav-link,
     .nav-pills.nav-primary .nav-link.active,
-    .nav-pills.nav-primary .show>.nav-link {
+    .nav-pills.nav-primary .show > .nav-link {
       border-radius: 5px;
     }
     .nav-link,

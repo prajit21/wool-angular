@@ -12,21 +12,19 @@
     </div>
     <div class="navigation-option">
       <ul>
-        @for(details of navigation; track details){
-          @if(details.section){
-            <hr>
-          }@else {
-            <li>
-              <a href="javascript:void(0)">
-                <app-feather-icons [icon]="details.icon" />
-                {{ details.title }}
-              </a>
-              @if(details.badge){
-                <span class="badge badge-primary rounded-pill pull-right">{{ details.badgeText }}</span>
-              }
-            </li>
+        @for(details of navigation; track details){ @if(details.section){
+        <hr />
+        }@else {
+        <li>
+          <a href="javascript:void(0)">
+            <app-feather-icons [icon]="details.icon" />
+            {{ details.title }}
+          </a>
+          @if(details.badge){
+          <span class="badge badge-primary rounded-pill pull-right">{{ details.badgeText }}</span>
           }
-        }
+        </li>
+        } }
       </ul>
     </div>
   </div>

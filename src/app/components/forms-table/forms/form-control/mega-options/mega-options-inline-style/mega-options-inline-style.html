@@ -2,29 +2,39 @@
   <div class="card-header">
     <h3>Inline style</h3>
     <p class="f-m-light mt-1">
-      For Create inline megaoption add <code>.mega-inline</code> class in form tag</p>
+      For Create inline megaoption add <code>.mega-inline</code> class in form tag
+    </p>
   </div>
   <div class="card-body megaoptions-border-space-sm">
     <form class="mega-inline">
       <div class="row">
         @for(details of inlineStyle; track details){
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="d-flex p-20">
-                <div class="form-check radio radio-{{ details.color }} m-0 w-100">
-                  <input class="form-check-input" id="{{ details.id }}" type="radio" name="radio1" value="option1">
-                  <label class="form-check-label mb-0 w-100" for="{{ details.id }}">
-                    <span class="flex-grow-1">
-                      <span class="mt-0 mega-title-badge">{{ details.title }}
-                        <span class="badge badge-{{ details.color }} pull-right digits">{{ details.tag }}</span>
-                      </span>
-                      <span>{{ details.description }}</span>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="d-flex p-20">
+              <div class="form-check radio radio-{{ details.color }} m-0 w-100">
+                <input
+                  class="form-check-input"
+                  id="{{ details.id }}"
+                  type="radio"
+                  name="radio1"
+                  value="option1"
+                />
+                <label class="form-check-label mb-0 w-100" for="{{ details.id }}">
+                  <span class="flex-grow-1">
+                    <span class="mt-0 mega-title-badge"
+                      >{{ details.title }}
+                      <span class="badge badge-{{ details.color }} pull-right digits"
+                        >{{ details.tag }}</span
+                      >
                     </span>
-                  </label>
-                </div>
+                    <span>{{ details.description }}</span>
+                  </span>
+                </label>
               </div>
             </div>
           </div>
+        </div>
         }
       </div>
     </form>

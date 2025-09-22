@@ -2,21 +2,23 @@
   <app-title [title]="'Latest Sale'" />
   <div class="card-body pt-0">
     <div class="table-responsive custom-scrollbar">
-      <div class="dataTables_wrapper  no-footer">
+      <div class="dataTables_wrapper no-footer">
         <div id="slling-card_filter" class="dataTables_filter">
-          <label>Search:<input type="search" class="" placeholder="" aria-controls="slling-card"></label>
+          <label
+            >Search:<input type="search" class="" placeholder="" aria-controls="slling-card"
+          /></label>
         </div>
-        <table class="table display dataTable no-footer" id="latest-sales" style="width:100%">
+        <table class="table display dataTable no-footer" id="latest-sales" style="width: 100%">
           <thead>
             <tr>
               <th>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="">
+                  <input class="form-check-input" type="checkbox" value="" />
                   <label class="form-check-label"></label>
                 </div>
               </th>
               <th>Customer</th>
-              <th>Product </th>
+              <th>Product</th>
               <th>address</th>
               <th>Total</th>
               <th>Payment</th>
@@ -25,32 +27,36 @@
           </thead>
           <tbody>
             @for(details of latestSaleCustomers; track details){
-              <tr>
-                <td>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="">
-                    <label class="form-check-label"></label>
+            <tr>
+              <td>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" />
+                  <label class="form-check-label"></label>
+                </div>
+              </td>
+              <td>
+                <div class="d-flex gap-2">
+                  <div class="flex-shrink-0"><img [src]="details.image" alt="user" /></div>
+                  <div class="flex-grow-1">
+                    <a href="javascript:void(0)" [routerLink]="['/letter-box']">
+                      <h6 class="f-w-600">{{ details.customerName }}</h6>
+                      <span>{{ details.email }}</span>
+                    </a>
                   </div>
-                </td>
-                <td>
-                  <div class="d-flex gap-2">
-                    <div class="flex-shrink-0"><img [src]="details.image" alt="user"></div>
-                    <div class="flex-grow-1"><a href="javascript:void(0)" [routerLink]="['/letter-box']">
-                        <h6 class="f-w-600">{{ details.customerName }}</h6><span>{{ details.email }}</span>
-                      </a></div>
-                    <div class="active-status active-online"></div>
-                  </div>
-                </td>
-                <td>
-                  <h6 class="f-w-600">{{ details.product }}</h6><span>{{ details.productCode }}</span>
-                </td>
-                <td>{{ details.address }}</td>
-                <td>${{ details.total }}</td>
-                <td>{{ details.payment }}</td>
-                <td>
-                  <div class="order"> <span>{{ details.status }}</span></div>
-                </td>
-              </tr>
+                  <div class="active-status active-online"></div>
+                </div>
+              </td>
+              <td>
+                <h6 class="f-w-600">{{ details.product }}</h6>
+                <span>{{ details.productCode }}</span>
+              </td>
+              <td>{{ details.address }}</td>
+              <td>${{ details.total }}</td>
+              <td>{{ details.payment }}</td>
+              <td>
+                <div class="order"><span>{{ details.status }}</span></div>
+              </td>
+            </tr>
             }
           </tbody>
         </table>

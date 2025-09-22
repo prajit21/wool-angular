@@ -1,13 +1,24 @@
 <div class="card">
   <div class="card-header">
     <h3>Select on exact</h3>
-    <span>A typeahead with [selectOnExact] example that selects the item when it is the only one that matches the user input</span>
+    <span
+      >A typeahead with [selectOnExact] example that selects the item when it is the only one that
+      matches the user input</span
+    >
   </div>
   <div class="card-body">
     <div id="custom-templates">
       <form class="theme-form">
         <div>
-          <input class="typeahead form-control" type="text" placeholder="Search for a state" [ngbTypeahead]="search" [selectOnExact]="true" [inputFormatter]="formatter" [resultFormatter]="formatter">
+          <input
+            class="typeahead form-control"
+            type="text"
+            placeholder="Search for a state"
+            [ngbTypeahead]="search"
+            [selectOnExact]="true"
+            [inputFormatter]="formatter"
+            [resultFormatter]="formatter"
+          />
         </div>
       </form>
     </div>

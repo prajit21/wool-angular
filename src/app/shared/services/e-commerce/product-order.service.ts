@@ -14,7 +14,7 @@ import {
 
 import { DataTableOrders } from '../../data/data/e-commerce/order-history';
 import { SortDirection } from '../../directive/e-commerce.directive';
-import { SortColumnOrder } from '../../directive/product-order.directive';
+import { SortColumn } from '../../directive/product-order.directive';
 import { productOrder } from '../../interface/e-commerce';
 
 interface SearchResult {
@@ -26,13 +26,13 @@ interface State {
   page: number;
   pageSize: number;
   searchTerm: string;
-  sortColumn: SortColumnOrder;
+  sortColumn: SortColumn;
   sortDirection: SortDirection;
 }
 
 const compare = (v1: string | number, v2: string | number) => (v1 < v2 ? -1 : v1 > v2 ? 1 : 0);
 
-function sort(product: productOrder[], column: SortColumnOrder, direction: string): productOrder[] {
+function sort(product: productOrder[], column: SortColumn, direction: string): productOrder[] {
   if (direction === '' || column === '') {
     return product;
   } else {
@@ -117,7 +117,7 @@ export class ProductOrderService {
   set searchTerm(searchTerm: string) {
     this._set({ searchTerm });
   }
-  set sortColumn(sortColumn: SortColumnOrder) {
+  set sortColumn(sortColumn: SortColumn) {
     this._set({ sortColumn });
   }
   set sortDirection(sortDirection: SortDirection) {

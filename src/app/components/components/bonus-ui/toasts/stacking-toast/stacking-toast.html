@@ -2,21 +2,24 @@
   <div class="card-header">
     <h3>Stacking Toasts</h3>
     <p class="f-m-light mt-1">
-      You can stack toasts by wrapping them in a toast container, which will vertically add some spacing.<code>[toast-*]</code>through change icons colors.</p>
+      You can stack toasts by wrapping them in a toast container, which will vertically add some
+      spacing.<code>[toast-*]</code>through change icons colors.
+    </p>
   </div>
   <div class="card-body toast-rtl stacking-toast-wrapper">
     <div class="toast-container position-static">
       @for(details of stackingToast; track details){
-        <div class="toast" role="alert" [class.show]="details.show">
-          <div class="toast-header">
-            <div class="toast-icons">
-              <app-feather-icons [icon]="'bell'" [class]="details.iconColor" />
-            </div>
-            <strong class="me-auto">{{ details.title }}</strong><small class="txt-danger">{{ details.time }}</small>
-            <button class="btn-close" type="button" (click)="closeToast(details.id)"></button>
+      <div class="toast" role="alert" [class.show]="details.show">
+        <div class="toast-header">
+          <div class="toast-icons">
+            <app-feather-icons [icon]="'bell'" [class]="details.iconColor" />
           </div>
-          <div class="toast-body toast-dark">{{ details.bodyText }}</div>
+          <strong class="me-auto">{{ details.title }}</strong
+          ><small class="txt-danger">{{ details.time }}</small>
+          <button class="btn-close" type="button" (click)="closeToast(details.id)"></button>
         </div>
+        <div class="toast-body toast-dark">{{ details.bodyText }}</div>
+      </div>
       }
     </div>
   </div>

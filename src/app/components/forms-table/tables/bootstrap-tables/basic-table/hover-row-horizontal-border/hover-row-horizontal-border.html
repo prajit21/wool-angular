@@ -1,6 +1,12 @@
 <div class="card">
   <div class="card-header">
-    <h3>Hoverable Rows With Horizontal Border</h3><span>Hoverable row use a class <code>table-hover</code> and for Horizontal border use a class <code>.table-border-horizontal</code> , Solid border Use a class<code>.border-solid .table</code>class.</span>
+    <h3>Hoverable Rows With Horizontal Border</h3>
+    <span
+      >Hoverable row use a class <code>table-hover</code> and for Horizontal border use a class
+      <code>.table-border-horizontal</code> , Solid border Use a class<code
+        >.border-solid .table</code
+      >class.</span
+    >
   </div>
   <div class="table-responsive signal-table custom-scrollbar">
     <table class="table table-hover">
@@ -8,7 +14,7 @@
         <tr>
           <th scope="col">Id</th>
           <th scope="col">Status</th>
-          <th scope="col">Signal Name </th>
+          <th scope="col">Signal Name</th>
           <th scope="col">Security</th>
           <th scope="col">Stage</th>
           <th scope="col">Schedule</th>
@@ -17,17 +23,21 @@
       </thead>
       <tbody>
         @for(details of hoverRowHorizontal; track details){
-          <tr>
-            <th scope="row">{{ details.id }}</th>
-            <td class="d-flex align-items-center">
-              <app-feather-icons [icon]="details.icon" class="bg-light-{{ details.statusColor }} font-{{ details.statusColor }}" />
-              <span class="font-{{ details.statusColor }}">{{ details.status }}</span></td>
-            <td>{{ details.signalName }}</td>
-            <td>{{ details.security }}</td>
-            <td>{{ details.stage }}</td>
-            <td>{{ details.schedule}}</td>
-            <td>{{ details.teamLead }} </td>
-          </tr>
+        <tr>
+          <th scope="row">{{ details.id }}</th>
+          <td class="d-flex align-items-center">
+            <app-feather-icons
+              [icon]="details.icon"
+              class="bg-light-{{ details.statusColor }} font-{{ details.statusColor }}"
+            />
+            <span class="font-{{ details.statusColor }}">{{ details.status }}</span>
+          </td>
+          <td>{{ details.signalName }}</td>
+          <td>{{ details.security }}</td>
+          <td>{{ details.stage }}</td>
+          <td>{{ details.schedule}}</td>
+          <td>{{ details.teamLead }}</td>
+        </tr>
         }
       </tbody>
     </table>

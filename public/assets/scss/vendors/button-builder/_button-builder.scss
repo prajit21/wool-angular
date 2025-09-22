@@ -12,7 +12,6 @@ $url_4: url(../../../images/button_builder/scroll.png);
 $url_5: url(../../../images/button_builder/hex_bg.gif);
 $url_6: url(../../../images/button_builder/btn-ok.png);
 
-
 .button-builder {
   %extend-col1 {
     background: $url_6 no-repeat scroll 0 0 $danger-color;
@@ -88,7 +87,7 @@ $url_6: url(../../../images/button_builder/btn-ok.png);
       background-color: var(--theme-deafult);
     }
 
-    input[type="radio"] {
+    input[type='radio'] {
       margin: 1px;
       position: absolute;
       z-index: 2;
@@ -116,7 +115,7 @@ $url_6: url(../../../images/button_builder/btn-ok.png);
       background-position: 0 -32px;
     }
 
-    input[type="checkbox"] {
+    input[type='checkbox'] {
       margin: 0;
       position: absolute;
       z-index: 2;
@@ -205,7 +204,7 @@ $url_6: url(../../../images/button_builder/btn-ok.png);
     border-radius: 5px;
 
     &:before {
-      content: "Ok";
+      content: 'Ok';
       position: absolute;
       width: 100%;
       text-align: center;

@@ -2,7 +2,7 @@
      62. Responsive CSS Start
 ==========================**/
 /* ========= min and max scss for 1200 to 1366 screen ========= */
-@media (max-width:1800px) {
+@media (max-width: 1800px) {
   .todo-wrap {
     .todo-list-body {
       .task-container {
@@ -18,7 +18,7 @@
     display: none;
   }
 }
-@media (max-width:1700px) {
+@media (max-width: 1700px) {
   .page-wrapper {
     .page-header {
       .header-wrapper {
@@ -31,7 +31,7 @@
     }
   }
 }
-@media screen and (max-width: 1680px){
+@media screen and (max-width: 1680px) {
   .page-wrapper {
     .page-header {
       .header-wrapper {
@@ -76,7 +76,7 @@
           width: auto;
           margin: 0 auto;
         }
-        >div {
+        > div {
           //height: 545px;
           z-index: 2;
           background-color: rgba($white, 0.75);
@@ -186,7 +186,7 @@
     }
   }
 }
-@media screen and (max-width: 1500px)  {
+@media screen and (max-width: 1500px) {
   .page-wrapper {
     .page-header {
       .header-wrapper {
@@ -199,7 +199,7 @@
     }
   }
 }
-@media screen and (max-width: 1480px){
+@media screen and (max-width: 1480px) {
   .page-wrapper {
     .page-header {
       .header-wrapper {
@@ -219,7 +219,7 @@
         tbody {
           tr {
             td {
-              &:nth-child(n+2) {
+              &:nth-child(n + 2) {
                 min-width: 180px;
               }
             }
@@ -234,7 +234,7 @@
         tbody {
           tr {
             td {
-              &:nth-child(n+2) {
+              &:nth-child(n + 2) {
                 min-width: 240px;
               }
             }
@@ -255,13 +255,13 @@
     }
   }
 }
-@media screen and (max-width: 1470px) and (min-width: 1200px){
+@media screen and (max-width: 1470px) and (min-width: 1200px) {
   //file-manager
   .files-content {
     li {
       margin-right: 8px;
       .files-list {
-        .file-left{
+        .file-left {
           padding: 12px 14px;
         }
       }
@@ -270,10 +270,10 @@
   //kanban-item
   .kanban-item {
     .list {
-      li{
-        i{
+      li {
+        i {
           margin-right: 8px;
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             margin-left: 8px !important;
           }
         }
@@ -282,7 +282,7 @@
   }
   //product
   .product-box {
-    .product-details{
+    .product-details {
       h4 {
         font-size: 18px;
       }
@@ -322,7 +322,7 @@
     flex: 0 0 33.33%;
   }
 }
-@media screen and (max-width: 1300px)  {
+@media screen and (max-width: 1300px) {
   .page-wrapper {
     .page-header {
       .header-wrapper {
@@ -361,8 +361,8 @@
       }
     }
   }
-  .project-box{
-    >h3{
+  .project-box {
+    > h3 {
       font-size: 18px;
     }
   }
@@ -407,7 +407,7 @@
       }
     }
     .card-footer {
-      >div {
+      > div {
         h3 {
           font-size: 18px;
         }
@@ -654,7 +654,7 @@
   .user-profile {
     .ttl-info {
       > span {
-        width: 130px  ;
+        width: 130px;
       }
     }
   }
@@ -693,7 +693,7 @@
   // alert page
   .alert-dismissible {
     strong {
-      &~p {
+      & ~ p {
         display: inline;
       }
     }
@@ -1073,11 +1073,11 @@
     }
   }
   //FILE-MANAGER
-  .file-manager{
-    .folder{
+  .file-manager {
+    .folder {
       .folder-box {
         p {
-          span{
+          span {
             float: unset;
             display: block;
           }
@@ -1099,7 +1099,7 @@
       visibility: hidden;
       z-index: 3;
       width: 280px;
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         left: unset;
         right: 0;
       }
@@ -1119,7 +1119,7 @@
       .faq-accordion.default-according {
         margin-bottom: 0;
         .row {
-          >div {
+          > div {
             &:last-child {
               .card {
                 margin-bottom: 0;
@@ -1142,7 +1142,7 @@
   .bookmark-dropdown {
     .Typeahead-menu {
       padding: 8px 9px 8px 35px !important;
-      .ProfileCard  {
+      .ProfileCard {
         padding: 8px;
         .ProfileCard-avatar {
           svg {
@@ -1190,34 +1190,34 @@
       .page-header {
         .header-wrapper {
           .header-logo-wrapper {
-            .toggle-sidebar{
+            .toggle-sidebar {
               margin: 0;
             }
           }
           .search-full {
             display: none;
           }
-          .nav-right{
-            >ul{
-              >li{
-                &:after{
+          .nav-right {
+            > ul {
+              > li {
+                &:after {
                   left: 51px;
-                  [dir="rtl"] &{
+                  [dir='rtl'] & {
                     right: 51px;
                   }
                 }
                 &:nth-child(7)::after {
                   left: 84px;
-                  [dir="rtl"] &{
+                  [dir='rtl'] & {
                     right: 84px;
                   }
                 }
-                &.search-box{
+                &.search-box {
                   display: block;
                 }
                 .rounded-pill {
                   right: 9px;
-                  [dir="rtl"] &{
+                  [dir='rtl'] & {
                     left: 9px;
                     right: unset;
                   }
@@ -1236,22 +1236,22 @@
           .search-full {
             display: none;
           }
-          .nav-right{
-            >ul{
-              >li{
-                &:after{
+          .nav-right {
+            > ul {
+              > li {
+                &:after {
                   left: 51px;
-                  [dir="rtl"] &{
+                  [dir='rtl'] & {
                     right: 51px;
                   }
                 }
                 &:nth-child(7)::after {
                   left: 73px;
-                  [dir="rtl"] &{
+                  [dir='rtl'] & {
                     right: 73px;
                   }
                 }
-                &.search-box{
+                &.search-box {
                   display: block;
                 }
               }
@@ -1283,7 +1283,7 @@
                 li {
                   .sidebar-link {
                     &.active {
-                      ~.sidebar-submenu {
+                      ~ .sidebar-submenu {
                         display: none !important;
                       }
                     }
@@ -1380,7 +1380,7 @@
               top: 22px;
               right: 23px;
               cursor: pointer;
-              [dir="rtl"] &{
+              [dir='rtl'] & {
                 float: left;
                 right: unset;
                 left: 23px;
@@ -1392,7 +1392,7 @@
           }
           .sidebar-main {
             .sidebar-links {
-              height: calc(100vh - 95px)
+              height: calc(100vh - 95px);
             }
           }
           &.close_icon {
@@ -1448,7 +1448,7 @@
             top: 10px;
           }
         }
-        >.mobile-toggle {
+        > .mobile-toggle {
           cursor: pointer;
           display: flex;
           align-items: center;
@@ -1468,7 +1468,7 @@
   }
   .file-sidebar {
     padding-right: 12px;
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       padding-right: 0;
     }
   }
@@ -1498,19 +1498,19 @@
       padding: 0.375rem 1.25rem;
     }
   }
-  .link-section>div {
+  .link-section > div {
     &.active {
-      >h6 {
+      > h6 {
         &:before {
-          content: "\f107";
+          content: '\f107';
           transition: content 0.3s ease;
         }
       }
     }
-    >h6 {
+    > h6 {
       position: relative;
       &:before {
-        content: "\f105";
+        content: '\f105';
         font-family: fontAwesome;
         position: absolute;
         right: 10px;
@@ -1537,7 +1537,7 @@
         .nav-right {
           position: unset;
           padding: 0;
-          >ul {
+          > ul {
             li {
               .submenu {
                 li {
@@ -1646,7 +1646,7 @@
   .typography {
     .row {
       div {
-        &+div {
+        & + div {
           margin-top: 30px;
         }
       }
@@ -1655,8 +1655,8 @@
   .listing {
     .card-body {
       .row {
-        >div {
-          &+div {
+        > div {
+          & + div {
             margin-top: 30px;
           }
         }
@@ -1671,7 +1671,7 @@
       margin-bottom: 10px;
     }
     .docs-toggles {
-      >.dropdown {
+      > .dropdown {
         margin-bottom: 0;
       }
     }
@@ -1703,7 +1703,7 @@
     &.dataTables_wrapper {
       div {
         &.dataTables_paginate {
-          &~.dataTables_filter {
+          & ~ .dataTables_filter {
             display: block;
             width: 100%;
             margin-top: 20px;
@@ -1726,7 +1726,7 @@
   .custom-card {
     .card-profile {
       .card-footer {
-        >div {
+        > div {
           h3 {
             font-size: 18px;
           }
@@ -1763,7 +1763,7 @@
       ul {
         .comment-social {
           margin-left: 0;
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             margin-left: unset;
             margin-right: 0;
           }
@@ -1817,7 +1817,7 @@
   }
   // eccommerce product
   .product-table {
-    table.dataTable thead>tr>th {
+    table.dataTable thead > tr > th {
       padding-right: 50px;
     }
   }
@@ -1898,7 +1898,7 @@
     }
     .chat-history {
       .call-content {
-        >div {
+        > div {
           padding-top: 70px;
         }
       }
@@ -1934,7 +1934,7 @@
     }
     .row {
       .col-xl-3 {
-        &+.col-xl-3 {
+        & + .col-xl-3 {
           padding-right: 15px;
         }
       }
@@ -2045,9 +2045,9 @@
     }
   }
   //kanban
-  .jkanban-container{
+  .jkanban-container {
     .kanban-container {
-      .kanban-board{
+      .kanban-board {
         margin-left: 10px !important;
         margin-right: 10px !important;
         width: calc(100% / 3 - 20px) !important;
@@ -2093,16 +2093,29 @@
       }
     }
   }
-  .page-wrapper.compact-wrapper .page-header .header-wrapper .nav-right > ul > li:nth-child(7)::after {
+  .page-wrapper.compact-wrapper
+    .page-header
+    .header-wrapper
+    .nav-right
+    > ul
+    > li:nth-child(7)::after {
     left: 60px;
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       right: 60px;
       left: 0;
     }
   }
-  .page-wrapper .page-header .header-wrapper .nav-right > ul .language-nav .translate_wrapper .lang svg {
+  .page-wrapper
+    .page-header
+    .header-wrapper
+    .nav-right
+    > ul
+    .language-nav
+    .translate_wrapper
+    .lang
+    svg {
     margin-left: 2px;
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       margin-right: 2px;
       margin-left: 0;
     }
@@ -2228,7 +2241,7 @@
   .crm-activity {
     > {
       li {
-        +li {
+        + li {
           margin-top: 10px;
           padding-top: 10px;
         }
@@ -2290,13 +2303,13 @@
     }
   }
   .details-about {
-    +.details-about {
+    + .details-about {
       margin-top: 20px;
     }
   }
   .activity-log {
     .my-activity {
-      +.my-activity {
+      + .my-activity {
         margin-top: 20px;
       }
     }
@@ -2457,37 +2470,37 @@
   }
   .typography {
     .h1 {
-      @media (max-width:1200px) {
+      @media (max-width: 1200px) {
         font-size: calc(16px + (34 - 16) * ((100vw - 320px) / (1200 - 320)));
       }
     }
     .h2 {
       font-size: 30px;
-      @media (max-width:1200px) {
+      @media (max-width: 1200px) {
         font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1200 - 320)));
       }
     }
     .h3 {
       font-size: 22px;
-      @media (max-width:1200px) {
+      @media (max-width: 1200px) {
         font-size: calc(17px + (22 - 17) * ((100vw - 320px) / (1200 - 320)));
       }
     }
     .h4 {
       font-size: 20px;
-      @media (max-width:1200px) {
+      @media (max-width: 1200px) {
         font-size: calc(15px + (20 - 15) * ((100vw - 320px) / (1200 - 320)));
       }
     }
     .h5 {
       font-size: 18px;
-      @media (max-width:1200px) {
+      @media (max-width: 1200px) {
         font-size: calc(13px + (18 - 13) * ((100vw - 320px) / (1200 - 320)));
       }
     }
     .h6 {
       font-size: 15px;
-      @media (max-width:1200px) {
+      @media (max-width: 1200px) {
         font-size: calc(12px + (15 - 12) * ((100vw - 320px) / (1200 - 320)));
       }
     }
@@ -2513,7 +2526,7 @@
     .basic-calendar {
       .external-events {
         .fc-event {
-          &+.fc-event {
+          & + .fc-event {
             margin-top: 10px;
           }
         }
@@ -2523,7 +2536,7 @@
   .owl-theme {
     .owl-nav {
       &.disabled {
-        &+.owl-dots {
+        & + .owl-dots {
           margin-bottom: -10px;
           margin-top: 15px;
         }
@@ -2653,10 +2666,10 @@
           padding: 11px 18px;
           width: 50px;
         }
-        +li {
+        + li {
           a {
             padding-left: 65px;
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               padding-right: 65px;
             }
           }
@@ -2686,7 +2699,7 @@
     margin-bottom: 20px;
   }
   .tab-content {
-    ~.nav-tabs {
+    ~ .nav-tabs {
       &.border-tab {
         margin-top: 20px;
       }
@@ -2704,13 +2717,13 @@
   // search page
   .search-page {
     .info-block {
-      +.info-block {
+      + .info-block {
         padding-top: 20px;
         margin-top: 20px;
       }
     }
     #video-links {
-      .embed-responsive+.embed-responsive {
+      .embed-responsive + .embed-responsive {
         margin-top: 20px;
       }
     }
@@ -2721,7 +2734,7 @@
   .gallery-with-description {
     margin-bottom: -20px;
     a {
-      >div {
+      > div {
         margin-bottom: 20px;
       }
     }
@@ -2804,7 +2817,7 @@
   }
   // summer-note page
   .click2edit {
-    &~.note-editor {
+    & ~ .note-editor {
       &.note-frame {
         margin-bottom: 20px;
       }
@@ -2881,7 +2894,7 @@
   .bookmark-tabcontent {
     .details-bookmark {
       .bookmark-card {
-        .title-bookmark  {
+        .title-bookmark {
           > h3 {
             font-size: 16px;
           }
@@ -2895,8 +2908,8 @@
     .page-header {
       .header-wrapper {
         .nav-right {
-          >ul {
-            >li {
+          > ul {
+            > li {
               .profile-media {
                 .flex-grow-1 {
                   display: none;
@@ -2909,14 +2922,14 @@
     }
   }
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
   .switch-section {
-		.card-body {
-			.d-flex {
-				align-items: center;
-			}
-	 	}
-	}
+    .card-body {
+      .d-flex {
+        align-items: center;
+      }
+    }
+  }
 }
 @media only screen and (max-width: 767.98px) {
   .wizard-4 {
@@ -2974,8 +2987,8 @@
       .page-header {
         .header-wrapper {
           .nav-right {
-            >ul {
-              >li {
+            > ul {
+              > li {
                 margin-right: -2px;
               }
             }
@@ -2991,23 +3004,23 @@
     &.compact-wrapper {
       .page-header {
         .header-wrapper {
-          .header-logo-wrapper{
-            .logo-wrapper{
+          .header-logo-wrapper {
+            .logo-wrapper {
               display: none !important;
             }
           }
           .nav-right {
-            >ul {
-              >li {
-                &:after{
+            > ul {
+              > li {
+                &:after {
                   left: 47px;
-                  [dir="rtl"] &{
+                  [dir='rtl'] & {
                     right: 47px;
                   }
                 }
                 &:nth-child(7)::after {
                   left: 68px;
-                  [dir="rtl"] &{
+                  [dir='rtl'] & {
                     right: 68px;
                   }
                 }
@@ -3025,12 +3038,12 @@
     }
   }
   .page-wrapper {
-    .page-header{
+    .page-header {
       .header-wrapper {
-        .nav-right{
+        .nav-right {
           ul {
-            li{
-              svg{
+            li {
+              svg {
                 width: 20px;
               }
             }
@@ -3043,7 +3056,7 @@
     .owl-carousel {
       .product-box {
         &.row {
-          >div {
+          > div {
             width: auto;
           }
         }
@@ -3061,7 +3074,7 @@
   .form-inline {
     .form-group:not(.form-control-search) {
       width: 100%;
-      +.form-group {
+      + .form-group {
         margin-top: 10px;
       }
       input {
@@ -3071,7 +3084,7 @@
   }
   .invoice {
     #project {
-      text-align: left!important;
+      text-align: left !important;
     }
   }
   .credit-card {
@@ -3100,7 +3113,7 @@
           &:first-child {
             padding-right: 25px;
           }
-          +li {
+          + li {
             padding-left: 25px;
           }
         }
@@ -3108,9 +3121,9 @@
     }
   }
   .footer-copyright {
-    ~div {
+    ~ div {
       text-align: center !important;
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         text-align: center !important;
       }
       p {
@@ -3183,7 +3196,7 @@
               font-size: 0;
               &:before {
                 position: absolute;
-                content: "\e661";
+                content: '\e661';
                 font-family: $font-themify;
                 font-size: 18px;
                 top: 11px;
@@ -3210,7 +3223,7 @@
     }
     .chat-history {
       .call-content {
-        >div {
+        > div {
           padding-top: 40px;
           height: auto;
         }
@@ -3254,7 +3267,7 @@
   }
   .form-builder-2-header {
     flex-wrap: wrap;
-    >div {
+    > div {
       width: 100%;
       margin-top: 10px;
       nav {
@@ -3299,7 +3312,7 @@
       &.ge-editing {
         .ge-tools-drawer {
           margin: 10px 0 0 10px;
-          >a {
+          > a {
             padding: 0 5px;
           }
         }
@@ -3476,15 +3489,15 @@
         margin-bottom: 10px;
       }
       .fc-toolbar {
-        >div {
+        > div {
           display: block !important;
           float: none !important;
         }
-        >* {
+        > * {
           :first-child {
             font-size: 18px;
           }
-          >* {
+          > * {
             float: none !important;
           }
         }
@@ -3679,7 +3692,7 @@
   .icon-hover-bottom {
     .icon-popup {
       display: block;
-      >.icon-last {
+      > .icon-last {
         display: block;
         margin-top: 15px;
         .form-inline {
@@ -3714,7 +3727,7 @@
   }
   .sm-left-text {
     text-align: left !important;
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       text-align: right !important;
     }
   }
@@ -3905,7 +3918,7 @@
       float: left;
       margin-right: 10px;
       margin-top: 8px;
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         float: right;
         margin-right: unset;
         margin-left: 10px;
@@ -3950,7 +3963,7 @@
       top: -45px;
       &:before,
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         width: 0;
         height: 0;
@@ -4011,7 +4024,7 @@
   h3 {
     font-size: 17px;
   }
-  h4{
+  h4 {
     font-size: 16px;
   }
   .page-wrapper {
@@ -4025,9 +4038,9 @@
       }
     }
   }
-  .onhover-dropdown{
+  .onhover-dropdown {
     &:hover {
-      .onhover-show-div{
+      .onhover-show-div {
         &.active {
           opacity: 1;
           transform: translateY(0);
@@ -4098,8 +4111,8 @@
       .page-header {
         .header-wrapper {
           .nav-right {
-            >ul {
-              >li {
+            > ul {
+              > li {
                 svg {
                   width: 18px !important;
                 }
@@ -4116,8 +4129,8 @@
   }
   .date-picker {
     .theme-form {
-      >.row {
-        >div {
+      > .row {
+        > div {
           &:last-child {
             margin-top: 0;
           }
@@ -4132,10 +4145,10 @@
   }
   .form-bookmark {
     .row {
-      >div {
+      > div {
         .row {
-          >.col-sm-6 {
-            +.col-sm-6 {
+          > .col-sm-6 {
+            + .col-sm-6 {
               margin-top: 10px;
             }
           }
@@ -4148,7 +4161,7 @@
       .d-flex {
         display: block !important;
         img {
-           margin-bottom: 10px;
+          margin-bottom: 10px;
         }
       }
     }
@@ -4188,7 +4201,7 @@
         top: 10px;
       }
     }
-    >div {
+    > div {
       width: 100%;
       text-align: center;
       padding: 15px;
@@ -4236,7 +4249,7 @@
     .btn-showcase {
       .btn {
         width: 100%;
-        +.btn {
+        + .btn {
           margin-left: 0;
           margin-top: 5px;
         }
@@ -4252,25 +4265,25 @@
             width: 16px;
           }
         }
-        &+li {
+        & + li {
           margin-left: 5px;
         }
       }
     }
   }
-  .page-wrapper .page-header .header-wrapper .nav-right>ul>li {
+  .page-wrapper .page-header .header-wrapper .nav-right > ul > li {
     padding: 4px 10px;
-    &:after{
+    &:after {
       top: 8px;
       left: 39px !important;
       height: 20px;
-      [dir="rtl"] &{
+      [dir='rtl'] & {
         right: 39px !important;
       }
     }
     &:nth-child(6)::after {
       left: 39px;
-      [dir="rtl"] &{
+      [dir='rtl'] & {
         right: 39px;
       }
     }
@@ -4296,7 +4309,7 @@
   }
   .page-wrapper {
     .page-body-wrapper {
-      .page-title>.row {
+      .page-title > .row {
         .col-6 {
           &:first-child {
             display: block;
@@ -4339,9 +4352,9 @@
             //   .simplebar-mask {
             //     .simplebar-content-wrapper {
             //       .simplebar-content {
-                    >li {
-                      margin-right: 0;
-                    }
+            > li {
+              margin-right: 0;
+            }
             //       }
             //     }
             //   }
@@ -4354,7 +4367,7 @@
       .header-wrapper {
         padding: 12px 15px !important;
         .nav-right {
-          >ul {
+          > ul {
             top: 58px;
             .search-form {
               i {
@@ -4371,7 +4384,7 @@
               }
             }
           }
-          >ul {
+          > ul {
             li {
               .flag-icon {
                 font-size: 14px !important;
@@ -4469,7 +4482,7 @@
     }
     .action-bar {
       right: 10px;
-      [dir="rtl"] {
+      [dir='rtl'] {
         left: 10px;
       }
     }
@@ -4684,7 +4697,7 @@
       margin-bottom: 15px;
     }
   }
-  .details-about+.details-about {
+  .details-about + .details-about {
     margin-top: 15px;
   }
   .your-details-xs {
@@ -4704,7 +4717,7 @@
   }
   .activity-log {
     .my-activity {
-      +.my-activity {
+      + .my-activity {
         margin-top: 15px;
       }
     }
@@ -4723,7 +4736,7 @@
   .chat-box {
     .chat-history {
       .call-content {
-        >div {
+        > div {
           padding-top: 30px;
         }
       }
@@ -4798,7 +4811,7 @@
           margin: 10px;
         }
       }
-      &.ge-layout-desktop [class*="col-"] {
+      &.ge-layout-desktop [class*='col-'] {
         width: inherit !important;
       }
     }
@@ -4884,7 +4897,7 @@
     margin-bottom: 10px;
   }
   .tab-content {
-    ~.nav-tabs {
+    ~ .nav-tabs {
       &.border-tab {
         margin-top: 10px;
       }
@@ -4910,9 +4923,9 @@
         height: 30px;
         font-size: 13px;
       }
-      &:nth-child(n+2) {
+      &:nth-child(n + 2) {
         margin-left: 5px;
-        [dir="rtl"] & {
+        [dir='rtl'] & {
           margin-left: unset;
           margin-right: 5px;
         }
@@ -4996,12 +5009,12 @@
   }
   div {
     &.table-responsive {
-      >div {
+      > div {
         &.dataTables_wrapper {
-          >div {
+          > div {
             &.row {
-              >div {
-                &[class^="col-"] {
+              > div {
+                &[class^='col-'] {
                   &:last-child {
                     padding-left: 0 !important;
                   }
@@ -5044,7 +5057,7 @@
                 border: none !important;
               }
               &:before {
-                content: "\e64a";
+                content: '\e64a';
                 font-family: $font-themify;
                 font-size: 11px;
                 padding: 0 5px;
@@ -5057,7 +5070,7 @@
                 border: none !important;
               }
               &:before {
-                content: "\e649";
+                content: '\e649';
                 font-family: $font-themify;
                 font-size: 11px;
                 padding: 0 5px;
@@ -5069,7 +5082,7 @@
       .dataTables_filter {
         margin-bottom: 15px;
         input {
-          &[type="search"] {
+          &[type='search'] {
             height: 30px;
           }
         }
@@ -5150,9 +5163,9 @@
       .blog-social {
         margin-top: 15px;
         li {
-          &+li {
+          & + li {
             padding-left: 20px;
-            >span {
+            > span {
               display: none;
             }
           }
@@ -5188,7 +5201,7 @@
     height: 320px;
   }
   .gallery {
-    >a {
+    > a {
       margin-bottom: 15px;
       text-align: center;
     }
@@ -5246,22 +5259,10 @@
     }
   }
   /* alert responsive css start here */
-  $alert-name: primary,
-    secondary,
-    success,
-    danger,
-    warning,
-    info,
-    light,
-    dark;
-  $alert-color: var(--theme-deafult),
-    $secondary-color,
-    $success-color,
-    $danger-color,
-    $warning-color,
-    $info-color,
-    $light-color,
-    $dark-color;
+  $alert-name: primary, secondary, success, danger, warning, info, light, dark;
+  $alert-color:
+    var(--theme-deafult), $secondary-color, $success-color, $danger-color, $warning-color,
+    $info-color, $light-color, $dark-color;
   @each $var in $alert-name {
     $i: index($alert-name, $var);
     .alert-#{$var}.inverse {
@@ -5314,7 +5315,7 @@
   //user card
   .custom-card {
     .card-footer {
-      >div {
+      > div {
         h6 {
           font-size: 14px;
           font-weight: 600;
@@ -5333,7 +5334,7 @@
       }
     }
     a.fc-more {
-      font-size: .70em;
+      font-size: 0.7em;
     }
   }
   // megaoption page responsive scss
@@ -5591,7 +5592,7 @@
   }
   // summer-note page
   .click2edit {
-    &~.note-editor {
+    & ~ .note-editor {
       &.note-frame {
         margin-bottom: 15px;
       }
@@ -5616,7 +5617,7 @@
   // gallery-with-description page
   .gallery-with-description {
     a {
-      >div {
+      > div {
         margin-bottom: 15px;
       }
     }
@@ -5711,10 +5712,10 @@
     &.compact-wrapper {
       .page-header {
         .header-wrapper {
-          .nav-right{
-            ul{
-              li{
-                &:after{
+          .nav-right {
+            ul {
+              li {
+                &:after {
                   display: none;
                 }
               }
@@ -5736,7 +5737,7 @@
   }
   .pagination-lg {
     .page-link {
-      font-size: 1.0rem;
+      font-size: 1rem;
     }
   }
   h6 {
@@ -5769,7 +5770,7 @@
         }
       }
     }
-    >div:not(.chart-clock-main) {
+    > div:not(.chart-clock-main) {
       canvas {
         width: 245px !important;
         height: 245px !important;
@@ -5780,7 +5781,7 @@
     .action-bar {
       .btn {
         width: 100%;
-        &+.btn {
+        & + .btn {
           margin-top: 10px;
         }
       }
@@ -5832,7 +5833,7 @@
   .custom-card {
     padding: 0;
     .card-footer {
-      >div {
+      > div {
         h3 {
           font-size: 20px;
         }
@@ -5865,8 +5866,8 @@
           font-size: 14px;
         }
       }
-      >span {
-        &+span {
+      > span {
+        & + span {
           display: none;
         }
       }
@@ -5983,8 +5984,8 @@
       display: none;
     }
     span {
-      +span {
-        +span {
+      + span {
+        + span {
           padding: 15px;
         }
       }
@@ -6011,11 +6012,11 @@
     &.compact-wrapper {
       .page-header {
         .header-wrapper {
-          .nav-right{
-            >ul{
-              >li{
+          .nav-right {
+            > ul {
+              > li {
                 padding: 4px 6px;
-                [dir="rtl"] & {
+                [dir='rtl'] & {
                   padding: 4px 5px !important;
                 }
               }
@@ -6030,7 +6031,7 @@
     &.compact-sidebar {
       .page-body-wrapper {
         div.sidebar-wrapper {
-          >div {
+          > div {
             width: 112px;
           }
           .sidebar-main {
@@ -6050,7 +6051,7 @@
     &.compact-small {
       .page-body-wrapper {
         div.sidebar-wrapper {
-          >div {
+          > div {
             width: 80px;
           }
           .sidebar-main {
@@ -6145,13 +6146,13 @@
     &.compact-wrapper {
       .page-header {
         .header-wrapper {
-          .nav-right{
-            >ul{
-              >li{
-                &:after{
+          .nav-right {
+            > ul {
+              > li {
+                &:after {
                   display: none;
                 }
-                svg{
+                svg {
                   width: 15px !important;
                 }
               }
@@ -6177,17 +6178,17 @@
       }
     }
   }
-  .project-box{
+  .project-box {
     padding: 24px;
-    .badge{
+    .badge {
       top: 7px;
       right: 23px;
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         left: 19px !important;
         top: 5px !important;
       }
     }
-    >h3{
+    > h3 {
       font-size: 16px;
     }
   }
@@ -6197,15 +6198,15 @@
   //       width: 100% !important;
   //     }
   //   }
-  .project-list{
-    .border-tab{
-      &.nav-tabs{
-        .nav-item{
+  .project-list {
+    .border-tab {
+      &.nav-tabs {
+        .nav-item {
           width: auto !important;
-          .nav-link{
+          .nav-link {
             padding: 5px 15px 5px 0;
             font-size: 14px;
-            [dir="rtl"] & {
+            [dir='rtl'] & {
               padding: 5px 0 5px 15px !important;
             }
           }
@@ -6354,7 +6355,7 @@
       }
     }
     .card-footer {
-      >div {
+      > div {
         h6 {
           font-size: 12px;
         }
@@ -6407,7 +6408,7 @@
   .bookmark-tabcontent {
     .details-bookmark {
       .bookmark-card {
-        .title-bookmark  {
+        .title-bookmark {
           > h3 {
             font-size: 18px;
           }
@@ -6613,7 +6614,7 @@
   // calender page
   .calendar-wrap {
     a.fc-more {
-      font-size: .59em;
+      font-size: 0.59em;
     }
     .fc {
       th {

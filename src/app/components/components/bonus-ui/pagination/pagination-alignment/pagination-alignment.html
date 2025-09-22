@@ -1,20 +1,26 @@
 <div class="card">
   <div class="card-header">
     <h3>Pagination Alignment</h3>
-    <p class="f-m-light mt-1">Change the alignment of pagination components with flexbox utilities. For example, with <code>.justify-content-center:</code>.</p>
+    <p class="f-m-light mt-1">
+      Change the alignment of pagination components with flexbox utilities. For example, with
+      <code>.justify-content-center:</code>.
+    </p>
   </div>
   <div class="card-body">
     @for(details of paginationAlignment; track details){
-      <nav class="{{ details.class }}" aria-label="Page navigation example">
-        <ul class="pagination justify-content-{{ details.alignmentClass }} pagin-border-{{ details.colorClass }} pagination-{{ details.colorClass }}">
-          <li class="page-item"><a class="page-link" href="javascript:void(0)">Previous</a></li>
-          @for(items of details.text; track items){
-            <li [class.active]="items.active" class="page-item">
-              <a class="page-link" href="javascript:void(0)">{{ items.number }} </a></li>
-          }
-          <li class="page-item"><a class="page-link" href="javascript:void(0)">Next</a></li>
-        </ul>
-      </nav>
+    <nav class="{{ details.class }}" aria-label="Page navigation example">
+      <ul
+        class="pagination justify-content-{{ details.alignmentClass }} pagin-border-{{ details.colorClass }} pagination-{{ details.colorClass }}"
+      >
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">Previous</a></li>
+        @for(items of details.text; track items){
+        <li [class.active]="items.active" class="page-item">
+          <a class="page-link" href="javascript:void(0)">{{ items.number }} </a>
+        </li>
+        }
+        <li class="page-item"><a class="page-link" href="javascript:void(0)">Next</a></li>
+      </ul>
+    </nav>
     }
   </div>
 </div>

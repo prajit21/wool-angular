@@ -1,26 +1,32 @@
 <div class="card">
   <div class="card-header">
-    <h3>Outline accordion </h3>
+    <h3>Outline accordion</h3>
     <p class="f-m-light mt-1">
-      make custom <code>.accordion-wrapper</code> class use to bring border-left side.</p>
+      make custom <code>.accordion-wrapper</code> class use to bring border-left side.
+    </p>
   </div>
   <div class="card-body">
     <div class="accordion dark-accordion" id="outlineaccordion" ngbAccordion [closeOthers]="true">
       @for(details of simpleAccordion; track details){
-        <div class="accordion-item accordion-wrapper" ngbAccordionItem>
-          <h2 class="accordion-header" id="outlineaccordionone" ngbAccordionHeader>
-            <button class="accordion-button collapsed bg-light-primary txt-primary" type="button" ngbAccordionButton>{{ details.title }}
-              <app-feather-icons [icon]="'chevron-down'" [class]="'svg-color'" />
-            </button>
-          </h2>
-          <div class="accordion-collapse collapse" id="left-collapseOne" ngbAccordionCollapse>
-            <div class="accordion-body" ngbAccordionBody>
-              <ng-template>
-                <p [innerHTML]="details.desc"></p>
-              </ng-template>
-            </div>
+      <div class="accordion-item accordion-wrapper" ngbAccordionItem>
+        <h2 class="accordion-header" id="outlineaccordionone" ngbAccordionHeader>
+          <button
+            class="accordion-button collapsed bg-light-primary txt-primary"
+            type="button"
+            ngbAccordionButton
+          >
+            {{ details.title }}
+            <app-feather-icons [icon]="'chevron-down'" [class]="'svg-color'" />
+          </button>
+        </h2>
+        <div class="accordion-collapse collapse" id="left-collapseOne" ngbAccordionCollapse>
+          <div class="accordion-body" ngbAccordionBody>
+            <ng-template>
+              <p [innerHTML]="details.desc"></p>
+            </ng-template>
           </div>
         </div>
+      </div>
       }
     </div>
   </div>

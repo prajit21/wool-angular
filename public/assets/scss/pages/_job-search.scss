@@ -16,7 +16,7 @@
   span {
     color: $light-text;
     padding-left: 33px;
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       padding-right: 33px;
       padding-left: unset;
     }
@@ -87,14 +87,14 @@
       margin-top: 30px;
       margin-bottom: 30px;
       .row {
-        div[class^="col-"] {
-          +div[class^="col-"] {
+        div[class^='col-'] {
+          + div[class^='col-'] {
             .select2-container {
               margin-top: 18px;
             }
           }
           .job-select2 {
-            ~.select2-container {
+            ~ .select2-container {
               margin-top: 0 !important;
             }
           }
@@ -194,7 +194,7 @@
         }
         p {
           span {
-            +span {
+            + span {
               display: block;
             }
           }
@@ -213,8 +213,8 @@
         margin-top: 15px;
         margin-bottom: 15px;
         .row {
-          div[class^="col-"] {
-            +div[class^="col-"] {
+          div[class^='col-'] {
+            + div[class^='col-'] {
               .select2-container {
                 margin-top: 2px;
               }

@@ -1,16 +1,19 @@
 <div class="card overflow-hidden">
   <div class="card-header">
     <h4 class="mb-0">Blockquotes</h4>
-    <p class="f-m-light mt-1">The <code>&lt;blockquote&gt;</code> tag specifies a section that is quoted from another source.</p>
+    <p class="f-m-light mt-1">
+      The <code>&lt;blockquote&gt;</code> tag specifies a section that is quoted from another
+      source.
+    </p>
   </div>
   <div class="card-body">
     @for(details of blockQuotes; track details){
-      <div class="figure d-block dark-blockquote" [ngClass]="details.class">
-        <blockquote class="blockquote light-card mb-2">
-          <p class="mb-0 txt-dark">{{ details.desc }}</p>
-          <span class="blockquote-footer pt-3">{{ details.author }}</span>
-        </blockquote>
-      </div>
+    <div class="figure d-block dark-blockquote" [ngClass]="details.class">
+      <blockquote class="blockquote light-card mb-2">
+        <p class="mb-0 txt-dark">{{ details.desc }}</p>
+        <span class="blockquote-footer pt-3">{{ details.author }}</span>
+      </blockquote>
+    </div>
     }
   </div>
 </div>

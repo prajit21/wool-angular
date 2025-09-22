@@ -17,7 +17,7 @@ div {
   .table-avtar {
     height: 32px;
     margin-right: 10px;
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       margin-right: unset;
       margin-left: 10px;
     }
@@ -38,7 +38,7 @@ div {
       i {
         color: $success-color;
       }
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         margin-left: 5px;
       }
     }
@@ -83,7 +83,7 @@ div {
     border-radius: 0.25rem;
     color: $white;
   }
-  &+.dataTables_wrapper {
+  & + .dataTables_wrapper {
     margin-top: 20px;
   }
   .dataTables_paginate {
@@ -150,7 +150,7 @@ div {
   .dataTables_filter {
     margin-bottom: 25px;
     margin-left: 15px;
-    input[type="search"] {
+    input[type='search'] {
       border: 1px solid $light-semi-gray;
       padding: 0 10px;
       margin-left: 10px;
@@ -168,7 +168,7 @@ table {
     background-color: $white;
   }
   .box {
-    >div {
+    > div {
       padding: 5px 15px;
       background-color: var(--theme-deafult);
       display: inline-block;
@@ -332,29 +332,29 @@ code {
     div.dt-button.btn-danger,
     a.dt-button.btn-danger {
       background-color: $danger-color;
-      border-color: $danger-color
+      border-color: $danger-color;
     }
     table.dataTable th.focus,
     table.dataTable td.focus {
       outline: 3px solid var(--theme-deafult);
     }
-    table.dataTable.display tbody>tr.odd.selected>.sorting_1,
-    table.dataTable.order-column.stripe tbody>tr.odd.selected>.sorting_1 {
-      background-color: lighten($primary-color , 38%);
+    table.dataTable.display tbody > tr.odd.selected > .sorting_1,
+    table.dataTable.order-column.stripe tbody > tr.odd.selected > .sorting_1 {
+      background-color: lighten($primary-color, 38%);
     }
-    table.dataTable.stripe tbody>tr.odd.selected,
-    table.dataTable.stripe tbody>tr.odd>.selected,
-    table.dataTable.display tbody>tr.odd.selected,
-    table.dataTable.display tbody>tr.odd>.selected {
-      background-color: lighten($primary-color , 38%);
+    table.dataTable.stripe tbody > tr.odd.selected,
+    table.dataTable.stripe tbody > tr.odd > .selected,
+    table.dataTable.display tbody > tr.odd.selected,
+    table.dataTable.display tbody > tr.odd > .selected {
+      background-color: lighten($primary-color, 38%);
     }
-    table.dataTable.display tbody>tr.even.selected>.sorting_1,
-    table.dataTable.order-column.stripe tbody>tr.even.selected>.sorting_1 {
-      background-color: lighten($primary-color , 38%);
+    table.dataTable.display tbody > tr.even.selected > .sorting_1,
+    table.dataTable.order-column.stripe tbody > tr.even.selected > .sorting_1 {
+      background-color: lighten($primary-color, 38%);
     }
-    table.dataTable tbody>tr.selected,
-    table.dataTable tbody>tr>.selected {
-      background-color: lighten($primary-color , 38%);
+    table.dataTable tbody > tr.selected,
+    table.dataTable tbody > tr > .selected {
+      background-color: lighten($primary-color, 38%);
     }
   }
 }
@@ -365,8 +365,8 @@ td.details-control {
   text-align: center;
   cursor: pointer;
   font-family: 'themify';
-  &:before{
-    content: "\e61a";
+  &:before {
+    content: '\e61a';
     border: 1px solid $primary-color;
     padding: 3px;
     border-radius: 20px;
@@ -374,7 +374,7 @@ td.details-control {
   }
 }
 .dataTables_scroll {
-  &~.dataTables_paginate {
+  & ~ .dataTables_paginate {
     margin-top: 20px !important;
   }
 }
@@ -402,7 +402,7 @@ table {
       tbody {
         tr {
           &.odd {
-            >.sorting_1 {
+            > .sorting_1 {
               background-color: $light;
             }
             .badge {

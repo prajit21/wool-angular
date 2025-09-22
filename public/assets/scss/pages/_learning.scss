@@ -23,7 +23,7 @@
 }
 .upcoming-course {
   .d-flex {
-    +.d-flex {
+    + .d-flex {
       margin-top: 30px;
     }
   }
@@ -43,7 +43,7 @@
           &:first-child {
             padding-right: 30px;
           }
-          +li {
+          + li {
             padding-left: 30px;
           }
         }
@@ -57,7 +57,7 @@
   }
   .upcoming-course {
     .d-flex {
-      +.d-flex {
+      + .d-flex {
         margin-top: 20px;
       }
     }
@@ -69,7 +69,7 @@
   }
   .upcoming-course {
     .d-flex {
-      +.d-flex {
+      + .d-flex {
         margin-top: 15px;
       }
     }

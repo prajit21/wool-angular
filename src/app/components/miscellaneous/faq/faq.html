@@ -2,9 +2,9 @@
   <div class="faq-wrap">
     <div class="row">
       @for(details of faqs; track details){
-        <div class="col-xl-4 box-col-4" [ngClass]="details.colClass">
-          <app-common-faq [details]="details" />
-        </div>
+      <div class="col-xl-4 box-col-4" [ngClass]="details.colClass">
+        <app-common-faq [details]="details" />
+      </div>
       }
       <div class="col-lg-12">
         <div class="header-faq">

@@ -1,19 +1,17 @@
 <div class="container-fluid">
   <div class="row">
     @for(details of buttonGroup; track details){
-      <div class="col-12">
-        <app-button-groups [details]="details" [buttonColor]="buttonColor" />
-      </div>
-    }
-    @for(details of customOutlineButton; track details){
-      <div class="col-12">
-        <app-custom-outline-button-groups [details]="details" [buttonColor]="buttonColor" />
-      </div>
-    }
-    @for(details of outlineGroupButton; track details){
-      <div class="col-12">
-        <app-outline-button-groups [details]="details" [buttonColor]="buttonColor" />
-      </div>
+    <div class="col-12">
+      <app-button-groups [details]="details" [buttonColor]="buttonColor" />
+    </div>
+    } @for(details of customOutlineButton; track details){
+    <div class="col-12">
+      <app-custom-outline-button-groups [details]="details" [buttonColor]="buttonColor" />
+    </div>
+    } @for(details of outlineGroupButton; track details){
+    <div class="col-12">
+      <app-outline-button-groups [details]="details" [buttonColor]="buttonColor" />
+    </div>
     }
     <div class="col-12">
       <app-radio-button-groups />

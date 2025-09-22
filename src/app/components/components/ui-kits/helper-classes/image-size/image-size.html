@@ -2,12 +2,13 @@
   <div class="card-header">
     <h3>Images sizes</h3>
     <p class="f-m-light mt-1">
-      Use the width and height of images class like: <code>.img-* </code>and <code>.img-h-*</code>.</p>
+      Use the width and height of images class like: <code>.img-* </code>and <code>.img-h-*</code>.
+    </p>
   </div>
   <div class="card-body">
     <div class="gradient-border gap-3">
       @for(details of imageSize; track details){
-        <img [class]="details.imgClass" [src]="details.img" alt="{{ details.alt }}">
+      <img [class]="details.imgClass" [src]="details.img" alt="{{ details.alt }}" />
       }
     </div>
   </div>

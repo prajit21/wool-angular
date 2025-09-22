@@ -2,12 +2,16 @@
   <div class="card-header">
     <h3>Flush lists</h3>
     <p class="f-m-light mt-1">
-      Use <code> .list-group-flush</code> to remove some borders and rounded corners to render list group items.</p>
+      Use <code> .list-group-flush</code> to remove some borders and rounded corners to render list
+      group items.
+    </p>
   </div>
   <div class="card-body">
     <ul class="list-group list-group-flush">
       @for(details of flushList; track details){
-        <li class="list-group-item"><i class="icofont icofont-arrow-right"> </i>{{ details.item }}</li>
+      <li class="list-group-item">
+        <i class="icofont icofont-arrow-right"> </i>{{ details.item }}
+      </li>
       }
     </ul>
   </div>

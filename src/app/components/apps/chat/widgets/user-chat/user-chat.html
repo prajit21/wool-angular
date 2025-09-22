@@ -5,13 +5,24 @@
   <div class="chat-history chat-msg-box custom-scrollbar">
     <ul>
       @for(chat of chat; track chat){
-        <li [class.clearfix]="chat.reply">
-          <div class="message" [ngClass]="chat.reply ? 'other-message pull-right' : 'my-message'" [class.mb-0]="chat.marginBottom">
-            <img class="rounded-circle chat-user-img img-30" [ngClass]="chat.reply ? 'float-end' : 'float-start'" [src]="chat.img" alt="">
-            <div class="message-data" [class.text-end]="!chat.reply">
-              <span class="message-data-time">{{ chat.time }}</span></div> {{ chat.message }}
+      <li [class.clearfix]="chat.reply">
+        <div
+          class="message"
+          [ngClass]="chat.reply ? 'other-message pull-right' : 'my-message'"
+          [class.mb-0]="chat.marginBottom"
+        >
+          <img
+            class="rounded-circle chat-user-img img-30"
+            [ngClass]="chat.reply ? 'float-end' : 'float-start'"
+            [src]="chat.img"
+            alt=""
+          />
+          <div class="message-data" [class.text-end]="!chat.reply">
+            <span class="message-data-time">{{ chat.time }}</span>
           </div>
-        </li>
+          {{ chat.message }}
+        </div>
+      </li>
       }
     </ul>
   </div>
@@ -20,10 +31,16 @@
     <div class="row">
       <div class="col-xl-12 d-flex">
         <div class="smiley-box bg-primary">
-          <div class="picker"><img src="assets/images/smiley.png" alt=""></div>
+          <div class="picker"><img src="assets/images/smiley.png" alt="" /></div>
         </div>
         <div class="input-group text-box">
-          <input class="form-control input-txt-bx" id="message-to-send" type="text" name="message-to-send" placeholder="Type a message......">
+          <input
+            class="form-control input-txt-bx"
+            id="message-to-send"
+            type="text"
+            name="message-to-send"
+            placeholder="Type a message......"
+          />
           <button class="input-group-text btn btn-primary b-r-0" type="button">SEND</button>
         </div>
       </div>

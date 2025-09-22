@@ -8,17 +8,20 @@
         <div class="card-body">
           <div class="my-gallery row grid gallery-with-description" gallerize>
             <ngx-masonry [ordered]="true" [options]="masonryOptions">
-                @for(details of masonryItems; track details){
-                <figure class="grid-item col-xl-3 col-sm-6" ngxMasonryItem style="width: 355px;">
-                  <a href="javascript:void(0)">
-                    <img class="img-thumbnail" [src]="details.image" alt="Image description">
-                    <div class="caption">
-                      <h4>Portfolio Title 1</h4>
-                      <p>Here is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
-                    </div>
-                  </a>
-                </figure>
-                }
+              @for(details of masonryItems; track details){
+              <figure class="grid-item col-xl-3 col-sm-6" ngxMasonryItem style="width: 355px">
+                <a href="javascript:void(0)">
+                  <img class="img-thumbnail" [src]="details.image" alt="Image description" />
+                  <div class="caption">
+                    <h4>Portfolio Title 1</h4>
+                    <p>
+                      Here is simply dummy text of the printing and typesetting industry. Lorem
+                      Ipsum has been the industry's standard dummy.
+                    </p>
+                  </div>
+                </a>
+              </figure>
+              }
             </ngx-masonry>
           </div>
         </div>

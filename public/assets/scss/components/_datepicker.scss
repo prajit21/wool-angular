@@ -90,7 +90,7 @@
       padding: 12px;
       background-color: var(--theme-deafult);
       border: 1px solid var(--theme-deafult);
-      +.fc-h-event {
+      + .fc-h-event {
         margin-top: 10px;
       }
       .fc-event-main {
@@ -105,7 +105,7 @@
       }
     }
     .fc {
-      td[role="presentation"] {
+      td[role='presentation'] {
         border: 0;
       }
       .fc-daygrid-day-number,
@@ -125,7 +125,7 @@
     }
     .fc-toolbar-chunk {
       .fc-button-group {
-        ~.fc-today-button {
+        ~ .fc-today-button {
           margin: 0 8px;
         }
       }
@@ -212,7 +212,7 @@
 }
 .flatpickr-calendar {
   &.animate {
-    @media (max-width:400px) {
+    @media (max-width: 400px) {
       width: 77%;
       left: 50% !important;
       transform: translateX(-50%);
@@ -229,12 +229,15 @@
 }
 .flatpicker-calender {
   .form-control {
-    @media (max-width:768px) {
+    @media (max-width: 768px) {
       font-size: 14px;
     }
   }
 }
-.input-group> :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+.input-group
+  > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(
+    .invalid-tooltip
+  ):not(.invalid-feedback) {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }

@@ -1,22 +1,31 @@
 <div class="card">
   <div class="card-header">
-    <h3>Centered modal </h3>
+    <h3>Centered modal</h3>
     <p class="f-m-light mt-1">
-      Use the <code>.modal-dialog-centered </code>through centered modal. and set <code>data-bs-target </code>.</p>
+      Use the <code>.modal-dialog-centered </code>through centered modal. and set
+      <code>data-bs-target </code>.
+    </p>
   </div>
   <div class="card-body">
     <!--Centered modal-->
-    <button class="btn btn-success" type="button" (click)="openModal(centeredModal)">Vertically centered</button>
+    <button class="btn btn-success" type="button" (click)="openModal(centeredModal)">
+      Vertically centered
+    </button>
     <ng-template #centeredModal let-modal>
       <div class="modal-content">
         <div class="modal-body">
           <div class="modal-toggle-wrapper">
             <ul class="modal-img">
-              <li> <img src="assets/images/gif/danger.gif" alt="error"></li>
+              <li><img src="assets/images/gif/danger.gif" alt="error" /></li>
             </ul>
             <h4 class="text-center pb-2">Ohh! Something went wrong!</h4>
-            <p class="text-center">Attackers on malicious activity may trick you into doing something dangrous like installing software or revealing your personal informations.</p>
-            <button class="btn btn-secondary d-flex m-auto" type="button" (click)="closeModal()">Close</button>
+            <p class="text-center">
+              Attackers on malicious activity may trick you into doing something dangrous like
+              installing software or revealing your personal informations.
+            </p>
+            <button class="btn btn-secondary d-flex m-auto" type="button" (click)="closeModal()">
+              Close
+            </button>
           </div>
         </div>
       </div>

@@ -1,14 +1,21 @@
 <div class="card height-equal">
   <div class="card-header border-l-primary border-3">
     <h3>Border Primary State</h3>
-    <p class="mt-1 f-m-light">Use the class of<code>.b-l-* </code>for left border and <code>.border-3 </code>is used to increase the width of the border.</p>
+    <p class="mt-1 f-m-light">
+      Use the class of<code>.b-l-* </code>for left border and <code>.border-3 </code>is used to
+      increase the width of the border.
+    </p>
   </div>
   <div class="card-body">
     <div class="list-group">
       @for(details of primaryStateCard; track details){
-        <a class="list-group-item list-group-item-action" [class.active]="details.active" href="javascript:void(0)">
-          <img class="rounded-circle" [src]="details.img" alt="user">{{ details.name }}
-        </a>
+      <a
+        class="list-group-item list-group-item-action"
+        [class.active]="details.active"
+        href="javascript:void(0)"
+      >
+        <img class="rounded-circle" [src]="details.img" alt="user" />{{ details.name }}
+      </a>
       }
     </div>
   </div>

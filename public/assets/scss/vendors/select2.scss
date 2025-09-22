@@ -6,11 +6,11 @@
   position: relative;
   vertical-align: middle;
 
-  @import "select2/single";
-  @import "select2/multiple";
+  @import 'select2/single';
+  @import 'select2/multiple';
 }
 
-@import "select2/dropdown";
+@import 'select2/dropdown';
 
 .select2-close-mask {
   border: 0;
@@ -44,5 +44,5 @@
   white-space: nowrap !important;
 }
 
-@import "select2/theme/default/layout";
-@import "select2/theme/classic/layout";
+@import 'select2/theme/default/layout';
+@import 'select2/theme/classic/layout';

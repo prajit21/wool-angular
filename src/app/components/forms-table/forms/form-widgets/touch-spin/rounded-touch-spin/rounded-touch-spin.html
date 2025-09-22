@@ -2,15 +2,30 @@
   <div class="card-header">
     <h3>Rounded touchspin</h3>
     <p class="f-m-light mt-1">
-      Use the <code>.decrement-touchspin </code>and <code>.increment-touchspin </code>class.</p>
+      Use the <code>.decrement-touchspin </code>and <code>.increment-touchspin </code>class.
+    </p>
   </div>
   <div class="card-body common-flex rounded-touchspin">
     @for(details of touchSpinDetails; track details){
-      <div class="touchspin-wrapper">
-        <button class="decrement-touchspin btn-touchspin touchspin-{{ details.color }}" (click)="changeValue(details.id, -1)"><i class="fa fa-angle-left"> </i></button>
-        <input class="input-touchspin spin-outline-{{ details.color }}" type="number" [value]="details.roundedValue ">
-        <button class="increment-touchspin btn-touchspin touchspin-{{ details.color }}" (click)="changeValue(details.id, 1)"><i class="fa fa-angle-right"></i></button>
-      </div>
+    <div class="touchspin-wrapper">
+      <button
+        class="decrement-touchspin btn-touchspin touchspin-{{ details.color }}"
+        (click)="changeValue(details.id, -1)"
+      >
+        <i class="fa fa-angle-left"> </i>
+      </button>
+      <input
+        class="input-touchspin spin-outline-{{ details.color }}"
+        type="number"
+        [value]="details.roundedValue "
+      />
+      <button
+        class="increment-touchspin btn-touchspin touchspin-{{ details.color }}"
+        (click)="changeValue(details.id, 1)"
+      >
+        <i class="fa fa-angle-right"></i>
+      </button>
+    </div>
     }
   </div>
 </div>

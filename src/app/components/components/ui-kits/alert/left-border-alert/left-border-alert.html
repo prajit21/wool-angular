@@ -2,15 +2,19 @@
   <div class="card-header">
     <h3>Left border alert</h3>
     <p class="f-m-light mt-1">
-      Use the <code>.border-left-wrapper </code>to change border-left radius.</p>
+      Use the <code>.border-left-wrapper </code>to change border-left radius.
+    </p>
   </div>
   <div class="card-body live-dark">
     @if(isShow){
-      <div class="alert alert-light-dark light alert-dismissible fade show text-dark border-left-wrapper" role="alert">
-        <app-feather-icons [icon]="'help-circle'" />
-        <p class="text-dark">You can check in on some of those fields below.</p>
-        <button class="btn-close" type="button" (click)="dismissAlert()"></button>
-      </div>
+    <div
+      class="alert alert-light-dark light alert-dismissible fade show text-dark border-left-wrapper"
+      role="alert"
+    >
+      <app-feather-icons [icon]="'help-circle'" />
+      <p class="text-dark">You can check in on some of those fields below.</p>
+      <button class="btn-close" type="button" (click)="dismissAlert()"></button>
+    </div>
     }
   </div>
 </div>

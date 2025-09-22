@@ -9,8 +9,8 @@
     height: 16px;
     cursor: pointer;
   }
-  .flex-grow-1{
-    .price{
+  .flex-grow-1 {
+    .price {
       border: none;
       padding: 0px;
     }
@@ -31,7 +31,7 @@
   }
   .product-name {
     a {
-      color: rgba($black , 0.9);
+      color: rgba($black, 0.9);
     }
     h6 {
       margin-bottom: 0;
@@ -85,7 +85,7 @@
         border-radius: 5px;
         border: 1px solid $light-gray;
         overflow: hidden;
-        input{
+        input {
           font-size: 13px;
         }
       }
@@ -94,14 +94,14 @@
         border: none;
         &.bootstrap-touchspin-down {
           border-right: 1px solid;
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             border-right: unset;
             border-left: 1px solid;
           }
         }
         &.bootstrap-touchspin-up {
           border-left: 1px solid;
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             border-left: unset;
             border-right: 1px solid;
           }

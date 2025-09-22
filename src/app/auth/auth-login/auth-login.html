@@ -1,54 +1,87 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xl-7 order-1 b-center bg-size" [ngStyle]="{'background-image': 'url(assets/images/login/1.jpg)',
+    <div
+      class="col-xl-7 order-1 b-center bg-size"
+      [ngStyle]="{'background-image': 'url(assets/images/login/1.jpg)',
                                                         'background-size': 'cover',
                                                         'background-position': 'center center',
-                                                        'display': 'block'}">
-      <img class="bg-img-cover bg-center d-none" src="assets/images/login/1.jpg" alt="looginpage">
+                                                        'display': 'block'}"
+    >
+      <img class="bg-img-cover bg-center d-none" src="assets/images/login/1.jpg" alt="looginpage" />
     </div>
     <div class="col-xl-5 p-0">
       <div class="login-card login-dark">
         <div>
           <div>
             <a class="logo text-start" href="javascript:void(0)">
-              <img class="img-fluid for-light" src="assets/images/logo/logo-1.png" alt="looginpage">
-              <img class="img-fluid for-dark" src="assets/images/logo/logo-dark.png" alt="looginpage">
+              <img
+                class="img-fluid for-light"
+                src="assets/images/logo/logo-1.png"
+                alt="looginpage"
+              />
+              <img
+                class="img-fluid for-dark"
+                src="assets/images/logo/logo-dark.png"
+                alt="looginpage"
+              />
             </a>
           </div>
           <div class="login-main">
-            <form class="theme-form needs-validation" novalidate [formGroup]="myForm" (ngSubmit)="submit()">
+            <form
+              class="theme-form needs-validation"
+              novalidate
+              [formGroup]="myForm"
+              (ngSubmit)="submit()"
+            >
               <h4>Sign in to account</h4>
               <p>Enter your email & password to login</p>
               <div class="form-group">
                 <label class="col-form-label">Email Address</label>
-                <input class="form-control" type="email" placeholder="Test@gmail.com" formControlName="email" [ngClass]="{ 'is-invalid' : (email?.touched || validate) && email?.errors , 'is-valid' : !email?.errors }">
+                <input
+                  class="form-control"
+                  type="email"
+                  placeholder="Test@gmail.com"
+                  formControlName="email"
+                  [ngClass]="{ 'is-invalid' : (email?.touched || validate) && email?.errors , 'is-valid' : !email?.errors }"
+                />
                 @if(email?.touched && email?.errors?.['required']){
-                  <div class="invalid-feedback">Email is required.</div>
-                }
-                @if(email?.errors?.['email']){
-                  <div class="invalid-feedback">Invalid Email Address.</div>
+                <div class="invalid-feedback">Email is required.</div>
+                } @if(email?.errors?.['email']){
+                <div class="invalid-feedback">Invalid Email Address.</div>
                 }
               </div>
               <div class="form-group">
                 <label class="col-form-label">Password</label>
                 <div class="form-input position-relative">
-                  <input class="form-control" [type]="show ? 'text' : 'password'" name="login[password]" placeholder="*********" formControlName="password" [ngClass]="{ 'is-invalid' : (password?.touched || validate) && password?.errors , 'is-valid' : !password?.errors }">
-                  <div class="show-hide" (click)="passwordToggle()"><span [class.show]="!show"> </span></div>
+                  <input
+                    class="form-control"
+                    [type]="show ? 'text' : 'password'"
+                    name="login[password]"
+                    placeholder="*********"
+                    formControlName="password"
+                    [ngClass]="{ 'is-invalid' : (password?.touched || validate) && password?.errors , 'is-valid' : !password?.errors }"
+                  />
+                  <div class="show-hide" (click)="passwordToggle()">
+                    <span [class.show]="!show"> </span>
+                  </div>
                   @if(password?.touched && password?.errors?.['required']){
-                    <div class="invalid-feedback">Password is required.</div>
-                  }
-                  @if(password?.errors?.['minlength'] || password?.errors?.['maxlength']){
-                    <div class="invalid-feedback">
-                      A password of 4 to 8 characters is required.
-                    </div>
+                  <div class="invalid-feedback">Password is required.</div>
+                  } @if(password?.errors?.['minlength'] || password?.errors?.['maxlength']){
+                  <div class="invalid-feedback">A password of 4 to 8 characters is required.</div>
                   }
                 </div>
               </div>
               <div class="form-group mb-0">
                 <div class="checkbox p-0">
-                  <input id="checkbox1" type="checkbox">
+                  <input id="checkbox1" type="checkbox" />
                   <label class="text-muted" for="checkbox1">Remember password</label>
-                </div><a class="link" href="javascript:void(0)" [routerLink]="['/authentication/forgot-password']">Forgot password?</a>
+                </div>
+                <a
+                  class="link"
+                  href="javascript:void(0)"
+                  [routerLink]="['/authentication/forgot-password']"
+                  >Forgot password?</a
+                >
                 <div class="text-end mt-3">
                   <button class="btn btn-primary btn-block w-100" type="submit">Sign in</button>
                 </div>
@@ -70,7 +103,14 @@
                   </a>
                 </div>
               </div>
-              <p class="mt-4 mb-0 text-center">Don't have account?<a class="ms-2" href="javascript:void(0)" [routerLink]="['/authentication/register-simple']">Create Account</a></p>
+              <p class="mt-4 mb-0 text-center">
+                Don't have account?<a
+                  class="ms-2"
+                  href="javascript:void(0)"
+                  [routerLink]="['/authentication/register-simple']"
+                  >Create Account</a
+                >
+              </p>
             </form>
           </div>
         </div>

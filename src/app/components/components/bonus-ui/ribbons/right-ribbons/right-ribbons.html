@@ -1,17 +1,25 @@
 <div class="card">
   <div class="card-header">
     <h3>Variations Of Right Ribbons</h3>
-    <p class="f-m-light mt-1">Use the class of <code>.ribbon-*</code>[ribbon-right/ribbon-clip-right/ribbon-vertical-right/ribbon-bookmark/ribbon-clip-bottom-right/ribbon-vertical-right] through create ribbons and all ribbon colors are available.<code>[.ribbon-*]</code></p>
+    <p class="f-m-light mt-1">
+      Use the class of
+      <code>.ribbon-*</code
+      >[ribbon-right/ribbon-clip-right/ribbon-vertical-right/ribbon-bookmark/ribbon-clip-bottom-right/ribbon-vertical-right]
+      through create ribbons and all ribbon colors are available.<code>[.ribbon-*]</code>
+    </p>
   </div>
   <div class="card-body ribbon-page">
     <div class="row g-3">
       @for(details of rightRibbons; track details){
-        <div class="col-sm-6 col-xl-4">
-          <div class="ribbon-wrapper-{{ details.class }} border border-1 height-equal">
-            <div class="ribbon ribbon-{{ details.ribbonClass }} " [innerHTML]="details.ribbonText"></div>
-            <p class="{{ details.textClass }}" [innerHTML]="details.text"></p>
-          </div>
+      <div class="col-sm-6 col-xl-4">
+        <div class="ribbon-wrapper-{{ details.class }} border border-1 height-equal">
+          <div
+            class="ribbon ribbon-{{ details.ribbonClass }} "
+            [innerHTML]="details.ribbonText"
+          ></div>
+          <p class="{{ details.textClass }}" [innerHTML]="details.text"></p>
         </div>
+      </div>
       }
     </div>
   </div>

@@ -5,11 +5,11 @@
   </div>
   <div class="modal-body dark-modal">
     @for(details of modalContent; track details){
-      <div class="large-modal-header">
-        <app-feather-icons [icon]="'chevrons-right'" />
-        <h5>{{ details.title }}</h5>
-      </div>
-      <p class="modal-padding-space">{{ details.description }}</p>
+    <div class="large-modal-header">
+      <app-feather-icons [icon]="'chevrons-right'" />
+      <h5>{{ details.title }}</h5>
+    </div>
+    <p class="modal-padding-space">{{ details.description }}</p>
     }
   </div>
 </div>

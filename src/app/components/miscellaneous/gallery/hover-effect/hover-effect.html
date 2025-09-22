@@ -9,11 +9,11 @@
         <div class="card-body">
           <div class="row my-gallery gallery" gallerize>
             @for(image of images; track image){
-              <figure class="col-md-3 col-6 img-hover hover-{{ details.effect }}">
-                <a href="javascript:void(0)">
-                  <div><img [src]="image.srcUrl" alt="Image description"></div>
-                </a>
-              </figure>
+            <figure class="col-md-3 col-6 img-hover hover-{{ details.effect }}">
+              <a href="javascript:void(0)">
+                <div><img [src]="image.srcUrl" alt="Image description" /></div>
+              </a>
+            </figure>
             }
           </div>
         </div>

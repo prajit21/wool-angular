@@ -1,19 +1,27 @@
 <div class="card">
   <div class="card-header">
-    <h3> Justify contents</h3>
-    <p class="f-m-light mt-1">Use the <code>(text-start/text-center/text-end)</code> to change dropdown texts.</p>
+    <h3>Justify contents</h3>
+    <p class="f-m-light mt-1">
+      Use the <code>(text-start/text-center/text-end)</code> to change dropdown texts.
+    </p>
   </div>
   <div class="card-body dropdown-basic m-0 rtl-dropdown">
     <div class="common-flex">
       @for(details of justifyContentDropdown; track details){
-        <div class="btn-group" ngbDropdown>
-          <button class="btn btn-{{ details.colorClass }} dropdown-toggle" type="button" ngbDropdownToggle>{{ details.title }}</button>
-          <ul class="dropdown-menu dropdown-block text-{{ details.class }}" ngbDropdownMenu>
-            @for(items of details.dropdownItem; track items){
-              <li><a href="javascript:void(0)" ngbDropdownItem>{{ items.item }}</a></li>
-            }
-          </ul>
-        </div>
+      <div class="btn-group" ngbDropdown>
+        <button
+          class="btn btn-{{ details.colorClass }} dropdown-toggle"
+          type="button"
+          ngbDropdownToggle
+        >
+          {{ details.title }}
+        </button>
+        <ul class="dropdown-menu dropdown-block text-{{ details.class }}" ngbDropdownMenu>
+          @for(items of details.dropdownItem; track items){
+          <li><a href="javascript:void(0)" ngbDropdownItem>{{ items.item }}</a></li>
+          }
+        </ul>
+      </div>
       }
     </div>
   </div>

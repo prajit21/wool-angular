@@ -9,14 +9,19 @@
                 <label class="form-label m-0" for="validationDefault04">Add Category</label>
               </div>
               <div class="col-12">
-                <select class="form-select" id="validationDefault04" formControlName="category" [ngClass]="{ 'is-invalid' : (category?.touched || validate) && category?.errors , 'is-valid' : !category?.errors}">
+                <select
+                  class="form-select"
+                  id="validationDefault04"
+                  formControlName="category"
+                  [ngClass]="{ 'is-invalid' : (category?.touched || validate) && category?.errors , 'is-valid' : !category?.errors}"
+                >
                   <option selected="" value="" disabled>category</option>
                   <option>Toys & games</option>
-                  <option>Sportswear </option>
-                  <option>Jewellery </option>
+                  <option>Sportswear</option>
+                  <option>Jewellery</option>
                   <option>Furniture and Decor</option>
                   <option>Health, Personal Care, and Beauty</option>
-                  <option>Auto and Parts </option>
+                  <option>Auto and Parts</option>
                   <option>Baby Care Products</option>
                 </select>
                 <p class="f-light">A product can be added to a category</p>
@@ -29,14 +34,24 @@
                 <label class="form-label d-block m-0">Add Tag</label>
               </div>
               <div class="col-12">
-                <tag-input [(ngModel)]="items" name="tag" [editable]="true" class="form-control" formControlName="tag" [ngClass]="{ 'is-invalid' : (tag?.touched || validate) && tag?.errors , 'is-valid' : !tag?.errors}" />
+                <tag-input
+                  [(ngModel)]="items"
+                  name="tag"
+                  [editable]="true"
+                  class="form-control"
+                  formControlName="tag"
+                  [ngClass]="{ 'is-invalid' : (tag?.touched || validate) && tag?.errors , 'is-valid' : !tag?.errors}"
+                />
                 <p class="f-light">Products can be tagged</p>
               </div>
             </div>
           </div>
           <div class="col-12">
             <div class="category-buton">
-              <a class="btn button-primary" href="javascript:void(0)" (click)="openModal()"><i class="me-2 fa fa-plus"></i>Create New Category </a></div>
+              <a class="btn button-primary" href="javascript:void(0)" (click)="openModal()"
+                ><i class="me-2 fa fa-plus"></i>Create New Category
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -46,7 +61,12 @@
             <div class="row">
               <div class="col-12">
                 <label class="form-label" for="publishStatus">Publish Status</label>
-                <select class="form-select" id="publishStatus" formControlName="status" [ngClass]="{ 'is-invalid' : (status?.touched || validate) && status?.errors , 'is-valid' : !status?.errors}">
+                <select
+                  class="form-select"
+                  id="publishStatus"
+                  formControlName="status"
+                  [ngClass]="{ 'is-invalid' : (status?.touched || validate) && status?.errors , 'is-valid' : !status?.errors}"
+                >
                   <option selected="" value="" disabled>status</option>
                   <option>Publish</option>
                   <option>Drafts</option>
@@ -61,7 +81,13 @@
               <div class="col-12">
                 <label class="form-label" for="datetime-local1">Publish Date & Time</label>
                 <div class="input-group flatpicker-calender product-date">
-                  <input class="form-control" id="datetime-local1" type="date" formControlName="publish_Date_Tile" [ngClass]="{ 'is-invalid' : (date_time?.touched || validate) && date_time?.errors , 'is-valid' : !date_time?.errors}">
+                  <input
+                    class="form-control"
+                    id="datetime-local1"
+                    type="date"
+                    formControlName="publish_Date_Tile"
+                    [ngClass]="{ 'is-invalid' : (date_time?.touched || validate) && date_time?.errors , 'is-valid' : !date_time?.errors}"
+                  />
                 </div>
               </div>
             </div>
@@ -72,11 +98,12 @@
     <div class="product-buttons">
       <div class="btn me-2">
         <div class="d-flex align-items-center gap-sm-2 gap-1" (click)="previous()">
-          <app-svg-icon [icon]="'back-arrow'" />  Previous
+          <app-svg-icon [icon]="'back-arrow'" /> Previous
         </div>
       </div>
       <div class="btn">
-        <div class="d-flex align-items-center gap-sm-2 gap-1" (click)="next()">Next
+        <div class="d-flex align-items-center gap-sm-2 gap-1" (click)="next()">
+          Next
           <app-svg-icon [icon]="'front-arrow'" />
         </div>
       </div>

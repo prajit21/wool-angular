@@ -1,23 +1,36 @@
 <div class="card">
   <div class="card-header">
     <h3>Link color in light theme</h3>
-    <p class="f-m-light mt-1">Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.</p>
+    <p class="f-m-light mt-1">
+      Use the <code>.alert-link</code> utility class to quickly provide matching colored links
+      within any alert.
+    </p>
   </div>
   <div class="card-body">
     <div class="row">
       @for(details of alerts; track details){
-        <div class="col-xl-6">
-          @for(alert of details.details; track alert){
-            <p class="mb-1">{{ alert.color | titlecase }} Light Alert</p>
-            <div class="alert alert-light-{{ alert.color }}" role="alert">
-              @if(alert.color === 'light'){
-              <p class="txt-dark">This is a <a class="alert-link txt-dark" href="javascript:void(0)">{{ alert.color }} alert</a> with an example link. Check it out.</p>
-              }@else {
-                <p class="txt-{{ alert.color }}">This is a <a class="alert-link txt-{{ alert.color }}" href="javascript:void(0)">{{ alert.color }} alert</a> with an example link. Check it out.</p>
-              }
-            </div>
+      <div class="col-xl-6">
+        @for(alert of details.details; track alert){
+        <p class="mb-1">{{ alert.color | titlecase }} Light Alert</p>
+        <div class="alert alert-light-{{ alert.color }}" role="alert">
+          @if(alert.color === 'light'){
+          <p class="txt-dark">
+            This is a
+            <a class="alert-link txt-dark" href="javascript:void(0)">{{ alert.color }} alert</a>
+            with an example link. Check it out.
+          </p>
+          }@else {
+          <p class="txt-{{ alert.color }}">
+            This is a
+            <a class="alert-link txt-{{ alert.color }}" href="javascript:void(0)"
+              >{{ alert.color }} alert</a
+            >
+            with an example link. Check it out.
+          </p>
           }
         </div>
+        }
+      </div>
       }
     </div>
   </div>

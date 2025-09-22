@@ -36,7 +36,7 @@
     }
   }
   .card-footer {
-    >div {
+    > div {
       h3 {
         font-size: 16px;
       }
@@ -271,7 +271,7 @@
       bottom: 0;
       left: 35px;
       border-radius: 100%;
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         right: 35px;
       }
     }
@@ -290,7 +290,7 @@
         margin-bottom: 5px;
       }
       span {
-        +span {
+        + span {
           color: $light-text;
         }
       }
@@ -315,7 +315,7 @@
   }
 }
 .details-about {
-  +.details-about {
+  + .details-about {
     margin-top: 30px;
   }
   .your-details {
@@ -349,7 +349,7 @@
 }
 .activity-log {
   .my-activity {
-    +.my-activity {
+    + .my-activity {
       margin-top: 30px;
     }
     p {

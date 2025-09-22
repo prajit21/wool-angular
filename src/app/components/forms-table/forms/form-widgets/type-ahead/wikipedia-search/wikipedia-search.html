@@ -7,11 +7,16 @@
     <div id="remote">
       <form class="theme-form">
         <div>
-          <input class="typeahead form-control" type="text" placeholder="" [class.is-invalid]="searchFailed" [ngbTypeahead]="search">
+          <input
+            class="typeahead form-control"
+            type="text"
+            placeholder=""
+            [class.is-invalid]="searchFailed"
+            [ngbTypeahead]="search"
+          />
           @if (searching) {
           <small class="form-text text-muted">searching...</small>
-          }
-          @if (searchFailed) {
+          } @if (searchFailed) {
           <div class="invalid-feedback">Sorry, suggestions could not be loaded.</div>
           }
         </div>

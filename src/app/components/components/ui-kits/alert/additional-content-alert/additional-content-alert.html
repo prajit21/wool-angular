@@ -2,17 +2,18 @@
   <div class="card-header">
     <h3>Additional content</h3>
     <p class="f-m-light mt-1">
-      Use the <code>.alert </code> utility class to quickly provide additional content within any alerts.</p>
+      Use the <code>.alert </code> utility class to quickly provide additional content within any
+      alerts.
+    </p>
   </div>
   <div class="card-body dark-alert">
     @for(details of additionalContent; track details){
-      <div class="alert bg-light-{{ details.colorClass }}" role="alert">
-        <h5 class="alert-heading pb-2 txt-{{ details.colorClass }}">{{ details.title }}</h5>
-        <p class="text-bark">
-          {{ details.desc }}</p>
-        <hr>
-        <p class="mb-0">{{ details.text }}</p>
-      </div>
+    <div class="alert bg-light-{{ details.colorClass }}" role="alert">
+      <h5 class="alert-heading pb-2 txt-{{ details.colorClass }}">{{ details.title }}</h5>
+      <p class="text-bark">{{ details.desc }}</p>
+      <hr />
+      <p class="mb-0">{{ details.text }}</p>
+    </div>
     }
   </div>
 </div>

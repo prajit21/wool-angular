@@ -9,7 +9,7 @@
           @for(details of carouselImages; track details){
           <ng-template carouselSlide>
             <div class="carousel-item active">
-              <img class="d-block w-100" [src]="details.img" alt="drawing-room">
+              <img class="d-block w-100" [src]="details.img" alt="drawing-room" />
               <div class="carousel-caption d-none d-md-block carousel-opacity">
                 <h5>{{ details.title }}</h5>
                 <p>{{ details.description }}</p>

@@ -4,13 +4,19 @@
   </svg>
 </div>
 <div class="onhover-show-div notification-dropdown" [class.active]="notification()">
-  <h3 class="f-18 mb-0 dropdown-title">Notifications </h3>
+  <h3 class="f-18 mb-0 dropdown-title">Notifications</h3>
   <ul>
     @for(details of headerNotification; track details){
-      <li class="b-t-{{ details.bgClass }} border-4 bg-light-{{ details.bgClass }}">
-        <p>{{ details.title }} <span class="font-{{ details.textClass }}">{{ details.time }}</span></p>
-      </li>
+    <li class="b-t-{{ details.bgClass }} border-4 bg-light-{{ details.bgClass }}">
+      <p>
+        {{ details.title }} <span class="font-{{ details.textClass }}">{{ details.time }}</span>
+      </p>
+    </li>
     }
-    <li><a class="f-w-700" href="javascript:void(0)" [routerLink]="['/dashboard/ecommerce']">Check all</a></li>
+    <li>
+      <a class="f-w-700" href="javascript:void(0)" [routerLink]="['/dashboard/ecommerce']"
+        >Check all</a
+      >
+    </li>
   </ul>
 </div>

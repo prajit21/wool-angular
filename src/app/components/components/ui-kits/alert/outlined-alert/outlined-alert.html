@@ -1,22 +1,27 @@
 <div class="card">
   <div class="card-header">
     <h3>Outline dark and light alerts</h3>
-    <p class="f-m-light mt-1">Use the <code>.border-* </code>utility class to quickly provide matching border and border-width within any alert.</p>
+    <p class="f-m-light mt-1">
+      Use the <code>.border-* </code>utility class to quickly provide matching border and
+      border-width within any alert.
+    </p>
   </div>
   <div class="card-body">
     @if(isShow[0]){
-      <div class="alert txt-primary border-primary alert-dismissible fade show" role="alert">
-        <app-feather-icons [icon]="'clock'" />
-        <p>One of <strong>YouTube's</strong>most crucial ranking factors is Watch Time.</p>
-        <button class="btn-close" type="button" (click)="dismissAlert(0)"></button>
-      </div>
-    }
-    @if(isShow[1]){
-      <div class="alert txt-success border-success outline-2x alert-dismissible fade show alert-icons" role="alert">
-        <app-feather-icons [icon]="'thumbs-up'" />
-        <p><b> Well done! </b>You successfully read this important message.</p>
-        <button class="btn-close" type="button" (click)="dismissAlert(1)"></button>
-      </div>
+    <div class="alert txt-primary border-primary alert-dismissible fade show" role="alert">
+      <app-feather-icons [icon]="'clock'" />
+      <p>One of <strong>YouTube's</strong>most crucial ranking factors is Watch Time.</p>
+      <button class="btn-close" type="button" (click)="dismissAlert(0)"></button>
+    </div>
+    } @if(isShow[1]){
+    <div
+      class="alert txt-success border-success outline-2x alert-dismissible fade show alert-icons"
+      role="alert"
+    >
+      <app-feather-icons [icon]="'thumbs-up'" />
+      <p><b> Well done! </b>You successfully read this important message.</p>
+      <button class="btn-close" type="button" (click)="dismissAlert(1)"></button>
+    </div>
     }
   </div>
 </div>

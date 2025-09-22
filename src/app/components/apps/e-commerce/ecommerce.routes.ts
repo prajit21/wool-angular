@@ -14,7 +14,7 @@ export const Ecommerce: Routes = [
       },
       {
         path: 'product',
-        loadComponent: () => import('./add-product/add-product').then(m => m.AddProduct),
+        loadComponent: () => import('./product/product').then(m => m.Product),
         data: {
           title: 'Product',
           breadcrumb: 'Product',

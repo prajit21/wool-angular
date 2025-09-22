@@ -1,17 +1,22 @@
 <div class="card">
   <div class="card-header">
     <h3>Multiple bars</h3>
-    <p class="f-m-light mt-1">Include multiple progress bars in a progress component if you need.</p>
+    <p class="f-m-light mt-1">
+      Include multiple progress bars in a progress component if you need.
+    </p>
   </div>
   <div class="card-body progress-showcase">
     <div class="row">
       <div class="col">
         @for(details of multipleProgress; track details){
-          <div class="progress">
-            @for(progress of details.details; track progress){
-              <div class="progress-bar bg-{{ progress.colorClass }}" [ngStyle]="{ 'width': progress.width + '%' }"></div>
-            }
-          </div>
+        <div class="progress">
+          @for(progress of details.details; track progress){
+          <div
+            class="progress-bar bg-{{ progress.colorClass }}"
+            [ngStyle]="{ 'width': progress.width + '%' }"
+          ></div>
+          }
+        </div>
         }
       </div>
     </div>

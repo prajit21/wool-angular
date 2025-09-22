@@ -2,56 +2,68 @@
   <div class="row">
     <div class="col-sm-12">
       @for(details of buttons; track details){
-        <div class="card" id="default">
-          <div class="card-header">
-            <h3>{{ details.title }}</h3>
-            <span [innerHTML]="details.subTitle"></span>
-          </div>
-          <div class="card-body">
-            <div class="btn-showcase">
-              @for(color of buttonColor; track color){
-                @if(details.active){
-                  <button class="btn btn-{{ color }}" [ngClass]="details.buttonClass" type="button">Active</button>
-                }@else if(details.disable){
-                <button class="btn btn-{{ color }}" [ngClass]="details.buttonClass" type="button">Disabled</button>
-                }@else if(details.raisedButton){
-                  <button class="btn btn-{{ color }} btn-air-{{ color }} {{details.buttonClass}}" type="button">{{ color | titlecase }} Button</button>
-                }
-                @else {
-                  <button class="btn btn-{{ color }} {{details.buttonClass}}" type="button">{{ color | titlecase }} Button</button>
-                }
-              }
-            </div>
+      <div class="card" id="default">
+        <div class="card-header">
+          <h3>{{ details.title }}</h3>
+          <span [innerHTML]="details.subTitle"></span>
+        </div>
+        <div class="card-body">
+          <div class="btn-showcase">
+            @for(color of buttonColor; track color){ @if(details.active){
+            <button class="btn btn-{{ color }}" [ngClass]="details.buttonClass" type="button">
+              Active
+            </button>
+            }@else if(details.disable){
+            <button class="btn btn-{{ color }}" [ngClass]="details.buttonClass" type="button">
+              Disabled
+            </button>
+            }@else if(details.raisedButton){
+            <button
+              class="btn btn-{{ color }} btn-air-{{ color }} {{details.buttonClass}}"
+              type="button"
+            >
+              {{ color | titlecase }} Button
+            </button>
+            } @else {
+            <button class="btn btn-{{ color }} {{details.buttonClass}}" type="button">
+              {{ color | titlecase }} Button
+            </button>
+            } }
           </div>
         </div>
-      }
-      @for(details of outlinedButton; track details){
-        <div class="card" id="outline-button">
-          <div class="card-header">
-            <h3>{{ details.title }}</h3>
-            <span [innerText]="details.subTitle"></span>
-          </div>
-          <div class="card-body">
-            <div class="btn-showcase">
-              @for(color of buttonColor; track color){
-                @if(details.boldBorder){
-                  <button class="btn {{ details.buttonClass}}-{{ color }}-2x" type="button">{{ color | titlecase }} Button</button>
-                }@else {
-                  <button class="btn {{ details.buttonClass}}-{{ color }}" type="button">{{ color | titlecase }} Button</button>
-                }
-              }
-            </div>
+      </div>
+      } @for(details of outlinedButton; track details){
+      <div class="card" id="outline-button">
+        <div class="card-header">
+          <h3>{{ details.title }}</h3>
+          <span [innerText]="details.subTitle"></span>
+        </div>
+        <div class="card-body">
+          <div class="btn-showcase">
+            @for(color of buttonColor; track color){ @if(details.boldBorder){
+            <button class="btn {{ details.buttonClass}}-{{ color }}-2x" type="button">
+              {{ color | titlecase }} Button
+            </button>
+            }@else {
+            <button class="btn {{ details.buttonClass}}-{{ color }}" type="button">
+              {{ color | titlecase }} Button
+            </button>
+            } }
           </div>
         </div>
+      </div>
       }
       <div class="card" id="gradiant">
         <div class="card-header">
-          <h3>Gradien buttons</h3><span>Add <code>.btn-*-gradien</code> class for gradien button</span>
+          <h3>Gradien buttons</h3>
+          <span>Add <code>.btn-*-gradien</code> class for gradien button</span>
         </div>
         <div class="card-body">
           <div class="btn-showcase">
             @for(color of buttonColor; track color){
-              <button class="btn btn-{{ color }}-gradien" type="button">{{ color | titlecase }} Button</button>
+            <button class="btn btn-{{ color }}-gradien" type="button">
+              {{ color | titlecase }} Button
+            </button>
             }
           </div>
         </div>

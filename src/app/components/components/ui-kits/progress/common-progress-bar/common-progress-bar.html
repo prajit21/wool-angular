@@ -12,9 +12,7 @@
             class="{{ details()?.class }}-{{ progress.colorClass }}"
             [ngStyle]="{ width: progress.width + '%' }"
           >
-            @if(progress.width && details()?.showWidth){
-            {{ progress.width + "%" }}
-            }
+            @if(progress.width && details()?.showWidth){ {{ progress.width + "%" }} }
           </div>
         </div>
         }

@@ -84,16 +84,14 @@
                 <thead>
                   <tr>
                     <th scope="col">Prdouct</th>
-                    <th scope="col" appProductOrder="name" (sortOrder)="onSort($event)">
-                      Prdouct name
-                    </th>
-                    <th scope="col" appProductOrder="size" (sortOrder)="onSort($event)">Size</th>
-                    <th scope="col" appProductOrder="color" (sortOrder)="onSort($event)">Color</th>
-                    <th scope="col" appProductOrder="article_number" (sortOrder)="onSort($event)">
+                    <th scope="col" appProductOrder="name" (sort)="onSort($event)">Prdouct name</th>
+                    <th scope="col" appProductOrder="size" (sort)="onSort($event)">Size</th>
+                    <th scope="col" appProductOrder="color" (sort)="onSort($event)">Color</th>
+                    <th scope="col" appProductOrder="article_number" (sort)="onSort($event)">
                       Article number
                     </th>
-                    <th scope="col" appProductOrder="units" (sortOrder)="onSort($event)">Units</th>
-                    <th scope="col" appProductOrder="price" (sortOrder)="onSort($event)">Price</th>
+                    <th scope="col" appProductOrder="units" (sort)="onSort($event)">Units</th>
+                    <th scope="col" appProductOrder="price" (sort)="onSort($event)">Price</th>
                     <th scope="col"><i class="fa fa-angle-down"></i></th>
                   </tr>
                 </thead>

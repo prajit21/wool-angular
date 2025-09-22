@@ -1,6 +1,7 @@
 <div class="card">
   <div class="card-header">
-    <h3>Inverse Table</h3><span>Use a class <code>table-inverse</code> inside table element.</span>
+    <h3>Inverse Table</h3>
+    <span>Use a class <code>table-inverse</code> inside table element.</span>
   </div>
   <div class="table-responsive custom-scrollbar">
     <table class="table table-inverse">
@@ -12,22 +13,22 @@
           <th scope="col">Office</th>
           <th scope="col">Position</th>
           <th scope="col">Salary</th>
-          <th scope="col">Join Date </th>
+          <th scope="col">Join Date</th>
           <th scope="col">Age</th>
         </tr>
       </thead>
       <tbody>
         @for(details of inverseTable; track details){
-          <tr>
-            <th scope="row">{{ details.id }}</th>
-            <td>{{ details.fname }}</td>
-            <td>{{ details.lname }}</td>
-            <td>{{ details.office }}</td>
-            <td>{{ details.position }}</td>
-            <td>${{ details.salary }} </td>
-            <td>{{ details.joinDate }} </td>
-            <td>{{ details.age }} </td>
-          </tr>
+        <tr>
+          <th scope="row">{{ details.id }}</th>
+          <td>{{ details.fname }}</td>
+          <td>{{ details.lname }}</td>
+          <td>{{ details.office }}</td>
+          <td>{{ details.position }}</td>
+          <td>${{ details.salary }}</td>
+          <td>{{ details.joinDate }}</td>
+          <td>{{ details.age }}</td>
+        </tr>
         }
       </tbody>
     </table>

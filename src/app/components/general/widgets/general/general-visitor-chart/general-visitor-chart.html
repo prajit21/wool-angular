@@ -1,10 +1,13 @@
 <div class="card visitor-card">
   <div class="card-header card-no-border pb-0">
     <div class="header-top">
-      <h3 class="m-0">Visitors<span class="f-14 font-primary f-w-500 ms-1">
+      <h3 class="m-0">
+        Visitors<span class="f-14 font-primary f-w-500 ms-1">
           <svg class="svg-fill me-1">
-            <use href="assets/svg/icon-sprite.svg#user-visitor"></use>
-          </svg>(+2.8)</span></h3>
+            <use href="assets/svg/icon-sprite.svg#user-visitor"></use></svg
+          >(+2.8)</span
+        >
+      </h3>
       <div class="card-header-right-icon">
         <div class="dropdown icon-dropdown" ngbDropdown>
           <button class="btn dropdown-toggle" id="visitorButton" type="button" ngbDropdownToggle>
@@ -22,10 +25,20 @@
   <div class="card-body pt-3">
     <div class="visitors-container">
       <div id="visitor-chart">
-        <apx-chart [series]="visitorChart.series" [chart]="visitorChart.chart" [plotOptions]="visitorChart.plotOptions"
-          [dataLabels]="visitorChart.dataLabels" [stroke]="visitorChart.stroke" [grid]="visitorChart.grid"
-          [colors]="visitorChart.colors" [xaxis]="visitorChart.xaxis" [yaxis]="visitorChart.yaxis"
-          [fill]="visitorChart.fill" [legend]="visitorChart.legend" [responsive]="visitorChart.responsive" />
+        <apx-chart
+          [series]="visitorChart.series"
+          [chart]="visitorChart.chart"
+          [plotOptions]="visitorChart.plotOptions"
+          [dataLabels]="visitorChart.dataLabels"
+          [stroke]="visitorChart.stroke"
+          [grid]="visitorChart.grid"
+          [colors]="visitorChart.colors"
+          [xaxis]="visitorChart.xaxis"
+          [yaxis]="visitorChart.yaxis"
+          [fill]="visitorChart.fill"
+          [legend]="visitorChart.legend"
+          [responsive]="visitorChart.responsive"
+        />
       </div>
     </div>
   </div>

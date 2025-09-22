@@ -1,27 +1,38 @@
 <div class="card">
   <div class="card-header">
     <h3>With icons accordion</h3>
-    <p class="f-m-light mt-1">Use the <code>.accordion </code>& <code>feather icons</code> through change look icons accordion.</p>
+    <p class="f-m-light mt-1">
+      Use the <code>.accordion </code>& <code>feather icons</code> through change look icons
+      accordion.
+    </p>
   </div>
   <div class="card-body accordion-border icons-accordion">
     <div class="accordion dark-accordion" id="accordionPanelsStayOpenExample" ngbAccordion>
       @for(details of accordionWithIcon; track details){
-        <div class="accordion-item" ngbAccordionItem>
-          <h2 class="accordion-header" id="panelsStayOpen-headingOne" ngbAccordionHeader>
-            <button class="accordion-button collapsed gap-2 bg-light-secondary active txt-secondary" type="button" ngbAccordionButton>
-              <app-feather-icons [icon]="details.icon" [class]="'svg-wrapper'" />
-              {{ details.title }}
-              <app-feather-icons [icon]="'chevron-down'" [class]="'svg-color'" />
-            </button>
-          </h2>
-          <div class="accordion-collapse collapse" id="panelsStayOpen-collapseOne" ngbAccordionCollapse>
-            <div class="accordion-body" ngbAccordionBody>
-              <ng-template>
-                <p [innerHTML]="details.desc"></p>
-              </ng-template>
-            </div>
+      <div class="accordion-item" ngbAccordionItem>
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne" ngbAccordionHeader>
+          <button
+            class="accordion-button collapsed gap-2 bg-light-secondary active txt-secondary"
+            type="button"
+            ngbAccordionButton
+          >
+            <app-feather-icons [icon]="details.icon" [class]="'svg-wrapper'" />
+            {{ details.title }}
+            <app-feather-icons [icon]="'chevron-down'" [class]="'svg-color'" />
+          </button>
+        </h2>
+        <div
+          class="accordion-collapse collapse"
+          id="panelsStayOpen-collapseOne"
+          ngbAccordionCollapse
+        >
+          <div class="accordion-body" ngbAccordionBody>
+            <ng-template>
+              <p [innerHTML]="details.desc"></p>
+            </ng-template>
           </div>
         </div>
+      </div>
       }
     </div>
   </div>
