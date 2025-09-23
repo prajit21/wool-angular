@@ -27,9 +27,11 @@
               (loadImageFailed)="loadImageFailed()"
             />
             <div class="btn-showcase">
+              @if(croppedImage) {
               <div class="text-center my-2">
                 <img [src]="croppedImage" alt="image" />
               </div>
+              }
               <div class="image-cropper-btn">
                 <input
                   class="btn btn-outline-primary"
