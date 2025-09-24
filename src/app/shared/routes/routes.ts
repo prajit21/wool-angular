@@ -214,7 +214,7 @@ export const content: Routes = [
     loadChildren: () => import('../../components/components/icons/icons.routes').then(r => r.Icons),
   },
   {
-    path: 'buttons',
+    path: 'button',
     data: {
       title: 'Buttons',
       breadcrumb: 'Buttons',

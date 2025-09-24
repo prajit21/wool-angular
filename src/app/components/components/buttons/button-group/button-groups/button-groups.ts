@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, input } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
 
 import { button } from '../../../../../shared/interface/buttons';
 
@@ -10,7 +10,7 @@ import { button } from '../../../../../shared/interface/buttons';
   styleUrl: './button-groups.scss',
 })
 export class ButtonGroups {
-  public readonly details = input<button>();
+  @Input() details: button;
 
   readonly buttonColor = input<string[]>();
 }

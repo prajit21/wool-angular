@@ -32,7 +32,7 @@ export class AddProductCategory {
     category: new FormControl('', Validators.required),
     tag: new FormControl(this.items, Validators.required),
     status: new FormControl('', Validators.required),
-    date_time: new FormControl('', Validators.required),
+    date: new FormControl('', Validators.required),
   });
 
   openModal() {
@@ -62,7 +62,7 @@ export class AddProductCategory {
     return this.myForm.get('status');
   }
 
-  get date_time() {
-    return this.myForm.get('date_time');
+  get date() {
+    return this.myForm.get('date');
   }
 }

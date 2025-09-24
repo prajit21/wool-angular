@@ -17,7 +17,7 @@ export const advanceSMILChart: LineChartConfiguration = {
     low: 0,
     showArea: false,
     fullWidth: true,
-    height: 250,
+    height: 350,
   },
 };
 
@@ -37,7 +37,7 @@ export const svgPathChart: LineChartConfiguration = {
     showArea: true,
     showPoint: false,
     fullWidth: true,
-    height: 250,
+    height: 350,
   },
 };
 
@@ -51,7 +51,7 @@ export const donutSVGChart: PieChartConfiguration = {
   options: {
     donut: true,
     showLabel: false,
-    height: 250,
+    height: 350,
   },
 };
 
@@ -74,7 +74,7 @@ export const biPolarLineChart: LineChartConfiguration = {
     showLine: false,
     showPoint: false,
     fullWidth: true,
-    height: 250,
+    height: 350,
     axisX: {
       showLabel: false,
       showGrid: false,
@@ -92,7 +92,7 @@ export const lineAreaChart: LineChartConfiguration = {
   options: {
     low: 0,
     showArea: true,
-    height: 250,
+    height: 350,
   },
 };
 
@@ -105,7 +105,7 @@ export const biPolarBarChart: BarChartConfiguration = {
   },
   options: {
     high: 10,
-    height: 250,
+    height: 350,
     low: -10,
     axisX: {
       labelInterpolationFnc: function (value, index: number) {
@@ -128,7 +128,7 @@ export const stackedBarChart: BarChartConfiguration = {
   },
   options: {
     stackBars: true,
-    height: 250,
+    height: 350,
     axisY: {
       labelInterpolationFnc: function (value: number) {
         return value / 1000 + 'k';

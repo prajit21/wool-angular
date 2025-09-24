@@ -1,6 +1,7 @@
-import { Directive, HostBinding, HostListener, Input, input, output, signal } from '@angular/core';
+import { Directive, HostBinding, HostListener, input, output, signal } from '@angular/core';
 
 import { productOrder } from '../interface/e-commerce';
+
 export type SortColumn = keyof productOrder | '';
 export type SortDirection = 'asc' | 'desc' | '';
 const rotate: { [key: string]: SortDirection } = { asc: 'desc', desc: '', '': 'asc' };

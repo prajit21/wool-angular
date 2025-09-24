@@ -1,4 +1,4 @@
-import { Component, inject, input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -13,7 +13,7 @@ import { ContactDetails } from '../../../../shared/interface/contact';
 export class ContactPrintModal {
   private modal = inject(NgbActiveModal);
 
-  readonly printDetails = input<ContactDetails>();
+  @Input() printDetails!: ContactDetails;
 
   closeModal() {
     this.modal.close();
