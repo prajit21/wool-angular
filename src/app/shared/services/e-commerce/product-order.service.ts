@@ -1,24 +1,14 @@
 import { DecimalPipe } from '@angular/common';
-import { Injectable, PipeTransform, inject } from '@angular/core';
+import { inject, Injectable, PipeTransform } from '@angular/core';
 
-import {
-  BehaviorSubject,
-  Observable,
-  Subject,
-  debounceTime,
-  delay,
-  of,
-  switchMap,
-  tap,
-} from 'rxjs';
+import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
+import { debounceTime, delay, switchMap, tap } from 'rxjs/operators';
 
-import { DataTableOrders } from '../../data/data/e-commerce/order-history';
-import { SortDirection } from '../../directive/e-commerce.directive';
-import { SortColumn } from '../../directive/product-order.directive';
-import { productOrder } from '../../interface/e-commerce';
+import { DataTableOrders, ORDERS } from '../../data/data/e-commerce/order-history';
+import { SortColumn, SortDirection } from '../../directive/product-order.directive';
 
 interface SearchResult {
-  product: productOrder[];
+  support: ORDERS[];
   total: number;
 }
 
@@ -32,36 +22,37 @@ interface State {
 
 const compare = (v1: string | number, v2: string | number) => (v1 < v2 ? -1 : v1 > v2 ? 1 : 0);
 
-function sort(product: productOrder[], column: SortColumn, direction: string): productOrder[] {
+function sort(support: ORDERS[], column: SortColumn, direction: string): ORDERS[] {
   if (direction === '' || column === '') {
-    return product;
+    return support;
   } else {
-    return [...product].sort((a, b) => {
+    return [...support].sort((a, b) => {
       const res = compare(a[column], b[column]);
       return direction === 'asc' ? res : -res;
     });
   }
 }
 
-function matches(product: productOrder, term: string, pipe: PipeTransform) {
+function matches(details: ORDERS, term: string, pipe: PipeTransform) {
   return (
-    product.name.toLowerCase().includes(term.toLowerCase()) ||
-    product.size.toLowerCase().includes(term.toLowerCase()) ||
-    product.color.toLowerCase().includes(term.toLowerCase()) ||
-    pipe.transform(product.article_number).includes(term) ||
-    pipe.transform(product.units).includes(term) ||
-    pipe.transform(product.price).includes(term)
+    details.product.toLowerCase().includes(term.toLowerCase()) ||
+    details.status.toLowerCase().includes(term.toLowerCase()) ||
+    details.product_img.toLowerCase().includes(term.toLowerCase()) ||
+    details.size.toLowerCase().includes(term.toLowerCase()) ||
+    pipe.transform(details.articleNumber).includes(term) ||
+    pipe.transform(details.units).includes(term) ||
+    details.price.toLowerCase().includes(term.toLowerCase())
   );
 }
+
 @Injectable({
   providedIn: 'root',
 })
-export class ProductOrderService {
+export class OrderService {
   private pipe = inject(DecimalPipe);
-
   private _loading$ = new BehaviorSubject<boolean>(true);
   private _search$ = new Subject<void>();
-  private _product$ = new BehaviorSubject<productOrder[]>([]);
+  private _support$ = new BehaviorSubject<ORDERS[]>([]);
   private _total$ = new BehaviorSubject<number>(0);
 
   private _state: State = {
@@ -82,15 +73,15 @@ export class ProductOrderService {
         tap(() => this._loading$.next(false)),
       )
       .subscribe(result => {
-        this._product$.next(result.product);
+        this._support$.next(result.support);
         this._total$.next(result.total);
       });
 
     this._search$.next();
   }
 
-  get product$() {
-    return this._product$.asObservable();
+  get support$() {
+    return this._support$.asObservable();
   }
   get total$() {
     return this._total$.asObservable();
@@ -133,14 +124,14 @@ export class ProductOrderService {
     const { sortColumn, sortDirection, pageSize, page, searchTerm } = this._state;
 
     // 1. sort
-    let product = sort(DataTableOrders, sortColumn, sortDirection);
+    let support = sort(DataTableOrders, sortColumn, sortDirection);
 
     // 2. filter
-    product = product.filter(product => matches(product, searchTerm, this.pipe));
-    const total = product.length;
+    support = support.filter(ticket => matches(ticket, searchTerm, this.pipe));
+    const total = support.length;
 
     // 3. paginate
-    product = product.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
-    return of({ product, total });
+    support = support.slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
+    return of({ support, total });
   }
 }

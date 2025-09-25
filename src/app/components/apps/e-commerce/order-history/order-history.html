@@ -83,35 +83,51 @@
               <table class="table table-bordernone display" id="basic-1">
                 <thead>
                   <tr>
-                    <th scope="col">Prdouct</th>
-                    <th scope="col" appProductOrder="name" (sort)="onSort($event)">Prdouct name</th>
-                    <th scope="col" appProductOrder="size" (sort)="onSort($event)">Size</th>
-                    <th scope="col" appProductOrder="color" (sort)="onSort($event)">Color</th>
-                    <th scope="col" appProductOrder="article_number" (sort)="onSort($event)">
+                    <th scope="col" appProductOrder sortableOrder="product_img">Product</th>
+                    <th scope="col" appProductOrder sortableOrder="product" (sort)="onSort($event)">
+                      Product name
+                    </th>
+                    <th scope="col" appProductOrder sortableOrder="size" (sort)="onSort($event)">
+                      Size
+                    </th>
+                    <th scope="col" appProductOrder sortableOrder="color" (sort)="onSort($event)">
+                      Color
+                    </th>
+                    <th
+                      scope="col"
+                      appProductOrder
+                      sortableOrder="articleNumber"
+                      (sort)="onSort($event)"
+                    >
                       Article number
                     </th>
-                    <th scope="col" appProductOrder="units" (sort)="onSort($event)">Units</th>
-                    <th scope="col" appProductOrder="price" (sort)="onSort($event)">Price</th>
+                    <th scope="col" appProductOrder sortableOrder="units" (sort)="onSort($event)">
+                      Units
+                    </th>
+                    <th scope="col" appProductOrder sortableOrder="price" (sort)="onSort($event)">
+                      Price
+                    </th>
                     <th scope="col"><i class="fa fa-angle-down"></i></th>
                   </tr>
                 </thead>
                 <tbody>
-                  @for (product of product$ | async; track product){
+                  @for(item of (products$ | async) ? (products$ | async) : []; track item;let i =
+                  $index){
                   <tr>
-                    <td><img class="img-fluid img-30" [src]="product.img" alt="#" /></td>
+                    <td><img class="img-fluid img-30" [src]="item.product_img" alt="#" /></td>
                     <td>
                       <div class="product-name">
-                        <a href="javascript:void(0)">{{ product.name }}</a>
+                        <a href="javascript:void(0)">{{ item.product }}</a>
                         <div class="order-process">
-                          <span class="order-process-circle"></span>{{ product.tag }}
+                          <span class="order-process-circle"></span>{{ item.status }}
                         </div>
                       </div>
                     </td>
-                    <td>{{ product.size }}</td>
-                    <td>{{ product.color }}</td>
-                    <td>{{ product.article_number }}</td>
-                    <td>{{ product.units }}</td>
-                    <td>${{ product.price }}</td>
+                    <td>{{ item.size }}</td>
+                    <td>{{ item.color }}</td>
+                    <td>{{ item.articleNumber }}</td>
+                    <td>{{ item.units }}</td>
+                    <td>${{ item.price }}</td>
                     <td>
                       <app-feather-icons [icon]="'more-vertical'" />
                     </td>

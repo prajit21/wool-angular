@@ -6,35 +6,33 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Observable } from 'rxjs';
 
 import { FeatherIcons } from '../../../../shared/components/ui/feather-icons/feather-icons';
-import { orderDetails } from '../../../../shared/data/data/e-commerce/order-history';
+import { orderDetails, ORDERS } from '../../../../shared/data/data/e-commerce/order-history';
 import {
   ProductOrderDirective,
   SortEvent,
 } from '../../../../shared/directive/product-order.directive';
-import { order, productOrder } from '../../../../shared/interface/e-commerce';
-import { ProductOrderService } from '../../../../shared/services/e-commerce/product-order.service';
+import { order } from '../../../../shared/interface/e-commerce';
+import { OrderService } from '../../../../shared/services/e-commerce/product-order.service';
 
 @Component({
   selector: 'app-order-history',
   imports: [CommonModule, FeatherIcons, FormsModule, NgbModule, ProductOrderDirective],
   templateUrl: './order-history.html',
   styleUrl: './order-history.scss',
-  providers: [ProductOrderService, DecimalPipe],
+  providers: [OrderService, DecimalPipe],
 })
 export class OrderHistory {
-  service = inject(ProductOrderService);
-
   public orderDetails = orderDetails;
-  product$: Observable<productOrder[]>;
+
+  public products$: Observable<ORDERS[]>;
+  service = inject(OrderService);
   total$: Observable<number>;
 
   readonly headers = viewChildren(ProductOrderDirective);
 
   constructor() {
-    const service = this.service;
-
-    this.product$ = service.product$;
-    this.total$ = service.total$;
+    this.products$ = this.service.support$;
+    this.total$ = this.service.total$;
   }
 
   onSort({ column, direction }: SortEvent) {
@@ -43,7 +41,6 @@ export class OrderHistory {
         header.currentDirection.set('');
       }
     });
-
     this.service.sortColumn = column;
     this.service.sortDirection = direction;
   }
