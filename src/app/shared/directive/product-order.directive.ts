@@ -19,10 +19,8 @@ export interface SortEvent {
   },
 })
 export class ProductOrderDirective {
-  constructor() {}
-
   readonly sortableOrder = input<SortColumn>('');
-  readonly direction = input<SortDirection>(''); // initial direction from parent
+  readonly direction = input<SortDirection>('');
 
   public currentDirection = signal<SortDirection>(this.direction());
 

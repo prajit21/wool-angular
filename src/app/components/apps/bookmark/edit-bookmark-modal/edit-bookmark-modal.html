@@ -14,7 +14,7 @@
             type="text"
             required=""
             autocomplete="off"
-            [value]="bookmarkDetails()?.url"
+            [value]="bookmarkDetails.url"
           />
         </div>
         <div class="mb-3 mt-0 col-md-12">
@@ -25,14 +25,14 @@
             type="text"
             required=""
             autocomplete="off"
-            [value]="bookmarkDetails()?.title"
+            [value]="bookmarkDetails.title"
           />
         </div>
         <div class="mb-3 mt-0 col-md-12">
           <label>Description</label>
           <textarea class="form-control" id="editdesc" required="" autocomplete="off">
 {{
-            bookmarkDetails()?.desc
+            bookmarkDetails.desc
           }}</textarea
           >
         </div>

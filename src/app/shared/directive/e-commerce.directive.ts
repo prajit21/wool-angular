@@ -21,12 +21,10 @@ export interface SortEvent {
 })
 export class ECommerceDirective {
   readonly appECommerce = input<SortColumn>('');
-  readonly direction = input<SortDirection>(''); // Initial direction
+  readonly direction = input<SortDirection>('');
 
-  // Local writable signal
   public currentDirection = signal<SortDirection>(this.direction());
 
-  // Output event
   readonly sort = output<SortEvent>();
 
   // HostBinding for CSS classes

@@ -38,7 +38,6 @@ export class OrderHistory {
   }
 
   onSort({ column, direction }: SortEvent) {
-    // resetting other headers
     this.headers().forEach(header => {
       if (header.sortableOrder() !== column) {
         header.currentDirection.set('');

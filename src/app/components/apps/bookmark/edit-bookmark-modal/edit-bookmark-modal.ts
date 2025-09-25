@@ -1,4 +1,4 @@
-import { Component, inject, input } from '@angular/core';
+import { Component, inject, Input, input } from '@angular/core';
 
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -13,7 +13,7 @@ import { bookmarks } from '../../../../shared/interface/bookmark';
 export class EditBookmarkModal {
   private modal = inject(NgbActiveModal);
 
-  readonly bookmarkDetails = input<bookmarks>();
+  @Input() bookmarkDetails!: bookmarks;
 
   closeModal() {
     this.modal.close();
