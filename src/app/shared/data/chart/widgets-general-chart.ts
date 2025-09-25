@@ -1,13 +1,4 @@
 import {
-  ApexNonAxisChartSeries,
-  ApexPlotOptions,
-  ApexChart,
-  ApexLegend,
-  ApexResponsive,
-  ApexStroke,
-} from 'ng-apexcharts';
-
-import {
   FollowersOptions,
   OrderChartOptions,
   ProfitChartDataOptions,
@@ -18,15 +9,6 @@ import {
   VisitorChartOptions,
 } from '../../interface/dashboard/chart';
 import { WidgetChartOptions } from '../../interface/widgets/chart';
-
-export interface chartOptions {
-  series: ApexNonAxisChartSeries;
-  chart: ApexChart;
-  legend: ApexLegend;
-  plotOptions: ApexPlotOptions;
-  responsive: ApexResponsive | ApexResponsive[];
-  stroke: ApexStroke;
-}
 
 interface WidgetData {
   color: string[];

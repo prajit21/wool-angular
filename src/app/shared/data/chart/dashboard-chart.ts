@@ -1,27 +1,9 @@
 import {
-  ApexNonAxisChartSeries,
-  ApexPlotOptions,
-  ApexChart,
-  ApexLegend,
-  ApexResponsive,
-  ApexStroke,
-} from 'ng-apexcharts';
-
-import {
   CoinChartOptions,
   LiveMarketCap,
   MarketOverviewChartOptions,
   PriceChartOptions,
 } from '../../interface/dashboard/chart';
-
-export interface chartOptions {
-  series: ApexNonAxisChartSeries;
-  chart: ApexChart;
-  legend: ApexLegend;
-  plotOptions: ApexPlotOptions;
-  responsive: ApexResponsive | ApexResponsive[];
-  stroke: ApexStroke;
-}
 
 let primary = localStorage.getItem('--theme-deafult') || '#7366ff';
 let secondary = localStorage.getItem('--theme-secondary') || '#FF8575';
