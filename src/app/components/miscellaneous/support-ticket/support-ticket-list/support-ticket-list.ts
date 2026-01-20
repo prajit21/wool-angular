@@ -1,4 +1,3 @@
-
 import { Component, input } from '@angular/core';
 
 import { supportTicketList } from '../../../../shared/interface/support-ticket';

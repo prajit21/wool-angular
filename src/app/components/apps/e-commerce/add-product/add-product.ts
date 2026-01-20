@@ -17,8 +17,8 @@ import { AddProductSteps } from './widgets/add-product-steps/add-product-steps';
     AddProductAdvance,
     AddProductDetails,
     AddProductCategory,
-    NgClass
-],
+    NgClass,
+  ],
   templateUrl: './add-product.html',
   styleUrl: './add-product.scss',
 })

@@ -1,4 +1,3 @@
-
 import { Component } from '@angular/core';
 
 import { multipleProgress } from '../../../../../shared/data/data/ui-kits/progress';

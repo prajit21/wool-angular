@@ -16,8 +16,8 @@ import { knowledgebaseDetails } from '../../../shared/data/data/knowledgebase';
     KnowledgebaseDetails,
     KnowledgebaseFeaturedTutorials,
     FeatherIcons,
-    NgClass
-],
+    NgClass,
+  ],
   templateUrl: './knowledgebase.html',
   styleUrl: './knowledgebase.scss',
 })

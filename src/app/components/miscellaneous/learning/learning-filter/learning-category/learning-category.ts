@@ -1,4 +1,3 @@
-
 import { Component } from '@angular/core';
 
 import { category } from '../../../../../shared/data/data/learning';

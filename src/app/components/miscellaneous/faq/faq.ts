@@ -20,8 +20,8 @@ import { faqs, featuredTutorial, latestArticleVideo } from '../../../shared/data
     FeaturedTutorials,
     LatestArticleVideos,
     FaqSearchArticle,
-    NgClass
-],
+    NgClass,
+  ],
   templateUrl: './faq.html',
   styleUrl: './faq.scss',
 })

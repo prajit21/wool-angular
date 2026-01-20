@@ -1,4 +1,3 @@
-
 import { Component, Input, output } from '@angular/core';
 
 import { ContactDetails } from '../../../../shared/interface/contact';
