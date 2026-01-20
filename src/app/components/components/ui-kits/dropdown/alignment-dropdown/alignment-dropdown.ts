@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -7,7 +7,7 @@ import { alignmentDropdown } from '../../../../../shared/data/data/ui-kits/dropd
 
 @Component({
   selector: 'app-alignment-dropdown',
-  imports: [CommonModule, NgbModule],
+  imports: [NgbModule, NgClass],
   templateUrl: './alignment-dropdown.html',
   styleUrl: './alignment-dropdown.scss',
 })

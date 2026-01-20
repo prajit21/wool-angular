@@ -1,11 +1,11 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component, input } from '@angular/core';
 
 import { button } from '../../../../../shared/interface/buttons';
 
 @Component({
   selector: 'app-outline-button-groups',
-  imports: [CommonModule],
+  imports: [NgClass],
   templateUrl: './outline-button-groups.html',
   styleUrl: './outline-button-groups.scss',
 })

@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 
 import { LeafletModule } from '@bluehalo/ngx-leaflet';
@@ -9,7 +9,7 @@ import { countries } from '../../../../../shared/data/data/e-commerce-dashboard'
 
 @Component({
   selector: 'app-dashboard-top-countries',
-  imports: [LeafletModule, SvgIcon, CommonModule],
+  imports: [LeafletModule, SvgIcon],
   templateUrl: './dashboard-top-countries.html',
   styleUrl: './dashboard-top-countries.scss',
 })

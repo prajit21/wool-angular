@@ -13,7 +13,7 @@
     <a
       href="javascript:void(0)"
       class="nav-link"
-      [ngClass]="{'active': openTab === 'status'}"
+      [class.active]="openTab === 'status'"
       id="profile-info-tab"
       (click)="tabbed('status')"
       >STATUS</a
@@ -23,7 +23,7 @@
     <a
       href="javascript:void(0)"
       class="nav-link"
-      [ngClass]="{'active': openTab === 'profile'}"
+      [class.active]="openTab === 'profile'"
       id="contact-info-tab"
       (click)="tabbed('profile')"
       >PROFILE</a

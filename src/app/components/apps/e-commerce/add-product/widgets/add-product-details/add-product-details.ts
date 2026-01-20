@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, output } from '@angular/core';
 import {
   FormControl,
@@ -14,7 +14,7 @@ import { SvgIcon } from '../../../../../../shared/components/ui/svg-icon/svg-ico
 
 @Component({
   selector: 'app-add-product-details',
-  imports: [CommonModule, FormsModule, SvgIcon, AngularEditorModule, ReactiveFormsModule],
+  imports: [FormsModule, SvgIcon, AngularEditorModule, ReactiveFormsModule],
   templateUrl: './add-product-details.html',
   styleUrl: './add-product-details.scss',
 })

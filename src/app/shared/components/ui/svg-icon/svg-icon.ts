@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component, Input, inject, input } from '@angular/core';
 
 import { LayoutService } from '../../../services/layout.service';
@@ -7,7 +7,7 @@ import { LayoutService } from '../../../services/layout.service';
   selector: 'app-svg-icon',
   templateUrl: './svg-icon.html',
   styleUrl: './svg-icon.scss',
-  imports: [CommonModule],
+  imports: [NgClass],
 })
 export class SvgIcon {
   layout = inject(LayoutService);

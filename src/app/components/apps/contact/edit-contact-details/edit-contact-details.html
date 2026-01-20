@@ -52,7 +52,7 @@
       </div>
     </div>
   </div>
-  <div class="row g-2 more-data" [ngStyle]="{ 'display' : editMore ? 'block' : 'none' }">
+  <div class="row g-2 more-data" [style.display]="editMore ? 'block' : 'none'">
     <div class="mt-0 mb-3 col-md-12">
       <label>URLS</label>
       <div class="row">
@@ -191,7 +191,7 @@
     class="ps-0 edit-information"
     href="javascript:void(0)"
     (click)="editMoreInfo()"
-    [ngStyle]="{ 'display' : editMore ? 'none' : 'block' }"
+    [style.display]="editMore ? 'none' : 'block'"
     >Edit more information</a
   >
   <button class="btn btn-secondary update-contact me-2" type="button" (click)="showDetails()">

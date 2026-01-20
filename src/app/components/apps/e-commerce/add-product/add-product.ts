@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { AddProductAdvance } from './widgets/add-product-advance/add-product-advance';
@@ -15,10 +15,10 @@ import { AddProductSteps } from './widgets/add-product-steps/add-product-steps';
     AddProductGallery,
     AddProductPrice,
     AddProductAdvance,
-    CommonModule,
     AddProductDetails,
     AddProductCategory,
-  ],
+    NgClass
+],
   templateUrl: './add-product.html',
   styleUrl: './add-product.scss',
 })

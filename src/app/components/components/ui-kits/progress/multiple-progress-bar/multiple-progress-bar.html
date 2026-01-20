@@ -13,7 +13,7 @@
           @for(progress of details.details; track progress){
           <div
             class="progress-bar bg-{{ progress.colorClass }}"
-            [ngStyle]="{ 'width': progress.width + '%' }"
+            [style.width]="progress.width + '%'"
           ></div>
           }
         </div>

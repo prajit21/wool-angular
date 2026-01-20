@@ -13,11 +13,6 @@ export interface SortEvent {
 
 @Directive({
   selector: 'th[appECommerce]',
-  host: {
-    '[class.asc]': 'direction === "asc"',
-    '[class.desc]': 'direction === "desc"',
-    '(click)': 'rotate()',
-  },
 })
 export class ECommerceDirective {
   readonly appECommerce = input<SortColumn>('');

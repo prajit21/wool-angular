@@ -25,7 +25,7 @@
                 placeholder="First Name"
                 autocomplete="off"
                 formControlName="firstName"
-                [ngClass]="{
+                [class]="{
                   'is-invalid': (firstName.touched || validate) && firstName.errors,
                   'is-valid': !firstName.errors && (firstName.touched || validate)
                 }"
@@ -39,7 +39,7 @@
                 placeholder="Last Name"
                 autocomplete="off"
                 formControlName="lastName"
-                [ngClass]="{
+                [class]="{
                   'is-invalid': (lastName.touched || validate) && lastName.errors,
                   'is-valid': !lastName.errors && (lastName.touched || validate)
                 }"
@@ -57,7 +57,7 @@
             type="text"
             autocomplete="off"
             formControlName="email"
-            [ngClass]="{
+            [class]="{
               'is-invalid': (email.touched || validate) && email.errors,
               'is-valid': !email.errors && (email.touched || validate)
             }"
@@ -75,7 +75,7 @@
                 type="number"
                 autocomplete="off"
                 formControlName="mobile"
-                [ngClass]="{
+                [class]="{
                   'is-invalid': (mobile.touched || validate) && mobile.errors,
                   'is-valid': !mobile.errors && (mobile.touched || validate)
                 }"
@@ -86,7 +86,7 @@
                 class="form-control"
                 id="con-select"
                 formControlName="type"
-                [ngClass]="{
+                [class]="{
                   'is-invalid': (type.touched || validate) && type.errors,
                   'is-valid': !type.errors && (type.touched || validate)
                 }"

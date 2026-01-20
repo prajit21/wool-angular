@@ -22,11 +22,6 @@ export interface SortEvent {
 
 @Directive({
   selector: 'th[appProductOrder]',
-  host: {
-    '[class.asc]': 'isAsc',
-    '[class.desc]': 'isDesc',
-    '(click)': 'rotateColumn()',
-  },
 })
 export class ProductOrderDirective {
   @Output() sort = new EventEmitter<SortEvent>();

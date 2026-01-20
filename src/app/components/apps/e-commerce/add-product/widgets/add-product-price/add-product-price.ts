@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, output } from '@angular/core';
 import {
   FormControl,
@@ -10,7 +10,7 @@ import {
 
 @Component({
   selector: 'app-add-product-price',
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './add-product-price.html',
   styleUrl: './add-product-price.scss',
 })

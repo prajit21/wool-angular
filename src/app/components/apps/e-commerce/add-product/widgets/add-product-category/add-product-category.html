@@ -13,7 +13,7 @@
                   class="form-select"
                   id="validationDefault04"
                   formControlName="category"
-                  [ngClass]="{ 'is-invalid' : (category?.touched || validate) && category?.errors , 'is-valid' : !category?.errors}"
+                  [class]="{ 'is-invalid' : (category?.touched || validate) && category?.errors , 'is-valid' : !category?.errors}"
                 >
                   <option selected="" value="" disabled>category</option>
                   <option>Toys & games</option>
@@ -40,7 +40,7 @@
                   [editable]="true"
                   class="form-control"
                   formControlName="tag"
-                  [ngClass]="{ 'is-invalid' : (tag?.touched || validate) && tag?.errors , 'is-valid' : !tag?.errors}"
+                  [class]="{ 'is-invalid' : (tag?.touched || validate) && tag?.errors , 'is-valid' : !tag?.errors}"
                 />
                 <p class="f-light">Products can be tagged</p>
               </div>
@@ -65,7 +65,7 @@
                   class="form-select"
                   id="publishStatus"
                   formControlName="status"
-                  [ngClass]="{ 'is-invalid' : (status?.touched || validate) && status?.errors , 'is-valid' : !status?.errors}"
+                  [class]="{ 'is-invalid' : (status?.touched || validate) && status?.errors , 'is-valid' : !status?.errors}"
                 >
                   <option selected="" value="" disabled>status</option>
                   <option>Publish</option>
@@ -86,7 +86,7 @@
                     id="datetime-local1"
                     type="date"
                     formControlName="date"
-                    [ngClass]="{ 'is-invalid' : (date?.touched || validate) && date?.errors, 'is-valid' : !date?.errors}"
+                    [class]="{ 'is-invalid' : (date?.touched || validate) && date?.errors, 'is-valid' : !date?.errors}"
                   />
                 </div>
               </div>

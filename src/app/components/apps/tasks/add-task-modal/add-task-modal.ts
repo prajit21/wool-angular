@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, inject } from '@angular/core';
 import {
   FormControl,
@@ -12,7 +12,7 @@ import { NgbActiveModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-add-task-modal',
-  imports: [FormsModule, ReactiveFormsModule, NgbModule, CommonModule],
+  imports: [FormsModule, ReactiveFormsModule, NgbModule],
   templateUrl: './add-task-modal.html',
   styleUrl: './add-task-modal.scss',
 })

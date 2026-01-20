@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { recentTradingActivity } from '../../../../../shared/data/data/dashboard
   selector: 'app-dashboard-recent-trading-activity',
   templateUrl: './dashboard-recent-trading-activity.html',
   styleUrl: './dashboard-recent-trading-activity.scss',
-  imports: [SvgIcon, CommonModule, RouterModule, Title],
+  imports: [SvgIcon, RouterModule, Title],
 })
 export class DashboardRecentTradingActivity {
   public recentTradingActivity = recentTradingActivity;

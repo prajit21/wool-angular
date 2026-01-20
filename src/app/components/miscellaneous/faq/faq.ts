@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { CommonFaq } from './common-faq/common-faq';
@@ -20,8 +20,8 @@ import { faqs, featuredTutorial, latestArticleVideo } from '../../../shared/data
     FeaturedTutorials,
     LatestArticleVideos,
     FaqSearchArticle,
-    CommonModule,
-  ],
+    NgClass
+],
   templateUrl: './faq.html',
   styleUrl: './faq.scss',
 })

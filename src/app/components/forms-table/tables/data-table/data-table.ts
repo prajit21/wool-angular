@@ -1,4 +1,4 @@
-import { CommonModule, DecimalPipe } from '@angular/common';
+import { DecimalPipe, AsyncPipe } from '@angular/common';
 import { Component, inject, viewChildren } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -14,7 +14,7 @@ import { SupportTicketService } from '../../../../shared/services/support-ticket
 
 @Component({
   selector: 'app-data-table',
-  imports: [CommonModule, NgbModule, FormsModule, SupportTicketDirective],
+  imports: [NgbModule, FormsModule, SupportTicketDirective, AsyncPipe],
   templateUrl: './data-table.html',
   styleUrl: './data-table.scss',
   providers: [SupportTicketService, DecimalPipe],

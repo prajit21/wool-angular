@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, inject } from '@angular/core';
 import {
   FormControl,
@@ -25,7 +25,7 @@ export interface BookmarkItem {
 
 @Component({
   selector: 'app-add-bookmark-modal',
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './add-bookmark-modal.html',
   styleUrl: './add-bookmark-modal.scss',
 })

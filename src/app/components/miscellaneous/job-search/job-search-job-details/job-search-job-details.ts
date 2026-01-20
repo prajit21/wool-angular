@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { SlicePipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 
 import { NgbModule, NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
@@ -8,7 +8,7 @@ import { JobSearchFilter } from '../job-search-filter/job-search-filter';
 
 @Component({
   selector: 'app-job-search-job-details',
-  imports: [JobSearchFilter, CommonModule, NgbModule],
+  imports: [JobSearchFilter, NgbModule, SlicePipe],
   templateUrl: './job-search-job-details.html',
   styleUrl: './job-search-job-details.scss',
 })

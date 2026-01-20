@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { UpperCasePipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 
 import { ToastrService } from 'ngx-toastr';
@@ -7,7 +7,7 @@ import { flagIcon } from '../../../../shared/data/data/icons/flag-icon';
 
 @Component({
   selector: 'app-flag-icon',
-  imports: [CommonModule],
+  imports: [UpperCasePipe],
   templateUrl: './flag-icon.html',
   styleUrl: './flag-icon.scss',
 })

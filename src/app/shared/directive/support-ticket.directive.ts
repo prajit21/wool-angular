@@ -12,11 +12,6 @@ export interface SortEvent {
 }
 @Directive({
   selector: '[appSupportTicket]',
-  host: {
-    '[class.asc]': 'direction === "asc"',
-    '[class.desc]': 'direction === "desc"',
-    '(click)': 'rotate()',
-  },
 })
 export class SupportTicketDirective {
   readonly appSupportTicket = input<SortColumn>('');

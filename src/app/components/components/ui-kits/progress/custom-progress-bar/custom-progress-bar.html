@@ -14,7 +14,7 @@
         <div class="progress mb-4">
           <div
             class="progress-bar-animated progress-bar-striped text-center bg-{{ details.colorClass }}"
-            [ngStyle]="{ 'width': details.width + '%' }"
+            [style.width]="details.width + '%'"
           >
             @if(details.width){ {{ details.width + '%' }} }
           </div>

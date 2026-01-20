@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, inject, output } from '@angular/core';
 import {
   FormControl,
@@ -16,7 +16,7 @@ import { SvgIcon } from '../../../../../../shared/components/ui/svg-icon/svg-ico
 
 @Component({
   selector: 'app-add-product-category',
-  imports: [CommonModule, SvgIcon, FormsModule, ReactiveFormsModule, TagInputModule],
+  imports: [SvgIcon, FormsModule, ReactiveFormsModule, TagInputModule],
   templateUrl: './add-product-category.html',
   styleUrl: './add-product-category.scss',
 })

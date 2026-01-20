@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass, DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -8,7 +8,7 @@ import { Task } from '../../../shared/interface/to-do';
 
 @Component({
   selector: 'app-to-do',
-  imports: [CommonModule, FeatherIcons, FormsModule],
+  imports: [FeatherIcons, FormsModule, DatePipe, NgClass],
   templateUrl: './to-do.html',
   styleUrl: './to-do.scss',
 })

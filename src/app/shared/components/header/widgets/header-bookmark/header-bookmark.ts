@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { SlicePipe } from '@angular/common';
 import { Component, inject, input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -11,7 +11,7 @@ import { SvgIcon } from '../../../ui/svg-icon/svg-icon';
   selector: 'app-header-bookmark',
   templateUrl: './header-bookmark.html',
   styleUrl: './header-bookmark.scss',
-  imports: [SvgIcon, FormsModule, RouterModule, CommonModule],
+  imports: [SvgIcon, FormsModule, RouterModule, SlicePipe],
 })
 export class HeaderBookmark {
   private navService = inject(NavService);

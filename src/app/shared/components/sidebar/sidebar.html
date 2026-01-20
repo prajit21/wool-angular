@@ -22,7 +22,7 @@
       <app-feather-icons [icon]="'arrow-left'" />
     </div>
     }
-    <div id="sidebar-menu" [ngStyle]="{ 'margin-left': layout.margin + 'px' }">
+    <div id="sidebar-menu" [style.margin-left]="layout.margin + 'px'">
       <ul class="sidebar-links custom-scrollbar" id="simple-bar">
         <li class="back-btn">
           <a href="javascript:void(0)"
@@ -75,7 +75,7 @@
             </a>
             @if(!menuItem.megaMenu){ @if(menuItem.children){
             <ul
-              [ngClass]="{ 'sidebar-submenu': menuItem.level === 1 ,'nav-sub-childmenu submenu-content': menuItem.level === 2,  'd-block': menuItem.active, 'd-none': !menuItem.active}"
+              [class]="{ 'sidebar-submenu': menuItem.level === 1 ,'nav-sub-childmenu submenu-content': menuItem.level === 2,  'd-block': menuItem.active, 'd-none': !menuItem.active}"
             >
               @for(child of menuItem.children; track child){
               <div *ngTemplateOutlet="recursiveMenu; context: { $implicit: child }"></div>
@@ -84,7 +84,7 @@
             } }@else{
             <div
               class="mega-menu-container menu-content"
-              [ngClass]="{'d-block': menuItem.active, 'd-none': !menuItem.active}"
+              [class]="{'d-block': menuItem.active, 'd-none': !menuItem.active}"
             >
               <div class="container-fluid">
                 <div class="row">

@@ -23,7 +23,7 @@
                   "color-functions",
                   "global-builtin",
                   "import",
-                  "mixed-decls"
+                  "if-function"
                 ]
               }
             },

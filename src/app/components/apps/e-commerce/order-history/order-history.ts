@@ -1,4 +1,4 @@
-import { CommonModule, DecimalPipe } from '@angular/common';
+import { DecimalPipe, AsyncPipe } from '@angular/common';
 import { Component, inject, viewChildren } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -16,7 +16,7 @@ import { OrderService } from '../../../../shared/services/e-commerce/product-ord
 
 @Component({
   selector: 'app-order-history',
-  imports: [CommonModule, FeatherIcons, FormsModule, NgbModule, ProductOrderDirective],
+  imports: [FeatherIcons, FormsModule, NgbModule, ProductOrderDirective, AsyncPipe],
   templateUrl: './order-history.html',
   styleUrl: './order-history.scss',
   providers: [OrderService, DecimalPipe],

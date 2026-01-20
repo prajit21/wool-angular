@@ -1,4 +1,4 @@
-import { CommonModule, DecimalPipe } from '@angular/common';
+import { DecimalPipe, AsyncPipe } from '@angular/common';
 import { Component, inject, viewChildren } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -15,7 +15,7 @@ import { SupportTicketService } from '../../../shared/services/support-ticket.se
 
 @Component({
   selector: 'app-support-ticket',
-  imports: [SupportTicketList, CommonModule, NgbModule, SupportTicketDirective, FormsModule],
+  imports: [SupportTicketList, NgbModule, SupportTicketDirective, FormsModule, AsyncPipe],
   templateUrl: './support-ticket.html',
   styleUrl: './support-ticket.scss',
   providers: [SupportTicketService, DecimalPipe],

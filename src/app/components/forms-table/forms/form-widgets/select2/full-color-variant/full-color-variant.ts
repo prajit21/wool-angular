@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
+import { TitleCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-full-color-variant',
-  imports: [CommonModule],
+  imports: [TitleCasePipe],
   templateUrl: './full-color-variant.html',
   styleUrl: './full-color-variant.scss',
 })

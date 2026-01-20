@@ -10,21 +10,21 @@
         <div class="btn-group" [ngClass]="details.buttonClass">
           <button
             class="btn btn-{{ color }}"
-            [ngClass]="{ 'btn-lg': details.largeButton }"
+            [class.btn-lg]="details.largeButton"
             type="button"
           >
             Left
           </button>
           <button
             class="btn btn-{{ color }}"
-            [ngClass]="{ 'btn-lg': details.largeButton }"
+            [class.btn-lg]="details.largeButton"
             type="button"
           >
             Middle
           </button>
           <button
             class="btn btn-{{ color }}"
-            [ngClass]="{ 'btn-lg': details.largeButton }"
+            [class.btn-lg]="details.largeButton"
             type="button"
           >
             Right

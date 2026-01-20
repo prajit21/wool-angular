@@ -9,7 +9,7 @@
         id="productTitle1"
         type="text"
         formControlName="product_title"
-        [ngClass]="{ 'is-invalid' : (product_title?.touched || validate) && product_title?.errors , 'is-valid' : !product_title?.errors}"
+        [class]="{ 'is-invalid' : (product_title?.touched || validate) && product_title?.errors , 'is-valid' : !product_title?.errors}"
       />
       @if(!product_title?.errors){
       <div class="valid-feedback">Looks good!</div>

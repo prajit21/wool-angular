@@ -34,7 +34,7 @@
 
 <h5>Sidebar Icon</h5>
 <ul class="sidebar-setting layout-grid">
-  <li [ngClass]="{ active: icon === 'stroke-svg' }" (click)="changeIcon('stroke-svg')">
+  <li [class.active]="icon === 'stroke-svg'" (click)="changeIcon('stroke-svg')">
     <div class="header bg-light">
       <ul>
         <li></li>
@@ -44,7 +44,7 @@
     </div>
     <div class="body bg-light"><span class="badge badge-primary">Stroke</span></div>
   </li>
-  <li [ngClass]="{ active: icon === 'fill-svg' }" (click)="changeIcon('fill-svg')">
+  <li [class.active]="icon === 'fill-svg'" (click)="changeIcon('fill-svg')">
     <div class="header bg-light">
       <ul>
         <li></li>

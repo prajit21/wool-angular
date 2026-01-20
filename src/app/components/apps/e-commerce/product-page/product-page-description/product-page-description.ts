@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { productDescription } from '../../../../../shared/data/data/e-commerce/product';
@@ -16,7 +16,7 @@ export interface description {
 
 @Component({
   selector: 'app-product-page-description',
-  imports: [CommonModule],
+  imports: [NgClass],
   templateUrl: './product-page-description.html',
   styleUrl: './product-page-description.scss',
 })

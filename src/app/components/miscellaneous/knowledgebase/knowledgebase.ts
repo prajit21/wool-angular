@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { KnowledgebaseArticle } from './knowledgebase-article/knowledgebase-article';
@@ -15,9 +15,9 @@ import { knowledgebaseDetails } from '../../../shared/data/data/knowledgebase';
     KnowledgebaseArticleVideo,
     KnowledgebaseDetails,
     KnowledgebaseFeaturedTutorials,
-    CommonModule,
     FeatherIcons,
-  ],
+    NgClass
+],
   templateUrl: './knowledgebase.html',
   styleUrl: './knowledgebase.scss',
 })

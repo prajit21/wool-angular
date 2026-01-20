@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import {
   FormControl,
@@ -10,7 +10,7 @@ import {
 
 @Component({
   selector: 'app-validation-form',
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './validation-form.html',
   styleUrl: './validation-form.scss',
 })

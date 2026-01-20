@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass, TitleCasePipe } from '@angular/common';
 import { Component, input } from '@angular/core';
 
 import { switches } from '../../../../../../shared/interface/switch';
@@ -6,7 +6,7 @@ import { switches } from '../../../../../../shared/interface/switch';
 @Component({
   selector: 'app-common-switch',
   standalone: true,
-  imports: [CommonModule],
+  imports: [NgClass, TitleCasePipe],
   templateUrl: './common-switch.html',
   styleUrls: ['./common-switch.scss'],
 })

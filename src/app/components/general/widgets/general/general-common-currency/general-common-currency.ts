@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component, input } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
@@ -9,7 +9,7 @@ import { WidgetChartOptions } from '../../../../../shared/interface/widgets/char
 
 @Component({
   selector: 'app-general-common-currency',
-  imports: [NgApexchartsModule, FeatherIcons, SvgIcon, CommonModule],
+  imports: [NgApexchartsModule, FeatherIcons, SvgIcon, NgClass],
   templateUrl: './general-common-currency.html',
   styleUrl: './general-common-currency.scss',
 })

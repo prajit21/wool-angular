@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 
 import { LayoutService } from '../../../../services/layout.service';
@@ -7,7 +6,6 @@ import { LayoutService } from '../../../../services/layout.service';
   selector: 'app-sidebar-type',
   templateUrl: './sidebar-type.html',
   styleUrl: './sidebar-type.scss',
-  imports: [CommonModule],
 })
 export class SidebarType {
   private layout = inject(LayoutService);

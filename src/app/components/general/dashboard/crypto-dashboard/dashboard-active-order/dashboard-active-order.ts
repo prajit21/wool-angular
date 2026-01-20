@@ -1,4 +1,4 @@
-import { CommonModule, DecimalPipe } from '@angular/common';
+import { DecimalPipe, AsyncPipe } from '@angular/common';
 import { Component, inject, viewChildren } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -18,7 +18,7 @@ import { ActiveOrderService } from '../../../../../shared/services/active-order.
   selector: 'app-dashboard-active-order',
   templateUrl: './dashboard-active-order.html',
   styleUrl: './dashboard-active-order.scss',
-  imports: [Title, RouterModule, FormsModule, CommonModule, ActiveOrderDirective],
+  imports: [Title, RouterModule, FormsModule, ActiveOrderDirective, AsyncPipe],
   providers: [ActiveOrderService, DecimalPipe],
 })
 export class DashboardActiveOrder {

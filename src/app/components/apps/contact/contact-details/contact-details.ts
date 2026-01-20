@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, inject, input } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -12,7 +12,7 @@ import { EditContactDetails } from '../edit-contact-details/edit-contact-details
 
 @Component({
   selector: 'app-contact-details',
-  imports: [EditContactDetails, ContactHistory, CommonModule],
+  imports: [EditContactDetails, ContactHistory],
   templateUrl: './contact-details.html',
   styleUrl: './contact-details.scss',
 })

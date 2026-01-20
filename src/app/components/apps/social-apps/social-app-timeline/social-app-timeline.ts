@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { FeatherIcons } from '../../../../shared/components/ui/feather-icons/feather-icons';
@@ -8,7 +8,7 @@ import { SocialAppRightPanel } from '../widgets/social-app-right-panel/social-ap
 
 @Component({
   selector: 'app-social-app-timeline',
-  imports: [FeatherIcons, SocialAppLeftPanel, SocialAppRightPanel, CommonModule],
+  imports: [FeatherIcons, SocialAppLeftPanel, SocialAppRightPanel, NgClass],
   templateUrl: './social-app-timeline.html',
   styleUrl: './social-app-timeline.scss',
 })

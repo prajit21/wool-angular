@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, inject } from '@angular/core';
 import {
   FormControl,
@@ -15,7 +15,7 @@ import { FeatherIcons } from '../../shared/components/ui/feather-icons/feather-i
 
 @Component({
   selector: 'app-auth-login',
-  imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule, FeatherIcons],
+  imports: [RouterModule, FormsModule, ReactiveFormsModule, FeatherIcons],
   templateUrl: './auth-login.html',
   styleUrl: './auth-login.scss',
 })

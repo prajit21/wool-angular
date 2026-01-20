@@ -51,7 +51,7 @@ export var lineGraphLabels: string[] = [
 ];
 export var lineGraphType: ChartType = 'line';
 export var lineGraphLegend = false;
-export var lineGraphData: ChartDataset<'line'>[] = [
+export var lineGraphData: ChartDataset[] = [
   {
     label: 'My First dataset',
     fill: true,

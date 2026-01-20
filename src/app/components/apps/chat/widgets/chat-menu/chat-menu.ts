@@ -1,11 +1,11 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { calls } from '../../../../../shared/data/data/chat';
 
 @Component({
   selector: 'app-chat-menu',
-  imports: [CommonModule],
+  imports: [NgClass],
   templateUrl: './chat-menu.html',
   styleUrl: './chat-menu.scss',
 })

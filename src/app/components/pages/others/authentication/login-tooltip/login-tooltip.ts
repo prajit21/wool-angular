@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -7,7 +7,7 @@ import { FeatherIcons } from '../../../../../shared/components/ui/feather-icons/
 
 @Component({
   selector: 'app-login-tooltip',
-  imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule, FeatherIcons],
+  imports: [RouterModule, FormsModule, ReactiveFormsModule, FeatherIcons],
   templateUrl: './login-tooltip.html',
   styleUrl: './login-tooltip.scss',
 })

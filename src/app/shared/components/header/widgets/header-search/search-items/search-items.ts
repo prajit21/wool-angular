@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { SlicePipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -9,7 +9,7 @@ import { SvgIcon } from '../../../../ui/svg-icon/svg-icon';
   selector: 'app-search-items',
   templateUrl: './search-items.html',
   styleUrl: './search-items.scss',
-  imports: [CommonModule, SvgIcon, RouterModule],
+  imports: [SvgIcon, RouterModule, SlicePipe],
 })
 export class SearchItems {
   search = inject(SearchService);

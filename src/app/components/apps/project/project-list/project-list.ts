@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -7,7 +7,7 @@ import { ProjectList, projectList, projectTab } from '../../../../shared/data/da
 
 @Component({
   selector: 'app-project-list',
-  imports: [FeatherIcons, CommonModule, RouterModule],
+  imports: [FeatherIcons, RouterModule, NgClass],
   templateUrl: './project-list.html',
   styleUrl: './project-list.scss',
 })
