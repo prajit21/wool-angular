@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { ListingTypography } from './listing-typography/listing-typography';
 import { TypographyBlockQuotes } from './typography-block-quotes/typography-block-quotes';
@@ -22,6 +22,7 @@ import { TypographyTextColor } from './typography-text-color/typography-text-col
     TypographyTextColor,
   ],
   templateUrl: './typography.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './typography.scss',
 })
 export class Typography {}

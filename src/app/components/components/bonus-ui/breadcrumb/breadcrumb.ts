@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { ColoredBreadcrumb } from './colored-breadcrumb/colored-breadcrumb';
 import { DefaultBreadcrumb } from './default-breadcrumb/default-breadcrumb';
@@ -16,6 +16,7 @@ import { VariationBreadcrumb } from './variation-breadcrumb/variation-breadcrumb
     ColoredBreadcrumb,
   ],
   templateUrl: './breadcrumb.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './breadcrumb.scss',
 })
 export class Breadcrumb {}

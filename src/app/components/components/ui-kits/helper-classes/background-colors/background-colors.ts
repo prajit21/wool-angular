@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { backGroundColor } from '../../../../../shared/data/data/ui-kits/helper-classic';
 
@@ -6,6 +6,7 @@ import { backGroundColor } from '../../../../../shared/data/data/ui-kits/helper-
   selector: 'app-background-colors',
   imports: [],
   templateUrl: './background-colors.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './background-colors.scss',
 })
 export class BackgroundColors {

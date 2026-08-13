@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { BaseChartDirective } from 'ng2-charts';
 
@@ -8,6 +8,7 @@ import * as data from '../../../../../shared/data/chart/chart-js';
   selector: 'app-chart-js-polar',
   imports: [BaseChartDirective],
   templateUrl: './chart-js-polar.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './chart-js-polar.scss',
 })
 export class ChartJsPolar {

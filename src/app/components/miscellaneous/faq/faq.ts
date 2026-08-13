@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { CommonFaq } from './common-faq/common-faq';
 import { FaqLatestUpdates } from './faq-latest-updates/faq-latest-updates';
@@ -23,6 +23,7 @@ import { faqs, featuredTutorial, latestArticleVideo } from '../../../shared/data
     NgClass,
   ],
   templateUrl: './faq.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './faq.scss',
 })
 export class Faq {

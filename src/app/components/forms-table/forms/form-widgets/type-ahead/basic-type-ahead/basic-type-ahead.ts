@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -10,6 +10,7 @@ import { state } from '../../../../../../shared/data/data/form-widgets/type-ahea
   selector: 'app-basic-type-ahead',
   imports: [FormsModule, NgbModule],
   templateUrl: './basic-type-ahead.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './basic-type-ahead.scss',
 })
 export class BasicTypeAhead {

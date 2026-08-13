@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { category } from '../../../../../shared/data/data/learning';
 
 @Component({
   selector: 'app-learning-category',
   templateUrl: './learning-category.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './learning-category.scss',
 })
 export class LearningCategory {

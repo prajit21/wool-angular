@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -13,6 +13,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-wool-modal',
   imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './wool-modal.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './wool-modal.scss',
 })
 export class WoolModal {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { FeatherIcons } from '../../../../../../shared/components/ui/feather-icons/feather-icons';
 import { hoverRowHorizontal } from '../../../../../../shared/data/data/tables';
@@ -7,6 +7,7 @@ import { hoverRowHorizontal } from '../../../../../../shared/data/data/tables';
   selector: 'app-hover-row-horizontal-border',
   imports: [FeatherIcons],
   templateUrl: './hover-row-horizontal-border.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './hover-row-horizontal-border.scss',
 })
 export class HoverRowHorizontalBorder {

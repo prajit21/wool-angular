@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { JobEducationDetails } from './job-education-details/job-education-details';
 import { JobExperienceDetails } from './job-experience-details/job-experience-details';
@@ -16,6 +16,7 @@ import { JobSearchFilter } from '../job-search-filter/job-search-filter';
     JobSearchFilter,
   ],
   templateUrl: './job-apply.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './job-apply.scss',
 })
 export class JobApply {}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Observable, OperatorFunction, debounceTime, map } from 'rxjs';
@@ -9,6 +9,7 @@ import { statesWithFlags } from '../../../../../../shared/data/data/form-widgets
   selector: 'app-template-result',
   imports: [NgbModule],
   templateUrl: './template-result.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './template-result.scss',
 })
 export class TemplateResult {

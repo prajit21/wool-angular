@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { SearchItems } from './search-items/search-items';
@@ -9,6 +9,7 @@ import { SearchService } from '../../../../services/search.service';
   selector: 'app-header-search',
   imports: [FormsModule, SearchItems, OutsideDirective],
   templateUrl: './header-search.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './header-search.scss',
 })
 export class HeaderSearch {

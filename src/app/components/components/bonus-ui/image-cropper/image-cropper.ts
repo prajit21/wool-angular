@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import {
   Dimensions,
   ImageCroppedEvent,
   ImageTransform,
-  ImageCropperModule,
+  ImageCropperComponent,
 } from 'ngx-image-cropper';
 
 @Component({
   selector: 'app-image-cropper',
-  imports: [ImageCropperModule, FormsModule],
+  imports: [ImageCropperComponent, FormsModule],
   templateUrl: './image-cropper.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './image-cropper.scss',
 })
 export class ImageCropper {

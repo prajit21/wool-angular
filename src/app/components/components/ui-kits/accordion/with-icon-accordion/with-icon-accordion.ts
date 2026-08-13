@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -9,6 +9,7 @@ import { accordionWithIcon } from '../../../../../shared/data/data/ui-kits/dropd
   selector: 'app-with-icon-accordion',
   imports: [FeatherIcons, NgbModule],
   templateUrl: './with-icon-accordion.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './with-icon-accordion.scss',
 })
 export class WithIconAccordion {

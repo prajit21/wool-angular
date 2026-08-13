@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-table-alert',
   imports: [],
   templateUrl: './table-alert.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './table-alert.scss',
 })
 export class TableAlert {

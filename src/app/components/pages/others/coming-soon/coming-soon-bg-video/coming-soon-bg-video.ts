@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-coming-soon-bg-video',
   imports: [],
   templateUrl: './coming-soon-bg-video.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './coming-soon-bg-video.scss',
 })
 export class ComingSoonBgVideo {

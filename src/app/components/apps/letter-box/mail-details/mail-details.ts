@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, input, output, ChangeDetectionStrategy } from '@angular/core';
 
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -10,6 +10,7 @@ import { SvgIcon } from '../../../../shared/components/ui/svg-icon/svg-icon';
   selector: 'app-mail-details',
   imports: [NgbModule, FeatherIcons, SvgIcon, AngularEditorModule],
   templateUrl: './mail-details.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./mail-details.scss'],
 })
 export class MailDetails {

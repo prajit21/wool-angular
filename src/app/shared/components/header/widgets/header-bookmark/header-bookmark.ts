@@ -1,5 +1,5 @@
 import { SlicePipe } from '@angular/common';
-import { Component, inject, input } from '@angular/core';
+import { Component, inject, input, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
@@ -11,6 +11,7 @@ import { SvgIcon } from '../../../ui/svg-icon/svg-icon';
   selector: 'app-header-bookmark',
   templateUrl: './header-bookmark.html',
   styleUrl: './header-bookmark.scss',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SvgIcon, FormsModule, RouterModule, SlicePipe],
 })
 export class HeaderBookmark {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { AdditionalContentAlert } from './additional-content-alert/additional-content-alert';
 import { AlertIcon } from './alert-icon/alert-icon';
@@ -24,6 +24,7 @@ import { OutlinedAlert } from './outlined-alert/outlined-alert';
     OutlinedAlert,
   ],
   templateUrl: './alert.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './alert.scss',
 })
 export class Alert {}

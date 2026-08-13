@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -9,6 +9,7 @@ import { faqQuestionAnswer, headers } from '../../../../shared/data/data/faq';
   selector: 'app-faq-question-answer',
   imports: [NgbModule, FeatherIcons],
   templateUrl: './faq-question-answer.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './faq-question-answer.scss',
 })
 export class FaqQuestionAnswer {

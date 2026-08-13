@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -8,6 +8,7 @@ import { SvgIcon } from '../../../../../shared/components/ui/svg-icon/svg-icon';
   selector: 'app-dashboard-total-margin',
   templateUrl: './dashboard-total-margin.html',
   styleUrl: './dashboard-total-margin.scss',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SvgIcon, NgApexchartsModule],
 })
 export class DashboardTotalMargin {}

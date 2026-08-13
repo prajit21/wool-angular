@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { customContent } from '../../../../../shared/data/data/ui-kits/list';
 
@@ -7,6 +7,7 @@ import { customContent } from '../../../../../shared/data/data/ui-kits/list';
   selector: 'app-custom-content-list',
   imports: [NgClass],
   templateUrl: './custom-content-list.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './custom-content-list.scss',
 })
 export class CustomContentList {

@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -9,6 +9,7 @@ import { RadialChartOptions } from '../../../../../shared/interface/dashboard/ch
   selector: 'app-general-common-average-of-day',
   imports: [FeatherIcons, NgApexchartsModule],
   templateUrl: './general-common-average-of-day.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './general-common-average-of-day.scss',
 })
 export class GeneralCommonAverageOfDay {

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { LayoutService } from '../../../../services/layout.service';
 import { FeatherIcons } from '../../../ui/feather-icons/feather-icons';
@@ -7,6 +7,7 @@ import { FeatherIcons } from '../../../ui/feather-icons/feather-icons';
   selector: 'app-header-theme-mode',
   templateUrl: './header-theme-mode.html',
   styleUrl: './header-theme-mode.scss',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FeatherIcons],
 })
 export class HeaderThemeMode {

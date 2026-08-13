@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgApexchartsModule } from 'ng-apexcharts';
@@ -9,6 +9,7 @@ import { visitorChart } from '../../../../../shared/data/chart/widgets-general-c
   selector: 'app-general-visitor-chart',
   imports: [NgbModule, NgApexchartsModule],
   templateUrl: './general-visitor-chart.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './general-visitor-chart.scss',
 })
 export class GeneralVisitorChart {

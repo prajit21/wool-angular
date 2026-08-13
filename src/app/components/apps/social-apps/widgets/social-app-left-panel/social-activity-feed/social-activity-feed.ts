@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { activityFeedDetails } from '../../../../../../shared/data/data/social-apps';
 
@@ -6,6 +6,7 @@ import { activityFeedDetails } from '../../../../../../shared/data/data/social-a
   selector: 'app-social-activity-feed',
   imports: [],
   templateUrl: './social-activity-feed.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './social-activity-feed.scss',
 })
 export class SocialActivityFeed {

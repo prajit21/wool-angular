@@ -2,7 +2,10 @@
   <div class="card-header card-no-border pb-0">
     <div class="d-flex">
       <div class="badge badge-rounded animation">
-        <app-svg-icon [icon]="chartData()?.icon" [class]="chartData()?.iconClass!" />
+        <app-svg-icon
+          [icon]="$safeNavigationMigration(chartData()?.icon)"
+          [class]="chartData()?.iconClass!"
+        />
         <!-- <svg class="ethereum-icon">
           <use href="assets/svg/icon-sprite.svg#stroke-ethereum"></use>
         </svg> -->
@@ -11,7 +14,7 @@
         <h5>{{ chartData()?.price }}</h5>
         <p class="d-flex">
           <span class="bg-light-{{ chartData()?.textColor }} me-2">
-            <app-svg-icon [icon]="chartData()?.marginType" />
+            <app-svg-icon [icon]="$safeNavigationMigration(chartData()?.marginType)" />
             <!-- <svg>
               <use href="assets/svg/icon-sprite.svg#arrow-up"></use>
             </svg> --> </span
@@ -25,13 +28,13 @@
     <div>
       <div id="ethereumchart">
         <apx-chart
-          [series]="chartData()?.series!"
-          [colors]="chartData()?.colors!"
-          [chart]="chartData()?.chart!"
-          [dataLabels]="chartData()?.dataLabels!"
-          [stroke]="chartData()?.stroke!"
-          [plotOptions]="chartData()?.plotOptions!"
-          [xaxis]="chartData()?.xaxis!"
+          [series]="$safeNavigationMigration(chartData()?.series)!"
+          [colors]="$safeNavigationMigration(chartData()?.colors)!"
+          [chart]="$safeNavigationMigration(chartData()?.chart)!"
+          [dataLabels]="$safeNavigationMigration(chartData()?.dataLabels)!"
+          [stroke]="$safeNavigationMigration(chartData()?.stroke)!"
+          [plotOptions]="$safeNavigationMigration(chartData()?.plotOptions)!"
+          [xaxis]="$safeNavigationMigration(chartData()?.xaxis)!"
         />
       </div>
     </div>

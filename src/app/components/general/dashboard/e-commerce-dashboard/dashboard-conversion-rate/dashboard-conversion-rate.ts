@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -11,6 +11,7 @@ import { conversionRate } from '../../../../../shared/data/data/e-commerce-dashb
   selector: 'app-dashboard-conversion-rate',
   imports: [Title, NgApexchartsModule, SvgIcon],
   templateUrl: './dashboard-conversion-rate.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './dashboard-conversion-rate.scss',
 })
 export class DashboardConversionRate {

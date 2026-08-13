@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { BasicTableBottomBorder } from './basic-table-bottom-border/basic-table-bottom-border';
 import { BreakPointSpecificTable } from './break-point-specific-table/break-point-specific-table';
@@ -30,6 +30,7 @@ import { TableHeadOption } from './table-head-option/table-head-option';
     TableHeadOption,
   ],
   templateUrl: './basic-table.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './basic-table.scss',
 })
 export class BasicTable {}

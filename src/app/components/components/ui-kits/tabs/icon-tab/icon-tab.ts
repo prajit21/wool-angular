@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -6,6 +6,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-icon-tab',
   imports: [NgbModule],
   templateUrl: './icon-tab.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './icon-tab.scss',
 })
 export class IconTab {

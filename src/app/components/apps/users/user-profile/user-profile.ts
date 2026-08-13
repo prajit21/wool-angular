@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { UserDetails } from './user-details/user-details';
 import { UserDoublePost } from './user-double-post/user-double-post';
@@ -10,6 +10,7 @@ import { postDetails1, postDetails2 } from '../../../../shared/data/data/users';
   selector: 'app-user-profile',
   templateUrl: './user-profile.html',
   styleUrl: './user-profile.scss',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [UserDoublePost, UserSinglePost, UserDetails, UserLeftSidePost],
 })
 export class UserProfile {

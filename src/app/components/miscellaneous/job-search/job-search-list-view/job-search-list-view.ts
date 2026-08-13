@@ -1,5 +1,5 @@
 import { SlicePipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModule, NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 
@@ -10,6 +10,7 @@ import { JobSearchFilter } from '../job-search-filter/job-search-filter';
   selector: 'app-job-search-list-view',
   imports: [JobSearchFilter, NgbModule, SlicePipe],
   templateUrl: './job-search-list-view.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './job-search-list-view.scss',
 })
 export class JobSearchListView {

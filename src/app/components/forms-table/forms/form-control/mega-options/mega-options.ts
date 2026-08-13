@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { MegaOptionsDefaultStyle } from './mega-options-default-style/mega-options-default-style';
 import { MegaOptionsHorizontalStyle } from './mega-options-horizontal-style/mega-options-horizontal-style';
@@ -24,6 +24,7 @@ import { MegaOptionsWithoutBorderStyle } from './mega-options-without-border-sty
     MegaOptionsWithoutBorderStyle,
   ],
   templateUrl: './mega-options.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './mega-options.scss',
 })
 export class MegaOptions {}

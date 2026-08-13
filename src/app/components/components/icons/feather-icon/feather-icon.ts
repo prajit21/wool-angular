@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { ToastrService } from 'ngx-toastr';
 
@@ -9,6 +9,7 @@ import { featherIcon } from '../../../../shared/data/data/icons/feather-icon';
   selector: 'app-feather-icon',
   imports: [FeatherIcons],
   templateUrl: './feather-icon.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './feather-icon.scss',
 })
 export class FeatherIcon {

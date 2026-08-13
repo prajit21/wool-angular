@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { productDescription } from '../../../../../shared/data/data/e-commerce/product';
 
@@ -18,6 +18,7 @@ export interface description {
   selector: 'app-product-page-description',
   imports: [NgClass],
   templateUrl: './product-page-description.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './product-page-description.scss',
 })
 export class ProductPageDescription {

@@ -1,4 +1,4 @@
-import { Component, inject, input } from '@angular/core';
+import { Component, inject, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModule, NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +8,7 @@ import { tutorials } from '../../../../shared/interface/faq';
   selector: 'app-featured-tutorials',
   imports: [NgbModule],
   templateUrl: './featured-tutorials.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './featured-tutorials.scss',
 })
 export class FeaturedTutorials {

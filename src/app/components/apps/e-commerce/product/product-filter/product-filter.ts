@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgxSliderModule, Options } from '@angular-slider/ngx-slider';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -10,6 +10,7 @@ import { ProductService } from '../../../../../shared/services/product.service';
   selector: 'app-product-filter',
   imports: [NgxSliderModule, CarouselModule],
   templateUrl: './product-filter.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './product-filter.scss',
 })
 export class ProductFilter {

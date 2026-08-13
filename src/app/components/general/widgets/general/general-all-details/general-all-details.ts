@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -10,6 +10,7 @@ import { allDetails } from '../../../../../shared/data/data/widgets-general';
   selector: 'app-general-all-details',
   imports: [SvgIcon, NgApexchartsModule],
   templateUrl: './general-all-details.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './general-all-details.scss',
 })
 export class GeneralAllDetails {

@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, input, output, ChangeDetectionStrategy } from '@angular/core';
 
 import { SvgIcon } from '../../../../../../shared/components/ui/svg-icon/svg-icon';
 import { addProductSteps } from '../../../../../../shared/data/data/e-commerce/add-product';
@@ -7,6 +7,7 @@ import { addProductSteps } from '../../../../../../shared/data/data/e-commerce/a
   selector: 'app-add-product-steps',
   imports: [SvgIcon],
   templateUrl: './add-product-steps.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './add-product-steps.scss',
 })
 export class AddProductSteps {

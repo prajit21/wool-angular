@@ -1,5 +1,5 @@
 import { NgClass, SlicePipe } from '@angular/common';
-import { Component, input, output } from '@angular/core';
+import { Component, input, output, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -10,6 +10,7 @@ import { mailDetails } from '../../../../shared/interface/letter-box';
   selector: 'app-letter-box-mail',
   imports: [NgbModule, NgClass, SlicePipe],
   templateUrl: './letter-box-mail.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './letter-box-mail.scss',
 })
 export class LetterBoxMail {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { sizingTable } from '../../../../../../shared/data/data/tables';
 
@@ -6,6 +6,7 @@ import { sizingTable } from '../../../../../../shared/data/data/tables';
   selector: 'app-sizing-table',
   imports: [],
   templateUrl: './sizing-table.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './sizing-table.scss',
 })
 export class SizingTable {

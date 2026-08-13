@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { DashboardBuyCoin } from './dashboard-buy-coin/dashboard-buy-coin';
 import { DashboardSellCoin } from './dashboard-sell-coin/dashboard-sell-coin';
@@ -7,6 +7,7 @@ import { DashboardSellCoin } from './dashboard-sell-coin/dashboard-sell-coin';
   selector: 'app-dashboard-buy-sell-coin',
   imports: [DashboardSellCoin, DashboardBuyCoin],
   templateUrl: './dashboard-buy-sell-coin.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './dashboard-buy-sell-coin.scss',
 })
 export class DashboardBuySellCoin {

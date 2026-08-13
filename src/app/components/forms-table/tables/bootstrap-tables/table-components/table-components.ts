@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { TableAlert } from './table-alert/table-alert';
 import { TableBadge } from './table-badge/table-badge';
@@ -26,6 +26,7 @@ import { TableUiComponents } from './table-ui-components/table-ui-components';
     TableInput,
   ],
   templateUrl: './table-components.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './table-components.scss',
 })
 export class TableComponents {}

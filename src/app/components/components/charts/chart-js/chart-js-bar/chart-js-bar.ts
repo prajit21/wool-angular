@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { BaseChartDirective } from 'ng2-charts';
 
@@ -8,6 +8,7 @@ import { barChart } from '../../../../../shared/data/chart/chart-js';
   selector: 'app-chart-js-bar',
   imports: [BaseChartDirective],
   templateUrl: './chart-js-bar.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './chart-js-bar.scss',
 })
 export class ChartJsBar {

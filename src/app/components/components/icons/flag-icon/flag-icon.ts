@@ -1,5 +1,5 @@
 import { UpperCasePipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { ToastrService } from 'ngx-toastr';
 
@@ -9,6 +9,7 @@ import { flagIcon } from '../../../../shared/data/data/icons/flag-icon';
   selector: 'app-flag-icon',
   imports: [UpperCasePipe],
   templateUrl: './flag-icon.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './flag-icon.scss',
 })
 export class FlagIcon {

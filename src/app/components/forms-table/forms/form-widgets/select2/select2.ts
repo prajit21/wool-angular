@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { NgSelectModule } from '@ng-select/ng-select';
@@ -10,6 +10,7 @@ import { FullColorVariant } from './full-color-variant/full-color-variant';
   selector: 'app-select2',
   imports: [ColorVariant, FullColorVariant, NgSelectModule, FormsModule],
   templateUrl: './select2.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './select2.scss',
 })
 export class Select2 {

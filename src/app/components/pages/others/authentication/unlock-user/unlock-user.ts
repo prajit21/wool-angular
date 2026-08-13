@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -7,6 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-unlock-user',
   imports: [RouterModule, NgbModule],
   templateUrl: './unlock-user.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './unlock-user.scss',
 })
 export class UnlockUser {

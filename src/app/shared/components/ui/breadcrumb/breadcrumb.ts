@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, PRIMARY_OUTLET, Router } from '@angular/router';
 
 import { filter, map } from 'rxjs';
@@ -9,6 +9,7 @@ import { FeatherIcons } from '../feather-icons/feather-icons';
   selector: 'app-breadcrumb',
   imports: [FeatherIcons],
   templateUrl: './breadcrumb.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './breadcrumb.scss',
 })
 export class Breadcrumb {

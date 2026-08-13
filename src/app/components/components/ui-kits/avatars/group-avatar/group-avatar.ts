@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { groupAvatar } from '../../../../../shared/data/data/ui-kits/avatars';
 
@@ -6,6 +6,7 @@ import { groupAvatar } from '../../../../../shared/data/data/ui-kits/avatars';
   selector: 'app-group-avatar',
   imports: [],
   templateUrl: './group-avatar.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './group-avatar.scss',
 })
 export class GroupAvatar {

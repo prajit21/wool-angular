@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
@@ -8,6 +8,7 @@ import { FeatherIcons } from '../../../../../shared/components/ui/feather-icons/
   selector: 'app-login-tooltip',
   imports: [RouterModule, FormsModule, ReactiveFormsModule, FeatherIcons],
   templateUrl: './login-tooltip.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './login-tooltip.scss',
 })
 export class LoginTooltip {

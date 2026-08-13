@@ -1,5 +1,5 @@
 import { TitleCasePipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { contextualClassList } from '../../../../../shared/data/data/ui-kits/list';
 
@@ -7,6 +7,7 @@ import { contextualClassList } from '../../../../../shared/data/data/ui-kits/lis
   selector: 'app-contextual-classes-list',
   imports: [TitleCasePipe],
   templateUrl: './contextual-classes-list.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './contextual-classes-list.scss',
 })
 export class ContextualClassesList {

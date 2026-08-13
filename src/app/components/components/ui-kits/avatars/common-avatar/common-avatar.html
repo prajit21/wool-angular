@@ -1,7 +1,7 @@
 <div class="card height-equal">
   <div class="card-header">
     <h3 class="mb-0">{{ details()?.title }}</h3>
-    <p class="mb-0 mt-1" [innerHTML]="details()?.desc"></p>
+    <p class="mb-0 mt-1" [innerHTML]="$safeNavigationMigration(details()?.desc)"></p>
   </div>
   <div class="card"></div>
   <div class="card-body avatar-showcase">

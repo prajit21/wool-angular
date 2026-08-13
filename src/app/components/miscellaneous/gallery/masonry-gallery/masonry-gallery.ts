@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { LightboxModule } from 'ng-gallery/lightbox';
 import { NgxMasonryModule, NgxMasonryOptions } from 'ngx-masonry';
@@ -7,6 +7,7 @@ import { NgxMasonryModule, NgxMasonryOptions } from 'ngx-masonry';
   selector: 'app-masonry-gallery',
   imports: [NgxMasonryModule, LightboxModule],
   templateUrl: './masonry-gallery.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './masonry-gallery.scss',
 })
 export class MasonryGallery {

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +8,7 @@ import { LayoutService } from '../../../../services/layout.service';
   selector: 'app-configuration-modal',
   templateUrl: './configuration-modal.html',
   styleUrl: './configuration-modal.scss',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [],
 })
 export class ConfigurationModal {

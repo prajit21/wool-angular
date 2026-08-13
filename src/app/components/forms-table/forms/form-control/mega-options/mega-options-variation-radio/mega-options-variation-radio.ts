@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { SvgIcon } from '../../../../../../shared/components/ui/svg-icon/svg-icon';
 import { variationRadioDetails } from '../../../../../../shared/data/data/mega-options';
@@ -7,6 +7,7 @@ import { variationRadioDetails } from '../../../../../../shared/data/data/mega-o
   selector: 'app-mega-options-variation-radio',
   imports: [SvgIcon],
   templateUrl: './mega-options-variation-radio.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './mega-options-variation-radio.scss',
 })
 export class MegaOptionsVariationRadio {

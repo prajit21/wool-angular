@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { breakPointTable } from '../../../../../../shared/data/data/tables';
 
@@ -6,6 +6,7 @@ import { breakPointTable } from '../../../../../../shared/data/data/tables';
   selector: 'app-break-point-specific-table',
   imports: [],
   templateUrl: './break-point-specific-table.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './break-point-specific-table.scss',
 })
 export class BreakPointSpecificTable {

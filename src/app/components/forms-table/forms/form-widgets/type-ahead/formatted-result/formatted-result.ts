@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -10,6 +10,7 @@ import { state } from '../../../../../../shared/data/data/form-widgets/type-ahea
   selector: 'app-formatted-result',
   imports: [FormsModule, NgbModule],
   templateUrl: './formatted-result.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './formatted-result.scss',
 })
 export class FormattedResult {

@@ -1,4 +1,4 @@
-import { Component, output } from '@angular/core';
+import { Component, output, ChangeDetectionStrategy } from '@angular/core';
 
 import { DropzoneConfigInterface, DropzoneModule } from 'ngx-dropzone-wrapper';
 
@@ -6,6 +6,7 @@ import { DropzoneConfigInterface, DropzoneModule } from 'ngx-dropzone-wrapper';
   selector: 'app-add-product-gallery',
   imports: [DropzoneModule],
   templateUrl: './add-product-gallery.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './add-product-gallery.scss',
 })
 export class AddProductGallery {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { FeatherIcons } from '../../../../shared/components/ui/feather-icons/feather-icons';
@@ -8,6 +8,7 @@ import { cartItem } from '../../../../shared/data/data/e-commerce/cart';
   selector: 'app-cart',
   imports: [FeatherIcons, RouterModule],
   templateUrl: './cart.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './cart.scss',
 })
 export class Cart {

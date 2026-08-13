@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -6,6 +6,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-title',
   imports: [NgbModule],
   templateUrl: './title.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './title.scss',
 })
 export class Title {

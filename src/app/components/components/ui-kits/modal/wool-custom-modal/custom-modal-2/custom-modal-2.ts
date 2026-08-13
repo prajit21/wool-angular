@@ -1,4 +1,4 @@
-import { Component, TemplateRef, inject } from '@angular/core';
+import { Component, TemplateRef, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -6,6 +6,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-custom-modal-2',
   imports: [],
   templateUrl: './custom-modal-2.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './custom-modal-2.scss',
 })
 export class CustomModal2 {

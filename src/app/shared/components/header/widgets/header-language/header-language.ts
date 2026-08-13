@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { TranslateService } from '@ngx-translate/core';
 
@@ -10,6 +10,7 @@ import { NavService } from '../../../../services/nav.service';
   selector: 'app-header-language',
   imports: [],
   templateUrl: './header-language.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './header-language.scss',
 })
 export class HeaderLanguage {

@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-clip-board',
   imports: [FormsModule],
   templateUrl: './clip-board.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './clip-board.scss',
 })
 export class ClipBoard {

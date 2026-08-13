@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { touchSpinDetails } from '../../../../../../shared/data/data/form-widgets/touchspin';
 
@@ -6,6 +6,7 @@ import { touchSpinDetails } from '../../../../../../shared/data/data/form-widget
   selector: 'app-rounded-touch-spin',
   imports: [],
   templateUrl: './rounded-touch-spin.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './rounded-touch-spin.scss',
 })
 export class RoundedTouchSpin {

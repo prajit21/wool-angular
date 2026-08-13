@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-forgot-password',
   imports: [RouterModule],
   templateUrl: './forgot-password.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './forgot-password.scss',
 })
 export class ForgotPassword {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
@@ -8,6 +8,7 @@ import { carouselImages } from '../../../../../shared/data/data/bonus-ui/carouse
   selector: 'app-with-caption-carousel',
   imports: [CarouselModule],
   templateUrl: './with-caption-carousel.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './with-caption-carousel.scss',
 })
 export class WithCaptionCarousel {

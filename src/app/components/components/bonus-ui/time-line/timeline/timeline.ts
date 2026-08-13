@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { AppIdeas } from './app-ideas/app-ideas';
 import { AudioTesting } from './audio-testing/audio-testing';
@@ -11,6 +11,7 @@ import { YoutubeBlog } from './youtube-blog/youtube-blog';
   selector: 'app-timeline',
   imports: [AppIdeas, AudioTesting, Designer, MeetUp, YoutubeBlog, Resolutions],
   templateUrl: './timeline.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './timeline.scss',
 })
 export class Timeline {}

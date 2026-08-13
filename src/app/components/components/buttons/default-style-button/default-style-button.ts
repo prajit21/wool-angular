@@ -1,5 +1,5 @@
 import { NgClass, TitleCasePipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import * as data from '../../../../shared/data/data/buttons';
 
@@ -7,6 +7,7 @@ import * as data from '../../../../shared/data/data/buttons';
   selector: 'app-default-style-button',
   imports: [NgClass, TitleCasePipe],
   templateUrl: './default-style-button.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './default-style-button.scss',
 })
 export class DefaultStyleButton {

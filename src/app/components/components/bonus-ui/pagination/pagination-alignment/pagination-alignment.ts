@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { paginationAlignment } from '../../../../../shared/data/data/bonus-ui/pagination';
 
@@ -6,6 +6,7 @@ import { paginationAlignment } from '../../../../../shared/data/data/bonus-ui/pa
   selector: 'app-pagination-alignment',
   imports: [],
   templateUrl: './pagination-alignment.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './pagination-alignment.scss',
 })
 export class PaginationAlignment {

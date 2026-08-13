@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, inject, Input, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
@@ -9,6 +9,7 @@ import { Products } from '../../../../../shared/interface/e-commerce';
   selector: 'app-product-details-modal',
   imports: [],
   templateUrl: './product-details-modal.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './product-details-modal.scss',
 })
 export class ProductDetailsModal {

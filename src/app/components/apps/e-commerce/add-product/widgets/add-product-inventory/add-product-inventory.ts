@@ -1,4 +1,4 @@
-import { Component, output } from '@angular/core';
+import { Component, output, ChangeDetectionStrategy } from '@angular/core';
 
 import { SvgIcon } from '../../../../../../shared/components/ui/svg-icon/svg-icon';
 
@@ -6,6 +6,7 @@ import { SvgIcon } from '../../../../../../shared/components/ui/svg-icon/svg-ico
   selector: 'app-add-product-inventory',
   imports: [SvgIcon],
   templateUrl: './add-product-inventory.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './add-product-inventory.scss',
 })
 export class AddProductInventory {

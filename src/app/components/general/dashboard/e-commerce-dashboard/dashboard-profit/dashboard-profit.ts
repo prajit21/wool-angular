@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -10,6 +10,7 @@ import { profitChart } from '../../../../../shared/data/chart/e-commerce-dashboa
   selector: 'app-dashboard-profit',
   imports: [NgApexchartsModule, Title, SvgIcon],
   templateUrl: './dashboard-profit.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './dashboard-profit.scss',
 })
 export class DashboardProfit {

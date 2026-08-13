@@ -1,5 +1,5 @@
 import { DecimalPipe, AsyncPipe } from '@angular/common';
-import { Component, inject, viewChildren } from '@angular/core';
+import { Component, inject, viewChildren, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -14,6 +14,7 @@ import { ECommerceService } from '../../../../shared/services/e-commerce/e-comme
   templateUrl: './product-list.html',
   styleUrl: './product-list.scss',
   imports: [NgbModule, FormsModule, ECommerceDirective, AsyncPipe],
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [ECommerceService, DecimalPipe],
 })
 export class ProductList {

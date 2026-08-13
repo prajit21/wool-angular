@@ -6,7 +6,10 @@
     <div class="ProfileCard-details">
       <div class="ProfileCard-realName">
         <app-svg-icon [icon]="menuItem.icon" />
-        <a [routerLink]="menuItem?.path" class="realname" (click)="search.removeFix()"
+        <a
+          [routerLink]="$safeNavigationMigration(menuItem?.path)"
+          class="realname"
+          (click)="search.removeFix()"
           >{{ menuItem?.title }}</a
         >
       </div>

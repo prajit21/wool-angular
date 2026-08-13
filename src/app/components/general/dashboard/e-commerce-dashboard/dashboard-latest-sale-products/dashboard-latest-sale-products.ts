@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { Title } from '../../../../../shared/components/ui/title/title';
@@ -8,6 +8,7 @@ import { latestSaleProducts } from '../../../../../shared/data/data/e-commerce-d
   selector: 'app-dashboard-latest-sale-products',
   imports: [Title, RouterModule],
   templateUrl: './dashboard-latest-sale-products.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './dashboard-latest-sale-products.scss',
 })
 export class DashboardLatestSaleProducts {

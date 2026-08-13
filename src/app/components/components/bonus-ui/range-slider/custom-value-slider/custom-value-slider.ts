@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgxSliderModule, Options } from '@angular-slider/ngx-slider';
 
@@ -6,6 +6,7 @@ import { NgxSliderModule, Options } from '@angular-slider/ngx-slider';
   selector: 'app-custom-value-slider',
   imports: [NgxSliderModule],
   templateUrl: './custom-value-slider.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './custom-value-slider.scss',
 })
 export class CustomValueSlider {

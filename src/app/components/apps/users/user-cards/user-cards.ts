@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { userCards } from '../../../../shared/data/data/users';
@@ -7,6 +7,7 @@ import { userCards } from '../../../../shared/data/data/users';
   selector: 'app-user-cards',
   imports: [RouterModule],
   templateUrl: './user-cards.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './user-cards.scss',
 })
 export class UserCards {

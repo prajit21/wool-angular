@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { GoogleMap, MapMarker } from '@angular/google-maps';
 
 interface IMarkerPosition {
@@ -20,6 +20,7 @@ interface IGoogleMapMarkers {
   selector: 'app-google-map',
   imports: [GoogleMap, MapMarker],
   templateUrl: './google-map.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./google-map.scss'],
 })
 export class GoogleMaps {

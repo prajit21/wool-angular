@@ -1,5 +1,12 @@
 import { JsonPipe } from '@angular/common';
-import { Component, TemplateRef, ViewEncapsulation, inject, viewChild } from '@angular/core';
+import {
+  Component,
+  TemplateRef,
+  ViewEncapsulation,
+  inject,
+  viewChild,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { NgbModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -53,6 +60,7 @@ const colors = {
   ],
   templateUrl: './calendar.html',
   styleUrl: './calendar.scss',
+  changeDetection: ChangeDetectionStrategy.Eager,
   encapsulation: ViewEncapsulation.None,
 })
 export class Calendar {

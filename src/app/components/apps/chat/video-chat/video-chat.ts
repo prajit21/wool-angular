@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { ChatContact } from '../widgets/chat-contact/chat-contact';
 import { ChatHeader } from '../widgets/chat-header/chat-header';
@@ -8,6 +8,7 @@ import { ChatMenu } from '../widgets/chat-menu/chat-menu';
   selector: 'app-video-chat',
   imports: [ChatMenu, ChatHeader, ChatContact],
   templateUrl: './video-chat.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './video-chat.scss',
 })
 export class VideoChat {

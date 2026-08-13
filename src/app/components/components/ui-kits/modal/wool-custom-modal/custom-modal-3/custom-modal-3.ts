@@ -1,4 +1,4 @@
-import { Component, TemplateRef, inject } from '@angular/core';
+import { Component, TemplateRef, inject, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -9,6 +9,7 @@ import { FeatherIcons } from '../../../../../../shared/components/ui/feather-ico
   selector: 'app-custom-modal-3',
   imports: [RouterModule, FeatherIcons],
   templateUrl: './custom-modal-3.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './custom-modal-3.scss',
 })
 export class CustomModal3 {

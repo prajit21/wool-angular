@@ -1,4 +1,4 @@
-import { Component, viewChildren, AfterViewInit } from '@angular/core';
+import { Component, viewChildren, AfterViewInit, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbAccordionItem, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -10,6 +10,7 @@ import { jobFilter } from '../../../../shared/interface/job-search';
   selector: 'app-job-search-filter',
   imports: [NgbModule, FeatherIcons],
   templateUrl: './job-search-filter.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './job-search-filter.scss',
 })
 export class JobSearchFilter implements AfterViewInit {

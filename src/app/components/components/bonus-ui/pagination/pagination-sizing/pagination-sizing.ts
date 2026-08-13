@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { paginationSizing } from '../../../../../shared/data/data/bonus-ui/pagination';
 
@@ -6,6 +6,7 @@ import { paginationSizing } from '../../../../../shared/data/data/bonus-ui/pagin
   selector: 'app-pagination-sizing',
   imports: [],
   templateUrl: './pagination-sizing.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './pagination-sizing.scss',
 })
 export class PaginationSizing {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { CurrentRating } from './current-rating/current-rating';
 import { HorizontalRating } from './horizontal-rating/horizontal-rating';
@@ -11,6 +11,7 @@ import { VerticalRating } from './vertical-rating/vertical-rating';
   selector: 'app-rating',
   imports: [CurrentRating, MovieRating, SquareRating, StarRating, VerticalRating, HorizontalRating],
   templateUrl: './rating.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './rating.scss',
 })
 export class Rating {}

@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { postDetails } from '../../../../../shared/interface/users';
 
@@ -6,6 +6,7 @@ import { postDetails } from '../../../../../shared/interface/users';
   selector: 'app-user-single-post',
   imports: [],
   templateUrl: './user-single-post.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './user-single-post.scss',
 })
 export class UserSinglePost {

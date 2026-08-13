@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { headerMessage } from '../../../../data/data/header';
 import { FeatherIcons } from '../../../ui/feather-icons/feather-icons';
@@ -7,6 +7,7 @@ import { FeatherIcons } from '../../../ui/feather-icons/feather-icons';
   selector: 'app-header-message',
   imports: [FeatherIcons],
   templateUrl: './header-message.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './header-message.scss',
 })
 export class HeaderMessage {

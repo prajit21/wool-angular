@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { SocialAppAbout } from './social-app-about/social-app-about';
 import { SocialAppFriends } from './social-app-friends/social-app-friends';
@@ -10,6 +10,7 @@ import { SocialAppTimeline } from './social-app-timeline/social-app-timeline';
   selector: 'app-social-apps',
   imports: [SocialAppProfile, SocialAppAbout, SocialAppFriends, SocialAppTimeline, SocialAppPhotos],
   templateUrl: './social-apps.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './social-apps.scss',
 })
 export class SocialApps {

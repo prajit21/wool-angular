@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { FooterContent } from '../footer-content/footer-content';
 
@@ -6,6 +6,7 @@ import { FooterContent } from '../footer-content/footer-content';
   selector: 'app-footer-dark',
   imports: [FooterContent],
   templateUrl: './footer-dark.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './footer-dark.scss',
 })
 export class FooterDark {}

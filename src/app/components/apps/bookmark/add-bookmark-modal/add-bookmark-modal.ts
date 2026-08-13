@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -26,6 +26,7 @@ export interface BookmarkItem {
   selector: 'app-add-bookmark-modal',
   imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './add-bookmark-modal.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './add-bookmark-modal.scss',
 })
 export class AddBookmarkModal {

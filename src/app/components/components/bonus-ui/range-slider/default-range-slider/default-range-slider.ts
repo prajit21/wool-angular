@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgxSliderModule, Options } from '@angular-slider/ngx-slider';
 
@@ -6,6 +6,7 @@ import { NgxSliderModule, Options } from '@angular-slider/ngx-slider';
   selector: 'app-default-range-slider',
   imports: [NgxSliderModule],
   templateUrl: './default-range-slider.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './default-range-slider.scss',
 })
 export class DefaultRangeSlider {

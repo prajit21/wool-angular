@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -10,6 +10,7 @@ import { SizeSmallModal } from './size-small-modal/size-small-modal';
 @Component({
   selector: 'app-sizes-modal',
   templateUrl: './sizes-modal.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './sizes-modal.scss',
 })
 export class SizesModal {

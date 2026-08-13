@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AngularEditorModule } from '@kolkov/angular-editor';
@@ -8,6 +8,7 @@ import { TagInputModule } from 'ngx-chips';
   selector: 'app-add-product-additional-option',
   imports: [TagInputModule, AngularEditorModule, FormsModule],
   templateUrl: './add-product-additional-option.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './add-product-additional-option.scss',
 })
 export class AddProductAdditionalOption {

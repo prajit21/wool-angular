@@ -5,7 +5,7 @@
         <h3>{{ details()?.title }}</h3>
         <p>{{ details()?.description }}</p>
       </div>
-      <app-feather-icons [icon]="details()?.icon" />
+      <app-feather-icons [icon]="$safeNavigationMigration(details()?.icon)" />
     </div>
   </div>
 </div>

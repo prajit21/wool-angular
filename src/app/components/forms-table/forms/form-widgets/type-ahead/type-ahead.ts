@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { BasicTypeAhead } from './basic-type-ahead/basic-type-ahead';
 import { FormattedResult } from './formatted-result/formatted-result';
@@ -20,6 +20,7 @@ import { WikipediaSearch } from './wikipedia-search/wikipedia-search';
     WikipediaSearch,
   ],
   templateUrl: './type-ahead.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './type-ahead.scss',
 })
 export class TypeAhead {}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { GeneralAllDetails } from './general-all-details/general-all-details';
 import { GeneralBalance } from './general-balance/general-balance';
@@ -35,6 +35,7 @@ import { productStatusDetails } from '../../../../shared/data/data/widgets-gener
     GeneralVisitorChart,
   ],
   templateUrl: './general.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './general.scss',
 })
 export class General {

@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-job-personal-details',
   imports: [],
   templateUrl: './job-personal-details.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './job-personal-details.scss',
 })
 export class JobPersonalDetails {

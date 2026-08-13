@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { FeatherIcons } from '../../../../shared/components/ui/feather-icons/feather-icons';
 import { tasks } from '../../../../shared/data/data/task';
@@ -8,6 +8,7 @@ import { task, taskDetails } from '../../../../shared/interface/task';
   selector: 'app-task-details',
   imports: [FeatherIcons],
   templateUrl: './task-details.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './task-details.scss',
 })
 export class TaskDetails {

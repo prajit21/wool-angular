@@ -1,10 +1,11 @@
-import { Component, Input, output } from '@angular/core';
+import { Component, Input, output, ChangeDetectionStrategy } from '@angular/core';
 
 import { ContactDetails } from '../../../../shared/interface/contact';
 
 @Component({
   selector: 'app-edit-contact-details',
   templateUrl: './edit-contact-details.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './edit-contact-details.scss',
 })
 export class EditContactDetails {

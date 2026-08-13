@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { ToastrService } from 'ngx-toastr';
 
@@ -8,6 +8,7 @@ import { fontAwesomeIcon } from '../../../../shared/data/data/icons/font-awesome
   selector: 'app-font-awesome-icon',
   imports: [],
   templateUrl: './font-awesome-icon.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './font-awesome-icon.scss',
 })
 export class FontAwesomeIcon {

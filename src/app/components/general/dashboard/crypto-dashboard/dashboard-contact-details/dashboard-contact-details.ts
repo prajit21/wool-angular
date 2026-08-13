@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { Title } from '../../../../../shared/components/ui/title/title';
 import { dashboardContacts } from '../../../../../shared/data/data/dashboard';
@@ -7,6 +7,7 @@ import { dashboardContacts } from '../../../../../shared/data/data/dashboard';
   selector: 'app-dashboard-contact-details',
   imports: [Title],
   templateUrl: './dashboard-contact-details.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './dashboard-contact-details.scss',
 })
 export class DashboardContactDetails {

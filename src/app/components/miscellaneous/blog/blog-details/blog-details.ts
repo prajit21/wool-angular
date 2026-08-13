@@ -1,5 +1,5 @@
 import { SlicePipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { blogDetails } from '../../../../shared/data/data/blog';
 
@@ -7,6 +7,7 @@ import { blogDetails } from '../../../../shared/data/data/blog';
   selector: 'app-blog-details',
   imports: [SlicePipe],
   templateUrl: './blog-details.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './blog-details.scss',
 })
 export class BlogDetails {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { FeatherIcons } from '../../../../../shared/components/ui/feather-icons/feather-icons';
 import { findCourse } from '../../../../../shared/data/data/learning';
@@ -7,6 +7,7 @@ import { findCourse } from '../../../../../shared/data/data/learning';
   selector: 'app-learning-find-course',
   imports: [FeatherIcons],
   templateUrl: './learning-find-course.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './learning-find-course.scss',
 })
 export class LearningFindCourse {

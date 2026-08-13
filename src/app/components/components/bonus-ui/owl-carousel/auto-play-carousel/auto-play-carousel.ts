@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
@@ -8,6 +8,7 @@ import { carouselImages } from '../../../../../shared/data/data/bonus-ui/carouse
   selector: 'app-auto-play-carousel',
   imports: [CarouselModule],
   templateUrl: './auto-play-carousel.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './auto-play-carousel.scss',
 })
 export class AutoPlayCarousel {

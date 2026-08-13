@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { Gallery, GalleryItem, ImageItem, ImageSize, ThumbnailsPosition } from 'ng-gallery';
 import { Lightbox, LightboxModule } from 'ng-gallery/lightbox';
@@ -9,6 +9,7 @@ import { socialAppPhoto } from '../../../../shared/data/data/social-apps';
   selector: 'app-search-result-images',
   imports: [LightboxModule],
   templateUrl: './search-result-images.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './search-result-images.scss',
 })
 export class SearchResultImages {

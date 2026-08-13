@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -9,6 +9,7 @@ import { justifyTab } from '../../../../../shared/data/data/ui-kits/tabs';
   selector: 'app-justify-tab',
   imports: [NgbModule, FormsModule],
   templateUrl: './justify-tab.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './justify-tab.scss',
 })
 export class JustifyTab {

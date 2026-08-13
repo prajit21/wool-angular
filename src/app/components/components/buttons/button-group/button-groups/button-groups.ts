@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, Input, input } from '@angular/core';
+import { Component, Input, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { button } from '../../../../../shared/interface/buttons';
 
@@ -7,6 +7,7 @@ import { button } from '../../../../../shared/interface/buttons';
   selector: 'app-button-groups',
   imports: [NgClass],
   templateUrl: './button-groups.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './button-groups.scss',
 })
 export class ButtonGroups {

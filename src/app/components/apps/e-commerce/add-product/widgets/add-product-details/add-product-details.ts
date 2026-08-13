@@ -1,4 +1,4 @@
-import { Component, output } from '@angular/core';
+import { Component, output, ChangeDetectionStrategy } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -15,6 +15,7 @@ import { SvgIcon } from '../../../../../../shared/components/ui/svg-icon/svg-ico
   selector: 'app-add-product-details',
   imports: [FormsModule, SvgIcon, AngularEditorModule, ReactiveFormsModule],
   templateUrl: './add-product-details.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './add-product-details.scss',
 })
 export class AddProductDetails {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { ActiveDisabledPagination } from './active-disabled-pagination/active-disabled-pagination';
 import { DefaultPagination } from './default-pagination/default-pagination';
@@ -18,6 +18,7 @@ import { RoundedPagination } from './rounded-pagination/rounded-pagination';
     RoundedPagination,
   ],
   templateUrl: './pagination.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './pagination.scss',
 })
 export class Pagination {}

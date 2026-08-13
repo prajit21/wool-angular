@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModule, NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 import { BarRatingModule } from 'ngx-bar-rating';
@@ -9,6 +9,7 @@ import { searchResultAllDetails } from '../../../../shared/data/data/search-resu
   selector: 'app-search-result-all',
   imports: [BarRatingModule, NgbModule],
   templateUrl: './search-result-all.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './search-result-all.scss',
 })
 export class SearchResultAll {

@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { FeatherIcons } from '../../../../shared/components/ui/feather-icons/feather-icons';
 import { timeLinePostDetails } from '../../../../shared/data/data/social-apps';
@@ -10,6 +10,7 @@ import { SocialAppRightPanel } from '../widgets/social-app-right-panel/social-ap
   selector: 'app-social-app-timeline',
   imports: [FeatherIcons, SocialAppLeftPanel, SocialAppRightPanel, NgClass],
   templateUrl: './social-app-timeline.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './social-app-timeline.scss',
 })
 export class SocialAppTimeline {

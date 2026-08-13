@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -11,6 +11,7 @@ import { topDealers } from '../../../../../shared/data/data/e-commerce-dashboard
   selector: 'app-dashboard-top-dealers',
   imports: [SvgIcon, NgbModule, CarouselModule, RouterModule],
   templateUrl: './dashboard-top-dealers.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './dashboard-top-dealers.scss',
 })
 export class DashboardTopDealers {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Observable, OperatorFunction, debounceTime, map } from 'rxjs';
@@ -9,6 +9,7 @@ import { statesData } from '../../../../../../shared/data/data/form-widgets/type
   selector: 'app-select-on-exact',
   imports: [NgbModule],
   templateUrl: './select-on-exact.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './select-on-exact.scss',
 })
 export class SelectOnExact {

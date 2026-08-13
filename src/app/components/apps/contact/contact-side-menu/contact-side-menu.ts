@@ -1,4 +1,4 @@
-import { Component, inject, output } from '@angular/core';
+import { Component, inject, output, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -11,6 +11,7 @@ import { NewContactModal } from '../new-contact-modal/new-contact-modal';
   selector: 'app-contact-side-menu',
   imports: [FeatherIcons],
   templateUrl: './contact-side-menu.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './contact-side-menu.scss',
 })
 export class ContactSideMenu {

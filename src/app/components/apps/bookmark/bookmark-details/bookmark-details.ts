@@ -1,4 +1,4 @@
-import { Component, inject, input } from '@angular/core';
+import { Component, inject, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import Swal from 'sweetalert2';
@@ -12,6 +12,7 @@ import { EditBookmarkModal } from '../edit-bookmark-modal/edit-bookmark-modal';
   selector: 'app-bookmark-details',
   imports: [FeatherIcons],
   templateUrl: './bookmark-details.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './bookmark-details.scss',
 })
 export class BookmarkDetails {

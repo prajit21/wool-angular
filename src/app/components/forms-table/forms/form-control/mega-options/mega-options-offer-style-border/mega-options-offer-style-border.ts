@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { offerStyleBorder } from '../../../../../../shared/data/data/mega-options';
 
@@ -6,6 +6,7 @@ import { offerStyleBorder } from '../../../../../../shared/data/data/mega-option
   selector: 'app-mega-options-offer-style-border',
   imports: [],
   templateUrl: './mega-options-offer-style-border.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './mega-options-offer-style-border.scss',
 })
 export class MegaOptionsOfferStyleBorder {

@@ -1,5 +1,5 @@
 import { DecimalPipe, AsyncPipe } from '@angular/common';
-import { Component, inject, viewChildren } from '@angular/core';
+import { Component, inject, viewChildren, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -19,6 +19,7 @@ import { OrderService } from '../../../../shared/services/e-commerce/product-ord
   imports: [FeatherIcons, FormsModule, NgbModule, ProductOrderDirective, AsyncPipe],
   templateUrl: './order-history.html',
   styleUrl: './order-history.scss',
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [OrderService, DecimalPipe],
 })
 export class OrderHistory {

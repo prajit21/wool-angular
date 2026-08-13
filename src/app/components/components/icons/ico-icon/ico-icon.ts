@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { ToastrService } from 'ngx-toastr';
 
@@ -8,6 +8,7 @@ import { icoIcon } from '../../../../shared/data/data/icons/ico-icon';
   selector: 'app-ico-icon',
   imports: [],
   templateUrl: './ico-icon.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './ico-icon.scss',
 })
 export class IcoIcon {

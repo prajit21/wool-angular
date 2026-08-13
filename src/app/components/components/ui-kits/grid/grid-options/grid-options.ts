@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { gridOptions } from '../../../../../shared/data/data/ui-kits/grid';
 
@@ -6,6 +6,7 @@ import { gridOptions } from '../../../../../shared/data/data/ui-kits/grid';
   selector: 'app-grid-options',
   imports: [],
   templateUrl: './grid-options.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './grid-options.scss',
 })
 export class GridOptions {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -9,6 +9,7 @@ import { liveMarketCap } from '../../../../../shared/data/chart/dashboard-chart'
   selector: 'app-dashboard-live-market-cap',
   imports: [NgApexchartsModule, Title],
   templateUrl: './dashboard-live-market-cap.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './dashboard-live-market-cap.scss',
 })
 export class DashboardLiveMarketCap {

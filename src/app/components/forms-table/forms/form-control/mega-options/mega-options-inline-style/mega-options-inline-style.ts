@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { inlineStyle } from '../../../../../../shared/data/data/mega-options';
 
@@ -6,6 +6,7 @@ import { inlineStyle } from '../../../../../../shared/data/data/mega-options';
   selector: 'app-mega-options-inline-style',
   imports: [],
   templateUrl: './mega-options-inline-style.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './mega-options-inline-style.scss',
 })
 export class MegaOptionsInlineStyle {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -6,6 +6,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-table-tooltip-trigger',
   imports: [NgbModule],
   templateUrl: './table-tooltip-trigger.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './table-tooltip-trigger.scss',
 })
 export class TableTooltipTrigger {}

@@ -1,4 +1,4 @@
-import { Component, output } from '@angular/core';
+import { Component, output, ChangeDetectionStrategy } from '@angular/core';
 
 import { advanceTab } from '../../../../../../shared/data/data/e-commerce/add-product';
 import { AddProductAdditionalOption } from '../add-product-additional-option/add-product-additional-option';
@@ -9,6 +9,7 @@ import { AddProductShipping } from '../add-product-shipping/add-product-shipping
   selector: 'app-add-product-advance',
   imports: [AddProductInventory, AddProductAdditionalOption, AddProductShipping],
   templateUrl: './add-product-advance.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './add-product-advance.scss',
 })
 export class AddProductAdvance {

@@ -1,4 +1,4 @@
-import { Component, inject, input } from '@angular/core';
+import { Component, inject, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import Swal from 'sweetalert2';
@@ -13,6 +13,7 @@ import { EditContactDetails } from '../edit-contact-details/edit-contact-details
   selector: 'app-contact-details',
   imports: [EditContactDetails, ContactHistory],
   templateUrl: './contact-details.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './contact-details.scss',
 })
 export class ContactDetail {

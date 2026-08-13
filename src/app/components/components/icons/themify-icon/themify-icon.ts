@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { ToastrService } from 'ngx-toastr';
 
@@ -8,6 +8,7 @@ import { themifyIcon } from '../../../../shared/data/data/icons/themify';
   selector: 'app-themify-icon',
   imports: [],
   templateUrl: './themify-icon.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './themify-icon.scss',
 })
 export class ThemifyIcon {

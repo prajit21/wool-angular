@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 
@@ -8,6 +8,7 @@ import { wordTreeChart } from '../../../../../shared/data/chart/google-chart';
   selector: 'app-word-tree-chart',
   imports: [Ng2GoogleChartsModule],
   templateUrl: './word-tree-chart.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './word-tree-chart.scss',
 })
 export class WordTreeChart {

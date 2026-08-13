@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-color-schemes-toast',
   imports: [],
   templateUrl: './color-schemes-toast.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './color-schemes-toast.scss',
 })
 export class ColorSchemesToast {

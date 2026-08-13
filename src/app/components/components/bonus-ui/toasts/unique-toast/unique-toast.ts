@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-unique-toast',
   imports: [],
   templateUrl: './unique-toast.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './unique-toast.scss',
 })
 export class UniqueToast {

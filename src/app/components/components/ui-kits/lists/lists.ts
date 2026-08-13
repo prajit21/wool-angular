@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { ActiveList } from './active-list/active-list';
 import { CheckBoxList } from './check-box-list/check-box-list';
@@ -32,6 +32,7 @@ import { ScrollableList } from './scrollable-list/scrollable-list';
     RadioList,
   ],
   templateUrl: './lists.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './lists.scss',
 })
 export class Lists {}

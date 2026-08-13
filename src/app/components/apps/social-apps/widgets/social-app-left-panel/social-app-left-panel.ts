@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -10,6 +10,7 @@ import { SocialProfileDetails } from './social-profile-details/social-profile-de
   selector: 'app-social-app-left-panel',
   imports: [SocialActivityFeed, SocialMutualFriends, SocialProfileDetails, NgbModule],
   templateUrl: './social-app-left-panel.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './social-app-left-panel.scss',
 })
 export class SocialAppLeftPanel {}

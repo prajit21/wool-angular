@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { mutualFriendsDetails } from '../../../../../../shared/data/data/social-apps';
 
@@ -6,6 +6,7 @@ import { mutualFriendsDetails } from '../../../../../../shared/data/data/social-
   selector: 'app-social-mutual-friends',
   imports: [],
   templateUrl: './social-mutual-friends.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './social-mutual-friends.scss',
 })
 export class SocialMutualFriends {

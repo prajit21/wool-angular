@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { calls } from '../../../../../shared/data/data/chat';
 
@@ -7,6 +7,7 @@ import { calls } from '../../../../../shared/data/data/chat';
   selector: 'app-chat-menu',
   imports: [NgClass],
   templateUrl: './chat-menu.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './chat-menu.scss',
 })
 export class ChatMenu {

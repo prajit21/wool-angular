@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { gridOffset } from '../../../../../shared/data/data/ui-kits/grid';
 
@@ -6,6 +6,7 @@ import { gridOffset } from '../../../../../shared/data/data/ui-kits/grid';
   selector: 'app-grid-offset',
   imports: [],
   templateUrl: './grid-offset.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './grid-offset.scss',
 })
 export class GridOffset {

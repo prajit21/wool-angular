@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -9,6 +9,7 @@ import { CoinChartOptions } from '../../../../../shared/interface/dashboard/char
   selector: 'app-top-common-charts',
   imports: [SvgIcon, NgApexchartsModule],
   templateUrl: './top-common-charts.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './top-common-charts.scss',
 })
 export class TopCommonCharts {

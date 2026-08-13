@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -11,6 +11,7 @@ import { WidgetChartOptions } from '../../../../../shared/interface/widgets/char
   selector: 'app-general-common-currency',
   imports: [NgApexchartsModule, FeatherIcons, SvgIcon, NgClass],
   templateUrl: './general-common-currency.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './general-common-currency.scss',
 })
 export class GeneralCommonCurrency {

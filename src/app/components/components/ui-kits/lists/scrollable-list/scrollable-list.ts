@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { scrollableList } from '../../../../../shared/data/data/ui-kits/list';
 
@@ -6,6 +6,7 @@ import { scrollableList } from '../../../../../shared/data/data/ui-kits/list';
   selector: 'app-scrollable-list',
   imports: [],
   templateUrl: './scrollable-list.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './scrollable-list.scss',
 })
 export class ScrollableList {

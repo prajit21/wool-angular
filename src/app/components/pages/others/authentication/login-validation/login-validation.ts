@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -14,6 +14,7 @@ import { FeatherIcons } from '../../../../../shared/components/ui/feather-icons/
   selector: 'app-login-validation',
   imports: [RouterModule, FormsModule, ReactiveFormsModule, FeatherIcons],
   templateUrl: './login-validation.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './login-validation.scss',
 })
 export class LoginValidation {

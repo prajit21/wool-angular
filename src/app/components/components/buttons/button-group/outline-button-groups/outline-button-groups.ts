@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { button } from '../../../../../shared/interface/buttons';
 
@@ -7,6 +7,7 @@ import { button } from '../../../../../shared/interface/buttons';
   selector: 'app-outline-button-groups',
   imports: [NgClass],
   templateUrl: './outline-button-groups.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './outline-button-groups.scss',
 })
 export class OutlineButtonGroups {

@@ -1,5 +1,5 @@
 import { NgClass, TitleCasePipe } from '@angular/common';
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { switches } from '../../../../../../shared/interface/switch';
 
@@ -8,6 +8,7 @@ import { switches } from '../../../../../../shared/interface/switch';
   standalone: true,
   imports: [NgClass, TitleCasePipe],
   templateUrl: './common-switch.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./common-switch.scss'],
 })
 export class CommonSwitch {

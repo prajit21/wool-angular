@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { BrowserDefaultValidation } from './browser-default-validation/browser-default-validation';
 import { TooltipFormValidation } from './tooltip-form-validation/tooltip-form-validation';
@@ -8,6 +8,7 @@ import { ValidationForm } from './validation-form/validation-form';
   selector: 'app-form-validation',
   imports: [TooltipFormValidation, BrowserDefaultValidation, ValidationForm],
   templateUrl: './form-validation.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './form-validation.scss',
 })
 export class FormValidation {}

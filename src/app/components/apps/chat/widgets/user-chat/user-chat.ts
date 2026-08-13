@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, output } from '@angular/core';
+import { Component, output, ChangeDetectionStrategy } from '@angular/core';
 
 import { chat } from '../../../../../shared/data/data/chat';
 import { ChatHeader } from '../chat-header/chat-header';
@@ -8,6 +8,7 @@ import { ChatHeader } from '../chat-header/chat-header';
   selector: 'app-user-chat',
   imports: [ChatHeader, NgClass],
   templateUrl: './user-chat.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './user-chat.scss',
 })
 export class UserChat {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { contact } from '../../../../../shared/data/data/chat';
 
@@ -6,6 +6,7 @@ import { contact } from '../../../../../shared/data/data/chat';
   selector: 'app-chat-contact',
   imports: [],
   templateUrl: './chat-contact.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './chat-contact.scss',
 })
 export class ChatContact {

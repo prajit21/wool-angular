@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -16,6 +16,7 @@ import { FeatherIcons } from '../../../../../shared/components/ui/feather-icons/
   selector: 'app-login-sweet-alert',
   imports: [RouterModule, FormsModule, ReactiveFormsModule, FeatherIcons],
   templateUrl: './login-sweet-alert.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './login-sweet-alert.scss',
 })
 export class LoginSweetAlert {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
@@ -8,6 +8,7 @@ import { carouselImages } from '../../../../../shared/data/data/bonus-ui/carouse
   selector: 'app-dark-variant-carousel',
   imports: [CarouselModule],
   templateUrl: './dark-variant-carousel.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './dark-variant-carousel.scss',
 })
 export class DarkVariantCarousel {

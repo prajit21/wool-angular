@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -9,6 +9,7 @@ import { turnOver } from '../../../../../shared/data/chart/widgets-chart';
   selector: 'app-widgets-turn-over',
   imports: [Title, NgApexchartsModule],
   templateUrl: './widgets-turn-over.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './widgets-turn-over.scss',
 })
 export class WidgetsTurnOver {

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { NgbModal, NgbModule, NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
@@ -12,6 +12,7 @@ import { ProductDetailsModal } from '../product-details-modal/product-details-mo
   selector: 'app-product-details',
   imports: [BarRatingModule, RouterModule, NgbModule],
   templateUrl: './product-details.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './product-details.scss',
 })
 export class ProductDetails {

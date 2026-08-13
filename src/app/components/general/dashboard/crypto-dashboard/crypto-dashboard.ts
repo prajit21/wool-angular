@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { DashboardActiveOrder } from './dashboard-active-order/dashboard-active-order';
 import { DashboardBalance } from './dashboard-balance/dashboard-balance';
@@ -21,6 +21,7 @@ import {
   selector: 'app-crypto-dashboard',
   templateUrl: './crypto-dashboard.html',
   styleUrl: './crypto-dashboard.scss',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     DashboardActiveOrder,
     DashboardBuySellCoin,

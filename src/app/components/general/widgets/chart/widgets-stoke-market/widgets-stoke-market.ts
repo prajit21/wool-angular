@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -9,6 +9,7 @@ import { stokeMarket } from '../../../../../shared/data/chart/widgets-chart';
   selector: 'app-widgets-stoke-market',
   imports: [Title, NgApexchartsModule],
   templateUrl: './widgets-stoke-market.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './widgets-stoke-market.scss',
 })
 export class WidgetsStokeMarket {

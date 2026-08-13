@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { headerCart } from '../../../../data/data/header';
@@ -8,6 +8,7 @@ import { FeatherIcons } from '../../../ui/feather-icons/feather-icons';
   selector: 'app-header-cart',
   templateUrl: './header-cart.html',
   styleUrl: './header-cart.scss',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [FeatherIcons, RouterModule],
 })
 export class HeaderCart {

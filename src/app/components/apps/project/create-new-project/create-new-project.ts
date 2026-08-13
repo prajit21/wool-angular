@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +8,7 @@ import { FileUpload } from './file-upload/file-upload';
   selector: 'app-create-new-project',
   imports: [FileUpload, NgbModule],
   templateUrl: './create-new-project.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './create-new-project.scss',
 })
 export class CreateNewProject {}

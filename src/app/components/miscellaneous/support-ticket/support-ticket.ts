@@ -1,5 +1,5 @@
 import { DecimalPipe, AsyncPipe } from '@angular/common';
-import { Component, inject, viewChildren } from '@angular/core';
+import { Component, inject, viewChildren, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -18,6 +18,7 @@ import { SupportTicketService } from '../../../shared/services/support-ticket.se
   imports: [SupportTicketList, NgbModule, SupportTicketDirective, FormsModule, AsyncPipe],
   templateUrl: './support-ticket.html',
   styleUrl: './support-ticket.scss',
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [SupportTicketService, DecimalPipe],
 })
 export class SupportTicket {

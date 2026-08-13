@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -16,6 +16,7 @@ import { FeatherIcons } from '../../shared/components/ui/feather-icons/feather-i
   selector: 'app-auth-login',
   imports: [RouterModule, FormsModule, ReactiveFormsModule, FeatherIcons],
   templateUrl: './auth-login.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './auth-login.scss',
 })
 export class AuthLogin {

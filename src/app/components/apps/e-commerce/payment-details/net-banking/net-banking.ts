@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { Title } from '../../../../../shared/components/ui/title/title';
 
@@ -6,6 +6,7 @@ import { Title } from '../../../../../shared/components/ui/title/title';
   selector: 'app-net-banking',
   imports: [Title],
   templateUrl: './net-banking.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './net-banking.scss',
 })
 export class NetBanking {}

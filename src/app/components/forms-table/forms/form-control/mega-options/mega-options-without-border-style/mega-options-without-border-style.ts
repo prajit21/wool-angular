@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { withoutBorder } from '../../../../../../shared/data/data/mega-options';
 
@@ -6,6 +6,7 @@ import { withoutBorder } from '../../../../../../shared/data/data/mega-options';
   selector: 'app-mega-options-without-border-style',
   imports: [],
   templateUrl: './mega-options-without-border-style.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './mega-options-without-border-style.scss',
 })
 export class MegaOptionsWithoutBorderStyle {

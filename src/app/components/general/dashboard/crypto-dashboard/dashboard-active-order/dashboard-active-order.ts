@@ -1,5 +1,5 @@
 import { DecimalPipe, AsyncPipe } from '@angular/common';
-import { Component, inject, viewChildren } from '@angular/core';
+import { Component, inject, viewChildren, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
@@ -19,6 +19,7 @@ import { ActiveOrderService } from '../../../../../shared/services/active-order.
   templateUrl: './dashboard-active-order.html',
   styleUrl: './dashboard-active-order.scss',
   imports: [Title, RouterModule, FormsModule, ActiveOrderDirective, AsyncPipe],
+  changeDetection: ChangeDetectionStrategy.Eager,
   providers: [ActiveOrderService, DecimalPipe],
 })
 export class DashboardActiveOrder {

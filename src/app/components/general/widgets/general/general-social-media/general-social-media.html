@@ -2,7 +2,9 @@
   <div class="card-body">
     <div class="d-flex align-items-center justify-content-between">
       <div class="d-flex align-items-center gap-2">
-        <div class="social-icons"><img [src]="social()?.image" alt="facebook icon" /></div>
+        <div class="social-icons">
+          <img [src]="$safeNavigationMigration(social()?.image)" alt="facebook icon" />
+        </div>
         <span>{{ social()?.name }}</span>
       </div>
       <span class="font-success f-12 d-xxl-block d-xl-none">+{{social()?.pr}}%</span>
@@ -15,12 +17,12 @@
       <div class="social-chart">
         <div id="radial-facebook">
           <apx-chart
-            [series]="social()?.series!"
-            [chart]="social()?.chart!"
-            [plotOptions]="social()?.plotOptions!"
-            [colors]="social()?.colors!"
-            [stroke]="social()?.stroke!"
-            [responsive]="social()?.responsive!"
+            [series]="$safeNavigationMigration(social()?.series)!"
+            [chart]="$safeNavigationMigration(social()?.chart)!"
+            [plotOptions]="$safeNavigationMigration(social()?.plotOptions)!"
+            [colors]="$safeNavigationMigration(social()?.colors)!"
+            [stroke]="$safeNavigationMigration(social()?.stroke)!"
+            [responsive]="$safeNavigationMigration(social()?.responsive)!"
           />
         </div>
       </div>

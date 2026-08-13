@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {
   FormControl,
   FormGroup,
@@ -11,6 +11,7 @@ import {
   selector: 'app-tooltip-form-validation',
   imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './tooltip-form-validation.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './tooltip-form-validation.scss',
 })
 export class TooltipFormValidation {

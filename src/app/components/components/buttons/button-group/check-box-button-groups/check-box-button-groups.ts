@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { checkboxGroup } from '../../../../../shared/data/data/buttons';
 
@@ -6,6 +6,7 @@ import { checkboxGroup } from '../../../../../shared/data/data/buttons';
   selector: 'app-check-box-button-groups',
   imports: [],
   templateUrl: './check-box-button-groups.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './check-box-button-groups.scss',
 })
 export class CheckBoxButtonGroups {

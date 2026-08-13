@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import * as data from '../../../../../../shared/data/data/checkbox-radio';
 
@@ -6,6 +6,7 @@ import * as data from '../../../../../../shared/data/data/checkbox-radio';
   selector: 'app-custom-checkbox',
   imports: [],
   templateUrl: './custom-checkbox.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './custom-checkbox.scss',
 })
 export class CustomCheckbox {

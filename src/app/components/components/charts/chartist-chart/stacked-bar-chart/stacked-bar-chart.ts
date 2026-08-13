@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { ChartistModule } from 'ng-chartist';
 
@@ -8,6 +8,7 @@ import { stackedBarChart } from '../../../../../shared/data/chart/chartist-chart
   selector: 'app-stacked-bar-chart',
   imports: [ChartistModule],
   templateUrl: './stacked-bar-chart.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './stacked-bar-chart.scss',
 })
 export class StackedBarChart {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {
@@ -19,6 +19,7 @@ import {
   selector: 'app-prevent-manual-entry',
   imports: [NgbModule],
   templateUrl: './prevent-manual-entry.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './prevent-manual-entry.scss',
 })
 export class PreventManualEntry {

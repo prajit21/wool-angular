@@ -1,7 +1,10 @@
-<div class="currency-widget height-equal widget-currency" [ngClass]="currency()?.colorClass">
+<div
+  class="currency-widget height-equal widget-currency"
+  [ngClass]="$safeNavigationMigration(currency()?.colorClass)"
+>
   <div class="d-flex">
     <div class="currency-icon-widget">
-      <app-svg-icon [icon]="currency()?.icon" />
+      <app-svg-icon [icon]="$safeNavigationMigration(currency()?.icon)" />
     </div>
     <div>
       <h4>{{ currency()?.coinName }} <span class="f-light">{{ currency()?.tag }}</span></h4>
@@ -12,18 +15,18 @@
       <div class="currency-chart-wrap">
         <div id="currency-chart">
           <apx-chart
-            [series]="currency()?.series!"
-            [chart]="currency()?.chart!"
-            [grid]="currency()?.grid!"
-            [colors]="currency()?.colors!"
-            [stroke]="currency()?.stroke!"
-            [labels]="currency()?.labels!"
-            [markers]="currency()?.markers!"
-            [xaxis]="currency()?.xaxis!"
-            [yaxis]="currency()?.yaxis!"
-            [legend]="currency()?.legend!"
-            [tooltip]="currency()?.tooltip!"
-            [responsive]="currency()?.responsive!"
+            [series]="$safeNavigationMigration(currency()?.series)!"
+            [chart]="$safeNavigationMigration(currency()?.chart)!"
+            [grid]="$safeNavigationMigration(currency()?.grid)!"
+            [colors]="$safeNavigationMigration(currency()?.colors)!"
+            [stroke]="$safeNavigationMigration(currency()?.stroke)!"
+            [labels]="$safeNavigationMigration(currency()?.labels)!"
+            [markers]="$safeNavigationMigration(currency()?.markers)!"
+            [xaxis]="$safeNavigationMigration(currency()?.xaxis)!"
+            [yaxis]="$safeNavigationMigration(currency()?.yaxis)!"
+            [legend]="$safeNavigationMigration(currency()?.legend)!"
+            [tooltip]="$safeNavigationMigration(currency()?.tooltip)!"
+            [responsive]="$safeNavigationMigration(currency()?.responsive)!"
           />
         </div>
       </div>

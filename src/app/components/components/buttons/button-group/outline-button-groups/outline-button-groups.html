@@ -6,7 +6,7 @@
     <div class="row">
       @for(color of buttonColor(); track color){
       <div class="col-xxl-4 col-md-6 col-sm-12">
-        <div class="btn-group" [ngClass]="details()?.buttonClass">
+        <div class="btn-group" [ngClass]="$safeNavigationMigration(details()?.buttonClass)">
           <button class="btn btn-outline-{{ color }}" type="button">Left</button>
           <button class="btn btn-outline-{{ color }}" type="button">Middle</button>
           <button class="btn btn-outline-{{ color }}" type="button">Right</button>

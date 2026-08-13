@@ -47,7 +47,7 @@
                 @for(item of menuItems | slice : 0 : 8; track item){
                 <div class="ProfileCard u-cf">
                   <div class="ProfileCard-avatar">
-                    <app-svg-icon [icon]="item?.icon" />
+                    <app-svg-icon [icon]="$safeNavigationMigration(item?.icon)" />
                   </div>
                   <div class="ProfileCard-details">
                     <div class="ProfileCard-realName d-flex">

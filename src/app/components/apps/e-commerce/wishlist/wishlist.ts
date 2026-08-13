@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { wishlistProducts } from '../../../../shared/data/data/e-commerce/wishlist';
 
@@ -6,6 +6,7 @@ import { wishlistProducts } from '../../../../shared/data/data/e-commerce/wishli
   selector: 'app-wishlist',
   imports: [],
   templateUrl: './wishlist.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './wishlist.scss',
 })
 export class Wishlist {

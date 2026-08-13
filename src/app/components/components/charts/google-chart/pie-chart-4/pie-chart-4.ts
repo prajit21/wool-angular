@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 
@@ -8,6 +8,7 @@ import { pieChart4 } from '../../../../../shared/data/chart/google-chart';
   selector: 'app-pie-chart-4',
   imports: [Ng2GoogleChartsModule],
   templateUrl: './pie-chart-4.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './pie-chart-4.scss',
 })
 export class PieChart4 {

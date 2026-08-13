@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import {
@@ -15,6 +15,7 @@ import { FeatherIcons } from '../../../../../../shared/components/ui/feather-ico
   selector: 'app-bootstrap-calendar',
   imports: [FormsModule, NgbModule, FeatherIcons],
   templateUrl: './bootstrap-calendar.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './bootstrap-calendar.scss',
 })
 export class BootstrapCalendar {

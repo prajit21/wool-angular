@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { LearningCategory } from './learning-category/learning-category';
 import { LearningFindCourse } from './learning-find-course/learning-find-course';
@@ -8,6 +8,7 @@ import { LearningUpcomingCourse } from './learning-upcoming-course/learning-upco
   selector: 'app-learning-filter',
   imports: [LearningFindCourse, LearningCategory, LearningUpcomingCourse],
   templateUrl: './learning-filter.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './learning-filter.scss',
 })
 export class LearningFilter {

@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { KnowledgebaseArticle } from './knowledgebase-article/knowledgebase-article';
 import { KnowledgebaseArticleVideo } from './knowledgebase-article-video/knowledgebase-article-video';
@@ -19,6 +19,7 @@ import { knowledgebaseDetails } from '../../../shared/data/data/knowledgebase';
     NgClass,
   ],
   templateUrl: './knowledgebase.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './knowledgebase.scss',
 })
 export class Knowledgebase {

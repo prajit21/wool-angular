@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { FooterContent } from '../footer-content/footer-content';
 
@@ -6,6 +6,7 @@ import { FooterContent } from '../footer-content/footer-content';
   selector: 'app-footer-fixed',
   imports: [FooterContent],
   templateUrl: './footer-fixed.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './footer-fixed.scss',
 })
 export class FooterFixed {}

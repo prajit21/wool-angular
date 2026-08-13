@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { FeatherIcons } from '../../../../shared/components/ui/feather-icons/feather-icons';
 import { sidebar } from '../../../../shared/data/data/file-manager';
@@ -8,6 +8,7 @@ import { sidebar } from '../../../../shared/data/data/file-manager';
   selector: 'app-file-manager-sidebar',
   imports: [FeatherIcons, NgClass],
   templateUrl: './file-manager-sidebar.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './file-manager-sidebar.scss',
 })
 export class FileManagerSidebar {

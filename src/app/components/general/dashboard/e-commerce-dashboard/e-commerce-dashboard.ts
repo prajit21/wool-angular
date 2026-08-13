@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { DashboardConversionRate } from './dashboard-conversion-rate/dashboard-conversion-rate';
 import { DashboardLatestSaleCustomers } from './dashboard-latest-sale-customers/dashboard-latest-sale-customers';
@@ -14,6 +14,7 @@ import { DashboardTopSelling } from './dashboard-top-selling/dashboard-top-selli
   selector: 'app-e-commerce-dashboard',
   templateUrl: './e-commerce-dashboard.html',
   styleUrl: './e-commerce-dashboard.scss',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [
     DashboardConversionRate,
     DashboardLatestSaleCustomers,

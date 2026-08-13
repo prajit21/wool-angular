@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { FeatherIcons } from '../../../../../shared/components/ui/feather-icons/feather-icons';
 import { badgeButton } from '../../../../../shared/data/data/ui-kits/tag-pills';
@@ -7,6 +7,7 @@ import { badgeButton } from '../../../../../shared/data/data/ui-kits/tag-pills';
   selector: 'app-badge-button',
   imports: [FeatherIcons],
   templateUrl: './badge-button.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './badge-button.scss',
 })
 export class BadgeButton {

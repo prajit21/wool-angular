@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { activeList } from '../../../../../shared/data/data/ui-kits/list';
 
@@ -7,6 +7,7 @@ import { activeList } from '../../../../../shared/data/data/ui-kits/list';
   selector: 'app-active-list',
   imports: [NgClass],
   templateUrl: './active-list.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './active-list.scss',
 })
 export class ActiveList {

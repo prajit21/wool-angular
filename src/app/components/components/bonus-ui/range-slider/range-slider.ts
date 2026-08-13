@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { CustomValueSlider } from './custom-value-slider/custom-value-slider';
 import { DefaultRangeSlider } from './default-range-slider/default-range-slider';
@@ -16,6 +16,7 @@ import { PrettifyNumberSlider } from './prettify-number-slider/prettify-number-s
     PrettifyNumberSlider,
   ],
   templateUrl: './range-slider.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './range-slider.scss',
 })
 export class RangeSlider {}

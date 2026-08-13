@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import {
   Gallery,
@@ -16,6 +16,7 @@ import { socialAppPhoto } from '../../../../shared/data/data/social-apps';
   selector: 'app-social-app-photos',
   imports: [GalleryModule, LightboxModule],
   templateUrl: './social-app-photos.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './social-app-photos.scss',
 })
 export class SocialAppPhotos {

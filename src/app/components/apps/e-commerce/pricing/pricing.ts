@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { Title } from '../../../../shared/components/ui/title/title';
 import {
@@ -10,6 +10,7 @@ import {
   selector: 'app-pricing',
   imports: [Title],
   templateUrl: './pricing.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './pricing.scss',
 })
 export class Pricing {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { SvgIcon } from '../../../../shared/components/ui/svg-icon/svg-icon';
 import { letterBoxHeaderTab } from '../../../../shared/data/data/letter-box';
@@ -7,6 +7,7 @@ import { letterBoxHeaderTab } from '../../../../shared/data/data/letter-box';
   selector: 'app-letter-box-header',
   imports: [SvgIcon],
   templateUrl: './letter-box-header.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './letter-box-header.scss',
 })
 export class LetterBoxHeader {

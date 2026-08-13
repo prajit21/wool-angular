@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { warningStateCard } from '../../../../../shared/data/data/bonus-ui/creative-cards';
 
@@ -6,6 +6,7 @@ import { warningStateCard } from '../../../../../shared/data/data/bonus-ui/creat
   selector: 'app-border-warning-state-card',
   imports: [],
   templateUrl: './border-warning-state-card.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './border-warning-state-card.scss',
 })
 export class BorderWarningStateCard {

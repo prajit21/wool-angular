@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { BasicModal } from './basic-modal/basic-modal';
 import { CenteredModal } from './centered-modal/centered-modal';
@@ -20,6 +20,7 @@ import { WoolCustomModal } from './wool-custom-modal/wool-custom-modal';
     CenteredModal,
   ],
   templateUrl: './modal.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './modal.scss',
 })
 export class Modal {}

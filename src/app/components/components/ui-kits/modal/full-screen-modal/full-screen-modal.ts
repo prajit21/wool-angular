@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -13,6 +13,7 @@ import { FullScreenXxlModal } from './full-screen-xxl-modal/full-screen-xxl-moda
   selector: 'app-full-screen-modal',
   imports: [],
   templateUrl: './full-screen-modal.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './full-screen-modal.scss',
 })
 export class FullScreenModal {

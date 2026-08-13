@@ -1,4 +1,4 @@
-import { Component, output } from '@angular/core';
+import { Component, output, ChangeDetectionStrategy } from '@angular/core';
 
 import { socialAppTab } from '../../../../shared/data/data/social-apps';
 
@@ -6,6 +6,7 @@ import { socialAppTab } from '../../../../shared/data/data/social-apps';
   selector: 'app-social-app-profile',
   imports: [],
   templateUrl: './social-app-profile.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './social-app-profile.scss',
 })
 export class SocialAppProfile {

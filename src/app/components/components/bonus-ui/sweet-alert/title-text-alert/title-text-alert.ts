@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import Swal from 'sweetalert2';
 
@@ -6,6 +6,7 @@ import Swal from 'sweetalert2';
   selector: 'app-title-text-alert',
   imports: [],
   templateUrl: './title-text-alert.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './title-text-alert.scss',
 })
 export class TitleTextAlert {

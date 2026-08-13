@@ -1,5 +1,5 @@
 import { NgClass, DatePipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { FeatherIcons } from '../../../shared/components/ui/feather-icons/feather-icons';
@@ -10,6 +10,7 @@ import { Task } from '../../../shared/interface/to-do';
   selector: 'app-to-do',
   imports: [FeatherIcons, FormsModule, DatePipe, NgClass],
   templateUrl: './to-do.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './to-do.scss',
 })
 export class ToDo {

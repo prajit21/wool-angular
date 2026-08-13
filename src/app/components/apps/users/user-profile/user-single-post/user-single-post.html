@@ -5,7 +5,7 @@
         <div class="d-flex">
           <img
             class="img-thumbnail rounded-circle me-3"
-            [src]="postDetails()?.userProfile"
+            [src]="$safeNavigationMigration(postDetails()?.userProfile)"
             alt="Generic placeholder image"
           />
           <div class="flex-grow-1 align-self-center">
@@ -26,7 +26,7 @@
           <a href="javascript:void(0)" itemprop="contentUrl" data-size="1600x950">
             <img
               class="img-fluid rounded"
-              [src]="postDetails()?.image"
+              [src]="$safeNavigationMigration(postDetails()?.image)"
               itemprop="thumbnail"
               alt="gallery"
           /></a>

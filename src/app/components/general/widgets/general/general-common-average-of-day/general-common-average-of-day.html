@@ -14,12 +14,12 @@
     <div class="radial-chart-wrap">
       <div id="radial-chart">
         <apx-chart
-          [series]="average()?.series!"
-          [chart]="average()?.chart!"
-          [plotOptions]="average()?.plotOptions!"
-          [colors]="average()?.colors!"
-          [stroke]="average()?.stroke!"
-          [responsive]="average()?.responsive!"
+          [series]="$safeNavigationMigration(average()?.series)!"
+          [chart]="$safeNavigationMigration(average()?.chart)!"
+          [plotOptions]="$safeNavigationMigration(average()?.plotOptions)!"
+          [colors]="$safeNavigationMigration(average()?.colors)!"
+          [stroke]="$safeNavigationMigration(average()?.stroke)!"
+          [responsive]="$safeNavigationMigration(average()?.responsive)!"
         />
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -7,6 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-pills-tab',
   imports: [NgbModule, FormsModule],
   templateUrl: './pills-tab.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './pills-tab.scss',
 })
 export class PillsTab {

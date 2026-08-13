@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +8,7 @@ import { FeatherIcons } from '../../../../../../shared/components/ui/feather-ico
   selector: 'app-full-screen-xl-modal',
   imports: [FeatherIcons],
   templateUrl: './full-screen-xl-modal.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './full-screen-xl-modal.scss',
 })
 export class FullScreenXlModal {

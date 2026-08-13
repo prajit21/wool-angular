@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { FeatherIcons } from '../../../../../shared/components/ui/feather-icons/feather-icons';
 import { productBrand, productServices } from '../../../../../shared/data/data/e-commerce/product';
@@ -7,6 +7,7 @@ import { productBrand, productServices } from '../../../../../shared/data/data/e
   selector: 'app-product-page-brand',
   imports: [FeatherIcons],
   templateUrl: './product-page-brand.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './product-page-brand.scss',
 })
 export class ProductPageBrand {

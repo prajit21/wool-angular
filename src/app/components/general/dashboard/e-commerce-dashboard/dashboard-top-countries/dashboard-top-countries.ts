@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { LeafletModule } from '@bluehalo/ngx-leaflet';
 import * as L from 'leaflet';
@@ -10,6 +10,7 @@ import { countries } from '../../../../../shared/data/data/e-commerce-dashboard'
   selector: 'app-dashboard-top-countries',
   imports: [LeafletModule, SvgIcon],
   templateUrl: './dashboard-top-countries.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './dashboard-top-countries.scss',
 })
 export class DashboardTopCountries {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { SvgIcon } from '../../../../../shared/components/ui/svg-icon/svg-icon';
@@ -8,6 +8,7 @@ import { popularCoins } from '../../../../../shared/data/data/dashboard';
   selector: 'app-dashboard-popular-coins',
   imports: [RouterModule, SvgIcon],
   templateUrl: './dashboard-popular-coins.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './dashboard-popular-coins.scss',
 })
 export class DashboardPopularCoins {

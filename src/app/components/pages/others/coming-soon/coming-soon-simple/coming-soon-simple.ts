@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-coming-soon-simple',
   imports: [],
   templateUrl: './coming-soon-simple.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './coming-soon-simple.scss',
 })
 export class ComingSoonSimple {

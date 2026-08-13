@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, inject, Input, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +8,7 @@ import { ContactDetails } from '../../../../shared/interface/contact';
   selector: 'app-contact-print-modal',
   imports: [],
   templateUrl: './contact-print-modal.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './contact-print-modal.scss',
 })
 export class ContactPrintModal {

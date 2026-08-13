@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { DropzoneDefaultFileUpload } from './dropzone-default-file-upload/dropzone-default-file-upload';
 import { DropzoneImagePreview } from './dropzone-image-preview/dropzone-image-preview';
@@ -14,6 +14,7 @@ import { DropzoneSingleFileUpload } from './dropzone-single-file-upload/dropzone
     DropzoneSingleFileUpload,
   ],
   templateUrl: './dropzone.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './dropzone.scss',
 })
 export class Dropzone {}

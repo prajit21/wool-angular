@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { FeatherIcons } from '../../../../../shared/components/ui/feather-icons/feather-icons';
 
@@ -6,6 +6,7 @@ import { FeatherIcons } from '../../../../../shared/components/ui/feather-icons/
   selector: 'app-left-border-alert',
   imports: [FeatherIcons],
   templateUrl: './left-border-alert.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './left-border-alert.scss',
 })
 export class LeftBorderAlert {

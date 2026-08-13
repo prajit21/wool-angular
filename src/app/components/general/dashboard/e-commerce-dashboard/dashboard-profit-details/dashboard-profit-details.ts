@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { SvgIcon } from '../../../../../shared/components/ui/svg-icon/svg-icon';
 import { profitDetails } from '../../../../../shared/data/data/e-commerce-dashboard';
@@ -7,6 +7,7 @@ import { profitDetails } from '../../../../../shared/data/data/e-commerce-dashbo
   selector: 'app-dashboard-profit-details',
   imports: [SvgIcon],
   templateUrl: './dashboard-profit-details.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './dashboard-profit-details.scss',
 })
 export class DashboardProfitDetails {

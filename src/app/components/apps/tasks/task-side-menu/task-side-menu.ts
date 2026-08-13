@@ -1,4 +1,4 @@
-import { Component, inject, output } from '@angular/core';
+import { Component, inject, output, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -11,6 +11,7 @@ import { AddTaskTagModal } from '../add-task-tag-modal/add-task-tag-modal';
   selector: 'app-task-side-menu',
   imports: [FeatherIcons],
   templateUrl: './task-side-menu.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './task-side-menu.scss',
 })
 export class TaskSideMenu {

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -9,6 +9,7 @@ import { modalContent } from '../../../../../../shared/data/data/ui-kits/modal';
   selector: 'app-size-extra-large-modal',
   imports: [FeatherIcons],
   templateUrl: './size-extra-large-modal.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './size-extra-large-modal.scss',
 })
 export class SizeExtraLargeModal {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { SocialAppPeople } from './social-app-people/social-app-people';
 import { FeatherIcons } from '../../../../shared/components/ui/feather-icons/feather-icons';
@@ -14,6 +14,7 @@ import { SocialAppRightPanel } from '../widgets/social-app-right-panel/social-ap
   selector: 'app-social-app-about',
   imports: [FeatherIcons, SocialAppLeftPanel, SocialAppPeople, SocialAppRightPanel],
   templateUrl: './social-app-about.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './social-app-about.scss',
 })
 export class SocialAppAbout {

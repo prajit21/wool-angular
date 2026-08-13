@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { AutoCloseAlert } from './auto-close-alert/auto-close-alert';
 import { BasicAlert } from './basic-alert/basic-alert';
@@ -31,6 +31,7 @@ import { WarningModeAlert } from './warning-mode-alert/warning-mode-alert';
     WarningModeAlert,
   ],
   templateUrl: './sweet-alert.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './sweet-alert.scss',
 })
 export class SweetAlert {}

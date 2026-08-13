@@ -2,7 +2,7 @@
   <div class="modal-header">
     <div class="product-box row">
       <div class="product-img col-lg-6">
-        <img class="img-fluid" [src]="productDetail?.img" alt="" />
+        <img class="img-fluid" [src]="$safeNavigationMigration(productDetail?.img)" alt="" />
       </div>
       <div class="product-details col-lg-6 text-start">
         <h4>{{ productDetail?.productName }}</h4>

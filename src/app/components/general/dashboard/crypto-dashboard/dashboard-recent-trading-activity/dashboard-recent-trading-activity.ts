@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { SvgIcon } from '../../../../../shared/components/ui/svg-icon/svg-icon';
@@ -9,6 +9,7 @@ import { recentTradingActivity } from '../../../../../shared/data/data/dashboard
   selector: 'app-dashboard-recent-trading-activity',
   templateUrl: './dashboard-recent-trading-activity.html',
   styleUrl: './dashboard-recent-trading-activity.scss',
+  changeDetection: ChangeDetectionStrategy.Eager,
   imports: [SvgIcon, RouterModule, Title],
 })
 export class DashboardRecentTradingActivity {

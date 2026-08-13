@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
@@ -7,6 +7,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-add-category-modal',
   imports: [AngularEditorModule],
   templateUrl: './add-category-modal.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './add-category-modal.scss',
 })
 export class AddCategoryModal {

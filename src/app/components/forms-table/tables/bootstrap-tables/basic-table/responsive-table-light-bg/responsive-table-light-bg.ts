@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { responsiveLightBgTable } from '../../../../../../shared/data/data/tables';
 
@@ -6,6 +6,7 @@ import { responsiveLightBgTable } from '../../../../../../shared/data/data/table
   selector: 'app-responsive-table-light-bg',
   imports: [],
   templateUrl: './responsive-table-light-bg.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './responsive-table-light-bg.scss',
 })
 export class ResponsiveTableLightBg {

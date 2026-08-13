@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, HostListener, inject } from '@angular/core';
+import { Component, HostListener, inject, ChangeDetectionStrategy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { LayoutService } from '../../../services/layout.service';
@@ -15,6 +15,7 @@ import { TapToTop } from '../../ui/tap-to-top/tap-to-top';
   selector: 'app-content',
   imports: [Header, Breadcrumb, Footer, Customizer, TapToTop, Sidebar, RouterOutlet, NgClass],
   templateUrl: './content.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './content.scss',
 })
 export class Content {

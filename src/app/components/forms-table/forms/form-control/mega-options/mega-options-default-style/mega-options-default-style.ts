@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { defaultStyle } from '../../../../../../shared/data/data/mega-options';
 
@@ -6,6 +6,7 @@ import { defaultStyle } from '../../../../../../shared/data/data/mega-options';
   selector: 'app-mega-options-default-style',
   imports: [],
   templateUrl: './mega-options-default-style.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './mega-options-default-style.scss',
 })
 export class MegaOptionsDefaultStyle {

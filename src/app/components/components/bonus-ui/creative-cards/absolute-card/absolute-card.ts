@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, ChangeDetectionStrategy } from '@angular/core';
 
 import { absoluteCard } from '../../../../../shared/interface/bonus-ui';
 
@@ -6,6 +6,7 @@ import { absoluteCard } from '../../../../../shared/interface/bonus-ui';
   selector: 'app-absolute-card',
   imports: [],
   templateUrl: './absolute-card.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './absolute-card.scss',
 })
 export class AbsoluteCard {

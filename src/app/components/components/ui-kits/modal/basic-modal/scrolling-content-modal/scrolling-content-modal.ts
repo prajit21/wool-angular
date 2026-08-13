@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +8,7 @@ import { FeatherIcons } from '../../../../../../shared/components/ui/feather-ico
   selector: 'app-scrolling-content-modal',
   imports: [FeatherIcons],
   templateUrl: './scrolling-content-modal.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './scrolling-content-modal.scss',
 })
 export class ScrollingContentModal {

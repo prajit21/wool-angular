@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { NgApexchartsModule } from 'ng-apexcharts';
 
@@ -10,6 +10,7 @@ import { livePrice } from '../../../../../shared/data/chart/dashboard-chart';
   selector: 'app-dashboard-live-prices',
   imports: [SvgIcon, NgApexchartsModule, Title],
   templateUrl: './dashboard-live-prices.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './dashboard-live-prices.scss',
 })
 export class DashboardLivePrices {

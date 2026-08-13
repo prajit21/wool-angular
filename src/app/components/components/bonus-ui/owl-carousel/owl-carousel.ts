@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { AnimationCarousel } from './animation-carousel/animation-carousel';
 import { AutoPlayCarousel } from './auto-play-carousel/auto-play-carousel';
@@ -20,6 +20,7 @@ import { WithIndicatorsCarousel } from './with-indicators-carousel/with-indicato
     WithIndicatorsCarousel,
   ],
   templateUrl: './owl-carousel.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './owl-carousel.scss',
 })
 export class OwlCarousel {}

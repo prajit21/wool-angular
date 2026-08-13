@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { GalleryModule } from 'ng-gallery';
 import { LightboxModule } from 'ng-gallery/lightbox';
@@ -9,6 +9,7 @@ import { galleryItems } from '../../../../shared/data/data/gallery';
   selector: 'app-gallery-grid-desc',
   imports: [LightboxModule, GalleryModule],
   templateUrl: './gallery-grid-desc.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './gallery-grid-desc.scss',
 })
 export class GalleryGridDesc {

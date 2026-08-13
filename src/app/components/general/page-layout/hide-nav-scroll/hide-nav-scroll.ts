@@ -1,4 +1,4 @@
-import { Component, HostListener, inject } from '@angular/core';
+import { Component, HostListener, inject, ChangeDetectionStrategy } from '@angular/core';
 
 import { NavService } from '../../../../shared/services/nav.service';
 
@@ -6,6 +6,7 @@ import { NavService } from '../../../../shared/services/nav.service';
   selector: 'app-hide-nav-scroll',
   imports: [],
   templateUrl: './hide-nav-scroll.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './hide-nav-scroll.scss',
 })
 export class HideNavScroll {

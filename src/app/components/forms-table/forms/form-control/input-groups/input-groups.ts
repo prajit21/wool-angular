@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { InputBasicInputGroup } from './input-basic-input-group/input-basic-input-group';
 import { InputButtonAddons } from './input-button-addons/input-button-addons';
@@ -27,6 +27,7 @@ import { InputVariationAddons } from './input-variation-addons/input-variation-a
     InputVariationAddons,
   ],
   templateUrl: './input-groups.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './input-groups.scss',
 })
 export class InputGroups {}

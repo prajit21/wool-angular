@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { ChartJsBar } from './chart-js-bar/chart-js-bar';
 import { ChartJsDoughnut } from './chart-js-doughnut/chart-js-doughnut';
@@ -11,6 +11,7 @@ import { ChartJsRadar } from './chart-js-radar/chart-js-radar';
   selector: 'app-chart-js',
   imports: [ChartJsBar, ChartJsDoughnut, ChartJsLine, ChartJsLineGraph, ChartJsPolar, ChartJsRadar],
   templateUrl: './chart-js.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './chart-js.scss',
 })
 export class ChartJs {}

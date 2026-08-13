@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 
@@ -6,6 +6,7 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
   selector: 'app-designer',
   imports: [CarouselModule],
   templateUrl: './designer.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './designer.scss',
 })
 export class Designer {
